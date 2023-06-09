@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='content-type' content='text/html; charset=utf-8'>
+    <title>Desafio 01</title>        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='https://sindresorhus.com/github-markdown-css/github-markdown.css'>
+    <style>
+        .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+        font-family: 'Noto Sans', sans-serif;
+        }
+        .markdown-body h6 { margin-bottom: 0; }
+        .markdown-body h6 + ul li {
+        display: inline-block;
+        width: 100%;
+        max-width: 426px;
+        vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <article class='markdown-body'>
+<h3>
+ADS - Fatec Campinas</h3>
+
+<h3>
+Algoritmos e lógica de programação</h3>
+
+<h1>
+Desafio 02 - PIB</h1>
+
+<p><em>Professor:</em> Alexandre Mello Ferreira<br></p>
+
+<hr>
+
+<h2>
+<a id="user-content-descrição" class="anchor" href="#descri%C3%A7%C3%A3o" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Descrição</h2>
+
+<p>O produto interno bruto (PIB) representa a soma dos valores monetários de todos os bens e serviços produzidos numa determinada região, durante um determinado período. O PIB é um dos indicadores mais utilizados na macroeconomia com o objetivo de quantificar a atividade econômica de uma região. Para países, é comum apresentar o PIB anual, correspondendo ao período de 1 de Janeiro até 31 de Dezembro de um determinado ano.</p>
+
+<p>Em análises sobre o desempenho da economia de um país é muito comum observar o crescimento ou redução do PIB durante um período de alguns anos, como por exemplo detectar um triênio onde houve o maior crescimento médio do PIB.</p>
+
+<p>Neste laboratório vocês devem criar um programa para ajudar os analistas do Banco Central do Brasil a determinar qual o triênio, dentro de um determinado intervalo de anos, que teve o maior crescimento médio do PIB.</p>
+
+<p>Como entrada para o seu programa será dado uma sequência de números reais
+que correspondem ao PIB do país durante um certo intervalo de anos.
+A partir destes dados é possível calcular o crescimento percentual de um
+determinado ano em relação ao ano anterior (para o primeiro ano considere
+que o crescimento é <strong>0%</strong>).
+Considere o exemplo abaixo:</p>
+
+<table>
+<thead>
+<tr>
+<th>Ano</th>
+<th>PIB (em trilhões de reais)</th>
+<th>Crescimento percentual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#0</td>
+<td>3.5</td>
+<td>0.00%</td>
+</tr>
+<tr>
+<td>#1</td>
+<td>3</td>
+<td>-14.28%</td>
+</tr>
+<tr>
+<td>#2</td>
+<td>4.25</td>
+<td>41.66%</td>
+</tr>
+<tr>
+<td>#3</td>
+<td>1.2</td>
+<td>-71.76%</td>
+</tr>
+<tr>
+<td>#4</td>
+<td>7.3</td>
+<td>508.33%</td>
+</tr>
+<tr>
+<td>#5</td>
+<td>4</td>
+<td>-45.20%</td>
+</tr>
+<tr>
+<td>#6</td>
+<td>4</td>
+<td>0.00%</td>
+</tr>
+<tr>
+<td>#7</td>
+<td>3.9</td>
+<td>-2.50%</td>
+</tr>
+</tbody>
+</table>
+
+<p>A partir do crescimento percentual anual, deve-se determinar o triênio que
+teve a maior média de crescimento.
+Para o exemplo da tabela acima, o triênio com o maior crescimento médio foi aquele entre os anos 2 e 4 (159.4%).</p>
+
+<h2>
+<a id="user-content-objetivo" class="anchor" href="#objetivo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Objetivo</h2>
+
+<p>Dada uma sequência de valores do PIB correspondentes a um determinado intervalo de anos, o objetivo deste laboratório é determinar o triênio que teve o maior crescimento médio do PIB.</p>
+
+<h2>
+<a id="user-content-entrada" class="anchor" href="#entrada" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Entrada</h2>
+
+<p>A entrada consiste de um número inteiro positivo <code>n</code>, que indica o número de anos considerado, seguido por <code>n</code> números reais, representando o PIB de cada ano da amostragem. Cada número da entrada estará em uma linha distinta.</p>
+
+<h2>
+<a id="user-content-saída" class="anchor" href="#sa%C3%ADda" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Saída</h2>
+
+<p>A saída deverá conter apenas uma linha, contendo a seguinte frase <code>a maior media de crescimento foi entre os anos X e Y: Z</code>, onde <code>X</code> e <code>Y</code> representam o primeiro e o último ano do triênio (<strong>onde o primeiro ano é o ano 0</strong>) com a maior média de crescimento, e <code>Z</code> deve ser o crescimento médio <strong>percentual</strong> deste triênio com uma casa decimal. Em caso de empate, i.e, mais de um triênio com a mesma média de crescimento, você deverá escolher o triênio mais antigo.</p>
+
+<h2>
+<a id="user-content-exemplos" class="anchor" href="#exemplos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Exemplos</h2>
+
+<h6>
+<a id="user-content-teste-02" class="anchor" href="#teste-02" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 02</h6>
+
+<ul>
+<li>
+<p><a href="dados/arq02.in">Entrada</a></p>
+
+<pre><code>4
+8.32
+2.55
+1.51
+2.48
+</code></pre>
+</li>
+<li>
+<p><a href="dados/arq02.res">Saída</a></p>
+
+<pre><code>a maior media de crescimento foi entre os anos 1 e 3: -15.3
+</code></pre>
+</li>
+</ul>
+
+<h6>
+<a id="user-content-teste-06" class="anchor" href="#teste-06" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 06</h6>
+
+<ul>
+<li>
+<p><a href="dados/arq06.in">Entrada</a></p>
+
+<pre><code>4
+1.72
+3.67
+9.66
+3.05
+</code></pre>
+</li>
+<li>
+<p><a href="dados/arq06.res">Saída</a></p>
+
+<pre><code>a maior media de crescimento foi entre os anos 0 e 2: 92.2
+</code></pre>
+</li>
+</ul>
+
+<h6>
+<a id="user-content-teste-10" class="anchor" href="#teste-10" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 10</h6>
+
+<ul>
+<li>
+<p><a href="dados/arq10.in">Entrada</a></p>
+
+<pre><code>5
+1.89
+7.91
+1.24
+7.92
+8.79
+</code></pre>
+</li>
+<li>
+<p><a href="dados/arq10.res">Saída</a></p>
+
+<pre><code>a maior media de crescimento foi entre os anos 1 e 3: 257.6
+</code></pre>
+</li>
+</ul>
+
+
+
+<h2>
+<a id="user-content-observações" class="anchor" href="#observa%C3%A7%C3%B5es" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Observações</h2>
+
+<ul>
+<li>O seu programa deve estar completamente contido em um único arquivo denominado <code>des02.c</code> em linguagem C
+<li>Você deve incluir, no início do seu programa, uma breve descrição dos objetivos do programa, da entrada e da saída, além do seu nome e do seu RA;</li>
+<li>Indente corretamente o seu código e inclua comentários no decorrer do seu programa.</li>
+</ul>
+
+<h2>
+<a id="user-content-critérios-importantes" class="anchor" href="#crit%C3%A9rios-importantes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Critérios importantes</h2>
+
+<p>Independentemente dos resultados dos testes, o não cumprimento dos critérios abaixo implicará em nota zero nesta tarefa de laboratório.</p>
+
+<ul>
+<li>Para os programas em linguagem C, o único header aceito para essa tarefa é o <code>stdio.h</code>.</li>
+</ul>
+
+    </article>
+</body>
+</html>
