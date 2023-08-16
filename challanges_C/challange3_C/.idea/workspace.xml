@@ -10,12 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc104ea9-e23f-497f-8c0f-60d0075a0038" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../challange2_C" beforeDir="false" afterPath="$PROJECT_DIR$/../challange2_C" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/challange3_C.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desafio3.c" beforeDir="false" afterPath="$PROJECT_DIR$/desafio3.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desafio3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/desafio3.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +37,12 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "D:/Systems_Analysis_and_Development_FATEC/ADS_FATEC/1_semestre/algoritmos_e_logica_de_programacao/2_listas/challanges_C/challange3_C",
+    "last_opened_file_path": "D:/Systems_Analysis_and_Development_FATEC/ADS_FATEC/1_semestre/algoritmos_e_logica_de_programacao/6_provas/p2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -70,6 +68,14 @@
       <workItem from="1686280580866" duration="979000" />
       <workItem from="1686311538940" duration="2302000" />
       <workItem from="1686315615734" duration="943000" />
+      <workItem from="1686332193489" duration="105000" />
+      <workItem from="1686332310880" duration="23000" />
+      <workItem from="1686332335584" duration="138000" />
+      <workItem from="1686332482956" duration="377000" />
+      <workItem from="1686541852637" duration="122000" />
+      <workItem from="1686581872730" duration="240000" />
+      <workItem from="1686619213862" duration="783000" />
+      <workItem from="1686689878974" duration="633000" />
     </task>
     <servers />
   </component>

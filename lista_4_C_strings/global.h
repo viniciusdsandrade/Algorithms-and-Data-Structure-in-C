@@ -11,7 +11,7 @@ int contadorDePalavras2(char *s);
 int isSubsequence(char* word1, char* word2);
 
 void contadorOcorrencia(char *texto, char *palavra);
-bool isPalindrome(char *s);
+int isPalindrome(char *s);
 void escreveString(char *texto);
 
 #endif // LISTA_4_GLOBAL_H

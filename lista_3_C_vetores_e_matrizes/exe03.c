@@ -2,8 +2,9 @@
 #include <locale.h>
 #include "global.c"
 
-int exercicio01(void)
-{
+#define MAX 50
+
+int exercicio01(void) {
 
     /*
      * 1. Escreva um programa que leia um vetor de ate 50 numeros reais e calcule a
@@ -16,25 +17,25 @@ int exercicio01(void)
     printf("Digite um valor entre 1 e 50 ");
 
     int n;
-    double vetor[100];
+    double vetor[MAX];
     double sum = 0.0;
     double media = 0.0;
 
     scanf("%d", &n);
 
-    if (n < 1 || n > 50)
-    {
+    if (n < 1 || n > 50) {
         printf("Valor invalido");
         return 0;
     }
-    vetor[n];
 
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         printf("vetor[%d]: ", i + 1);
         scanf("%lf", &vetor[i]);
         sum += vetor[i];
     }
+
+    imprimeVetorDouble(vetor, n);
+    printf("Soma: %.2lf\n", sum);
 
     media = sum / n;
 
@@ -43,59 +44,50 @@ int exercicio01(void)
     return 0;
 }
 
-int exercicio02(void)
-{
+int exercicio02(void) {
 
     /*
      * 2. Escreva um programa que leia um vetor de ate 50 numeros reais e calcule o
-     * desvio padrÃ£o destes valores.
+     * desvio padrão destes valores.
      */
 
     printf("\nExe02 - Lista03\n");
-
+    double vetor[MAX];
     int n;
-    double vetor[100];
 
     printf("Digite um valor entre 1 e 50: ");
     scanf("%d", &n);
 
-    if (n < 1 || n > 50)
-    {
+    if (n < 1 || n > 50) {
         printf("Valor invalido");
         return 0;
     }
-    vetor[n];
 
     if (n < 8)
-    {
         preencheVetorDouble(vetor, n);
-    }
     else
-    {
         preencheVetorDoubleRandom(vetor, n, n);
-    }
+
 
     double media = mediaVetorDouble(vetor, n);
     double dp = 0.0;
 
     for (int i = 0; i < n; i++)
-    {
         // desvioPadrao += (vetor[i] - media)*(vetor[i] - media) ;
         dp += potenciaDouble(vetor[i] - media, 2);
-    }
+
 
     dp = raizQuadradaDouble(dp / n);
 
     printf("Vetor: ");
     imprimeVetorDouble(vetor, n);
-    printf("m?dia: %.2lf\n", media);
-    printf("Desvio padr?o: %.2lf\n", dp);
+    printf("média: %.2lf\n", media);
+    printf("Desvio padrão: %.2lf\n", dp);
 
     return 0;
 }
 
-int exercicio03(void)
-{
+int exercicio03(void) {
     /*
      * 3. Mostre o que o programa abaixo ir? imprimir caso seja executado (execute o
      * programa na m?o).
@@ -129,8 +121,7 @@ int exercicio03(void)
     return 0;
 }
 
-int exercicio04(void)
-{
+int exercicio04(void) {
 
     /*
      * 4. Dadas duas sequencias de n e m valores inteiros, onde n e m, escreva um
@@ -143,7 +134,8 @@ int exercicio04(void)
      */
 
     printf("\nExe04 - Lista03\n");
-
+    int sequencia1[MAX];
+    int sequencia2[MAX];
     int n;
     int m;
     int count = 0;
@@ -154,38 +146,28 @@ int exercicio04(void)
     printf("Digite o tamanho da segunda sequencia: ");
     scanf("%d", &m);
 
-    int sequencia1[n];
-    int sequencia2[m];
-
     printf("Digite os valores da primeira sequencia: \n");
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         printf("sequencia[%d] = ", i);
         scanf("%d", &sequencia1[i]);
     }
 
     printf("Digite os valores da segunda sequencia: \n");
-    for (int i = 0; i < m; i++)
-    {
+    for (int i = 0; i < m; i++) {
         printf("sequencia[%d] = ", i);
         scanf("%d", &sequencia2[i]);
     }
 
-    for (int i = 0; i <= m - n; i++)
-    {
+    for (int i = 0; i <= m - n; i++) {
         int achou = 1;
-        for (int j = 0; j < n; j++)
-        {
-            if (sequencia1[j] != sequencia2[i + j])
-            {
+        for (int j = 0; j < n; j++) {
+            if (sequencia1[j] != sequencia2[i + j]) {
                 achou = 0;
                 break;
             }
         }
         if (achou)
-        {
             count++;
-        }
     }
 
     // int ocorrencias = verificaOcorrenciaVetorInt(sequencia1, n, sequencia2, m);
@@ -194,8 +176,7 @@ int exercicio04(void)
     return 0;
 }
 
-int exercicio05(void)
-{
+int exercicio05(void) {
 
     /*
      * 5. Faca um programa que leia duas sequencias de numeros inteiros distintos e
@@ -212,8 +193,10 @@ int exercicio05(void)
 
     printf("Exe05 - Lista03\n");
 
-    int tam1 = 0;
-    int tam2 = 0;
+    int v1[MAX];
+    int v2[MAX];
+
+    int tam1,tam2;
 
     printf("Dimensao vetor1: ");
     scanf("%d", &tam1);
@@ -221,26 +204,25 @@ int exercicio05(void)
     printf("Dimensao vetor2: ");
     scanf("%d", &tam2);
 
-    if (tam1 < 0 || tam1 > 50 || tam2 < 0 || tam2 > 50)
-    {
+    if (tam1 < 0 || tam1 > 50 || tam2 < 0 || tam2 > 50) {
         printf("Tamanho invalido\n");
         return 0;
     }
 
-    int v1[50];
-    int v2[50];
 
-    if (tam1 < 8 || tam2 < 8)
-    {
+    if (tam1 < 8 || tam2 < 8) {
+
         printf("Vetor1\n");
         preencheVetorInt(v1, tam1);
+
         printf("Vetor2\n");
         preencheVetorInt(v2, tam2);
-    }
-    else
-    {
+
+    } else {
+
         preencheVetorIntRandom(v1, tam1, tam1);
         preencheVetorIntRandom(v2, tam2, tam2);
+
     }
 
     linha(30, '*');
@@ -252,25 +234,18 @@ int exercicio05(void)
     // Algoritmo para detectar qual o menor vetor
     int index = 0;
     if (tam1 < tam2)
-    {
         index = tam1;
-    }
     else
-    {
         index = tam2;
-    }
 
     int v3[index];
     int aux = 0;
 
     // Algoritmo para detectar os elementos iguais e colocalos no vetor3.
     // Variavel aux serve para controlar o indice do vetor3
-    for (int i = 0; i < tam1; i++)
-    {
-        for (int j = 0; j < tam2; j++)
-        {
-            if (v1[i] == v2[j])
-            {
+    for (int i = 0; i < tam1; i++) {
+        for (int j = 0; j < tam2; j++) {
+            if (v1[i] == v2[j]) {
                 v3[aux] = v1[i];
                 aux++;
                 break;
@@ -281,21 +256,16 @@ int exercicio05(void)
     // Algoritmo para contar quantos elementos diferentes de 0 existem no vetor3
     // Variavel contador serve para controlar o tamanho do novo vetor
     int contador = 0;
-    for (int i = 0; i < index; ++i)
-    {
+    for (int i = 0; i < index; ++i) {
         if (v3[i] != 0)
-        {
             contador++;
-        }
     }
 
     int indice = 0;
     int novoVetor[contador];
     // Algoritmo para colocar os elementos diferentes de 0 no novo vetor
-    for (int i = 0; i < index; ++i)
-    {
-        if (v3[i] != 0)
-        {
+    for (int i = 0; i < index; ++i) {
+        if (v3[i] != 0) {
             novoVetor[indice] = v3[i];
             indice++;
         }
@@ -308,8 +278,7 @@ int exercicio05(void)
     return 0;
 }
 
-int exercicio06()
-{
+int exercicio06() {
     /*
     6. Faca um programa que leia duas sequencias de numeros inteiros distintos e salve cada
     sequencia em um vetor. Suponha que o numero maximo de elementos de uma sequencia
@@ -324,9 +293,9 @@ int exercicio06()
     */
     printf("\nExe06 - Lista03\n");
 
-    int v1[50];
-    int v2[50];
-    int v3[100];
+    int v1[MAX];
+    int v2[MAX];
+    int v3[MAX];
 
     int tam1 = 0;
     int tam2 = 0;
@@ -354,13 +323,10 @@ int exercicio06()
 
     // Copia os elementos do vetor1 para o vetor3
     for (index = 0; index < tam1; index++)
-    {
         v3[index] = v1[index];
-    }
 
     // Copia os elementos do vetor2 para o vetor3
-    for (int i = 0; i < tam2; i++)
-    {
+    for (int i = 0; i < tam2; i++) {
         v3[index] = v2[i];
         index++;
     }
@@ -369,19 +335,15 @@ int exercicio06()
     int novoTam = 0;
     int v3SemDuplicados[100];
 
-    for (int i = 0; i < tam3; i++)
-    {
+    for (int i = 0; i < tam3; i++) {
         int duplicado = 0;
-        for (int j = 0; j < novoTam; j++)
-        {
-            if (v3[i] == v3SemDuplicados[j])
-            {
+        for (int j = 0; j < novoTam; j++) {
+            if (v3[i] == v3SemDuplicados[j]) {
                 duplicado = 1;
                 break;
             }
         }
-        if (!duplicado)
-        {
+        if (!duplicado) {
             v3SemDuplicados[novoTam] = v3[i];
             novoTam++;
         }
@@ -390,17 +352,14 @@ int exercicio06()
     // algoritmos para pegar elementos do vetor3SemDuplicados e colocar no vetor3Final
     int v3Final[100];
     for (int i = 0; i < novoTam; i++)
-    {
         v3Final[i] = v3SemDuplicados[i];
-    }
 
     imprimeVetorInt(v3Final, novoTam);
 
     return 0;
 }
 
-int exercicio07(void)
-{
+int exercicio07(void) {
 
     /*
      * 7. Faca um programa que leia duas sequencias de numeros inteiros ordenados e
@@ -417,34 +376,32 @@ int exercicio07(void)
     putchar('\n');
     printf("Exe07 - Lista03\n");
 
+    int v1[MAX];
+    int v2[MAX];
+    int v3[MAX * 2];
+
     int tam = 0;
 
     printf("Digite o tamanho dos vetores: ");
     scanf("%d", &tam);
 
-    if (tam < 0 || tam > 50)
-    {
+    if (tam < 0 || tam > 50) {
         printf("Tamanho inv?lido");
         return 0;
     }
 
-    int v1[tam];
-    int v2[tam];
-    int v3[2 * tam];
     int index;
 
-    if (tam < 8)
-    {
+    if (tam < 8) {
         printf("Vetor1\n");
         preencheVetorInt(v1, tam);
         printf("Vetor2\n");
         preencheVetorInt(v2, tam);
-    }
-    else
-    {
+    } else {
         preencheVetorIntRandom(v1, tam, tam + 17);
         preencheVetorIntRandom(v2, tam, tam + 13);
     }
+
     printf("Vetor1: ");
     imprimeVetorInt(v1, tam);
     printf("Vetor2: ");
@@ -452,10 +409,8 @@ int exercicio07(void)
 
     index = 0;
     // Aqui nos estamos alocando todos os valores de v1 e v2 em v3
-    for (int i = 0; i < tam; ++i)
-    {
-        if (i < tam)
-        {
+    for (int i = 0; i < tam; ++i) {
+        if (i < tam) {
             v3[index] = v1[i];
             v3[index + 1] = v2[i];
             index = index + 2;
@@ -464,12 +419,9 @@ int exercicio07(void)
 
     // bubbleSort com intuito de ordernar o vetor
     int temp;
-    for (int i = 0; i < index; ++i)
-    {
-        for (int j = 0; j < index; ++j)
-        {
-            if (v3[j] > v3[j + 1])
-            {
+    for (int i = 0; i < 2 * tam; i++) {
+        for (int j = 0; j < 2 * tam - 1; j++) {
+            if (v3[j] > v3[j + 1]) {
                 temp = v3[j];
                 v3[j] = v3[j + 1];
                 v3[j + 1] = temp;
@@ -483,8 +435,7 @@ int exercicio07(void)
     return 0;
 }
 
-int exercicio08(void)
-{
+int exercicio08(void) {
     /*
      * 8. Faca um programa que calcule o produto interno de dois vetores u e v de
      * mesmo tamanho n lidos do teclado. O programa deve ler primeiramente o valor
@@ -499,33 +450,27 @@ int exercicio08(void)
 
     int tam = 0;
     double soma = 0.0;
+    double vet1[MAX];
+    double vet2[MAX];
+    double produtoInterno[MAX];
 
     printf("Digite o tamanho dos vetores: ");
     scanf("%d", &tam);
 
-    if (tam < 0 || tam > 50)
-    {
+    if (tam < 0 || tam > 50) {
         printf("Tamanho inv?lido");
         return 0;
     }
 
-    double vet1[tam];
-    double vet2[tam];
-    double produtoInterno[tam];
-
-    if (tam < 4)
-    {
+    if (tam < 4) {
         preencheVetorDouble(vet1, tam);
         preencheVetorDouble(vet2, tam);
-    }
-    else
-    {
+    } else {
         preencheVetorDoubleRandom(vet1, tam, tam);
         preencheVetorDoubleRandom(vet2, tam, tam);
     }
 
-    for (int i = 0; i < tam; ++i)
-    {
+    for (int i = 0; i < tam; ++i) {
         produtoInterno[i] = vet1[i] * vet2[i];
         soma += vet1[i] * vet2[i];
     }
@@ -546,8 +491,7 @@ int exercicio08(void)
     return 0;
 }
 
-int exercicio09(void)
-{
+int exercicio09(void) {
     /*
      * 9. Escreva um programa que leia uma sequencia de numeros inteiros e os salva
      * em um vetor. Assuma que o tamanho maximo da sequencia e 50. Em seguida o programa
@@ -562,34 +506,27 @@ int exercicio09(void)
     printf("\nExe09 - Lista03\n");
 
     int tam = 0;
-    int vet[100];
+    int vet[MAX];
     int c = 0;
     int cont = 0;
-    int multiplo[100];
+    int multiplo[MAX];
 
     printf("Digite o tamanho do vetor:");
     scanf("%d", &tam);
 
-    if (tam < 0 || tam > 50)
-    {
+    if (tam < 0 || tam > 50) {
         printf("Tamanho inv?lido");
         return 0;
     }
 
-    vet[tam];
     preencheVetorInt(vet, tam);
 
     printf("Digite um valor para c:");
     scanf("%d", &c);
 
-    multiplo[tam];
-
-    for (int i = 0; i < tam; ++i)
-    {
-        for (int j = i + 1; j < tam; ++j)
-        {
-            if (vet[i] * vet[j] == c)
-            {
+    for (int i = 0; i < tam; ++i) {
+        for (int j = i + 1; j < tam; ++j) {
+            if (vet[i] * vet[j] == c) {
                 printf("%d x %d = %d\n", vet[i], vet[j], c);
                 multiplo[cont] = vet[i];
                 cont = cont + 2;
@@ -598,19 +535,14 @@ int exercicio09(void)
     }
 
     if (cont == 0)
-    {
         printf("Nao existem multiplos de %d\n", c);
-    }
     else
-    {
         printf("total de multiplos: %d\n", cont);
-    }
 
     return 0;
 }
 
-int exercicio10(void)
-{
+int exercicio10(void) {
 
     /*
      * 10. Escreva um programa que leia uma sequencia de numeros inteiros positivos
@@ -634,55 +566,43 @@ int exercicio10(void)
      * v[5]  1    1    1    1    1    0
      *
      *
-     * Note no exemplo que 2 (v[0]) Ã© coprimo de 3 (v[1]), 5 (v[3]) e 7 (v[5]).
+     * Note no exemplo que 2 (v[0]) é coprimo de 3 (v[1]), 5 (v[3]) e 7 (v[5]).
      */
 
     putchar('\n');
     printf("Exe10 - Lista03");
 
+    int vetor[MAX];
     int n;
+
     printf("Digite o tamanho do vetor: ");
     scanf("%d", &n);
 
-    int vetor[n];
-
     printf("Digite os valores do vetor: \n");
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         printf("vetor[%d]: ", i + 1);
         scanf("%d", &vetor[i]);
     }
 
     printf("Matriz: \n");
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         printf("vetor[%d] ", i + 1);
-        for (int j = 0; j < n; j++)
-        {
+        for (int j = 0; j < n; j++) {
             if (i == j)
-            {
                 printf("0 ");
-            }
-            else
-            {
+            else {
                 if (mdc(vetor[i], vetor[j]) == 1)
-                {
                     printf("1 ");
-                }
                 else
-                {
                     printf("0 ");
-                }
             }
         }
         printf("\n");
     }
-
     return 0;
 }
 
-int exercicio11(void)
-{
+int exercicio11(void) {
     /*
         Faca um programa que peca para o usuario digitar 5 valores inteiros em 2 vetores distintos.
         Em Seguida descubra quais sao os elementos que estao em comum nos dois vetores e seus respectivos indices;
@@ -691,42 +611,35 @@ int exercicio11(void)
     putchar('\n');
     printf("Exercicio 01\n");
 
-    int vetor1[5], vetor2[5];
+    int vetor1[MAX], vetor2[MAX];
     int umEmComum = 0;
 
-    for (int i = 0; i < 5; i++)
-    {
+    for (int i = 0; i < 5; i++) {
         printf("Valor vetor1 posicao %d\n", i + 1);
         scanf("%d", &vetor1[i]);
     }
 
-    for (int i = 0; i < 5; i++)
-    {
+    for (int i = 0; i < 5; i++) {
         printf("Valor vetor2 posicao %d\n", i + 1);
         scanf("%d", &vetor2[i]);
     }
 
     printf("Elementos iguais nos dois vetores\n");
-    for (int i = 0; i < 5; i++)
-    {
-        for (int j = 0; j < 5; j++)
-        {
-            if (vetor1[i] == vetor2[j])
-            {
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            if (vetor1[i] == vetor2[j]) {
                 printf("elemento: [%d] | vetor2[%d]=vetor1[%d] \n", vetor2[j], j, i);
                 umEmComum++;
             }
         }
     }
     if (umEmComum == 0)
-    {
-        printf("n?o h? elementos iguais em suas respectivas posicoes\n");
-    }
+        printf("não há elementos iguais em suas respectivas posicoes\n");
+
     return 0;
 }
 
-int exercicio12(void)
-{
+int exercicio12(void) {
 
     /*
         Faca um programa que peca para o usuario digitar 5 valores reais em 2 vetores distintos.
@@ -739,79 +652,70 @@ int exercicio12(void)
     double vetor1[5], vetor2[5], res = 0.0;
 
     printf("Digite os valores do vetor1: \n");
-    for (int i = 0; i < 5; i++)
-    {
+    for (int i = 0; i < 5; i++) {
         printf("vetor1[%d]: ", i + 1);
         scanf("%lf", &vetor1[i]);
     }
     linha(30, '*');
 
     printf("Digite os valores do vetor2: \n");
-    for (int i = 0; i < 5; i++)
-    {
+    for (int i = 0; i < 5; i++) {
         printf("vetor2[%d]: ", i + 1);
         scanf("%lf", &vetor2[i]);
     }
     linha(30, '*');
 
     for (int j = 0; j < 5; j++)
-    {
         res += vetor1[j] * vetor2[j];
-    }
+
 
     printf("Produto Interno: %.2lf\n", res);
 
     return 0;
 }
 
-int exercicio13(void)
-{
+int exercicio13(void) {
     /*
      Codigo para fazer a leitura e impressao de uma matriz
     */
 
     putchar('\n');
     printf("Exercicio 03\n");
+    double mat1[MAX][MAX];
 
     printf("Digite o tamanho da matriz: ");
     int n;
     scanf("%d", &n);
 
-    double mat1[n][n]; // Matriz quadrada
-
     printf("Digite os valores da matriz: \n");
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
             printf("mat1[%d,%d]: ", i + 1, j + 1);
             scanf("%lf", &mat1[i][j]);
         }
     }
 
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         printf("[");
-        for (int j = 0; j < n; j++)
-        {
-            printf("%.2lf \t", mat1[i][j]);
+        for (int j = 0; j < n; j++) {
+            if (j < n - 1)
+                printf("%.2lf\t", mat1[i][j]);
+            else
+                printf("%.2lf", mat1[i][j]);
         }
         printf("]");
         putchar('\n');
     }
 
-    printf("\n");
+
     linha(30, '*');
 
     return 0;
 }
 
-int exercicio14(void)
-{
-
+int exercicio14(void) {
     /*
-        Fa?a um programa que leia valores de 2 matriz nxn sendo n um valor inteiro
+        Faça um programa que leia valores de 2 matriz nxn sendo n um valor inteiro
         digitado pelo usuario. Em seguida atribua valores para cada uma das posi??es
         dessas matrizes E faca a soma dessas matrizes.
     */
@@ -819,19 +723,16 @@ int exercicio14(void)
     putchar('\n');
     printf("Exercicio 04\n");
 
+    double m1[MAX][MAX];
+    double m2[MAX][MAX];
+    double s3[MAX][MAX];
     int n;
     printf("Digite a dimensao nxn da matriz: ");
     scanf("%d", &n);
 
-    double m1[n][n];
-    double m2[n][n];
-    double s3[n][n];
-
     printf("1? Matriz: \n");
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
             printf("vetor1[%d,%d]: ", i + 1, j + 1);
             scanf("%lf", &m1[i][j]);
         }
@@ -839,10 +740,8 @@ int exercicio14(void)
     linha(30, '*');
 
     printf("2? Matriz: \n");
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
             printf("vetor2[%d,%d]: ", i + 1, j + 1);
             scanf("%lf", &m2[i][j]);
         }
@@ -850,28 +749,19 @@ int exercicio14(void)
     printf("*********************************\n");
 
     // Soma das matrizes
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++)
-        {
             s3[i][j] = m1[i][j] + m2[i][j];
-        }
     }
 
     printf("**************soma********************\n");
-    for (int k = 0; k < n; k++)
-    {
+    for (int k = 0; k < n; k++) {
         printf("[");
-        for (int l = 0; l < n; l++)
-        {
+        for (int l = 0; l < n; l++) {
             if (l < n - 1)
-            {
                 printf("%.02lf \t", s3[k][l]);
-            }
             else
-            {
                 printf("%.02lf", s3[k][l]);
-            }
         }
         printf("]\n");
     }
@@ -882,8 +772,7 @@ int exercicio14(void)
     return 0;
 }
 
-int exercicio15(void)
-{
+int exercicio15(void) {
     /*
         Faca um algoritmo para multiplicar duas matrizes de dimensao nxn
     */
@@ -892,12 +781,12 @@ int exercicio15(void)
     printf("Exercicio 05\n");
 
     int n;
+    int m1[MAX][MAX];
+    int m2[MAX][MAX];
+    int m3[MAX][MAX];
+
     printf("Digite a dimensao nxn da matriz: ");
     scanf("%d", &n);
-
-    int m1[100][100];
-    int m2[100][100];
-    int m3[100][100];
 
     printf("1o Matriz:\n");
     preencheMatrizInt(m1, n, n);
@@ -914,8 +803,7 @@ int exercicio15(void)
     return 0;
 }
 
-int exercicio16(void)
-{
+int exercicio16(void) {
     /*
      * Faca um algoritmo para calcular a matriz transposta de dimensao nxn
      */
@@ -924,11 +812,12 @@ int exercicio16(void)
     printf("Exercicio 06\n");
 
     printf("Digite a dimensao nxn da matriz: ");
-    int n;
-    scanf("%d", &n);
 
-    int m1[100][100];
-    int mt1[100][100];
+    int m1[MAX][MAX];
+    int mt1[MAX][MAX];
+    int n;
+
+    scanf("%d", &n);
 
     printf("1o Matriz:\n");
     preencheMatrizIntRandom(m1, n, n, 100);
@@ -937,12 +826,9 @@ int exercicio16(void)
     linha(30, '*');
 
     // Operacao de transposicao
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++)
-        {
             mt1[i][j] = m1[j][i];
-        }
     }
 
     imprimeMatrizInt(mt1, n, n);
@@ -950,8 +836,7 @@ int exercicio16(void)
     return 0;
 }
 
-int exercicio17(void)
-{
+int exercicio17(void) {
     /*
      * Escreva um programa que le 10 numeros inteiros e os salva em um
      * vetor. Em seguida o programa deve encontrar a posicao do maior
@@ -961,10 +846,9 @@ int exercicio17(void)
     putchar('\n');
     printf("Exercicio 07\n");
 
-    int vetor[10];
+    int vetor[MAX];
 
-    for (int i = 0; i < 10; i++)
-    {
+    for (int i = 0; i < 10; i++) {
         printf("vetor[%d]: ", i + 1);
         scanf("%d", &vetor[i]);
     }
@@ -972,16 +856,12 @@ int exercicio17(void)
     int maior = vetor[0];
     int menor = vetor[0];
 
-    for (int i = 0; i < 10; i++)
-    {
+    for (int i = 0; i < 10; i++) {
         if (vetor[i] > maior)
-        {
             maior = vetor[i];
-        }
+
         if (vetor[i] < menor)
-        {
             menor = vetor[i];
-        }
     }
 
     printf("Maior elemento: %d\n", maior);
@@ -990,8 +870,7 @@ int exercicio17(void)
     return 0;
 }
 
-int exercicio18(void)
-{
+int exercicio18(void) {
 
     /*
      * Escreva um programa que le 10 numeros ponto
@@ -1006,8 +885,7 @@ int exercicio18(void)
     float vetor[10];
     float soma = 0.0;
 
-    for (int i = 0; i < 10; i++)
-    {
+    for (int i = 0; i < 10; i++) {
         printf("vetor[%d]: ", i + 1);
         scanf("%f", &vetor[i]);
         soma += vetor[i];
@@ -1020,8 +898,7 @@ int exercicio18(void)
     return 0;
 }
 
-int exercicio19(void)
-{
+int exercicio19(void) {
 
     /*
     Escreva um programa que le 10 numeros inteiros e os salva em um vetor.
@@ -1033,28 +910,23 @@ int exercicio19(void)
     printf("Exercicio 09\n");
 
     printf("Digite 10 numero inteiros: \n");
-    int vetor[10];
+    int vetor[MAX];
     int maior, menor;
     int pMaior = 0;
     int pMenor = 0;
-    for (int i = 0; i < 10; i++)
-    {
+    for (int i = 0; i < 10; i++) {
         printf("vetor[%d]: ", i + 1);
         scanf("%d", &vetor[i]);
     }
-
     maior = vetor[0];
     menor = vetor[0];
 
-    for (int i = 1; i < 10; i++)
-    {
-        if (vetor[i] > maior)
-        {
+    for (int i = 1; i < 10; i++) {
+        if (vetor[i] > maior) {
             maior = vetor[i];
             pMaior = i;
         }
-        if (vetor[i] < menor)
-        {
+        if (vetor[i] < menor) {
             menor = vetor[i];
             pMenor = i;
         }
@@ -1066,13 +938,11 @@ int exercicio19(void)
     return 0;
 }
 
-int exercicio20(void)
-{
+int exercicio20(void) {
     return 0;
 }
 
-int exercicio21(void)
-{
+int exercicio21(void) {
     /*
      * Escreva um programa que leia todas as posicoes de uma matriz 10 x 10.
      * O programa deve entao exibir o numero de posicoes nao nulas na matriz.
@@ -1081,25 +951,20 @@ int exercicio21(void)
     putchar('\n');
     printf("Exercicio 11\n");
 
-    int matriz[100][100];
-    int pos[100];
+    int matriz[MAX][MAX];
+    int pos[MAX];
     int cont = 0;
 
     printf("Digite a dimens?o da matriz nxn: ");
     int n;
     scanf("%d", &n);
 
-    pos[n * n];
-
     preencheMatrizIntRandom(matriz, n, n, 100);
     imprimeMatrizInt(matriz, n, n);
 
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            if (matriz[i][j] != 0)
-            {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (matriz[i][j] != 0) {
                 pos[cont] = matriz[i][j];
                 cont++;
             }
@@ -1113,14 +978,12 @@ int exercicio21(void)
     return 0;
 }
 
-int exercicio22(void)
-{
+int exercicio22(void) {
     printf("\nExerc?cio 22\n");
-
-    int matriz[100][100];
 
     printf("Digite a dimensao da matriz nxn: ");
     int n;
+    int matriz[MAX][MAX];
     scanf("%d", &n);
 
     preencheMatrizIntRandom(matriz, n, n, 100);
@@ -1134,19 +997,13 @@ int exercicio22(void)
 
     // Agora que temos o maior e o menor elementos,
     // basta percorrermos um loop para detectarmos a frequencia de cada elemento
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
             if (matriz[i][j] == maior)
-            {
                 freqMaior++;
-            }
 
             if (matriz[i][j] == menor)
-            {
                 freqMenor++;
-            }
         }
     }
 
@@ -1163,15 +1020,14 @@ int exercicio22(void)
     return 0;
 }
 
-int exercicio23(void)
-{
+int exercicio23(void) {
     /*
      * Escreva um programa que le todos os elementos de uma matriz 4 x 4
      * e mostra a matriz e a sua transposta na tela.
      */
     printf("\nExercicio 23\n");
 
-    int matriz[4][4];
+    int matriz[MAX][MAX];
     preencheMatrizIntRandom(matriz, 4, 4, 100);
     printf("Matriz:\n");
     imprimeMatrizInt(matriz, 4, 4);
@@ -1183,9 +1039,7 @@ int exercicio23(void)
     return 0;
 }
 
-int exercicio24(void)
-{
-
+int exercicio24(void) {
     // Faca um programa que leia uma matriz de dimensao arbitraria definida pelo usuario
     //  a) encontre o elemento com maior frequencia na matriz
     //  b) a frequencia do maior elemento
@@ -1198,16 +1052,16 @@ int exercicio24(void)
 
     printf("\nExerc?cio 24\n");
 
-    int matriz[100][100];
-    int matrizFrequencia[100][100];
+    int matriz[MAX][MAX];
+    int matrizFrequencia[MAX][MAX];
     int l;
     int c;
     int maior_elemento;
     int menor_elemento;
-    int contagemMaiorElemento[10000] = {0};
-    int contagemMenorElemento[10000] = {0};
+    int contagemMaiorElemento[MAX] = {0};
+    int contagemMenorElemento[MAX] = {0};
     int frequenciaMaiorElemento = 0;
-    int frequenciaMenorElemento = 10000;
+    int frequenciaMenorElemento = MAX;
 
     printf("N?mero de linhas da matriz: ");
     scanf("%d", &l);
@@ -1215,28 +1069,19 @@ int exercicio24(void)
     printf("N?mero de colunas da matriz: ");
     scanf("%d", &c);
 
-    matriz[l][c];
-    matrizFrequencia[l][c];
-
     preencheMatrizIntRandom(matriz, l, c, 5);
     printf("Matriz Original:\n");
     imprimeMatrizInt(matriz, l, c);
 
     // Algoritmo para calcular a frequ?ncia de todos os elementos da matriz
-    for (int i = 0; i < l; i++)
-    {
-        for (int j = 0; j < c; j++)
-        {
+    for (int i = 0; i < l; i++) {
+        for (int j = 0; j < c; j++) {
             int elementoAtual = matriz[i][j];
             int frequencia = 0;
-            for (int k = 0; k < l; k++)
-            {
-                for (int m = 0; m < c; m++)
-                {
+            for (int k = 0; k < l; k++) {
+                for (int m = 0; m < c; m++) {
                     if (matriz[k][m] == elementoAtual)
-                    {
                         frequencia++;
-                    }
                 }
             }
             matrizFrequencia[i][j] = frequencia;
@@ -1248,14 +1093,11 @@ int exercicio24(void)
     linha(50, '*');
 
     maior_elemento = matriz[0][0];
-    for (int i = 0; i < l; i++)
-    {
-        for (int j = 0; j < c; j++)
-        {
+    for (int i = 0; i < l; i++) {
+        for (int j = 0; j < c; j++) {
             int elemento = matriz[i][j];
             contagemMaiorElemento[elemento]++;
-            if (contagemMaiorElemento[elemento] > frequenciaMaiorElemento)
-            {
+            if (contagemMaiorElemento[elemento] > frequenciaMaiorElemento) {
                 frequenciaMaiorElemento = contagemMaiorElemento[elemento];
                 maior_elemento = elemento;
             }
@@ -1263,39 +1105,30 @@ int exercicio24(void)
     }
 
     printf("O elemento com maior frequencia: %d\n", maior_elemento);
-    printf("Frequ?ncia do maior elemento: %d\n", frequenciaMaiorElemento);
-    printf("Posi??es do maior elemento:\n");
+    printf("Frequencia do maior elemento: %d\n", frequenciaMaiorElemento);
+    printf("Posiçoes do maior elemento:\n");
 
-    for (int i = 0; i < l; i++)
-    {
-        for (int j = 0; j < c; j++)
-        {
+    for (int i = 0; i < l; i++) {
+        for (int j = 0; j < c; j++) {
             if (matriz[i][j] == maior_elemento)
-            {
                 printf("(%d, %d)\n", i, j);
-            }
         }
     }
 
     linha(50, '*');
 
-    for (int i = 0; i < l; i++)
-    {
-        for (int j = 0; j < c; ++j)
-        {
+    for (int i = 0; i < l; i++) {
+        for (int j = 0; j < c; ++j) {
             int elemento = matriz[i][j];
             contagemMenorElemento[elemento]++;
         }
     }
 
     menor_elemento = matriz[0][0];
-    for (int i = 0; i < l; i++)
-    {
-        for (int j = 0; j < c; ++j)
-        {
+    for (int i = 0; i < l; i++) {
+        for (int j = 0; j < c; ++j) {
             int elemento = matriz[i][j];
-            if (contagemMenorElemento[elemento] < frequenciaMenorElemento)
-            {
+            if (contagemMenorElemento[elemento] < frequenciaMenorElemento) {
                 frequenciaMenorElemento = contagemMenorElemento[elemento];
                 menor_elemento = elemento;
             }
@@ -1306,14 +1139,10 @@ int exercicio24(void)
     printf("Frequencia do menor elemento: %d\n", frequenciaMenorElemento);
     printf("Posicoes do menor elemento:\n");
 
-    for (int i = 0; i < l; i++)
-    {
-        for (int j = 0; j < c; j++)
-        {
+    for (int i = 0; i < l; i++) {
+        for (int j = 0; j < c; j++) {
             if (matriz[i][j] == menor_elemento)
-            {
                 printf("(%d, %d)\n", i, j);
-            }
         }
     }
 
@@ -1322,8 +1151,7 @@ int exercicio24(void)
     return 0;
 }
 
-int exercicio25(void)
-{
+int exercicio25(void) {
     /*
     Faca um programa para realizar operacoes com matrizes que tenha as
     seguintes funcionalidades:
@@ -1342,17 +1170,16 @@ int exercicio25(void)
 
     int choice = 0;
 
-    int matriz1[100][100];
-    int matriz2[100][100];
-    int matrizSoma[100][100];
+    int matriz1[MAX][MAX];
+    int matriz2[MAX][MAX];
+    int matrizSoma[MAX][MAX];
 
     int l1 = 0;
     int c1 = 0;
     int l2 = 0;
     int c2 = 0;
 
-    do
-    {
+    do {
         printf("Escolha uma op??o: \n");
         printf("0 - Sair\n");
         printf("1 - Leitura de uma matriz1.\n");
@@ -1366,75 +1193,68 @@ int exercicio25(void)
         printf("Digite a op??o: ");
         scanf("%d", &choice);
 
-        switch (choice)
-        {
-        case 0:
-            printf("Saindo...\n");
-            break;
-        case 1:
-            printf("Digite o n?mero de linhas da matriz1: ");
-            scanf("%d", &l1);
-            printf("Digite o n?mero de colunas da matriz1: ");
-            scanf("%d", &c1);
+        switch (choice) {
+            case 0:
+                printf("Saindo...\n");
+                break;
+            case 1:
+                printf("Digite o n?mero de linhas da matriz1: ");
+                scanf("%d", &l1);
+                printf("Digite o n?mero de colunas da matriz1: ");
+                scanf("%d", &c1);
 
-            if (l1 > 3 || c1 > 3)
-            {
-                preencheMatrizIntRandom(matriz1, l1, c1, 100);
-            }
-            else
-            {
-                **matriz1 = (int)preencherMatrizInt(l1, c1);
-            }
-            putchar('\n');
-            break;
-        case 2:
-            printf("Digite o n?mero de linhas da matriz2: ");
-            scanf("%d", &l2);
-            printf("Digite o n?mero de colunas da matriz2: ");
-            scanf("%d", &c2);
+                if (l1 > 3 || c1 > 3) {
+                    preencheMatrizIntRandom(matriz1, l1, c1, 100);
+                } else {
+                    **matriz1 = (int) preencherMatrizInt(l1, c1);
+                }
+                putchar('\n');
+                break;
+            case 2:
+                printf("Digite o n?mero de linhas da matriz2: ");
+                scanf("%d", &l2);
+                printf("Digite o n?mero de colunas da matriz2: ");
+                scanf("%d", &c2);
 
-            if (l2 > 3 || c2 > 3)
-            {
-                preencheMatrizIntRandom(matriz2, l2, c2, 100);
-            }
-            else
-            {
-                **matriz2 = (int)preencherMatrizInt(l2, c2);
-            }
-            putchar('\n');
-            break;
-        case 3:
-            printf("\nMatriz1:\n");
-            imprimeMatrizInt(*matriz1, l1, c1);
-            printf("Matriz2:\n");
-            imprimeMatrizInt(*matriz2, l2, c2);
-            putchar('\n');
-            break;
-        case 4:
-            printf(" \nSoma das matrizes:\n");
-            somaMatrizInt(matriz1, matriz2, l1, c1, l2, c2);
-            putchar('\n');
-            break;
-        case 5:
-            printf(" \nMultiplica??o das matrizes:\n");
-            multiplicaMatrizInt(matriz1, matriz2, l1, c1, l2, c2);
-            putchar('\n');
-            break;
-        case 6:
-            printf(" \nSubtra??o das matrizes:\n");
-            subtraiMatrizInt(matriz1, matriz2, l1, c1, l2, c2);
-            putchar('\n');
-            break;
-        case 7:
-            printf(" \nTransposta da matriz1:\n");
-            matrizTranspostaInt(matriz1, l1, c1);
-            printf(" \nTransposta da matriz2:\n");
-            matrizTranspostaInt(matriz2, l2, c2);
-            putchar('\n');
-            break;
-        default:
-            printf("Op??o inv?lida. Por favor, tente novamente.\n");
-            break;
+                if (l2 > 3 || c2 > 3) {
+                    preencheMatrizIntRandom(matriz2, l2, c2, 100);
+                } else {
+                    **matriz2 = (int) preencherMatrizInt(l2, c2);
+                }
+                putchar('\n');
+                break;
+            case 3:
+                printf("\nMatriz1:\n");
+                imprimeMatrizInt(*matriz1, l1, c1);
+                printf("Matriz2:\n");
+                imprimeMatrizInt(*matriz2, l2, c2);
+                putchar('\n');
+                break;
+            case 4:
+                printf(" \nSoma das matrizes:\n");
+                somaMatrizInt(matriz1, matriz2, l1, c1, l2, c2);
+                putchar('\n');
+                break;
+            case 5:
+                printf(" \nMultiplica??o das matrizes:\n");
+                multiplicaMatrizInt(matriz1, matriz2, l1, c1, l2, c2);
+                putchar('\n');
+                break;
+            case 6:
+                printf(" \nSubtra??o das matrizes:\n");
+                subtraiMatrizInt(matriz1, matriz2, l1, c1, l2, c2);
+                putchar('\n');
+                break;
+            case 7:
+                printf(" \nTransposta da matriz1:\n");
+                matrizTranspostaInt(matriz1, l1, c1);
+                printf(" \nTransposta da matriz2:\n");
+                matrizTranspostaInt(matriz2, l2, c2);
+                putchar('\n');
+                break;
+            default:
+                printf("Op??o inv?lida. Por favor, tente novamente.\n");
+                break;
         }
 
     } while (choice != 0);
@@ -1445,8 +1265,7 @@ int exercicio25(void)
     return 0;
 }
 
-int exercicio26(void)
-{
+int exercicio26(void) {
 
     /*
     Faca um algoritmo que calcule o determinante de uma matriz quadrada de ordem nxn.
@@ -1455,10 +1274,10 @@ int exercicio26(void)
     printf("\nexercicio 26\n");
 
     int n;
+    int matriz[MAX][MAX];
     printf("Digite a dimensao da matriz: ");
     scanf("%d", &n);
 
-    int matriz[n][n];
     preencheMatrizIntRandom(matriz, n, n, 100);
 
     printf("Matriz:\n");
@@ -1467,8 +1286,7 @@ int exercicio26(void)
     return 0;
 }
 
-int exercicio27(void)
-{
+int exercicio27(void) {
 
     /*
     Faca um algoritmo que calcule a soma dos elementos da diagonal principal de uma matriz quadrada de ordem nxn.
@@ -1476,10 +1294,11 @@ int exercicio27(void)
 
     printf("\nexercicio 27\n");
     int n;
+    int matriz[MAX][MAX];
+
     printf("Digite a dimensao da matriz: ");
     scanf("%d", &n);
 
-    int matriz[n][n];
     preencheMatrizIntRandom(matriz, n, n, 100);
 
     printf("Matriz:\n");
@@ -1487,27 +1306,25 @@ int exercicio27(void)
 
     int soma = 0;
     for (int i = 0; i < n; i++)
-    {
         soma += matriz[i][i];
-    }
+
 
     printf("Soma da diagonal principal: %d\n", soma);
 
     return 0;
 }
 
-int exercicio28(void)
-{
+int exercicio28(void) {
     /*
     Faca um algoritmo que calcule a soma dos elementos da diagonal secundaria de uma matriz quadrada de ordem nxn.
     */
 
     printf("\nexercicio 28\n");
     int n;
+    int matriz[MAX][MAX];
     printf("Digite a dimensao da matriz: ");
     scanf("%d", &n);
 
-    int matriz[n][n];
     preencheMatrizIntRandom(matriz, n, n, 100);
 
     printf("Matriz:\n");
@@ -1515,17 +1332,14 @@ int exercicio28(void)
 
     int soma = 0;
     for (int i = 0; i < n; i++)
-    {
         soma += matriz[i][n - i - 1];
-    }
 
     printf("Soma da diagonal secundaria: %d\n", soma);
 
     return 0;
 }
 
-int exercicio29(void)
-{
+int exercicio29(void) {
 
     /*
     Faca um algoritmo que verifique se uma matriz e inversivel. Em seguida calcule a sua inversa.
@@ -1533,25 +1347,23 @@ int exercicio29(void)
 
     printf("\nexercicio 29\n");
     int n;
+    int matriz[MAX][MAX];
     printf("Digite a dimensao da matriz: ");
     scanf("%d", &n);
 
-    int matriz[n][n];
+
     preencheMatrizIntRandom(matriz, n, n, 100);
 
     printf("Matriz:\n");
     imprimeMatrizInt(matriz, n, n);
 
-    // verificar se uma matriz Ã© inversÃ­vel
-    int det = (int)determinanteMatrizInt(matriz, n, n);
+    // verificar se uma matriz é inversível
+    int det = (int) determinanteMatrizInt(matriz, n, n);
     if (det == 0)
-    {
         printf("Matriz nao inversivel\n");
-    }
     else
-    {
         printf("Matriz inversivel\n");
-    }
+
 
     // calcular a sua inversa
     int matrizInversa[n][n];
@@ -1563,18 +1375,17 @@ int exercicio29(void)
     return 0;
 }
 
-int exercicio30(void)
-{
+int exercicio30(void) {
     /*
-    Verifica se uma matriz Ã© triangular superior ou triangular inferior ou nenhuma das duas
+    Verifica se uma matriz é triangular superior ou triangular inferior ou nenhuma das duas
     */
 
     printf("\nexercicio 30\n");
     int n;
+    int matriz[MAX][MAX];
     printf("Digite a dimensao da matriz: ");
     scanf("%d", &n);
 
-    int matriz[n][n];
     preencheMatrizIntRandom(matriz, n, n, 100);
 
     printf("Matriz:\n");
@@ -1583,81 +1394,64 @@ int exercicio30(void)
     int triangularSuperior = 1;
     int triangularInferior = 1;
 
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < i; ++j)
-        {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < i; ++j) {
             if (matriz[i][j] != 0)
-            {
                 triangularSuperior = 0;
-            }
         }
     }
 
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = i + 1; j < n; ++j)
-        {
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; ++j) {
             if (matriz[i][j] != 0)
-            {
                 triangularInferior = 0;
-            }
         }
     }
 
     if (triangularSuperior == 1)
-    {
         printf("Matriz triangular superior\n");
-    }
     else if (triangularInferior == 1)
-    {
         printf("Matriz triangular inferior\n");
-    }
     else
-    {
         printf("Matriz nao triangular\n");
-    }
 
     return 0;
 }
 
-int exercicio31(void)
-{
+int exercicio31(void) {
     /*
     Escreva uma algoritmo que descubra qual a matriz identidade de uma matriz digitada pelo usuario
     */
 
     printf("\nexercicio 31\n");
     int n;
+    int matriz[MAX][MAX];
+    int matrizIdentidade[MAX][MAX];
+    int matrizAux[MAX][MAX];
+    int matrizIdentidade2[MAX][MAX];
+
     printf("Digite a dimensao da matriz: ");
     scanf("%d", &n);
 
-    int matriz[n][n];
-    int matrizIdentidade[n][n];
-    int matrizAux[n][n];
-    int matrizIdentidade2[n][n];
+    matrizIdentidade[n][n] = **matrizIdentidadeCalculo(n);
 
-    matrizIdentidade[n][n] = matrizIdentidadeCalculo(n);
-
-    matriz[n][n] = preenchendoMatrizInt(n, n);
+    matriz[n][n] = **preenchendoMatrizInt(n, n);
     imprimeMatrizInt(matriz, n, n);
 
-    float determinante = (float)-1 / (determinanteMatrizInt(matriz, n, n));
+    float determinante = (float) -1 / (determinanteMatrizInt(matriz, n, n));
     printf("Determinante: %.2f\n", determinante);
 
-    matrizAux[n][n] = multiplicaMatrizInt2(matriz, determinante);
+    matrizAux[n][n] = **multiplicaMatrizInt2(matriz, determinante);
     imprimeMatrizInt(matrizAux, n, n);
 
     return 0;
 }
 
-int main(void)
-{
+int main(void) {
     setlocale(LC_ALL, "Portuguese");
 
     int sair = 1;
-    do
-    {
+    do {
         int escolha;
         printf("(1) -  Exercicio 1  - Lista 3\n");
         printf("(2) -  Exercicio 2  - Lista 3\n");
@@ -1694,111 +1488,109 @@ int main(void)
 
         scanf("%d", &escolha);
 
-        switch (escolha)
-        {
-        case 1:
-            exercicio01();
-            break;
-        case 2:
-            exercicio02();
-            break;
-        case 3:
-            exercicio03();
-            break;
-        case 4:
-            exercicio04();
-            break;
-        case 5:
-            exercicio05();
-            break;
-        case 6:
-            exercicio06();
-            break;
-        case 7:
-            exercicio07();
-            break;
-        case 8:
-            exercicio08();
-            break;
-        case 9:
-            exercicio09();
-            break;
-        case 10:
-            exercicio10();
-            break;
-        case 11:
-            exercicio11();
-            break;
-        case 12:
-            exercicio12();
-            break;
-        case 13:
-            exercicio13();
-            break;
-        case 14:
-            exercicio14();
-            break;
-        case 15:
-            exercicio15();
-            break;
-        case 16:
-            exercicio16();
-            break;
-        case 17:
-            exercicio17();
-            break;
-        case 18:
-            exercicio18();
-            break;
-        case 19:
-            exercicio19();
-            break;
-        case 20:
-            exercicio20();
-            break;
-        case 21:
-            exercicio21();
-            break;
-        case 22:
-            exercicio22();
-            break;
-        case 23:
-            exercicio23();
-            break;
-        case 24:
-            exercicio24();
-            break;
-        case 25:
-            exercicio25();
-            break;
-        case 26:
-            exercicio26();
-            break;
-        case 27:
-            exercicio27();
-            break;
-        case 28:
-            exercicio28();
-            break;
-        case 29:
-            exercicio29();
-            break;
-        case 30:
-            exercicio30();
-            break;
-        case 31:
-            exercicio31();
-            break;
-        default:
-            printf("Exercicio n?o existente na lista.\n");
-            break;
+        switch (escolha) {
+            case 1:
+                exercicio01();
+                break;
+            case 2:
+                exercicio02();
+                break;
+            case 3:
+                exercicio03();
+                break;
+            case 4:
+                exercicio04();
+                break;
+            case 5:
+                exercicio05();
+                break;
+            case 6:
+                exercicio06();
+                break;
+            case 7:
+                exercicio07();
+                break;
+            case 8:
+                exercicio08();
+                break;
+            case 9:
+                exercicio09();
+                break;
+            case 10:
+                exercicio10();
+                break;
+            case 11:
+                exercicio11();
+                break;
+            case 12:
+                exercicio12();
+                break;
+            case 13:
+                exercicio13();
+                break;
+            case 14:
+                exercicio14();
+                break;
+            case 15:
+                exercicio15();
+                break;
+            case 16:
+                exercicio16();
+                break;
+            case 17:
+                exercicio17();
+                break;
+            case 18:
+                exercicio18();
+                break;
+            case 19:
+                exercicio19();
+                break;
+            case 20:
+                exercicio20();
+                break;
+            case 21:
+                exercicio21();
+                break;
+            case 22:
+                exercicio22();
+                break;
+            case 23:
+                exercicio23();
+                break;
+            case 24:
+                exercicio24();
+                break;
+            case 25:
+                exercicio25();
+                break;
+            case 26:
+                exercicio26();
+                break;
+            case 27:
+                exercicio27();
+                break;
+            case 28:
+                exercicio28();
+                break;
+            case 29:
+                exercicio29();
+                break;
+            case 30:
+                exercicio30();
+                break;
+            case 31:
+                exercicio31();
+                break;
+            default:
+                printf("Exercicio n?o existente na lista.\n");
+                break;
         }
 
         printf("Deseja sair? (1) - Sim (0) - N?o: ");
         scanf("%d", &sair);
 
-        while (sair != 0 && sair != 1)
-        {
+        while (sair != 0 && sair != 1) {
             printf("Op??o inv?lida, digite novamente!\n");
             printf("Deseja sair? (1) - Sim (0) - N?o: ");
             scanf("%d", &sair);

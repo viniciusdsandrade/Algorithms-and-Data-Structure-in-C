@@ -615,15 +615,6 @@ int main(void)
         case 15:
             exercicio15();
             break;
-        case 16:
-            exercicio16();
-            break;
-        case 17:
-            exercicio17();
-            break;
-        case 18:
-            exercicio18();
-            break;
         default:
             printf("Escolha inválida.\n");
             break;

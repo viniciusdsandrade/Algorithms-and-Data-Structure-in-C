@@ -1,60 +1,55 @@
 #include <stdio.h>
-#include <unistd.h>
 #include <locale.h>
 
-int exercicio01(void)
-{
+int exercicio01(void) {
     /*
-    1. FaÃ§a um programa que imprima um menu de 4 pratos na tela e uma quinta opÃ§Ã£o para sair do programa.
-    O programa deve imprimir o prato solicitado. O programa deve terminarquando for escolhido a quinta opÃ§Ã£o.
+    1. Faça um programa que imprima um menu de 4 pratos na tela e uma quinta opção para sair do programa.
+    O programa deve imprimir o prato solicitado. O programa deve terminarquando for escolhido a quinta opção.
     */
 
     printf("\nExe01 - Lista02\n");
 
     int opcao = 1;
 
-    do
-    {
+    do {
         int escolha;
         printf("Escolha um prato:\n");
         printf("(1) Feijoada\n");
-        printf("(2) Arroz com FeijÃ£o\n");
-        printf("(3) MacarrÃ£o\n");
+        printf("(2) Arroz com Feijão\n");
+        printf("(3) Macarrão\n");
         printf("(4) Bife\n");
         printf("(5) Sair\n");
 
         scanf("%d", &escolha);
 
-        switch (escolha)
-        {
-        case 1:
-            printf("VocÃª escolheu Feijoada\n\n");
-            break;
-        case 2:
-            printf("VocÃª escolheu Arroz com FeijÃ£o\n\n");
-            break;
-        case 3:
-            printf("VocÃª escolheu MacarrÃ£o\n\n");
-            break;
-        case 4:
-            printf("VocÃª escolheu Bife\n\n");
-            break;
-        case 5:
-            printf("Finalizando o programa!\n\n");
-            opcao = 2;
-        default:
-            printf("Opcao invÃ¡lida!\n\n");
-            break;
+        switch (escolha) {
+            case 1:
+                printf("Você escolheu Feijoada\n\n");
+                break;
+            case 2:
+                printf("Você escolheu Arroz com Feijão\n\n");
+                break;
+            case 3:
+                printf("Você escolheu Macarrão\n\n");
+                break;
+            case 4:
+                printf("Você escolheu Bife\n\n");
+                break;
+            case 5:
+                printf("Finalizando o programa!\n\n");
+                opcao = 2;
+            default:
+                printf("Opcao inválida!\n\n");
+                break;
         }
 
         printf("Gostaria de escolhe outro prato?\n");
-        printf("Deseja sair? (1) - Sim (0) - NÃ£o: ");
+        printf("Deseja sair? (1) - Sim (0) - Não: ");
         scanf("%d", &opcao);
 
-        while (opcao != 0 && opcao != 1)
-        {
-            printf("OpÃ§Ã£o invÃ¡lida, digite novamente!\n");
-            printf("Deseja sair? (1) - Sim (0) - NÃ£o: ");
+        while (opcao != 0 && opcao != 1) {
+            printf("Opção inválida, digite novamente!\n");
+            printf("Deseja sair? (1) - Sim (0) - Não: ");
             scanf("%d", &opcao);
         }
     } while (opcao != 1);
@@ -62,86 +57,88 @@ int exercicio01(void)
 
     return 0;
 }
-int exercicio02(void)
-{
+
+int exercicio02(void) {
     /*
-    2. FaÃ§a um programa que lÃª dois nÃºmeros inteiros positivos a e b.
-    Utilizando laÃ§os, o seu programa deve calcular e imprimir o valor a^b.
+    2. Faça um programa que lê dois números inteiros positivos a e b.
+    Utilizando laços, o seu programa deve calcular e imprimir o valor a^b.
     */
 
     printf("\nExe02 - Lista02\n");
 
     int a, b, resultado = 1;
+
     printf("Para calcular a^b, digite o valor de a e b:\n");
+
     printf("a = ");
     scanf("%d", &a);
+
     printf("b = ");
     scanf("%d", &b);
 
     for (int i = 0; i < b; i++)
-    {
         resultado *= a;
-    }
-    printf("O resultado de %d^%d Ã©: %d\n\n", a, b, resultado);
+
+    printf("O resultado de %d^%d é: %d\n\n", a, b, resultado);
 
     return 0;
 }
-int exercicio03(void)
-{
+
+int exercicio03(void) {
     /*
-     3.FaÃ§a um programa que lÃª um nÃºmerone que compute e imprima o valor do somatÃ³rio de 1 atÃ© n.
-    OBS: NÃ£o use formulas como a da soma de uma P.A.
+     3.Faça um programa que lê um númerone que compute e imprima o valor do somatório de 1 até n.
+    OBS: Não use formulas como a da soma de uma P.A.
      */
 
     printf("\nExe03 - Lista02\n");
 
     int n, resultado = 0;
-    printf("Para calcular o somatorio de 1 atÃ© n, digite o valor de n:\n");
+
+    printf("Para calcular o somatorio de 1 até n, digite o valor de n:\n");
     scanf("%d", &n);
 
     for (int i = 1; i <= n; i++)
-    {
         resultado += i;
-    }
 
-    printf("O resultado do somatorio de 1 atÃ© %d Ã©: %d\n\n", n, resultado);
+    printf("O resultado do somatorio de 1 até %d é: %d\n\n", n, resultado);
     return 0;
 }
-int exercicio04(void)
-{
+
+int exercicio04(void) {
+
     /*
-    4. No exemplo dos nÃºmeros primos visto em aula, nÃ£o precisamos testar todos os nÃºmeros
-    entre 2, . . . , (nâˆ’1), para verificar se dividem ou nÃ£o n. Basta testarmos atÃ© n/2. Por que?
-    Qual o maior divisor possÃ­vel de n? Na verdade basta testarmos os nÃºmeros 2, . . . ,pn.
+    4. No exemplo dos números primos visto em aula, não precisamos testar todos os números
+    entre 2, . . . , (n?1), para verificar se dividem ou não n. Basta testarmos até n/2. Por que?
+    Qual o maior divisor possível de n? Na verdade basta testarmos os números 2, . . . ,pn.
     Por que?
     */
 
     printf("\nExe04 - Lista02\n");
     return 0;
 }
-int exercicio05(void)
-{
+
+int exercicio05(void) {
     /*
-        5. Considere o programa para determinar se uma sequÃªncia de n nÃºmeros digitados pelo
-        usuÃ¡rio estÃ¡ ordenada ou nÃ£o. FaÃ§a o programa usando uma variÃ¡vel contadora.
+        5. Considere o programa para determinar se uma sequência de n números digitados pelo
+        usuário está ordenada ou não. Faça o programa usando uma variável contadora.
     */
 
-    int qtdNumber, anterior, atual;
-    int ordenado = 1;
-    printf("Digite a quantidade de nÃºmeros que vocÃª deseja digitar:\n");
+    int qtdNumber, anterior, atual, ordenado = 1;
+
+    printf("Digite a quantidade de números que você deseja digitar:\n");
     scanf("%d", &qtdNumber);
 
-    printf("1Âº nÃºmero: ");
+    printf("1º número: ");
     scanf("%d", &anterior);
 
-    for (int i = 2; i < qtdNumber + 1; i++)
-    {
-        printf("%d nÃºmero: ", i);
+    for (int i = 2; i < qtdNumber + 1; i++) {
+
+        printf("%d número: ", i);
         scanf("%d", &atual);
+
         if (atual < anterior)
-        {
             ordenado = 0;
-        }
+
         anterior = atual;
     }
     if (ordenado)
@@ -152,11 +149,10 @@ int exercicio05(void)
     return 0;
 }
 
-int exercicio06(void)
-{
+int exercicio06(void) {
     /*
-    6. FaÃ§a um programa em C que calcule o mÃ¡ximo divisor comum de dois nÃºmeros m, n. VocÃª
-    deve utilizar a seguinte regra do cÃ¡lculo do mdc com m # n
+    6. Faça um programa em C que calcule o máximo divisor comum de dois números m, n. Você
+    deve utilizar a seguinte regra do cálculo do mdc com m # n
     mdc(m, n) = m se n = 0
     mdc(m, n) = mdc(n,m%n) se n > 0
   */
@@ -164,26 +160,27 @@ int exercicio06(void)
     printf("\nExe06 - Lista02\n");
 
     int m, n, resto;
+
     printf("Digite o valor de m: ");
     scanf("%d", &m);
+
     printf("Digite o valor de n: ");
     scanf("%d", &n);
 
-    while (n != 0)
-    {
+    while (n != 0) {
         resto = m % n;
         m = n;
         n = resto;
     }
     return 0;
 }
-int exercicio07(void)
-{
+
+int exercicio07(void) {
     /*
-    7. Escreva um programa que lÃª um nÃºmero n,
-    e entÃ£o imprime :
-    1- menor nÃºmero primo que Ã© maior ou igual n,
-    2- maior primo que Ã© menor ou igual a n.
+    7. Escreva um programa que lê um número n,
+    e então imprime :
+    1- menor número primo que é maior ou igual n,
+    2- maior primo que é menor ou igual a n.
     */
 
     printf("\nExe07 - Lista02\n");
@@ -194,79 +191,63 @@ int exercicio07(void)
     printf("Digite um numero n:\n");
     scanf("%d", &n);
 
-    // verificar se o numero digitado 'n' Ã© primo
-    for (int i = 1; i <= n; i++)
-    {
+    // verificar se o numero digitado 'n' é primo
+    for (int i = 1; i <= n; i++) {
+
         if (n % i == 0)
-        {
             isNPrime++;
-        }
+
         if (isNPrime > 2)
-        {
-            break; // Nao Ã© primo
-        }
+            break; // Nao é primo
     }
 
-    if (isNPrime == 2)
-    {
-        printf("O numero %d Ã© primo!\n", n);
-        printf("O menor numero primo que Ã© maior ou igual a %d Ã©: %d\n", n, n);
-        printf("O maior numero primo que Ã© menor ou igual a %d Ã©: %d\n", n, n);
-    }
-    else
-    {
-        printf("O numero %d nÃ£o Ã© primo!\n\n", n);
+    if (isNPrime == 2) {
+        printf("O numero %d é primo!\n", n);
+        printf("O menor numero primo que é maior ou igual a %d é: %d\n", n, n);
+        printf("O maior numero primo que é menor ou igual a %d é: %d\n", n, n);
+    } else {
+        printf("O numero %d não é primo!\n\n", n);
 
-        // verificar o menor numero primo que Ã© maior ou igual a 'n'
-        for (int i = n + 1; i <= 2 * n; i++) // LaÃ§o que percorrer n atÃ© o seu dobro, que com certeza nÃ£o serÃ¡ primo
+        // verificar o menor numero primo que é maior ou igual a 'n'
+        for (int i = n + 1; i <= 2 * n; i++) // Laço que percorrer n até o seu dobro, que com certeza não será primo
         {
-            // Aqui vou verificar a partir de n+1 atÃ© o dobro de n se o numero Ã© primo
-            menorPrimoMaiorQueN = 0; // reiniciar a contagem para cada nÃºmero i
-            for (int j = 1; j <= i; j++)
-            {
+            // Aqui vou verificar a partir de n+1 até o dobro de n se o numero é primo
+            menorPrimoMaiorQueN = 0; // reiniciar a contagem para cada número i
+            for (int j = 1; j <= i; j++) {
+
                 if (i % j == 0)
-                {
                     menorPrimoMaiorQueN++;
-                }
+
                 if (menorPrimoMaiorQueN > 2)
-                {
-                    break; // Nao Ã© primo
-                }
+                    break; // Nao é primo
             }
             if (menorPrimoMaiorQueN == 2)
-            {
-                printf("O menor numero primo que Ã© maior ou igual a %d Ã©: %d\n", n, i);
-            }
+                printf("O menor numero primo que é maior ou igual a %d é: %d\n", n, i);
         }
-        // verificar o maior numero primo que Ã© menor ou igual a 'n'
-        for (int k = n - 1; k >= 1; k--)
-        {
-            maiorPrimoMenorQueN = 0; // reiniciar a contagem para cada nÃºmero k
-            for (int j = 1; j <= k; j++)
-            {
+        // verificar o maior numero primo que é menor ou igual a 'n'
+        for (int k = n - 1; k >= 1; k--) {
+            maiorPrimoMenorQueN = 0; // reiniciar a contagem para cada número k
+            for (int j = 1; j <= k; j++) {
+
                 if (k % j == 0)
-                {
                     maiorPrimoMenorQueN++;
-                }
+
                 if (maiorPrimoMenorQueN > 2)
-                {
-                    break; // Nao Ã© primo
-                }
+                    break; // Nao é primo
             }
-            if (maiorPrimoMenorQueN == 2)
-            {
-                printf("O maior numero primo que Ã© menor ou igual a %d Ã©: %d\n", n, k);
+            if (maiorPrimoMenorQueN == 2) {
+                printf("O maior numero primo que é menor ou igual a %d é: %d\n", n, k);
                 break;
             }
         }
     }
     return 0;
 }
-int exercicio08(void)
-{
+
+int exercicio08(void) {
     /*
-    8. O que serÃ¡ impresso pelo programa abaixo? Assuma que o valor de D na declaraÃ§Ã£o de x
-    Ã© o valor do Ãºltimo dÃ­gito do seu RA.
+    8. O que será impresso pelo programa abaixo? Assuma que o valor de D na declaração de x
+    é o valor do último dígito do seu RA.
 
     RA: 2760482311026
     */
@@ -274,14 +255,12 @@ int exercicio08(void)
     printf("\nExe08 - Lista02\n");
 
     int x = 5 + 6, y = 0;
-    do
-    {
+    do {
         y = (x % 2) + 10 * y;
         x = x / 2;
         printf("x = %d, y = %d\n", x, y);
     } while (x != 0);
-    while (y != 0)
-    {
+    while (y != 0) {
         x = y % 100;
         y = y / 10;
         printf("x = %d, y = %d\n", x, y);
@@ -289,12 +268,11 @@ int exercicio08(void)
     return 0;
 }
 
-int exercicio09(void)
-{
+int exercicio09(void) {
     /*
-    9. Escreva um programa para ler n de nÃºmeros do tipo float e imprimir quantos deles estÃ£o
+    9. Escreva um programa para ler n de números do tipo float e imprimir quantos deles estão
     nos seguintes intervalos: [0 . . . 25], [26 . . . 50], [51 . . . 75] e [76 . . . 100]. Por exemplo, para
-    n = 10 e os seguintes dez nÃºmeros 2.0, 61.5,âˆ’1.0, 0.0, 88.7, 94.5, 55.0, 3.1415, 25.5, 75.0,
+    n = 10 e os seguintes dez números 2.0, 61.5,?1.0, 0.0, 88.7, 94.5, 55.0, 3.1415, 25.5, 75.0,
     seu programa deve imprimir:
     Intervalo [0..25]: 3
     Intervalo [26..50]: 0
@@ -310,28 +288,20 @@ int exercicio09(void)
 
     int qtdIntervalo1 = 0, qtdIntervalo2 = 0, qtdIntervalo3 = 0, qtdIntervalo4 = 0;
 
-    for (int i = 1; i <= n; i++)
-    {
+    for (int i = 1; i <= n; i++) {
         float number;
-        printf("Digite o %dÂº numero do tipo float: ", i);
+        printf("Digite o %dº numero do tipo float: ", i);
         scanf("%f", &number);
 
         if (number >= 0 && number <= 25)
-        {
             qtdIntervalo1++;
-        }
         else if (number > 25 && number <= 50)
-        {
             qtdIntervalo2++;
-        }
         else if (number > 50 && number <= 75)
-        {
             qtdIntervalo3++;
-        }
         else if (number > 75 && number <= 100)
-        {
             qtdIntervalo4++;
-        }
+
     }
 
     printf("\n");
@@ -343,99 +313,95 @@ int exercicio09(void)
 
     return 0;
 }
-int exercicio10(void)
-{
+
+int exercicio10(void) {
     /*
-    10. Escreva um programa em C para computar a raiz quadrada de um nÃºmero positivo. Use
-    a idÃ©ia abaixo, baseada no mÃ©todo de aproximaÃ§Ãµes sucessivas de Newton. O programa
-    deverÃ¡ imprimir o valor da vigÃ©sima aproximaÃ§Ã£o.
-    Seja Y um nÃºmero, sua raiz quadrada Ã© raiz da equaÃ§Ã£o
-    f(x) = x^2 âˆ’ Y.
-    A primeira aproximaÃ§Ã£o Ã© x1 = Y/2. A (n + 1)-Ã©sima aproximaÃ§Ã£o Ã©
-    xn+1 = xn âˆ’ f(xn)/f'(xn)
+    10. Escreva um programa em C para computar a raiz quadrada de um número positivo. Use
+    a idéia abaixo, baseada no método de aproximações sucessivas de Newton. O programa
+    deverá imprimir o valor da vigésima aproximação.
+    Seja Y um número, sua raiz quadrada é raiz da equação
+    f(x) = x^2 ? Y.
+    A primeira aproximação é x1 = Y/2. A (n + 1)-ésima aproximação é
+    xn+1 = xn ? f(xn)/f'(xn)
     */
 
     printf("\nExe10 - Lista02\n");
 
     double Y, x;
 
-    printf("Digite um nÃºmero positivo: ");
+    printf("Digite um número positivo: ");
     scanf("%lf", &Y);
 
-    if (Y < 0)
-    {
-        printf("Erro: o nÃºmero digitado Ã© negativo.\n");
-        return 1;
+    if (Y < 0) {
+        printf("Erro: o número digitado é negativo.\n");
+        return 0;
     }
 
     x = Y / 2.0;
 
     for (int i = 0; i < 20; i++)
-    {
         x = x - ((x * x - Y) / (2.0 * x));
-    }
 
-    printf("A raiz quadrada de %lf Ã© %lf\n", Y, x);
+
+    printf("A raiz quadrada de %lf é %lf\n", Y, x);
 
     return 0;
 }
-int exercicio11(void)
-{
+
+int exercicio11(void) {
     // Ctrl + k + c = Comentar
     // Ctrl + k + u = Descomentar
 
     // /*
-    // Aponte os erros de implementaÃ§Ã£o existentes no cÃ³digo em C, a seguir, desenvolvido com o intuito
-    // de calcular e imprimir o fatorial de um nÃºmero inteiro nÃ£o-negativo n.
+    // Aponte os erros de implementação existentes no código em C, a seguir, desenvolvido com o intuito
+    // de calcular e imprimir o fatorial de um número inteiro não-negativo n.
     // */
 
-    // // 1Âº erro = NÃ£o pede para o usuÃ¡rio digitar o valor de n.
+    // // 1º erro = Não pede para o usuário digitar o valor de n.
     // int valor;
     // scanf("%d", &valor);
 
-    // // 2Âº erro = tipo do valor digitado nÃ£o Ã© o mesmo do tipo da variÃ¡vel fatorial. Embora nÃ£o ocorre problemas de compilaÃ§Ã£o, nÃ£o Ã© considerado boas prÃ¡ticas. Visto que pode haver perda de precisÃ£o das informaÃ§Ãµes.
+    // // 2º erro = tipo do valor digitado não é o mesmo do tipo da variável fatorial. Embora não ocorre problemas de compilação, não é considerado boas práticas. Visto que pode haver perda de precisão das informações.
     // int n = valor;
     // float fatorial = 1;
 
-    // if (n > -1)   // 3Âº erro = block de identacao do if inexiste.
+    // if (n > -1)   // 3º erro = block de identacao do if inexiste.
     //     while (n > 0)
     //     {
     //         fatorial *= n;
     //         n--;
     //     }
-    //     printf("O fatorial de %d Ã© %d\n", valor, fatorial); // 4Âº erro = fatorial Ã© do tipo float mas a mascara de impressÃ£o Ã© %d, que Ã© do tipo int
+    //     printf("O fatorial de %d é %d\n", valor, fatorial); // 4º erro = fatorial é do tipo float mas a mascara de impressão é %d, que é do tipo int
     // else
-    //     printf("O fatorial de %d nÃ£o existe\n", valor);
+    //     printf("O fatorial de %d não existe\n", valor);
     // return 0;
 
-    // Uma possÃ­vel implementaÃ§Ã£o correta do cÃ³digo seria:
-    
+    // Uma possível implementação correta do código seria:
+
     printf("\nExe11 - Lista02\n");
-    
+
     int n, fatorial = 1;
 
-    printf("Digite um nÃºmero inteiro: ");
+    printf("Digite um número inteiro: ");
     scanf("%d", &n);
 
     // Calcula o fatorial
     for (int i = 1; i <= n; i++)
-    {
         fatorial *= i;
-    }
 
-    printf("O fatorial de %d Ã© %d\n", n, fatorial);
+    printf("O fatorial de %d é %d\n", n, fatorial);
 
     return 0;
 }
-int exercicio12(void)
-{
+
+int exercicio12(void) {
     /*
-   12. Implemente um programa que compute todas as soluÃ§Ãµes de equaÃ§Ãµes do tipo
+   12. Implemente um programa que compute todas as soluções de equações do tipo
    x1 + x2 + x3 + x4 = C
-   onde todas as variÃ¡veis x1, . . . ,x4 sÃ£o inteiras nÃ£o negativas e C > 0 Ã© uma constante
-   inteira. Melhore o seu programa com as seguinte idÃ©ias.
-   â€¢ Fixado x1, os valores possÃ­veis para x2 sÃ£o 0, . . . ,C âˆ’ x1. Fixado x1 e x2, os valores
-   possÃ­veis para x3 sÃ£o 0, . . . ,C âˆ’x1 âˆ’x2. Fixados x1, x2, e x3, entÃ£o x4 Ã© unicamente
+   onde todas as variáveis x1, . . . ,x4 são inteiras não negativas e C > 0 é uma constante
+   inteira. Melhore o seu programa com as seguinte idéias.
+   ? Fixado x1, os valores possíveis para x2 são 0, . . . ,C ? x1. Fixado x1 e x2, os valores
+   possíveis para x3 são 0, . . . ,C ?x1 ?x2. Fixados x1, x2, e x3, então x4 é unicamente
    determinado.
    */
 
@@ -443,60 +409,56 @@ int exercicio12(void)
 
     int C;
     int cont = 0;
-    printf("Digite um nÃºmero inteiro: ");
+    printf("Digite um número inteiro: ");
     scanf("%d", &C);
 
-    // SoluÃ§Ã£o 1
-    for (int x1 = 0; x1 <= C; x1++)
-    {
-        // SoluÃ§Ã£o 2
-        for (int x2 = 0; x2 <= C - x1; x2++)
-        {
-            // SoluÃ§Ã£o 3
-            for (int x3 = 0; x3 <= C - x1 - x2; x3++)
-            {
-                // SoluÃ§Ã£o 4
+    // Solução 1
+    for (int x1 = 0; x1 <= C; x1++) {
+        // Solução 2
+        for (int x2 = 0; x2 <= C - x1; x2++) {
+            // Solução 3
+            for (int x3 = 0; x3 <= C - x1 - x2; x3++) {
+                // Solução 4
                 int x4 = C - x1 - x2 - x3;
                 printf("%d + %d + %d + %d = %d\n", x1, x2, x3, x4, C);
                 cont++;
             }
         }
     }
-    printf("O numero total de solucoes para C = %d Ã© %d \n", C, cont);
+    printf("O numero total de solucoes para C = %d é %d \n", C, cont);
     printf("\n");
     return 0;
 }
-int exercicio13(void)
-{
+
+int exercicio13(void) {
     /*
-    13. Na transformaÃ§Ã£o decimal para binÃ¡rio, modifique o programa para que este obtenha o
-    valor binÃ¡rio em uma variÃ¡vel inteira, ao invÃ©s de imprimir os dÃ­gitos um por linha na
-    tela. Dica: Suponha n = 7 (111 em binÃ¡rio), e vocÃª jÃ¡ computou x = 11, para "inserir"o
-    Ãºltimo dÃ­gito 1 em x vocÃª deve fazer x = x + 100. Ou seja, vocÃª precisa de uma variÃ¡vel
-    acumuladora que armazena as potÃªncias de 10: 1, 10, 100, 1000 etc.
+    13. Na transformação decimal para binário, modifique o programa para que este obtenha o
+    valor binário em uma variável inteira, ao invés de imprimir os dígitos um por linha na
+    tela. Dica: Suponha n = 7 (111 em binário), e você já computou x = 11, para "inserir"o
+    último dígito 1 em x você deve fazer x = x + 100. Ou seja, você precisa de uma variável
+    acumuladora que armazena as potências de 10: 1, 10, 100, 1000 etc.
     */
 
     printf("\nExe13 - Lista02\n");
 
-    printf("Digite um nÃºmero inteiro que vocÃª deseja transformar para binÃ¡rio: ");
+    printf("Digite um número inteiro que você deseja transformar para binário: ");
     int n;
     scanf("%d", &n);
 
-    int x = 0; // variÃ¡vel que vai armazenar o nÃºmero em binÃ¡rio
+    int x = 0; // variável que vai armazenar o número em binário
     int potencia = 1;
-    while (n > 0)
-    {
-        x = x + (n % 2) * potencia; // o resto da divisÃ£o por 2 vai ser 1(quando for Ã­mpar) ou 0(quando for par)
-        n = n / 2;                  // como n Ã© inteiro, a divisÃ£o por sempre vai ser a parte inteira da divisao
+    while (n > 0) {
+        x = x + (n % 2) * potencia; // o resto da divisão por 2 vai ser 1(quando for ímpar) ou 0(quando for par)
+        n = n / 2;                  // como n é inteiro, a divisão por sempre vai ser a parte inteira da divisao
         potencia = potencia * 10;
     }
-    printf("O nÃºmero em binÃ¡rio Ã©: %d\n", x);
+    printf("O número em binário é: %d\n", x);
     return 0;
 }
-int exercicio14(void)
-{
+
+int exercicio14(void) {
     /*
-    14. FaÃ§a um programa que leia um inteiro n (no mÃ¡ximo 50) e imprima uma saÃ­da da forma:
+    14. Faça um programa que leia um inteiro n (no máximo 50) e imprima uma saída da forma:
     1
         2
             3
@@ -509,29 +471,23 @@ int exercicio14(void)
     printf("\nExe14 - Lista02\n");
 
     int n;
-    printf("Digite um nÃºmero n: ");
+    printf("Digite um número n: ");
     scanf("%d", &n);
 
-    for (int i = 1; (i > 50) ? i <= 50 : i <= n; i++)
-    {
-        for (int j = 1; j <= n; j++)
-        {
+    for (int i = 1; (i > 50) ? i <= 50 : i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
             if (i == j)
-            {
                 printf("%d", i);
-            }
             else
-            {
                 printf(" ");
-            }
         }
         printf("\n");
     }
 }
-int exercicio15(void)
-{
+
+int exercicio15(void) {
     /*
-    15. FaÃ§a um programa que leia um nÃºmero n e imprima n linhas na tela com o seguinte
+    15. Faça um programa que leia um número n e imprima n linhas na tela com o seguinte
     formato (exemplo se n = 6):
 
     1
@@ -545,26 +501,24 @@ int exercicio15(void)
     printf("\nExe15 - Lista02\n");
 
     int n;
-    printf("Digite um nÃºmero n:\n");
+    printf("Digite um número n:\n");
     scanf("%d", &n);
 
     printf("\n");
-    for (int i = 1; i <= n; i++)
-    {
+    for (int i = 1; i <= n; i++) {
         for (int j = 1; j <= i; j++)
-        {
             printf("%d ", j);
-        }
+
         printf("\n");
     }
     printf("\n");
 
     return 0;
 }
-int exercicio16(void)
-{
+
+int exercicio16(void) {
     /*
-    16. FaÃ§a um programa que leia um nÃºmero n e imprima n linhas na tela com o seguinte
+    16. Faça um programa que leia um número n e imprima n linhas na tela com o seguinte
     formato (exemplo se n = 6):
     + * * * * *
     * + * * * *
@@ -577,36 +531,30 @@ int exercicio16(void)
     printf("\nExe16 - Lista02\n");
 
     int n;
-    printf("Digite um nÃºmero n:\n");
+    printf("Digite um número n:\n");
     scanf("%d", &n);
 
-    for (int i = 1; i <= n; i++)
-    {
-        for (int j = 1; j <= n; j++)
-        {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
             if (i == j)
-            {
                 printf("+ ");
-            }
             else
-            {
                 printf("* ");
-            }
         }
         printf("\n");
     }
 }
-int exercicio17(void)
-{
+
+int exercicio17(void) {
     /*
-        17. Um jogador da Mega-Sena Ã© supersticioso, e sÃ³ faz jogos em que
-        o primeiro Ã© par,
-        o segundo  Ã© Ã­mpar,
-        o terceiro Ã© par,
-        o quarto   Ã© Ã­mpar,
-        o quinto   Ã© par e
-        o sexto    Ã© Ã­mpar.
-        FaÃ§a um programa que imprima todas as possibilidades de jogos
+        17. Um jogador da Mega-Sena é supersticioso, e só faz jogos em que
+        o primeiro é par,
+        o segundo  é ímpar,
+        o terceiro é par,
+        o quarto   é ímpar,
+        o quinto   é par e
+        o sexto    é ímpar.
+        Faça um programa que imprima todas as possibilidades de jogos
         que este jogador supersticioso pode jogar.
     */
 
@@ -614,18 +562,12 @@ int exercicio17(void)
 
     double cont = 0;
 
-    for (int par1 = 2; par1 <= 54; par1 += 2)
-    {
-        for (int impar1 = par1 + 1; impar1 <= 55; impar1 += 2)
-        {
-            for (int par2 = 4; impar1 + 1 <= 56; par2 += 2)
-            {
-                for (int impar2 = par2 + 1; impar2 <= 57; impar2 += 2)
-                {
-                    for (int par3 = impar2 + 1; par3 <= 58; par3 += 2)
-                    {
-                        for (int impar3 = par3 + 1; impar3 <= 59; impar3 += 2)
-                        {
+    for (int par1 = 2; par1 <= 54; par1 += 2) {
+        for (int impar1 = par1 + 1; impar1 <= 55; impar1 += 2) {
+            for (int par2 = 4; impar1 + 1 <= 56; par2 += 2) {
+                for (int impar2 = par2 + 1; impar2 <= 57; impar2 += 2) {
+                    for (int par3 = impar2 + 1; par3 <= 58; par3 += 2) {
+                        for (int impar3 = par3 + 1; impar3 <= 59; impar3 += 2) {
                             cont++;
                             printf("%02d %02d %02d %02d %02d %02d\n", par1, impar1, par2, impar2, par3, impar3);
                             // usleep(500000);
@@ -636,26 +578,19 @@ int exercicio17(void)
         }
     }
 
-    // imprime o nÃºmero total de jogos possÃ­veis
+    // imprime o número total de jogos possíveis
     printf("Numero total de jogos: %.0lf", cont);
 }
 
-int exercicio18(void)
-{
+int exercicio18(void) {
     printf("\nExe18 - Lista02\n");
     double cont = 0;
-    for (int i = 1; i <= 55; i++)
-    {
-        for (int j = i + 1; j <= 56; j++)
-        {
-            for (int k = j + 1; k <= 57; k++)
-            {
-                for (int l = k + 1; l <= 58; l++)
-                {
-                    for (int m = l + 1; m <= 59; m++)
-                    {
-                        for (int n = m + 1; n <= 60; n++)
-                        {
+    for (int i = 1; i <= 55; i++) {
+        for (int j = i + 1; j <= 56; j++) {
+            for (int k = j + 1; k <= 57; k++) {
+                for (int l = k + 1; l <= 58; l++) {
+                    for (int m = l + 1; m <= 59; m++) {
+                        for (int n = m + 1; n <= 60; n++) {
                             cont++;
                             // printf("%02d %02d %02d %02d %02d %02d\n", i, j, k, l, m, n);
                         }
@@ -668,109 +603,91 @@ int exercicio18(void)
     return 0;
 }
 
-int exercicio21(void)
-{
+int exercicio21(void) {
 
     /*
-    FaÃ§a um programa que imprima todos os nÃºmeros primos entre 1 e um numero n digitado pelo usuario
+    Faça um programa que imprima todos os números primos entre 1 e um numero n digitado pelo usuario
     */
 
     int n;
     printf("Digite um numero natural: \n");
     scanf("%d", &n);
 
-    for (int i = 1; i <= n; i++)
-    {
+    for (int i = 1; i <= n; i++) {
         int isPrime = 0;
-        for (int j = 1; j <= i; j++)
-        {
+        for (int j = 1; j <= i; j++) {
+
             if (i % j == 0)
-            {
                 isPrime++;
-            }
+
             if (isPrime > 2)
-            {
-                break; // significa que o numero nÃ£o Ã© primo
-            }
+                break; // significa que o numero não é primo
         }
         if (isPrime == 2)
-        {
             printf("%d \n", i);
-        }
     }
 
     return 0;
 }
 
-int exercicio23(void)
-{
+int exercicio23(void) {
     /*
-    FaÃ§a um programa que que o usuario iria digitar um numero e descubra todos os primos entre 1 e esse numero
+    Faça um programa que que o usuario iria digitar um numero e descubra todos os primos entre 1 e esse numero
 
-    a) Lista de todos os primos nesse intervalo numÃ©rico
-    b) Exiba o maior nÃºmero primo
-    c) Exiba o menor nÃºmero primo
+    a) Lista de todos os primos nesse intervalo numérico
+    b) Exiba o maior número primo
+    c) Exiba o menor número primo
     */
 
     int n, i, j, count = 0, max_prime = 0, min_prime = 0;
-    printf("Digite um nÃºmero: ");
+    printf("Digite um número: ");
     scanf("%d", &n);
 
-    // iterando atravÃ©s dos nÃºmeros de 1 atÃ© n
-    for (i = 1; i <= n; i++)
-    {
+    // iterando através dos números de 1 até n
+    for (i = 1; i <= n; i++) {
         int is_prime = 0;
-        // verificando se o nÃºmero atual Ã© primo
-        for (j = 1; j <= i; j++)
-        {
+        // verificando se o número atual é primo
+        for (j = 1; j <= i; j++) {
+
             if (i % j == 0)
-            {
                 is_prime++;
-            }
+
             if (is_prime > 2)
-            {
                 break;
-            }
         }
 
-        if (is_prime == 2)
-        {
-            // se o nÃºmero Ã© primo, imprimir na tela e contar
+        if (is_prime == 2) {
+            // se o número é primo, imprimir na tela e contar
             printf("%d \n", i);
             count++;
 
-            // se Ã© o primeiro primo encontrado, definir como mÃ­nimo e mÃ¡ximo
-            if (count == 1)
-            {
+            // se é o primeiro primo encontrado, definir como mínimo e máximo
+            if (count == 1) {
                 min_prime = i;
                 max_prime = i;
             }
-            // caso contrÃ¡rio, atualizar o mÃ­nimo e o mÃ¡ximo, se necessÃ¡rio
-            else
-            {
+                // caso contrário, atualizar o mínimo e o máximo, se necessário
+            else {
+
                 if (i > max_prime)
-                {
                     max_prime = i;
-                }
+
                 if (i < min_prime)
-                {
                     min_prime = i;
-                }
             }
         }
     }
     // imprimir o maior e o menor primo encontrados
-    printf("\nMaior nÃºmero primo: %d\n", max_prime);
-    printf("Menor nÃºmero primo: %d\n", min_prime);
+    printf("\nMaior número primo: %d\n", max_prime);
+    printf("Menor número primo: %d\n", min_prime);
 
     return 0;
 }
 
-int exercicio24(void)
-{
+int exercicio24(void) {
 
     /*
- FaÃ§a um programa que leia um nÃºmero n e imprima n linhas na tela com o seguinte
+ Faça um programa que leia um número n e imprima n linhas na tela com o seguinte
  formato (exemplo se n = 3):
 
  A
@@ -780,24 +697,20 @@ int exercicio24(void)
  */
 
     int n;
-    printf("Digite um nÃºmero n:\n");
+    printf("Digite um número n:\n");
     scanf("%d", &n);
 
     printf("\n");
-    for (int i = 1; i <= n; i++)
-    {
-        for (int j = 1; j <= i; j++)
-        {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
             printf("%c ", i + 64);
         }
         printf("\n");
     }
     printf("\n");
 
-    for (int i = 1; i <= n; i++)
-    {
-        for (int j = 1; j <= i; j++)
-        {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
             printf("%c ", i + 65);
         }
         printf("\n");
@@ -806,90 +719,79 @@ int exercicio24(void)
     return 0;
 }
 
-int exercicio25(void)
-{
+int exercicio25(void) {
 
     /*
-      Escreva um programa que solicite um numero ao usuÃ¡rio atÃ© que o valor deste esteja entre os  valores 1 e 100
+      Escreva um programa que solicite um numero ao usuário até que o valor deste esteja entre os  valores 1 e 100
     */
 
     int n;
     printf("Digite um numero inteiro: \n");
     scanf("%d", &n);
 
-    if (n >= 1 && n <= 100)
-    {
-        printf("VocÃª digitou um numero entre 0 e 100\n");
-    }
-    else
-    {
-        do
-        {
+    if (n >= 1 && n <= 100) {
+        printf("Você digitou um numero entre 0 e 100\n");
+    } else {
+        do {
             printf("Digite um numero inteiro: \n");
             scanf("%d", &n);
 
         } while (n <= 1 || n >= 100);
-        printf("VocÃª digitou um numero entre 0 e 100\n");
+        printf("Você digitou um numero entre 0 e 100\n");
     }
     return 0;
 }
 
-int exercicio26(void)
-{
+int exercicio26(void) {
     /*
-    Escreva um programa em C que escreva na tela toda a tabela ASCII(0, 255chars), escrevendo em cada linha o cÃ³digo ASCII e o caractere correspondente.
+    Escreva um programa em C que escreva na tela toda a tabela ASCII(0, 255chars), escrevendo em cada linha o código ASCII e o caractere correspondente.
     */
     int i;
     for (i = 0; i <= 255; i++)
-    {
-        printf("%3d - %c\n", i, (char)i);
-    }
+        printf("%3d - %c\n", i, (char) i);
+
     return 0;
 }
 
-int exercicio27(void)
-{
+int exercicio27(void) {
 
     /*
-      Escreva um program que solicite ao usuÃ¡rio um nÃºmero e escreva simultaneamente a sequencia crescente e decrescente entre 1 e esse nÃºmero
+      Escreva um program que solicite ao usuário um número e escreva simultaneamente a sequencia crescente e decrescente entre 1 e esse número
     */
 
     int n;
 
-    printf("Digite um nÃºmero: ");
+    printf("Digite um número: ");
     scanf("%d", &n);
 
-    printf("SequÃªncia crescente e decrescente: \n");
+    printf("Sequência crescente e decrescente: \n");
     for (int i = 1; i <= n; i++)
-    {
         printf("%d  %d\n", i, n - i + 1);
-    }
+
 
     printf("\n");
 
     return 0;
 }
 
-int exercicio28(void)
-{
+int exercicio28(void) {
 
     /*
-    Escreva um programa que solicite ao usuÃ¡rio um nÃºmero e um caractere. Em seguida terÃ¡ que preencher n linhas, cada uma delas com n caracteres
+    Escreva um programa que solicite ao usuário um número e um caractere. Em seguida terá que preencher n linhas, cada uma delas com n caracteres
     */
 
     int n;
     char ch;
 
-    printf("Digite um nÃºmero: ");
+    printf("Digite um número: ");
     scanf("%d", &n);
     printf("Digite um caractere:  ");
-    scanf(" %c", &ch); // NÃ£o esquecer o espaÃ§o em branco antes de %c para retirar o <ENTER> que ficou no buffer do teclado, depois de introduzido o inteiro
+    scanf(" %c",
+          &ch); // Não esquecer o espaço em branco antes de %c para retirar o <ENTER> que ficou no buffer do teclado, depois de introduzido o inteiro
 
     printf("\n");
-    for (int i = 1; i <= n; i++)
-    {
-        for (int j = 1; j <= n; j++)
-        {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
             printf("%c", ch);
         }
         printf(" \n");
@@ -898,19 +800,17 @@ int exercicio28(void)
 
     return 0;
 }
-int exercicio29(void)
-{
+
+int exercicio29(void) {
     /*
-      FaÃ§a um algoritmo que peÃ§a para o coloque a tabuada de todos os numeros de 1 atÃ© o numero que o usuÃ¡rio digitar
+      Faça um algoritmo que peça para o coloque a tabuada de todos os numeros de 1 até o numero que o usuário digitar
     */
     int d, res;
-    printf("Qual numero inteiro vocÃª deseja saber a tabuada?\n");
+    printf("Qual numero inteiro você deseja saber a tabuada?\n");
     scanf("%d", &d);
 
-    for (int i = 1; i <= d; i++)
-    {
-        for (int j = 1; j <= 10; j++)
-        {
+    for (int i = 1; i <= d; i++) {
+        for (int j = 1; j <= 10; j++) {
             res = 0;
             res = i * j;
             printf("%d X %d = %d\n", i, j, res);
@@ -921,13 +821,11 @@ int exercicio29(void)
     return 0;
 }
 
-int main(void)
-{
+int main(void) {
     setlocale(LC_ALL, "Portuguese");
 
     int sair = 1;
-    do
-    {
+    do {
         int escolha;
         printf("(1) Exercicio 1 - Lista 2\n");
         printf("(2) Exercicio 2 - Lista 2\n");
@@ -956,106 +854,104 @@ int main(void)
         printf("(27) Exercicio 27\n");
         printf("(28) Exercicio 28\n");
         printf("(29) Exercicio 29\n");
-        printf("Qual exercÃ­cio vocÃª gostaria de realizar ?\n");
+        printf("Qual exercício você gostaria de realizar ?\n");
 
         scanf("%d", &escolha);
 
-        switch (escolha)
-        {
-        case 1:
-            exercicio01();
-            break;
-        case 2:
-            exercicio02();
-            break;
-        case 3:
-            exercicio03();
-            break;
-        case 4:
-            exercicio04();
-            break;
-        case 5:
-            exercicio05();
-            break;
-        case 6:
-            exercicio06();
-            break;
-        case 7:
-            exercicio07();
-            break;
-        case 8:
-            exercicio08();
-            break;
-        case 9:
-            exercicio09();
-            break;
-        case 10:
-            exercicio10();
-            break;
-        case 11:
-            exercicio11();
-            break;
-        case 12:
-            exercicio12();
-            break;
-        case 13:
-            exercicio13();
-            break;
-        case 14:
-            exercicio14();
-            break;
-        case 15:
-            exercicio15();
-            break;
-        case 16:
-            exercicio16();
-            break;
-        case 17:
-            exercicio17();
-            break;
-        case 18:
-            exercicio18();
-            break;
-        case 21:
-            exercicio21();
-            break;
-        case 23:
-            exercicio23();
-            break;
-        case 24:
-            exercicio24();
-            break;
-        case 25:
-            exercicio25();
-            break;
-        case 26:
-            exercicio26();
-            break;
-        case 27:
-            exercicio27();
-            break;
-        case 28:
-            exercicio28();
-            break;
-        case 29:
-            exercicio29();
-            break;
-        default:
-            printf("Exercicio nÃ£o existente na lista.\n");
-            break;
+        switch (escolha) {
+            case 1:
+                exercicio01();
+                break;
+            case 2:
+                exercicio02();
+                break;
+            case 3:
+                exercicio03();
+                break;
+            case 4:
+                exercicio04();
+                break;
+            case 5:
+                exercicio05();
+                break;
+            case 6:
+                exercicio06();
+                break;
+            case 7:
+                exercicio07();
+                break;
+            case 8:
+                exercicio08();
+                break;
+            case 9:
+                exercicio09();
+                break;
+            case 10:
+                exercicio10();
+                break;
+            case 11:
+                exercicio11();
+                break;
+            case 12:
+                exercicio12();
+                break;
+            case 13:
+                exercicio13();
+                break;
+            case 14:
+                exercicio14();
+                break;
+            case 15:
+                exercicio15();
+                break;
+            case 16:
+                exercicio16();
+                break;
+            case 17:
+                exercicio17();
+                break;
+            case 18:
+                exercicio18();
+                break;
+            case 21:
+                exercicio21();
+                break;
+            case 23:
+                exercicio23();
+                break;
+            case 24:
+                exercicio24();
+                break;
+            case 25:
+                exercicio25();
+                break;
+            case 26:
+                exercicio26();
+                break;
+            case 27:
+                exercicio27();
+                break;
+            case 28:
+                exercicio28();
+                break;
+            case 29:
+                exercicio29();
+                break;
+            default:
+                printf("Exercicio não existente na lista.\n");
+                break;
         }
-        printf("Deseja sair? (1) - Sim (0) - NÃ£o: ");
+        printf("Deseja sair? (1) - Sim (0) - Não: ");
         scanf("%d", &sair);
 
-        while (sair != 0 && sair != 1)
-        {
-            printf("OpÃ§Ã£o invÃ¡lida, digite novamente!\n");
-            printf("Deseja sair? (1) - Sim (0) - NÃ£o: ");
+        while (sair != 0 && sair != 1) {
+            printf("Opção inválida, digite novamente!\n");
+            printf("Deseja sair? (1) - Sim (0) - Não: ");
             scanf("%d", &sair);
         }
     } while (sair != 1);
 
     printf("Fim do Programa!\n");
-    printf("AtÃ© Breve!");
+    printf("Até Breve!");
     return 0;
 }

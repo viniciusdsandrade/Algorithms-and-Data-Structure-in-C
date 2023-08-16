@@ -1,11 +1,9 @@
-  #include <stdio.h>
+#include <stdio.h>
 #include <locale.h>
 #include <string.h>
 #include "global.c"
 
-int exercicio01(void)
-{
-
+int exercicio01(void) {
     /*
         1 - Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
         caracteres e que entao salve a inversa desta string em uma nova string.
@@ -23,13 +21,11 @@ int exercicio01(void)
     fgets(str, sizeof(str), stdin);
 
     int tamStr = strlen(str) - 1; // Desconsidera o caractere de nova linha '\n'
-    int j = 0;
-    int i = 0;
+    int j, i;
 
     printf("String original:  %s", str);
 
-    for (i = 0, j = tamStr - 1; i < j; i++, j--)
-    {
+    for (i = 0, j = tamStr - 1; i < j; i++, j--) {
         char temp = str[i];
         str[i] = str[j];
         str[j] = temp;
@@ -40,8 +36,7 @@ int exercicio01(void)
     return 0;
 }
 
-int exercicio02(void)
-{
+int exercicio02(void) {
     /*
         2. Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
         caracteres e que entao salve a string lida em uma nova removendo-se os espacos.
@@ -67,13 +62,9 @@ int exercicio02(void)
     fflush(stdin);
     fgets(str, sizeof(str), stdin);
 
-    int i = 0;
-    int j = 0;
-
-    for (i = 0; i < strlen(str); i++)
-    {
-        if (str[i] != ' ')
-        {
+    int i, j = 0;
+    for (i = 0; i < strlen(str); i++) {
+        if (str[i] != ' ') {
             strSemEspaco[j] = str[i];
             j++;
         }
@@ -83,8 +74,7 @@ int exercicio02(void)
     printf("String sem espaco: %s", strSemEspaco);
 }
 
-int exercicio03(void)
-{
+int exercicio03(void) {
     /*
         3. Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
         caracteres e que entao salve a string lida em uma nova removendo-se os espacos extras
@@ -109,18 +99,12 @@ int exercicio03(void)
     printf("Digite uma string: ");
     escreveString(str);
 
-    int i = 0;
-    int j = 0;
-
-    for (i = 0; i < strlen(str); i++)
-    {
-        if (str[i] != ' ')
-        {
+    int i, j = 0;
+    for (i = 0; i < strlen(str); i++) {
+        if (str[i] != ' ') {
             strSemEspacoExtra[j] = str[i];
             j++;
-        }
-        else if (str[i] == ' ' && str[i + 1] != ' ')
-        {
+        } else if (str[i] == ' ' && str[i + 1] != ' ') {
             strSemEspacoExtra[j] = str[i];
             j++;
         }
@@ -133,8 +117,7 @@ int exercicio03(void)
     return 0;
 }
 
-int exercicio04(void)
-{
+int exercicio04(void) {
     /*
         4. Escreva um programa que leia duas palavras do teclado e determina se a segunda e um
         anagrama da primeira. Uma palavra e um anagrama de outra se todas as letras de uma
@@ -157,27 +140,22 @@ int exercicio04(void)
 
     strcpy(aux, str2); // Copia str2 para aux
 
-    int i = 0;
-    int j = 0;
+    int i, j;
 
     int tamStr1 = strlen(str1) - 1;
     int tamStr2 = strlen(str2) - 1;
 
     // Verifica se as strings tem o mesmo tamanho
-    if (tamStr1 != tamStr2)
-    {
+    if (tamStr1 != tamStr2) {
         printf("Não e anagrama!\n");
         return 0;
     }
 
     // Verifica se as strings tem os mesmos caracteres
-    for (i = 0; i < tamStr1; i++)
-    {
-        for (j = 0; j < tamStr2; j++)
-        {
+    for (i = 0; i < tamStr1; i++) {
+        for (j = 0; j < tamStr2; j++) {
             // Verifica se os caracteres são iguais sem distinção de maiúsculas e minúsculas
-            if (str1[i] == str2[j] || str1[i] == str2[j] + 32 || str1[i] == str2[j] - 32)
-            {
+            if (str1[i] == str2[j] || str1[i] == str2[j] + 32 || str1[i] == str2[j] - 32) {
                 str2[j] = ' ';
                 break;
             }
@@ -185,10 +163,8 @@ int exercicio04(void)
     }
 
     // Verifica se a string 2 ficou vazia
-    for (i = 0; i < tamStr2; i++)
-    {
-        if (str2[i] != ' ')
-        {
+    for (i = 0; i < tamStr2; i++) {
+        if (str2[i] != ' ') {
             printf("Não é anagrama!\n");
             return 0;
         }
@@ -202,8 +178,8 @@ int exercicio04(void)
     return 0;
 }
 
-int exercicio05(void)
-{
+int exercicio05(void) {
+
     /*
         5. Faça um programa que leia duas strings e elimine, da segunda string, todas as ocorrências
         dos caracteres da primeira string.
@@ -214,13 +190,13 @@ int exercicio05(void)
     char str1[80];
     char str2[80];
 
-    printf("Digite outra string: ");
-    fflush(stdin);
-    fgets(str2, sizeof(str2), stdin);
-
     printf("Digite uma string: ");
     fflush(stdin);
     fgets(str1, sizeof(str1), stdin);
+
+    printf("Digite outra string: ");
+    fflush(stdin);
+    fgets(str2, sizeof(str2), stdin);
 
     char copia[80];
     strcpy(copia, str2); // Copia str2 para copia
@@ -228,18 +204,11 @@ int exercicio05(void)
     int tamStr1 = strlen(str1) - 1; // Desconsidera o caractere de nova linha '\n'
     int tamStr2 = strlen(str2) - 1;
 
-    int i = 0;
-    int j = 0;
-
     // Verifica se as strings tem os mesmos caracteres
-    for (i = 0; i < tamStr1; i++)
-    {
-        for (j = 0; j < tamStr2; j++)
-        {
+    for (int i = 0; i < tamStr2; i++) {
+        for (int j = 0; j < tamStr1; j++) {
             if (str1[i] == str2[j])
-            {
                 str2[j] = ' ';
-            }
         }
     }
 
@@ -250,8 +219,7 @@ int exercicio05(void)
     return 0;
 }
 
-int exercicio06(void)
-{
+int exercicio06(void) {
     /*
         6. Faça um programa que leia um texto T (com espacos) e uma palavra p do teclado. Em
         seguida o programa devera imprimir todas as posicoes onde ocorrem a palavra p em T.
@@ -284,9 +252,7 @@ int exercicio06(void)
     {
         j = 0;
         while (j < tamP && p[j] == t[i + j]) // Percorre a palavra e verifica se os caracteres são iguais
-        {
             j++;
-        }
 
         if (j == tamP) // Se j == tamP, significa que a palavra foi encontrada
         {
@@ -296,19 +262,15 @@ int exercicio06(void)
     }
 
     if (cont == 0)
-    {
         printf("Palavra não encontrada!\n");
-    }
     else
-    {
         printf("Palavra encontrada %d vezes!\n", cont);
-    }
+
 
     return 0;
 }
 
-int exercicio07(void)
-{
+int exercicio07(void) {
     /*
     7. Escreva um programa que lê uma string de atÉ 50 caracteres, e imprime "Palindromo"caso
     a string seja um palindromo e "Nao Palindromo" caso contr?rio.
@@ -331,8 +293,7 @@ int exercicio07(void)
     fflush(stdin);
     fgets(str, sizeof(str), stdin);
 
-    if (strlen(str) > 50 || strlen(str) < 0)
-    {
+    if (strlen(str) > 50 || strlen(str) < 0) {
         printf("Erro ao alocar memória!\n");
         return 0;
     }
@@ -344,19 +305,14 @@ int exercicio07(void)
     str[tam] = '\0';
 
     if (isPalindrome(str) == 0)
-    {
         printf("\n'%s' NÃO é palíndromo!\n", str);
-        return 0;
-    }
     else
-    {
         printf("\n'%s' É palíndromo!\n", str);
-        return 0;
-    }
+
+    return 0;
 }
 
-int exercicio08(void)
-{
+int exercicio08(void) {
     /*
         8. Faca um programa que leia duas palavras e verifique se uma delas pode ser obtida por
         meio da remove o de letras da outra. A ordem das letras nao pode ser alterada.
@@ -383,16 +339,13 @@ int exercicio08(void)
     int i = 0, j = 0;
     int isSub = 0;
 
-    while (i < len1 && j < len2)
-    {
-        if (p1[i] == p2[j])
-        {
+    while (i < len1 && j < len2) {
+        if (p1[i] == p2[j]) {
             i++;
         }
         j++;
 
-        if (i == len1)
-        {
+        if (i == len1) {
             isSub = 1;
             break;
         }
@@ -402,35 +355,27 @@ int exercicio08(void)
     i = 0;
     j = 0;
     int isSub2 = 0;
-    while (i < len2 && j < len1)
-    {
-        if (p2[i] == p1[j])
-        {
+    while (i < len2 && j < len1) {
+        if (p2[i] == p1[j]) {
             i++;
         }
         j++;
 
-        if (i == len2)
-        {
+        if (i == len2) {
             isSub2 = 1;
             break;
         }
     }
 
     if (isSub == 1 || isSub2 == 1)
-    {
         printf("Uma palavra e subsequencia da outra.\n");
-    }
     else
-    {
         printf("As palavras nao sao subsequencias uma da outra.\n");
-    }
 
     return 0;
 }
 
-int exercicio09(void)
-{
+int exercicio09(void) {
     /*
     9. Historicamente Cesar foi o primeiro a codificar mensagens. Ele reorganizava o texto de
     suas mensagens de maneira que o texto parecia n?o ter sentido. Cada mensagem sempre
@@ -459,14 +404,12 @@ int exercicio09(void)
     return 0;
 }
 
-int exercicio10(void)
-{
+int exercicio10(void) {
 
     return 0;
 }
 
-int exercicio11(void)
-{
+int exercicio11(void) {
     /*
         Ler uma string de ate 79 caracteres e salvar a inversa desta em um
         vetor. Imprimir a inversa da string lida.
@@ -489,16 +432,14 @@ int exercicio11(void)
 
     int comStrlen = strlen(st1) - 1;
 
-    for (tam = 0; (st1[tam] != '\0') && (st1[tam] != '\n'); tam++)
-        ;
+    for (tam = 0; (st1[tam] != '\0') && (st1[tam] != '\n'); tam++);
 
     printf("\ntamanho da string com strlen: %d\n", strlen(st1) - 1);
     printf("Tamanho da string com for:    %d\n", tam);
 
     for (j = comStrlen - 1, i = 0; j >= 0; j--, i++)
-    {
         stInversa[j] = st1[i];
-    }
+
 
     stInversa[comStrlen] = '\0';
 
@@ -513,8 +454,7 @@ int exercicio11(void)
     printf("Inversa: %s \n", st4);
 }
 
-int exercicio12(void)
-{
+int exercicio12(void) {
 
     /*
        Como exemplo de uso de strings vamos implementar duas
@@ -531,18 +471,14 @@ int exercicio12(void)
 
     fflush(stdin);
     fgets(s, sizeof(s), stdin);
-    while (s[i] != '\n' && s[i] != '\0')
-    {
-        while (s[i] == ' ')
-        {
+    while (s[i] != '\n' && s[i] != '\0') {
+        while (s[i] == ' ') {
             i++;
         }
 
-        if (s[i] != '\n' && s[i] != '\0')
-        {
+        if (s[i] != '\n' && s[i] != '\0') {
             n++;
-            while (s[i] != ' ' && s[i] != '\n' && s[i] != '\0')
-            {
+            while (s[i] != ' ' && s[i] != '\n' && s[i] != '\0') {
                 i++;
             }
         }
@@ -557,8 +493,8 @@ int exercicio12(void)
     return 0;
 }
 
-int exercicio13(void)
-{ /*
+int exercicio13(void) {
+    /*
       Fazer um programa que acha todas as posicoes de ocorrencia de uma
       palavra em um texto.
 
@@ -568,7 +504,7 @@ int exercicio13(void)
 
       Saida:
       2, 7 e 9.
-  */
+    */
 
     printf("2 - Fazer a busca de uma palavra em um texto e:\n");
     printf("a) retornar a posicao de todas as ocorrencias\n");
@@ -590,26 +526,22 @@ int exercicio13(void)
     int i, j;
 
     // Percorre o texto
-    for (i = 0; i <= tamTexto - tamPalavra; i++)
-    {
+    for (i = 0; i <= tamTexto - tamPalavra; i++) {
         j = 0; // Inicializa o passo que vai percorre a palavra
         while (j < tamPalavra && p[j] == s[i + j])
-        {
             j++; // Incrementa o contador
-        }
+
 
         // Se j == tamPalavra, significa que a palavra foi encontrada
         if (j == tamPalavra)
-        {
             printf("Encontrada na posicao [%d - %d]\n", i, i + tamPalavra - 1);
-        }
+
     }
 
     return 0;
 }
 
-int exercicio14(void)
-{
+int exercicio14(void) {
     /*
         Escreva um programa que le uma string de ate 50 caracteres, e
         imprime \Palindromo"caso a string seja um palindromo e
@@ -626,10 +558,8 @@ int exercicio14(void)
     int tam = strlen(s) - 1;
     int j = tam - 1;
 
-    while (i < j)
-    {
-        if (s[i] != s[j])
-        {
+    while (i < j) {
+        if (s[i] != s[j]) {
             printf(" Nao e palindromo\n");
             return 0;
         }
@@ -641,8 +571,7 @@ int exercicio14(void)
     return 0;
 }
 
-int exercicio15(void)
-{ /*
+int exercicio15(void) { /*
       Refaca o exemplo visto em aula de inversao de uma string de tal
       forma que nao seja utilizado nenhum vetor adicional! Ou seja
       devemos computar a inversa no proprio vetor original.
@@ -657,8 +586,7 @@ int exercicio15(void)
     int tam = strlen(s) - 1;
     int i = 0;
 
-    for (i = 0; i < tam; i++)
-    {
+    for (i = 0; i < tam; i++) {
         char temp = s[i];
         s[i] = s[tam];
         s[tam] = temp;
@@ -669,8 +597,7 @@ int exercicio15(void)
     return 0;
 }
 
-int exercicio16(void)
-{
+int exercicio16(void) {
     // Fazer a busca de uma palavra em um texto e:
     // a) retornar quantas vezes essa palavra esta inserida em determinado texto
     // b) retornar a posicao da primeira ocorrencia dessa palavra
@@ -696,59 +623,48 @@ int exercicio16(void)
 
     int i, j;
     // Percorre o texto
-    for (i = 0; i <= tamTexto - tamPalavra; i++)
-    {
+    for (i = 0; i <= tamTexto - tamPalavra; i++) {
         j = 0; // Inicializa o passo que vai percorre a palavra
         // Percorre a palavra
-        while (j < tamPalavra && palavra[j] == s[i + j])
-        {
+        while (j < tamPalavra && palavra[j] == s[i + j]) {
             j++; // Incrementa o contador
         }
 
         // Se j == tamPalavra, significa que a palavra foi encontrada
-        if (j == tamPalavra)
-        {
+        if (j == tamPalavra) {
             freq++; // Incrementa o contador de frequencia
             printf("Encontrada na posicao [%d - %d]\n", i, i + tamPalavra - 1);
         }
     }
 
     if (freq == 0)
-    {
         printf("Palavra nao encontrada!\n");
-    }
     else
-    {
         printf("Palavra encontrada %d vezes!\n", freq);
-    }
+
 
     return 0;
 }
 
-int exercicio17(void)
-{
+int exercicio17(void) {
 
     return 0;
 }
 
-int exercicio18(void)
-{
+int exercicio18(void) {
 
     return 0;
 }
 
-int exercicio19(void)
-{
+int exercicio19(void) {
     return 0;
 }
 
-int main(void)
-{
+int main(void) {
     setlocale(LC_ALL, "Portuguese");
 
     int sair = 1;
-    do
-    {
+    do {
         int escolha;
         printf("(1) - Exe01  - Lista04\n");
         printf("(2) - Exe02  - Lista04\n");
@@ -773,75 +689,73 @@ int main(void)
 
         scanf("%d", &escolha);
 
-        switch (escolha)
-        {
-        case 1:
-            exercicio01();
-            break;
-        case 2:
-            exercicio02();
-            break;
-        case 3:
-            exercicio03();
-            break;
-        case 4:
-            exercicio04();
-            break;
-        case 5:
-            exercicio05();
-            break;
-        case 6:
-            exercicio06();
-            break;
-        case 7:
-            exercicio07();
-            break;
-        case 8:
-            exercicio08();
-            break;
-        case 9:
-            exercicio09();
-            break;
-        case 10:
-            exercicio10();
-            break;
-        case 11:
-            exercicio11();
-            break;
-        case 12:
-            exercicio12();
-            break;
-        case 13:
-            exercicio13();
-            break;
-        case 14:
-            exercicio14();
-            break;
-        case 15:
-            exercicio15();
-            break;
-        case 16:
-            exercicio16();
-            break;
-        case 17:
-            exercicio17();
-            break;
-        case 18:
-            exercicio18();
-            break;
-        case 19:
-            exercicio19();
-            break;
-        default:
-            printf("Opcao invalida!\n");
-            break;
+        switch (escolha) {
+            case 1:
+                exercicio01();
+                break;
+            case 2:
+                exercicio02();
+                break;
+            case 3:
+                exercicio03();
+                break;
+            case 4:
+                exercicio04();
+                break;
+            case 5:
+                exercicio05();
+                break;
+            case 6:
+                exercicio06();
+                break;
+            case 7:
+                exercicio07();
+                break;
+            case 8:
+                exercicio08();
+                break;
+            case 9:
+                exercicio09();
+                break;
+            case 10:
+                exercicio10();
+                break;
+            case 11:
+                exercicio11();
+                break;
+            case 12:
+                exercicio12();
+                break;
+            case 13:
+                exercicio13();
+                break;
+            case 14:
+                exercicio14();
+                break;
+            case 15:
+                exercicio15();
+                break;
+            case 16:
+                exercicio16();
+                break;
+            case 17:
+                exercicio17();
+                break;
+            case 18:
+                exercicio18();
+                break;
+            case 19:
+                exercicio19();
+                break;
+            default:
+                printf("Opcao invalida!\n");
+                break;
         }
 
         printf("Deseja sair? (1) - Sim (0) - Nao: ");
         scanf("%d", &sair);
 
-        while (sair != 0 && sair != 1)
-        {
+        while (sair != 0 && sair != 1) {
             printf("Opcao invalida, digite novamente!\n");
             printf("Deseja sair? (1) - Sim (0) - Nao: ");
             scanf("%d", &sair);

@@ -6,7 +6,7 @@
 
 void leitorArquivo(const char *nomeArquivo, int matriz[][MAX_COLUNAS], int *numLinhas, int *numColunas, int *numDias);
 void leituraManualMatriz(int matriz[][MAX_COLUNAS], int numLinhas, int numColunas);
-void imprimeMatriz(int matrix[][MAX_COLUNAS], int linha, int coluna);
+void imprimeMatriz(int matrix[][MAX_COLUNAS], int numLinhas, int numColunas);
 void atualizaMatriz(int matrix[][MAX_COLUNAS], int numLinhas, int numColunas);
 int contadorVizinhosHumanos(int matrix[][MAX_COLUNAS], int linha, int coluna, int numLinhas, int numColunas);
 int contadorVizinhosZumbis(int matrix[][MAX_COLUNAS], int linha, int coluna, int numLinhas, int numColunas);
@@ -14,7 +14,7 @@ int contadorVizinhosZumbis(int matrix[][MAX_COLUNAS], int linha, int coluna, int
 /*
     MEMBROS DO GRUPO:
     ALUNO 1: Vinícius dos Santos Andrade  RA: 2760482311026
-    ALUNO 2:                              RA:
+    ALUNO 2: Gianlucca Fadiga Rissato     RA: 2760482311014
     ALUNO 3:                              RA:
     ALUNO 4:                              RA:
 */
