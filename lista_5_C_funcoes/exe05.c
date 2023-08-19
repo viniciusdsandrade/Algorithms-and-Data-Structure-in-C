@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <locale.h>
-
 #include "global.c"
 
+int solveSudoku(int pInt[9][9]);
 
 int exercicio01(void) {
 
@@ -56,7 +56,6 @@ int exercicio01(void) {
 
     return 0;
 }
-
 
 
 int exercicio02(void) {
@@ -115,6 +114,26 @@ int exercicio04(void) {
 }
 
 int exercicio05(void) {
+
+    /*
+     * Escreva uma função que receba uma lista de números reais e devolva a média aritmética
+    dos números da lista.
+    A seguinte função deve ser implementada:
+     */
+
+    int qtd;
+    printf("Quantos numeros você quer digitar? ");
+    scanf("%d", &qtd);
+
+    double numeros[qtd];
+    int i;
+
+    for (i = 0; i < qtd; i++) {
+        printf("Digite o %dº número: ", i + 1);
+        scanf("%lf", &numeros[i]);
+    }
+
+    printf("A média dos números digitados é %lf", media(numeros, qtd));
     return 0;
 }
 
@@ -130,6 +149,38 @@ int exercicio07(void) {
 int exercicio08(void) {
     return 0;
 }
+
+int exercicio09(void) {
+    return 0;
+}
+
+int exercicio10(void) {
+    /*
+     No jogo Sudoku temos uma matriz 9  9 dividida em 9 quadrados de 3  3 preenchidos
+    previamente com alguns números entre 1 e 9 (veja o exemplo à esquerda abaixo). Uma
+    solução para uma instância do jogo consiste no preenchimento de todas as posições vazias
+    com números entre 1 e 9 respeitando-se as seguintes regras:
+
+    (a) Não pode haver números repetidos em um mesmo quadrado, ou seja, cada número
+    entre 1 e 9 deve aparecer exatamente uma vez em cada quadrado.
+    (b) Não pode haver números repetidos em nenhuma linha da matriz.
+    (c) Não pode haver números repetidos em nenhuma coluna da matriz.
+
+    Escreva uma função que receba uma matriz 9  9 como parâmetro, que represente uma
+    proposta de solução para um Sudoku, e teste se a matriz é uma solução válida para o jogo,
+    devolvendo True em caso verdadeiro e False, caso contrário.
+    A seguinte função deve ser implementada:
+
+     */
+
+    int matriz[9][9];
+
+    preencheMatriz(matriz);
+
+    return 0;
+}
+
+
 
 int main(void) {
     setlocale(LC_ALL, "Portuguese");
