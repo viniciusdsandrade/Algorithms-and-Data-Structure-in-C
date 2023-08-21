@@ -109,6 +109,7 @@ int exercicio03(void) {
 }
 
 int exercicio04(void) {
+
     /*
      4. Escreva uma função que recebe um valor inteiro positivo n como parâmetro e devolve um
     valor inteiro b tal que bk = n para algum inteiro k, e b seja o menor possível. Por exemplo,
@@ -156,6 +157,7 @@ bool teste(int a, int b, int n) {
 
 
 int exercicio06(void) {
+
     /*
      6. Escreva uma função que recebe um vetor de números reais e o seu tamanho por parâmetro
      e devolve a média aritmética dos números do vetor. O protótipo da função deve ser:
@@ -179,6 +181,7 @@ int exercicio06(void) {
 }
 
 int exercicio07(void) {
+
     /*
     7. Escreva uma função que recebe um vetor de números reais e o seu tamanho por parâmetro
     e devolve o desvio padrão dos números do vetor usando a seguinte fórmula:
@@ -200,6 +203,7 @@ int exercicio07(void) {
 }
 
 int exercicio08(void) {
+
     /*
      8. Escreva uma função que recebe como parâmetro duas matrizes quadradas de tamanho
     no máximo 30 X 30, onde a primeira matriz corresponde a uma matriz de entrada e a
@@ -241,9 +245,6 @@ int exercicio09(void) {
 
     int matriz[30][30];
     preencheMatrizQuadrada(matriz, 30);
-
-    int dimensao = 30;
-
 
 
     return 0;
