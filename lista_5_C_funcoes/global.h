@@ -13,7 +13,9 @@ void transposta(double matriz[30][30], double matrizTransposta[30][30], int dime
 double *preencheVetorDoubleReturn(int qtd);
 void imprimeMatrizQuadrada(double matriz[30][30], int dimensao);
 void preencheVetorDouble(int qtd, double pDouble[qtd]);
-
+int menor_base_log(int n);
+int pitagorico(int n);
+int test(int a, int b, int n);
 
 
 #endif //INC_2_LISTAS_GLOBAL_H

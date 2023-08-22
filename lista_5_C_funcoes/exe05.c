@@ -2,6 +2,8 @@
 #include <locale.h>
 #include "global.c"
 
+
+
 int exercicio01(void) {
 
     /*
@@ -117,6 +119,13 @@ int exercicio04(void) {
     12. Não use funções de bibliotecas na sua solução. O protótipo da função deve ser:
     int menor_base_log(int n);
      */
+
+    int n;
+    printf("Digite o valor de n: ");
+    scanf("%d", &n);
+
+    printf("O menor valor de b tal que bk = %d é %d", n, menor_base_log(n));
+
     return 0;
 }
 
@@ -146,15 +155,17 @@ int exercicio05(void) {
     printf("Digite o valor de n: ");
     scanf("%d", &n);
 
+    printf("Digite um número inteiro positivo: ");
+    scanf("%d", &n);
+
+    if (pitagorico(n)) {
+        printf("%d é um número pitagórico.\n", n);
+    } else {
+        printf("%d não é um número pitagórico.\n", n);
+    }
+
     return 0;
 }
-
-bool teste(int a, int b, int n) {
-    return (a * a) + (b * b) == n;
-}
-
-
-
 
 int exercicio06(void) {
 

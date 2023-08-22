@@ -242,6 +242,74 @@ void imprimeMatrizQuadrada(double matriz[30][30], int dimensao) {
     }
 }
 
+/**
+ * Verifica se a soma dos quadrados de a e b é igual a n.
+ *
+ * @param a Primeiro inteiro.
+ * @param b Segundo inteiro.
+ * @param n Inteiro alvo.
+ * @return Verdadeiro se a^2 + b^2 for igual a n, falso caso contrário.
+ */
+int test(int a, int b, int n) {
+    return a * a + b * b == n;
+}
+
+/**
+ * Verifica se n é um número pitagórico.
+ *
+ * @param n Inteiro alvo.
+ * @return Verdadeiro se n for pitagórico, falso caso contrário.
+ */
+int pitagorico(int n) {
+    for (int a = 1; a * a < n; a++) {
+        int b_quadrado = n - a * a;
+        int b = (int) sqrt(b_quadrado);
+        if (test(a, b, n)) {
+            return 1;  // n é um número pitagórico
+        }
+    }
+    return 0;  // n não é um número pitagórico
+}
+
+/**
+ * Encontra a menor base b tal que b^k = n.
+ *
+ * @param n Inteiro alvo.
+ * @return A menor base b possível para a qual b^k = n.
+ */
+int menor_base_log(int n) {
+    if (n <= 1) {
+        return n;  // Para n <= 1, o resultado é n
+    }
+
+    int menor_base = n;  // Inicializa com um valor maior do que n
+
+    // Encontra os fatores primos de 2
+    while (n % 2 == 0) {
+        n /= 2;
+        menor_base = 2;
+    }
+
+    // Encontra os fatores primos ímpares
+    for (int i = 3; i * i <= n; i += 2) {
+        while (n % i == 0) {
+            n /= i;
+            menor_base = i;
+        }
+    }
+
+    // Se n for primo maior que 2, atualiza menor_base
+    if (n > 2) {
+        menor_base = n;
+    }
+
+    return menor_base;
+}
+
+
+
+
+
 
 
 
