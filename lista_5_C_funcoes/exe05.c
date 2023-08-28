@@ -2,8 +2,6 @@
 #include <locale.h>
 #include "global.c"
 
-
-
 int exercicio01(void) {
 
     /*

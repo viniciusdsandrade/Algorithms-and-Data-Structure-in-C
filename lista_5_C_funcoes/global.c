@@ -231,7 +231,7 @@ void transposta(double matriz[30][30], double matrizTransposta[30][30], int dime
  * @param matriz A matriz a ser impressa.
  * @param dimensao A dimensão da matriz (número de linhas e colunas).
  */
-void imprimeMatrizQuadrada(double matriz[30][30], int dimensao) {
+void imprimeMatrizQuadrada(double matriz[][MAX_DIMENSAO], int dimensao) {
     printf("Matriz %d x %d:\n", dimensao, dimensao);
 
     for (int i = 0; i < dimensao; i++) {
