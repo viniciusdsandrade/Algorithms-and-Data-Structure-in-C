@@ -7,8 +7,8 @@ void ordenaPreco(Produto vet[], int n);
 void ordenaQuant(Produto vet[], int n);
 void imprimeProduto(Produto vet[], int n);
 
-Aluno leAluno(int n);
-Alune leAlune(int n);
+Aluno *leAlunos(int n);
+Alune *leAlunes(int n);
 void imprimeAluno(Aluno aluno);
 void listarTurma(Aluno turma[], int n);
 double mediaAlunes(Alune turma[], int n);

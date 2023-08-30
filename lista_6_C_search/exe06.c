@@ -205,7 +205,7 @@ int exercicio08(void) {
     int numAlunes;
     printf("Digite o número de alunos: ");
     scanf("%d", &numAlunes);
-    Alune *alunes = leAlunos(numAlunes);
+    Alune *alunes = leAlunes(numAlunes);
 
     printf("A média das idades é: %.2f", mediaAlunes(alunes, 5));
 
