@@ -32,6 +32,29 @@ typedef struct Ponto {
     double y;
 } Ponto;
 
+
+/**
+ * Lê os dados de um vetor de produtos da entrada padrão.
+ *
+ * Esta função aloca memória para o vetor de produtos e preenche seus elementos
+ * com os dados lidos da entrada padrão.
+ *
+ * @param n O número de produtos a serem lidos.
+ * @return Um ponteiro para o vetor de produtos preenchido.
+ */
+Produto *lerProdutos(int n) {
+    Produto *produtos = malloc(n * sizeof(Produto));
+    for (int i = 0; i < n; i++) {
+        printf("Digite o nome do produto %d: ", i + 1);
+        scanf("%s", produtos[i].nome);
+        printf("Digite o preço do produto %d: ", i + 1);
+        scanf("%lf", &produtos[i].preco);
+        printf("Digite a quantidade do produto %d: ", i + 1);
+        scanf("%d", &produtos[i].quantidade);
+    }
+    return produtos;
+}
+
 /**
  * Ordena um array de produtos por preço em ordem crescente.
  *
@@ -75,6 +98,23 @@ void ordenaQuant(Produto vet[], int n) {
 }
 
 /**
+ * Imprime os dados de uma lista de produtos na saída padrão.
+ *
+ * Esta função recebe um vetor de produtos e o número de elementos no vetor,
+ * e imprime na saída padrão os detalhes de cada produto.
+ *
+ * @param vet O vetor de produtos a ser impresso.
+ * @param n O número de elementos no vetor.
+ */
+void imprimeProduto(Produto vet[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("Nome: %s\n", vet[i].nome);
+        printf("Preço: %.2lf\n", vet[i].preco);
+        printf("Quantidade: %d\n", vet[i].quantidade);
+    }
+}
+
+/**
  * Lê os dados de um produto (nome, preço e quantidade) da entrada padrão.
   @return Uma estrutura Produto preenchida com os dados lidos.
 */
@@ -98,9 +138,9 @@ Produto *leProdutos(int n) {
  */
 Aluno leAluno() {
     Aluno a;
-    printf("Digite o nome do aluno: ");
+    printf("Nome: ");
     scanf("%s", a.nome);
-    printf("Digite a nota do aluno: ");
+    printf("Nota: ");
     scanf("%f", &a.nota);
     return a;
 }
@@ -112,9 +152,9 @@ Aluno leAluno() {
  */
 Alune leAlune() {
     Alune a;
-    printf("Digite o RA do aluno: ");
+    printf("RA: ");
     scanf("%d", &a.ra);
-    printf("Digite a nota do aluno: ");
+    printf("Nota: ");
     scanf("%f", &a.nota);
     return a;
 }
@@ -234,7 +274,3 @@ double distanciaPonto(Ponto p1, Ponto p2) {
     distancia = sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
     return distancia;
 }
-
-
-
-

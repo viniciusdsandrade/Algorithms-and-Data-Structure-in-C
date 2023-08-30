@@ -2,12 +2,13 @@
 #define INC_2_LISTAS_GLOBAL_H
 #include "global.c"
 
+Produto *lerProdutos(int n);
 void ordenaPreco(Produto vet[], int n);
 void ordenaQuant(Produto vet[], int n);
-Produto *lerProdutos(int n);
+void imprimeProduto(Produto vet[], int n);
 
-Aluno *leAlunos(int n);
-Alune *leAlunes(int n);
+Aluno leAluno(int n);
+Alune leAlune(int n);
 void imprimeAluno(Aluno aluno);
 void listarTurma(Aluno turma[], int n);
 double mediaAlunes(Alune turma[], int n);

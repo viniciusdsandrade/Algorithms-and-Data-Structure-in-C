@@ -1,10 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "global.h"
 
 int exercicio01(void) {
-    /*
+    /**
     1. Suponha que criamos uma estrutura para armazenar produtos de um supermercado:
 
      typedef struct Produto{
@@ -20,14 +18,25 @@ int exercicio01(void) {
     void ordenaQuant(Produto vet[], int n);
      */
 
+    printf("Digite a quantidade de produtos: ");
+    int n;
+    scanf("%d", &n);
 
+    Produto *produtos = lerProdutos(n);
 
+    ordenaPreco(produtos, n);
+    printf("Produtos ordenados por preço:\n");
+    imprimeProduto(produtos, n);
 
+    ordenaQuant(produtos, n);
+    printf("Produtos ordenados por quantidade:\n");
+    imprimeProduto(produtos, n);
 
+    return 0;
 }
 
 int exercicio02(void) {
-    /*
+    /**
      2. Suponha que criamos uma estrutura para armazenar Datas:
 
      typedef struct Data{
@@ -47,7 +56,7 @@ int exercicio02(void) {
 }
 
 int exercicio03(void) {
-    /*
+    /**
     3. Suponha que criamos uma estrutura para armazenar dados de pessoas e uma outra estrutura
     para armazenar dados de várias pessoas como uma base de dados.
 
@@ -83,7 +92,7 @@ int exercicio03(void) {
 }
 
 int exercicio04(void) {
-    /*
+    /**
     4. Suponha que criamos uma estrutura para armazenar dados de pessoas e um vetor para
     armazenar dados de várias pessoas:
 
@@ -104,7 +113,7 @@ int exercicio04(void) {
 }
 
 int exercicio05(void) {
-    /*
+    /**
     5. Refaça as funções de busca sequencial e busca binária vistas em aula assumindo que o
     vetor possui chaves que podem aparecer repetidas. Neste caso, você deve retornar em um
     outro vetor todas as posições onde a chave foi encontrada.
@@ -114,7 +123,7 @@ int exercicio05(void) {
     em *n o número de ocorrências da chave.
     – OBS: Na chamada desta função, o vetor posições deve ter espaço suficiente
     (por exemplo, tam) para guardar todas as possíveis ocorrências da chave.
-     * */
+     */
     return 0;
 }
 
@@ -170,29 +179,74 @@ int exercicio07(void) {
     tamanho do vetor. A função imprime os dados de todos os alunos.
     */
 
+    Aluno aluno[5];
+
+    for (int i = 0; i < 5; i++) {
+        printf("Digite os dados do aluno %d:\n", i + 1);
+        aluno[i] = leAluno(i);
+    }
+
+    for (int i = 0; i < 5; i++) {
+        imprimeAluno(aluno[i]);
+    }
+
+    listarTurma(aluno, 5);
+
     return 0;
 }
 
 int exercicio08(void) {
-    /*
+    /**
      Crie um novo tipo de registro para armazenar alunos com RA e idade.
      faça a leitura de 5 alunos em uma função.
      Calcule e imprima a média das idades dos alunos.
      */
 
+    Alune alunes[5];
 
+    for (int i = 0; i < 5; i++) {
+        printf("Digite os dados do alune %d:\n", i + 1);
+        alunes[i] = leAlune(i);
+    }
+
+    printf("A média das idades é: %.2f", mediaAlunes(alunes, 5));
 
     return 0;
 }
 
 int exercicio09(void) {
-    /*
+    /**
     Crie um novo tipo de registro para armazenar coordenadas no plano
     cartesiano.
     Crie uma Função para imprimir um ponto do tipo criado.
     Crie uma Função para cada uma destas operações: soma de dois
     pontos, subtração de dois pontos, multiplicação por um escalar.
      */
+
+    printf("Digite as coordenadas do ponto 1:\n");
+    Ponto p1 = lePonto();
+
+    printf("Digite as coordenadas do ponto 2:\n");
+    Ponto p2 = lePonto();
+
+    printf("Ponto 1:\n");
+    imprimePonto(p1);
+
+    printf("Ponto 2:\n");
+    imprimePonto(p2);
+
+    printf("Soma dos pontos:\n");
+    imprimePonto(somaPonto(p1, p2));
+
+    printf("Subtração dos pontos:\n");
+    imprimePonto(subtraiaPonto(p1, p2));
+
+    printf("Multiplicação do ponto 1 por um escalar:\n");
+    imprimePonto(multiplicaPonto(p1, 2));
+
+    printf("Multiplicação do ponto 2 por um escalar:\n");
+    imprimePonto(multiplicaPonto(p2, 2));
+
 
     return 0;
 }
