@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "global.h"
 
 int exercicio01(void) {
     /*
@@ -18,6 +19,11 @@ int exercicio01(void) {
     void ordenaPreco(Produto vet[], int n);
     void ordenaQuant(Produto vet[], int n);
      */
+
+
+
+
+
 }
 
 int exercicio02(void) {
@@ -144,6 +150,50 @@ int exercicio06(void) {
         *b = 2*(*b);
     }
     */
+    return 0;
+}
+
+int exercicio07(void) {
+
+    /*
+    struct Aluno leAluno ( ) ;
+    Esta função faz a leitura dos dados de um registro Aluno e devolve o
+    registro lido.
+
+    void imprimeAluno (struct Aluno a) ;
+    Esta função recebe como parâmetro um registro Aluno e imprime os
+    dados do registro.
+
+    void listarTurma (struc t Aluno turma [ ], int n ) ;
+    Esta função recebe como parâmetros um vetor do tipo Aluno
+    representando uma turma, e também um inteiro n indicando o
+    tamanho do vetor. A função imprime os dados de todos os alunos.
+    */
+
+    return 0;
+}
+
+int exercicio08(void) {
+    /*
+     Crie um novo tipo de registro para armazenar alunos com RA e idade.
+     faça a leitura de 5 alunos em uma função.
+     Calcule e imprima a média das idades dos alunos.
+     */
+
+
+
+    return 0;
+}
+
+int exercicio09(void) {
+    /*
+    Crie um novo tipo de registro para armazenar coordenadas no plano
+    cartesiano.
+    Crie uma Função para imprimir um ponto do tipo criado.
+    Crie uma Função para cada uma destas operações: soma de dois
+    pontos, subtração de dois pontos, multiplicação por um escalar.
+     */
+
     return 0;
 }
 
