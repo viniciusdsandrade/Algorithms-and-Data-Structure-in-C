@@ -1,5 +1,9 @@
 #include <stdio.h>
+#include <locale.h>
+#include <stdbool.h>
 #include "global.h"
+
+#define MAX_EXERCISES 9
 
 int exercicio01(void) {
     /**
@@ -11,8 +15,8 @@ int exercicio01(void) {
         int quantidade;
     }Produto;
 
-    Implemente duas funÃ§Ãµes, uma que devolve o vetor ordenado por preÃ§os e outra que devolve
-    o vetor ordenado pela quantidade de itens no estoque. Os protÃ³tipos sÃ£o:
+    Implemente duas funções, uma que devolve o vetor ordenado por preços e outra que devolve
+    o vetor ordenado pela quantidade de itens no estoque. Os protótipos são:
 
     void ordenaPreco(Produto vet[], int n);
     void ordenaQuant(Produto vet[], int n);
@@ -25,7 +29,7 @@ int exercicio01(void) {
     Produto *produtos = lerProdutos(n);
 
     ordenaPreco(produtos, n);
-    printf("Produtos ordenados por preÃ§o:\n");
+    printf("Produtos ordenados por preço:\n");
     imprimeProduto(produtos, n);
 
     ordenaQuant(produtos, n);
@@ -45,8 +49,8 @@ int exercicio02(void) {
         int ano;
     }Data;
 
-    Implemente um algoritmo que receba um vetor de Datas como parÃ¢metro e que retorne as
-    datas em ordem cronolÃ³gica. ProtÃ³tipo da funÃ§Ã£o Ã©:
+    Implemente um algoritmo que receba um vetor de Datas como parâmetro e que retorne as
+    datas em ordem cronológica. Protótipo da função é:
 
     void ordena(struct Data vet[], int tam);
 
@@ -58,7 +62,7 @@ int exercicio02(void) {
 int exercicio03(void) {
     /**
     3. Suponha que criamos uma estrutura para armazenar dados de pessoas e uma outra estrutura
-    para armazenar dados de vÃ¡rias pessoas como uma base de dados.
+    para armazenar dados de várias pessoas como uma base de dados.
 
     typedef struct Pessoa{
         int rg;
@@ -67,25 +71,25 @@ int exercicio03(void) {
     }Pessoa;
 
     typedef struct Base{
-        int armazenado; //Deve sempre corresponder ao nÃºmero de pessoas na base
+        int armazenado; //Deve sempre corresponder ao número de pessoas na base
         Pessoa pessoas[100];
     }Base;
 
-    Crie funÃ§Ãµes para cada uma das operaÃ§Ãµes abaixo:
+    Crie funções para cada uma das operações abaixo:
 
-     a) Cria base: esta funÃ§Ã£o devolve uma Base onde o campo armazenado Ã© inicializado
+     a) Cria base: esta função devolve uma Base onde o campo armazenado é inicializado
     com 0.
     Base cria_base();
 
-    b) Inclui Pessoa: esta funÃ§Ã£o recebe como parÃ¢metro um dado do tipo Pessoa e o inclui
-    na base (tambÃ©m passada por parÃ¢metro) caso jÃ¡ nÃ£o exista na base uma pessoa com
-    o mesmo RG. A funÃ§Ã£o devolve 1 caso a inclusÃ£o tenha ocorrido, devolve 0 caso a
-    Base esteja cheia e devolve -1 caso jÃ¡ exista uma pessoa com o RG informado.
+    b) Inclui Pessoa: esta função recebe como parâmetro um dado do tipo Pessoa e o inclui
+    na base (também passada por parâmetro) caso já não exista na base uma pessoa com
+    o mesmo RG. A função devolve 1 caso a inclusão tenha ocorrido, devolve 0 caso a
+    Base esteja cheia e devolve -1 caso já exista uma pessoa com o RG informado.
     int insere_base(Pessoa p, Base base);
 
-    c) Exclui Pessoa: esta funÃ§Ã£o recebe como parÃ¢metro um dado do tipo int representando
-    o RG de uma pessoa e o exclui da base caso esteja presente. A funÃ§Ã£o devolve 1 caso a
-    exclusÃ£o tenha ocorrido, e devolve 0 caso nÃ£o exista uma pessoa com o RG informado.
+    c) Exclui Pessoa: esta função recebe como parâmetro um dado do tipo int representando
+    o RG de uma pessoa e o exclui da base caso esteja presente. A função devolve 1 caso a
+    exclusão tenha ocorrido, e devolve 0 caso não exista uma pessoa com o RG informado.
     int remove_base(int rg, Base base);
     */
     return 0;
@@ -94,7 +98,7 @@ int exercicio03(void) {
 int exercicio04(void) {
     /**
     4. Suponha que criamos uma estrutura para armazenar dados de pessoas e um vetor para
-    armazenar dados de vÃ¡rias pessoas:
+    armazenar dados de várias pessoas:
 
     typedef struct Pessoa{
         int rg;
@@ -105,24 +109,24 @@ int exercicio04(void) {
     Pessoa cadastro[100];
 
     Suponha que o vetor esteja ordenado em ordem crescente por valor de RG. Implemente
-    uma funÃ§Ã£o de busca por RG, que opera como a busca binÃ¡ria, e que caso exista uma
-    pessoa no cadastro com o RG a ser buscado, devolve o Ã­ndice deste no cadastro, e devolve
-    -1 caso nÃ£o exista uma pessoa com o RG a ser buscado.
+    uma função de busca por RG, que opera como a busca binária, e que caso exista uma
+    pessoa no cadastro com o RG a ser buscado, devolve o índice deste no cadastro, e devolve
+    -1 caso não exista uma pessoa com o RG a ser buscado.
      */
     return 0;
 }
 
 int exercicio05(void) {
     /**
-    5. RefaÃ§a as funÃ§Ãµes de busca sequencial e busca binÃ¡ria vistas em aula assumindo que o
-    vetor possui chaves que podem aparecer repetidas. Neste caso, vocÃª deve retornar em um
-    outro vetor todas as posiÃ§Ãµes onde a chave foi encontrada.
-    ProtÃ³tipo da funÃ§Ã£o: void busca(int vet[], int tam, int chave, int posicoes[], int
+    5. Refaça as funções de busca sequencial e busca binária vistas em aula assumindo que o
+    vetor possui chaves que podem aparecer repetidas. Neste caso, você deve retornar em um
+    outro vetor todas as posições onde a chave foi encontrada.
+    Protótipo da função: void busca(int vet[], int tam, int chave, int posicoes[], int
         *n)
-    â€¢ VocÃª deve devolver em posicoes[] as posiÃ§Ãµes de vet que possuem a chave, e devolver
-    em *n o nÃºmero de ocorrÃªncias da chave.
-    â€“ OBS: Na chamada desta funÃ§Ã£o, o vetor posiÃ§Ãµes deve ter espaÃ§o suficiente
-    (por exemplo, tam) para guardar todas as possÃ­veis ocorrÃªncias da chave.
+    ? Você deve devolver em posicoes[] as posições de vet que possuem a chave, e devolver
+    em *n o número de ocorrências da chave.
+    ? OBS: Na chamada desta função, o vetor posições deve ter espaço suficiente
+    (por exemplo, tam) para guardar todas as possíveis ocorrências da chave.
      */
     return 0;
 }
@@ -130,7 +134,7 @@ int exercicio05(void) {
 int exercicio06(void) {
 
     /*
-     6. O que serÃ¡ impresso pelo programa abaixo?
+     6. O que será impresso pelo programa abaixo?
      #include <stdio.h>
      struct T{
          int x;
@@ -166,21 +170,21 @@ int exercicio07(void) {
 
     /*
     struct Aluno leAluno ( ) ;
-    Esta funÃ§Ã£o faz a leitura dos dados de um registro Aluno e devolve o
+    Esta função faz a leitura dos dados de um registro Aluno e devolve o
     registro lido.
 
     void imprimeAluno (struct Aluno a) ;
-    Esta funÃ§Ã£o recebe como parÃ¢metro um registro Aluno e imprime os
+    Esta função recebe como parâmetro um registro Aluno e imprime os
     dados do registro.
 
     void listarTurma (struc t Aluno turma [ ], int n ) ;
-    Esta funÃ§Ã£o recebe como parÃ¢metros um vetor do tipo Aluno
-    representando uma turma, e tambÃ©m um inteiro n indicando o
-    tamanho do vetor. A funÃ§Ã£o imprime os dados de todos os alunos.
+    Esta função recebe como parâmetros um vetor do tipo Aluno
+    representando uma turma, e também um inteiro n indicando o
+    tamanho do vetor. A função imprime os dados de todos os alunos.
     */
 
     int numAlunos;
-    printf("Digite o nÃºmero de alunos: ");
+    printf("Digite o número de alunos: ");
     scanf("%d", &numAlunos);
     Aluno *alunos = leAlunos(numAlunos);
 
@@ -198,16 +202,16 @@ int exercicio07(void) {
 int exercicio08(void) {
     /**
      Crie um novo tipo de registro para armazenar alunos com RA e idade.
-     faÃ§a a leitura de 5 alunos em uma funÃ§Ã£o.
-     Calcule e imprima a mÃ©dia das idades dos alunos.
+     faça a leitura de 5 alunos em uma função.
+     Calcule e imprima a média das idades dos alunos.
      */
 
     int numAlunes;
-    printf("Digite o nÃºmero de alunos: ");
+    printf("Digite o número de alunos: ");
     scanf("%d", &numAlunes);
     Alune *alunes = leAlunes(numAlunes);
 
-    printf("A mÃ©dia das idades Ã©: %.2f", mediaAlunes(alunes, 5));
+    printf("A média das idades é: %.2f", mediaAlunes(alunes, 5));
 
     free(alunes);
     return 0;
@@ -217,9 +221,9 @@ int exercicio09(void) {
     /**
     Crie um novo tipo de registro para armazenar coordenadas no plano
     cartesiano.
-    Crie uma FunÃ§Ã£o para imprimir um ponto do tipo criado.
-    Crie uma FunÃ§Ã£o para cada uma destas operaÃ§Ãµes: soma de dois
-    pontos, subtraÃ§Ã£o de dois pontos, multiplicaÃ§Ã£o por um escalar.
+    Crie uma Função para imprimir um ponto do tipo criado.
+    Crie uma Função para cada uma destas operações: soma de dois
+    pontos, subtração de dois pontos, multiplicação por um escalar.
      */
 
     printf("Digite as coordenadas do ponto 1:\n");
@@ -237,22 +241,99 @@ int exercicio09(void) {
     printf("Soma dos pontos:\n");
     imprimePonto(somaPonto(p1, p2));
 
-    printf("SubtraÃ§Ã£o dos pontos:\n");
-    imprimePonto(subtraiaPonto(p1, p2));
+    printf("Subtração dos pontos:\n");
+    imprimePonto(subtraiPonto(p1, p2));
 
-    printf("MultiplicaÃ§Ã£o do ponto 1 por um escalar:\n");
+    printf("Multiplicação do ponto 1 por um escalar:\n");
     imprimePonto(multiplicaPonto(p1, 2));
 
-    printf("MultiplicaÃ§Ã£o do ponto 2 por um escalar:\n");
+    printf("Multiplicação do ponto 2 por um escalar:\n");
     imprimePonto(multiplicaPonto(p2, 2));
 
-
     return 0;
 }
 
+// Function to display exercise menu and get user choice
+int displayMenuAndGetChoice() {
+    printf("Exercício 01:\n");
+    printf("Exercício 02:\n");
+    printf("Exercício 03:\n");
+    printf("Exercício 04:\n");
+    printf("Exercício 05:\n");
+    printf("Exercício 06:\n");
+    printf("Exercício 07:\n");
+    printf("Exercício 08:\n");
+    printf("Exercício 09:\n");
+    printf("Digite o número do exercício que deseja executar");
+
+    int escolha;
+    scanf("%d", &escolha);
+    return escolha;
+}
+
+void executeExercise(int choice) {
+    switch (choice) {
+        case 1:
+            exercicio01();
+            break;
+        case 2:
+            exercicio02();
+            break;
+        case 3:
+            exercicio03();
+            break;
+        case 4:
+            exercicio04();
+            break;
+        case 5:
+            exercicio05();
+            break;
+        case 6:
+            exercicio06();
+            break;
+        case 7:
+            exercicio07();
+            break;
+        case 8:
+            exercicio08();
+            break;
+        case 9:
+            exercicio09();
+            break;
+        default:
+            printf("Opção inválida!\n");
+            break;
+    }
+}
+
+
+// Function to validate and get user's exit choice
+bool getExitChoice() {
+    int sair;
+    do {
+        printf("Deseja sair? Digite (1) para Sim ou (0) para Não: ");
+        scanf("%d", &sair);
+    } while (sair != 0 && sair != 1);
+    return sair;
+}
 
 int main(void) {
+    setlocale(LC_ALL, "Portuguese");
 
+    bool sair = false;  // Use boolean instead of int for exit choice
+    do {
+        int escolha = displayMenuAndGetChoice();
+
+        if (escolha >= 1 && escolha <= MAX_EXERCISES) {
+            executeExercise(escolha);
+        } else {
+            printf("Opção inválida!\n");
+        }
+        sair = getExitChoice();
+    } while (!sair);
+    printf("Obrigado por utilizar o programa!\n");
     return 0;
 }
+
+
 
