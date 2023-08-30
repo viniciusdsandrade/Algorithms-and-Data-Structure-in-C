@@ -179,19 +179,19 @@ int exercicio07(void) {
     tamanho do vetor. A função imprime os dados de todos os alunos.
     */
 
-    Aluno aluno[5];
+    int numAlunos;
+    printf("Digite o número de alunos: ");
+    scanf("%d", &numAlunos);
+    Aluno *alunos = leAlunos(numAlunos);
+
 
     for (int i = 0; i < 5; i++) {
-        printf("Digite os dados do aluno %d:\n", i + 1);
-        aluno[i] = leAluno(i);
+        imprimeAluno(alunos[i]);
     }
 
-    for (int i = 0; i < 5; i++) {
-        imprimeAluno(aluno[i]);
-    }
+    listarTurma(alunos, 5);
 
-    listarTurma(aluno, 5);
-
+    free(alunos);
     return 0;
 }
 
@@ -202,15 +202,14 @@ int exercicio08(void) {
      Calcule e imprima a média das idades dos alunos.
      */
 
-    Alune alunes[5];
-
-    for (int i = 0; i < 5; i++) {
-        printf("Digite os dados do alune %d:\n", i + 1);
-        alunes[i] = leAlune(i);
-    }
+    int numAlunes;
+    printf("Digite o número de alunos: ");
+    scanf("%d", &numAlunes);
+    Alune *alunes = leAlunos(numAlunes);
 
     printf("A média das idades é: %.2f", mediaAlunes(alunes, 5));
 
+    free(alunes);
     return 0;
 }
 

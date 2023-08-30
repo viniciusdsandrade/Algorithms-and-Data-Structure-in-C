@@ -27,11 +27,13 @@ typedef struct Alune {
     double nota;
 } Alune;
 
+/**
+ * Estrutura que representa um ponto no plano cartesiano.
+ */
 typedef struct Ponto {
     double x;
     double y;
 } Ponto;
-
 
 /**
  * Lê os dados de um vetor de produtos da entrada padrão.
@@ -131,32 +133,53 @@ Produto *leProdutos(int n) {
     return produtos;
 }
 
+
 /**
- * Lê os dados de um aluno (nome e nota) da entrada padrão.
+ * Lê os dados de um vetor de alunos da entrada padrão.
  *
- * @return Uma estrutura Aluno preenchida com os dados lidos.
+ * Esta função aloca memória para o vetor de alunos e preenche seus elementos
+ * com os dados lidos da entrada padrão.
+ *
+ * @param n O número de alunos a serem lidos.
+ * @return Um ponteiro para o vetor de alunos preenchido.
  */
-Aluno leAluno() {
-    Aluno a;
-    printf("Nome: ");
-    scanf("%s", a.nome);
-    printf("Nota: ");
-    scanf("%f", &a.nota);
-    return a;
+Aluno *leAlunos(int n) {
+    Aluno *alunos = malloc(n * sizeof(Aluno));
+    if (alunos == NULL) {
+        fprintf(stderr, "Erro na alocação de memória\n");
+        exit(1);
+    }
+    for (int i = 0; i < n; i++) {
+        printf("Nome: ");
+        scanf("%s", alunos[i].nome);
+        printf("Nota: ");
+        scanf("%f", &alunos[i].nota);
+    }
+    return alunos;
 }
 
 /**
- * Lê os dados de um aluno (RA e nota) da entrada padrão.
+ * Lê os dados de um vetor de alunes da entrada padrão.
  *
- * @return Uma estrutura Alune preenchida com os dados lidos.
+ * Esta função aloca memória para o vetor de alunes e preenche seus elementos
+ * com os dados lidos da entrada padrão.
+ *
+ * @param n O número de alunes a serem lidos.
+ * @return Um ponteiro para o vetor de alunes preenchido.
  */
-Alune leAlune() {
-    Alune a;
-    printf("RA: ");
-    scanf("%d", &a.ra);
-    printf("Nota: ");
-    scanf("%f", &a.nota);
-    return a;
+Alune *leAlunes(int n) {
+    Alune *alunes = malloc(n * sizeof(Alune));
+    if (alunes == NULL) {
+        fprintf(stderr, "Erro na alocação de memória\n");
+        exit(1);
+    }
+    for (int i = 0; i < n; i++) {
+        printf("RA: ");
+        scanf("%d", &alunes[i].ra);
+        printf("Nota: ");
+        scanf("%lf", &alunes[i].nota);
+    }
+    return alunes;
 }
 
 /**
