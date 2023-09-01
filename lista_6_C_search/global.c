@@ -3,37 +3,89 @@
 #include "global.h"
 
 /**
+ * @struct Produto
+ * 
  * Estrutura que representa um produto com nome, preço e quantidade.
  */
 typedef struct Produto {
-    char nome[80];
-    double preco;
-    int quantidade;
+    char nome[80];      /**< Nome do produto. */
+    double preco;       /**< Preço do produto. */
+    int quantidade;     /**< Quantidade disponível do produto. */
 } Produto;
 
 /**
- * Estrutura que representa uma aluno com nome e nota.
+ * @struct Aluno
+ * 
+ * Estrutura que representa um aluno com nome e nota.
  */
 typedef struct Aluno {
-    char nome[80];
-    float nota;
+    char nome[80];      /**< Nome do aluno. */
+    float nota;         /**< Nota do aluno. */
 } Aluno;
 
 /**
- * Estrutura que representa uma aluno com ra e nota.
+ * @struct Alune
+ * 
+ * Estrutura que representa um aluno com RA (Registro Acadêmico) e nota.
  */
 typedef struct Alune {
-    int ra;
-    double nota;
+    int ra;             /**< Registro Acadêmico (RA) do aluno. */
+    double nota;        /**< Nota do aluno. */
 } Alune;
 
 /**
- * Estrutura que representa um ponto no plano cartesiano.
+ * @struct Ponto
+ * 
+ * Estrutura que representa um ponto no plano cartesiano com coordenadas x e y.
  */
 typedef struct Ponto {
-    double x;
-    double y;
+    double x;           /**< Coordenada x do ponto. */
+    double y;           /**< Coordenada y do ponto. */
 } Ponto;
+
+
+/**
+ * @struct Reg
+ * 
+ * Estrutura que representa um registro com um vetor de inteiros com 3 elementos
+ * e uma variável inteira.
+ */
+typedef struct Reg {
+    int vet[3];  /**< Vetor de inteiros com 3 elementos. */
+    int n;       /**< Variável inteira. */
+} Reg;
+
+/**
+ * @struct Data
+ * 
+ * Estrutura que representa uma data com dia, mês e ano.
+ */
+typedef struct Data {
+    int dia; /**< Dia da data. */
+    int mes; /**< Mês da data. */
+    int ano; /**< Ano da data. */
+} Data;
+
+/**
+ * @struct Pessoa
+ * 
+ * Estrutura que representa uma pessoa com RG, CPF e nome.
+ */
+typedef struct Pessoa {
+    int rg; /**< Registro Geral (RG) da pessoa. */
+    int cpf; /**< Cadastro de Pessoa Física (CPF) da pessoa. */
+    char nome[80]; /**< Nome da pessoa. */
+} Pessoa;
+
+/**
+ * @struct Base
+ * 
+ * Estrutura que representa uma base de dados de pessoas.
+ */
+typedef struct Base {
+    int armazenado; /**< Número de pessoas armazenadas na base. Deve sempre corresponder ao número de pessoas na base. */
+    Pessoa pessoas[100]; /**< Array de pessoas armazenadas na base. */
+} Base;
 
 /**
  * Lê os dados de um vetor de produtos da entrada padrão.
@@ -296,4 +348,71 @@ double distanciaPonto(Ponto p1, Ponto p2) {
     double distancia;
     distancia = sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
     return distancia;
+}
+
+
+/**
+ * Função que lê valores para a estrutura Reg e retorna a estrutura preenchida.
+ *
+ * Esta função solicita ao usuário que insira valores para o vetor de inteiros e a variável
+ * inteira dentro da estrutura Reg. Em seguida, ela retorna a estrutura Reg preenchida.
+ *
+ * @return A estrutura Reg preenchida.
+ */
+Reg leReg(void) {
+    Reg reg;
+
+    for (int i = 0; i < 3; i++) {
+        printf("Digite o valor para Reg.vet[%d]: ", i);
+        scanf("%d", &(reg.vet[i]));
+    }
+
+    printf("Digite o valor para Reg.n: ");
+    scanf("%d", &(reg.n));
+
+    return reg;
+}
+
+/**
+ * Função que soma os valores do vetor do primeiro atributo da estrutura Reg e armazena o resultado no segundo atributo.
+ *
+ * Esta função calcula a soma dos valores do vetor de inteiros no primeiro atributo da estrutura Reg
+ * e armazena o resultado no segundo atributo da mesma estrutura.
+ *
+ * @param reg A estrutura Reg na qual os valores serão somados e armazenados.
+ * @return A estrutura Reg com o segundo atributo atualizado.
+ */
+Reg somaVetorSegundoAtributo(Reg reg) {
+    int soma = 0;
+
+    // Calcula a soma dos valores do vetor do primeiro atributo
+    for (int i = 0; i < 3; i++) {
+        soma += reg.vet[i];
+    }
+
+    // Armazena o resultado no segundo atributo (reg.vet[1])
+    Reg resultado = reg;
+    resultado.vet[1] = soma;
+
+    return resultado;
+}
+
+/**
+ * Função que imprime os valores de uma estrutura Reg.
+ *
+ * Esta função imprime os valores do vetor de inteiros e da variável
+ * inteira dentro da estrutura Reg.
+ *
+ * @param reg A estrutura Reg cujos valores serão impressos.
+ */
+void imprimeReg(Reg reg) {
+    printf("Valores da estrutura Reg:\n");
+    
+    printf("Vetor de inteiros: ");
+    for (int i = 0; i < 3; i++) {
+        printf("%d ", reg.vet[i]);
+    }
+    printf("\n");
+
+    printf("Variável inteira (n): %d\n", reg.n);
 }

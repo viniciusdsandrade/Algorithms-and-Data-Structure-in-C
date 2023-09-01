@@ -18,4 +18,8 @@ void imprimePonto(Ponto p);
 Ponto somaPonto(Ponto p1, Ponto p2);
 Ponto subtraiPonto(Ponto p1, Ponto p2);
 
+Reg leReg(void);
+Reg somaVetorSegundoAtributo(Reg reg);
+void imprimeReg(Reg reg);
+
 #endif //INC_2_LISTAS_GLOBAL_H
