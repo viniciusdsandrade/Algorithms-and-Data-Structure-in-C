@@ -298,11 +298,6 @@ int menor_base_log(int n) {
         }
     }
 
-    // Se n for primo maior que 2, atualiza menor_base
-    if (n > 2) {
-        menor_base = n;
-    }
-
     return menor_base;
 }
 
