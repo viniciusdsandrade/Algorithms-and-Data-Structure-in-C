@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include <locale.h>
 #include <stdbool.h>
+#include <malloc.h>
+#include <locale.h>
 #include "global.h"
 
 #define MAX_EXERCISES 10
@@ -193,7 +194,6 @@ int exercicio07(void) {
     scanf("%d", &numAlunos);
     Aluno *alunos = leAlunos(numAlunos);
 
-
     for (int i = 0; i < 5; i++) {
         imprimeAluno(alunos[i]);
     }
@@ -247,13 +247,13 @@ int exercicio09(void) {
     printf("Soma dos pontos:\n");
     imprimePonto(somaPonto(p1, p2));
 
-    printf("Subtração dos pontos:\n");
+    printf("SubtraÃ§Ã£o dos pontos:\n");
     imprimePonto(subtraiPonto(p1, p2));
 
-    printf("Multiplicação do ponto 1 por um escalar:\n");
+    printf("MultiplicaÃ§Ã£o do ponto 1 por um escalar:\n");
     imprimePonto(multiplicaPonto(p1, 2));
 
-    printf("Multiplicação do ponto 2 por um escalar:\n");
+    printf("MultiplicaÃ§Ã£o do ponto 2 por um escalar:\n");
     imprimePonto(multiplicaPonto(p2, 2));
 
     return 0;
@@ -261,12 +261,12 @@ int exercicio09(void) {
 
 int exercicio10(void) {
     /**
-    Defina uma variável do tipo registro que tenha dois campinas, senodo o  1 um vetor de 3 elementos do tipo inteiro
-    e o 2 campo um valor inteiro. Faça:
+    Defina uma variÃ¡vel do tipo registro que tenha dois campinas, senodo o  1 um vetor de 3 elementos do tipo inteiro
+    e o 2 campo um valor inteiro. FaÃ§a:
     
-    a) Crie uma função para leitura dos valores do 1 campo(vetor)    
+    a) Crie uma funÃ§Ã£o para leitura dos valores do 1 campo(vetor)    
     b) Some os valores do vetor e coloque o resultao no 2 campo
-    c) Crie uma função para imprimir os valores de registro
+    c) Crie uma funÃ§Ã£o para imprimir os valores de registro
     
      */
 
@@ -294,7 +294,7 @@ int displayMenuAndGetChoice() {
     printf("Exerc?cio 07:\n");
     printf("Exerc?cio 08:\n");
     printf("Exerc?cio 09:\n");
-    printf("Exercício 10: \n");
+    printf("ExercÃ­cio 10: \n");
     printf("Digite o n?mero do exerc?cio que deseja executar");
 
     int escolha;
@@ -360,7 +360,7 @@ int main(void) {
         if (escolha >= 1 && escolha <= MAX_EXERCISES) {
             executeExercise(escolha);
         } else {
-            printf("Opção inválida!\n");
+            printf("OpÃ§Ã£o invÃ¡lida!\n");
         }
         sair = getExitChoice();
     } while (!sair);

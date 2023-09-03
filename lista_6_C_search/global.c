@@ -1,6 +1,6 @@
 #include <math.h>
 #include <malloc.h>
-#include "global.h"
+#include <stdio.h>
 
 /**
  * @struct Produto
