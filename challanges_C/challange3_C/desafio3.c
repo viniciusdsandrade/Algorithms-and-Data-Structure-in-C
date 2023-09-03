@@ -11,15 +11,13 @@ void atualizaMatriz(int matrix[][MAX_COLUNAS], int numLinhas, int numColunas);
 int contadorVizinhosHumanos(int matrix[][MAX_COLUNAS], int linha, int coluna, int numLinhas, int numColunas);
 int contadorVizinhosZumbis(int matrix[][MAX_COLUNAS], int linha, int coluna, int numLinhas, int numColunas);
 
-/*
-    MEMBROS DO GRUPO:
-    ALUNO 1: Vinícius dos Santos Andrade  RA: 2760482311026
-    ALUNO 2: Gianlucca Fadiga Rissato     RA: 2760482311014
-    ALUNO 3:                              RA:
-    ALUNO 4:                              RA:
+/**
+    - MEMBROS DO GRUPO:
+    @ALUNO 1: Vinícius dos Santos Andrade  RA: 2760482311026
+    @ALUNO 2: Gianlucca Fadiga Rissato     RA: 2760482311014
 */
 
-/*
+/**
     O objetivo desse desafio é elaborar um algortimo de detecção de variáveis dentro de uma matriz
     considerando que nessa matriz os vizinhos são considerados como uma matriz circular.
 

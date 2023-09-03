@@ -1,4 +1,4 @@
-/*
+/**
 Dada uma sequência de valores do PIB correspondentes a um determinado intervalo de anos,
 o objetivo deste laboratório é determinar o triênio que teve o maior crescimento médio do PIB.
 
