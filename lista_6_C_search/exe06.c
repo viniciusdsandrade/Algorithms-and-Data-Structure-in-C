@@ -56,6 +56,11 @@ int exercicio02(void) {
 
     Dica: Ordene o vetor separadamente por cada um dos campos.
     */
+
+    printf("Digite a quantidade de datas: ");
+    int n;
+
+    scanf("%d", &n);
     return 0;
 }
 
@@ -133,7 +138,7 @@ int exercicio05(void) {
 
 int exercicio06(void) {
 
-    /*
+    /**
      6. O que ser? impresso pelo programa abaixo?
      #include <stdio.h>
      struct T{
@@ -168,7 +173,7 @@ int exercicio06(void) {
 
 int exercicio07(void) {
 
-    /*
+    /**
     struct Aluno leAluno ( ) ;
     Esta fun??o faz a leitura dos dados de um registro Aluno e devolve o
     registro lido.
@@ -254,8 +259,7 @@ int exercicio09(void) {
     return 0;
 }
 
-int exercicio10(void)
-{
+int exercicio10(void) {
     /**
     Defina uma variável do tipo registro que tenha dois campinas, senodo o  1 um vetor de 3 elementos do tipo inteiro
     e o 2 campo um valor inteiro. Faça:
@@ -349,14 +353,14 @@ bool getExitChoice() {
 int main(void) {
     setlocale(LC_ALL, "Portuguese");
 
-    bool sair = false;  
+    bool sair = false;
     do {
         int escolha = displayMenuAndGetChoice();
 
         if (escolha >= 1 && escolha <= MAX_EXERCISES) {
             executeExercise(escolha);
         } else {
-            printf("Op??o inv?lida!\n");
+            printf("Opção inválida!\n");
         }
         sair = getExitChoice();
     } while (!sair);

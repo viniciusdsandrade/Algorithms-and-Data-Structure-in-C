@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <locale.h>
+#include <stdbool.h>
 #include "global.c"
 
 #define MAX 50
@@ -196,7 +197,7 @@ int exercicio05(void) {
     int v1[MAX];
     int v2[MAX];
 
-    int tam1,tam2;
+    int tam1, tam2;
 
     printf("Dimensao vetor1: ");
     scanf("%d", &tam1);
@@ -1447,158 +1448,173 @@ int exercicio31(void) {
     return 0;
 }
 
+int displayMenuGetChoice() {
+    printf("Exercício 1 - Lista 3\n");
+    printf("Exercício 2 - Lista 3\n");
+    printf("Exercício 3 - Lista 3\n");
+    printf("Exercício 4 - Lista 3\n");
+    printf("Exercício 5 - Lista 3\n");
+    printf("Exercício 6 - Lista 3\n");
+    printf("Exercício 7 - Lista 3\n");
+    printf("Exercício 8 - Lista 3\n");
+    printf("Exercício 9 - Lista 3\n");
+    printf("Exercício 10 - Lista 3\n");
+    printf("Exercício 11 - Lista 3\n");
+    printf("Exercício 12 - Lista 3\n");
+    printf("Exercício 13 - Lista 3\n");
+    printf("Exercício 14 - Lista 3\n");
+    printf("Exercício 15 - Lista 3\n");
+    printf("Exercício 16 - Lista 3\n");
+    printf("Exercício 17 - Lista 3\n");
+    printf("Exercício 18 - Lista 3\n");
+    printf("Exercício 19 - Lista 3\n");
+    printf("Exercício 20 - Lista 3\n");
+    printf("Exercício 21 - Lista 3\n");
+    printf("Exercício 22 - Lista 3\n");
+    printf("Exercício 23 - Lista 3\n");
+    printf("Exercício 24 - Lista 3\n");
+    printf("Exercício 25 - Lista 3\n");
+    printf("Exercício 26 - Lista 3\n");
+    printf("Exercício 27 - Lista 3\n");
+    printf("Exercício 28 - Lista 3\n");
+    printf("Exercício 29 - Lista 3\n");
+    printf("Exercício 30 - Lista 3\n");
+    printf("Exercício 31 - Lista 3\n");
+    printf("Digite o número do exercício: ");
+
+    int choice;
+    scanf("%d", &choice);
+    return choice;
+}
+
+void executeExercise(int choice) {
+    switch (choice) {
+        case 1:
+            exercicio01();
+            break;
+        case 2:
+            exercicio02();
+            break;
+        case 3:
+            exercicio03();
+            break;
+        case 4:
+            exercicio04();
+            break;
+        case 5:
+            exercicio05();
+            break;
+        case 6:
+            exercicio06();
+            break;
+        case 7:
+            exercicio07();
+            break;
+        case 8:
+            exercicio08();
+            break;
+        case 9:
+            exercicio09();
+            break;
+        case 10:
+            exercicio10();
+            break;
+        case 11:
+            exercicio11();
+            break;
+        case 12:
+            exercicio12();
+            break;
+        case 13:
+            exercicio13();
+            break;
+        case 14:
+            exercicio14();
+            break;
+        case 15:
+            exercicio15();
+            break;
+        case 16:
+            exercicio16();
+            break;
+        case 17:
+            exercicio17();
+            break;
+        case 18:
+            exercicio18();
+            break;
+        case 19:
+            exercicio19();
+            break;
+        case 20:
+            exercicio20();
+            break;
+        case 21:
+            exercicio21();
+            break;
+        case 22:
+            exercicio22();
+            break;
+        case 23:
+            exercicio23();
+            break;
+        case 24:
+            exercicio24();
+            break;
+        case 25:
+            exercicio25();
+            break;
+        case 26:
+            exercicio26();
+            break;
+        case 27:
+            exercicio27();
+            break;
+        case 28:
+            exercicio28();
+            break;
+        case 29:
+            exercicio29();
+            break;
+        case 30:
+            exercicio30();
+            break;
+        case 31:
+            exercicio31();
+            break;
+        default:
+            printf("Exercicio n?o existente na lista.\n");
+            break;
+    }
+}
+
+bool getExitChoice() {
+    int exitChoice;
+    printf("Deseja sair? (1) - Sim (0) - N?o: ");
+    scanf("%d", &exitChoice);
+
+    while (exitChoice != 0 && exitChoice != 1) {
+        printf("Op??o inv?lida, digite novamente: ");
+        scanf("%d", &exitChoice);
+    }
+
+    return exitChoice;
+}
+
 int main(void) {
     setlocale(LC_ALL, "Portuguese");
 
-    int sair = 1;
+    bool sair = false;
     do {
-        int escolha;
-        printf("(1) -  Exercicio 1  - Lista 3\n");
-        printf("(2) -  Exercicio 2  - Lista 3\n");
-        printf("(3) -  Exercicio 3  - Lista 3\n");
-        printf("(4) -  Exercicio 4  - Lista 3\n");
-        printf("(5) -  Exercicio 5  - Lista 3\n");
-        printf("(6) -  Exercicio 6  - Lista 3\n");
-        printf("(7) -  Exercicio 7  - Lista 3\n");
-        printf("(8) -  Exercicio 8  - Lista 3\n");
-        printf("(9) -  Exercicio 9  - Lista 3\n");
-        printf("(10) - Exercicio 10 - Lista 3\n");
-        printf("(11) - Exercicio 11\n");
-        printf("(12) - Exercicio 12\n");
-        printf("(13) - Exercicio 13\n");
-        printf("(14) - Exercicio 14\n");
-        printf("(15) - Exercicio 15\n");
-        printf("(16) - Exercicio 16\n");
-        printf("(17) - Exercicio 17\n");
-        printf("(18) - Exercicio 18\n");
-        printf("(19) - Exercicio 19\n");
-        printf("(20) - Exercicio 20\n");
-        printf("(21) - Exercicio 21\n");
-        printf("(22) - Exercicio 22\n");
-        printf("(23) - Exercicio 23\n");
-        printf("(24) - Exercicio 24\n");
-        printf("(25) - Exercicio 25\n");
-        printf("(26) - Exercicio 26\n");
-        printf("(27) - Exercicio 27\n");
-        printf("(28) - Exercicio 28\n");
-        printf("(29) - Exercicio 29\n");
-        printf("(30) - Exercicio 30\n");
-        printf("(31) - Exercicio 31\n");
-        printf("Qual exerc?cio voc? gostaria de realizar: ");
+        int choice = displayMenuGetChoice();
 
-        scanf("%d", &escolha);
-
-        switch (escolha) {
-            case 1:
-                exercicio01();
-                break;
-            case 2:
-                exercicio02();
-                break;
-            case 3:
-                exercicio03();
-                break;
-            case 4:
-                exercicio04();
-                break;
-            case 5:
-                exercicio05();
-                break;
-            case 6:
-                exercicio06();
-                break;
-            case 7:
-                exercicio07();
-                break;
-            case 8:
-                exercicio08();
-                break;
-            case 9:
-                exercicio09();
-                break;
-            case 10:
-                exercicio10();
-                break;
-            case 11:
-                exercicio11();
-                break;
-            case 12:
-                exercicio12();
-                break;
-            case 13:
-                exercicio13();
-                break;
-            case 14:
-                exercicio14();
-                break;
-            case 15:
-                exercicio15();
-                break;
-            case 16:
-                exercicio16();
-                break;
-            case 17:
-                exercicio17();
-                break;
-            case 18:
-                exercicio18();
-                break;
-            case 19:
-                exercicio19();
-                break;
-            case 20:
-                exercicio20();
-                break;
-            case 21:
-                exercicio21();
-                break;
-            case 22:
-                exercicio22();
-                break;
-            case 23:
-                exercicio23();
-                break;
-            case 24:
-                exercicio24();
-                break;
-            case 25:
-                exercicio25();
-                break;
-            case 26:
-                exercicio26();
-                break;
-            case 27:
-                exercicio27();
-                break;
-            case 28:
-                exercicio28();
-                break;
-            case 29:
-                exercicio29();
-                break;
-            case 30:
-                exercicio30();
-                break;
-            case 31:
-                exercicio31();
-                break;
-            default:
-                printf("Exercicio n?o existente na lista.\n");
-                break;
+        if (choice >= 0 && choice <= MAX) {
+            executeExercise(choice);
+        } else {
+            printf("Opçãoo inválida, tente novamente.\n");
         }
-
-        printf("Deseja sair? (1) - Sim (0) - N?o: ");
-        scanf("%d", &sair);
-
-        while (sair != 0 && sair != 1) {
-            printf("Op??o inv?lida, digite novamente!\n");
-            printf("Deseja sair? (1) - Sim (0) - N?o: ");
-            scanf("%d", &sair);
-        }
-    } while (sair != 1);
-
-    printf("Fim do Programa!\n");
-    printf("At? Breve!");
-
+        sair = getExitChoice();
+    } while (!sair);
+    printf("Obriagado por utilizar o programa.\n");
     return 0;
 }

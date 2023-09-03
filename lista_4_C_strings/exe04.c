@@ -3,6 +3,8 @@
 #include <string.h>
 #include "global.c"
 
+#define MAX_EXERCISES 10
+
 int exercicio01(void) {
     /*
         1 - Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
@@ -660,110 +662,127 @@ int exercicio19(void) {
     return 0;
 }
 
-int main(void) {
-    setlocale(LC_ALL, "Portuguese");
+int displayMenuAndGetChoice() {
+    printf("Escolha uma opcao:\n");
+    printf("1 - Exercicio 1\n");
+    printf("2 - Exercicio 2\n");
+    printf("3 - Exercicio 3\n");
+    printf("4 - Exercicio 4\n");
+    printf("5 - Exercicio 5\n");
+    printf("6 - Exercicio 6\n");
+    printf("7 - Exercicio 7\n");
+    printf("8 - Exercicio 8\n");
+    printf("9 - Exercicio 9\n");
+    printf("10 - Exercicio 10\n");
+    printf("11 - Exercicio 11\n");
+    printf("12 - Exercicio 12\n");
+    printf("13 - Exercicio 13\n");
+    printf("14 - Exercicio 14\n");
+    printf("15 - Exercicio 15\n");
+    printf("16 - Exercicio 16\n");
+    printf("17 - Exercicio 17\n");
+    printf("18 - Exercicio 18\n");
+    printf("19 - Exercicio 19\n");
+    printf("20 - Sair\n");
+    printf("Digite sua escolha: ");
 
-    int sair = 1;
+    int choice;
+    scanf("%d", &choice);
+    return choice;
+}
+
+void executeExercise(int choice) {
+    switch (choice) {
+        case 1:
+            exercicio01();
+            break;
+        case 2:
+            exercicio02();
+            break;
+        case 3:
+            exercicio03();
+            break;
+        case 4:
+            exercicio04();
+            break;
+        case 5:
+            exercicio05();
+            break;
+        case 6:
+            exercicio06();
+            break;
+        case 7:
+            exercicio07();
+            break;
+        case 8:
+            exercicio08();
+            break;
+        case 9:
+            exercicio09();
+            break;
+        case 10:
+            exercicio10();
+            break;
+        case 11:
+            exercicio11();
+            break;
+        case 12:
+            exercicio12();
+            break;
+        case 13:
+            exercicio13();
+            break;
+        case 14:
+            exercicio14();
+            break;
+        case 15:
+            exercicio15();
+            break;
+        case 16:
+            exercicio16();
+            break;
+        case 17:
+            exercicio17();
+            break;
+        case 18:
+            exercicio18();
+            break;
+        case 19:
+            exercicio19();
+            break;
+        default:
+            printf("Opcao invalida!\n");
+            break;
+    }
+}
+
+bool getExitChoice() {
+    int sair;
     do {
-        int escolha;
-        printf("(1) - Exe01  - Lista04\n");
-        printf("(2) - Exe02  - Lista04\n");
-        printf("(3) - Exe03  - Lista04\n");
-        printf("(4) - Exe04  - Lista04\n");
-        printf("(5) - Exe05  - Lista04\n");
-        printf("(6) - Exe06  - Lista04\n");
-        printf("(7) - Exe07  - Lista04\n");
-        printf("(8) - Exe08  - Lista04\n");
-        printf("(9) - Exe09  - Lista04\n");
-        printf("(10) - Exe10 - Lista04\n");
-        printf("(11) - Exercicio 11\n");
-        printf("(12) - Exercicio 12\n");
-        printf("(13) - Exercicio 13\n");
-        printf("(14) - Exercicio 14\n");
-        printf("(15) - Exercicio 15\n");
-        printf("(16) - Exercicio 16\n");
-        printf("(17) - Exercicio 17\n");
-        printf("(18) - Exercicio 18\n");
-        printf("(19) - Exercicio 19\n");
-        printf("Qual exercicio deseja executar? ");
-
-        scanf("%d", &escolha);
-
-        switch (escolha) {
-            case 1:
-                exercicio01();
-                break;
-            case 2:
-                exercicio02();
-                break;
-            case 3:
-                exercicio03();
-                break;
-            case 4:
-                exercicio04();
-                break;
-            case 5:
-                exercicio05();
-                break;
-            case 6:
-                exercicio06();
-                break;
-            case 7:
-                exercicio07();
-                break;
-            case 8:
-                exercicio08();
-                break;
-            case 9:
-                exercicio09();
-                break;
-            case 10:
-                exercicio10();
-                break;
-            case 11:
-                exercicio11();
-                break;
-            case 12:
-                exercicio12();
-                break;
-            case 13:
-                exercicio13();
-                break;
-            case 14:
-                exercicio14();
-                break;
-            case 15:
-                exercicio15();
-                break;
-            case 16:
-                exercicio16();
-                break;
-            case 17:
-                exercicio17();
-                break;
-            case 18:
-                exercicio18();
-                break;
-            case 19:
-                exercicio19();
-                break;
-            default:
-                printf("Opcao invalida!\n");
-                break;
-        }
-
         printf("Deseja sair? (1) - Sim (0) - Nao: ");
         scanf("%d", &sair);
 
-        while (sair != 0 && sair != 1) {
-            printf("Opcao invalida, digite novamente!\n");
-            printf("Deseja sair? (1) - Sim (0) - Nao: ");
-            scanf("%d", &sair);
-        }
-    } while (sair != 1);
 
+    } while (sair != 0 && sair != 1);
+    return sair;
+}
+
+int main(void) {
+    setlocale(LC_ALL, "Portuguese");
+
+    bool sair = false;
+    do{
+        int escolha = displayMenuAndGetChoice();
+
+        if(escolha >= 1 && escolha <= MAX_EXERCISES)
+            executeExercise(escolha);
+        else {
+            printf("Opcao invalida!\n");
+        }
+
+        sair = getExitChoice();
+    } while (!sair);
     printf("Fim do Programa!\n");
     printf("Ate Breve!");
-
     return 0;
 }

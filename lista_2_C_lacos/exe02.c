@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <locale.h>
+#include <stdbool.h>
+
+#define MAX_EXERCISES 29
 
 int exercicio01(void) {
-    /*
+    /**
     1. Faça um programa que imprima um menu de 4 pratos na tela e uma quinta opção para sair do programa.
     O programa deve imprimir o prato solicitado. O programa deve terminarquando for escolhido a quinta opção.
     */
@@ -59,7 +62,7 @@ int exercicio01(void) {
 }
 
 int exercicio02(void) {
-    /*
+    /**
     2. Faça um programa que lê dois números inteiros positivos a e b.
     Utilizando laços, o seu programa deve calcular e imprimir o valor a^b.
     */
@@ -85,7 +88,7 @@ int exercicio02(void) {
 }
 
 int exercicio03(void) {
-    /*
+    /**
      3.Faça um programa que lê um númerone que compute e imprima o valor do somatório de 1 até n.
     OBS: Não use formulas como a da soma de uma P.A.
      */
@@ -105,8 +108,7 @@ int exercicio03(void) {
 }
 
 int exercicio04(void) {
-
-    /*
+    /**
     4. No exemplo dos números primos visto em aula, não precisamos testar todos os números
     entre 2, . . . , (n?1), para verificar se dividem ou não n. Basta testarmos até n/2. Por que?
     Qual o maior divisor possível de n? Na verdade basta testarmos os números 2, . . . ,pn.
@@ -118,7 +120,7 @@ int exercicio04(void) {
 }
 
 int exercicio05(void) {
-    /*
+    /**
         5. Considere o programa para determinar se uma sequência de n números digitados pelo
         usuário está ordenada ou não. Faça o programa usando uma variável contadora.
     */
@@ -150,7 +152,7 @@ int exercicio05(void) {
 }
 
 int exercicio06(void) {
-    /*
+    /**
     6. Faça um programa em C que calcule o máximo divisor comum de dois números m, n. Você
     deve utilizar a seguinte regra do cálculo do mdc com m # n
     mdc(m, n) = m se n = 0
@@ -176,7 +178,7 @@ int exercicio06(void) {
 }
 
 int exercicio07(void) {
-    /*
+    /**
     7. Escreva um programa que lê um número n,
     e então imprime :
     1- menor número primo que é maior ou igual n,
@@ -245,7 +247,7 @@ int exercicio07(void) {
 }
 
 int exercicio08(void) {
-    /*
+    /**
     8. O que será impresso pelo programa abaixo? Assuma que o valor de D na declaração de x
     é o valor do último dígito do seu RA.
 
@@ -269,7 +271,7 @@ int exercicio08(void) {
 }
 
 int exercicio09(void) {
-    /*
+    /**
     9. Escreva um programa para ler n de números do tipo float e imprimir quantos deles estão
     nos seguintes intervalos: [0 . . . 25], [26 . . . 50], [51 . . . 75] e [76 . . . 100]. Por exemplo, para
     n = 10 e os seguintes dez números 2.0, 61.5,?1.0, 0.0, 88.7, 94.5, 55.0, 3.1415, 25.5, 75.0,
@@ -315,7 +317,7 @@ int exercicio09(void) {
 }
 
 int exercicio10(void) {
-    /*
+    /**
     10. Escreva um programa em C para computar a raiz quadrada de um número positivo. Use
     a idéia abaixo, baseada no método de aproximações sucessivas de Newton. O programa
     deverá imprimir o valor da vigésima aproximação.
@@ -395,7 +397,7 @@ int exercicio11(void) {
 }
 
 int exercicio12(void) {
-    /*
+    /**
    12. Implemente um programa que compute todas as soluções de equações do tipo
    x1 + x2 + x3 + x4 = C
    onde todas as variáveis x1, . . . ,x4 são inteiras não negativas e C > 0 é uma constante
@@ -431,7 +433,7 @@ int exercicio12(void) {
 }
 
 int exercicio13(void) {
-    /*
+    /**
     13. Na transformação decimal para binário, modifique o programa para que este obtenha o
     valor binário em uma variável inteira, ao invés de imprimir os dígitos um por linha na
     tela. Dica: Suponha n = 7 (111 em binário), e você já computou x = 11, para "inserir"o
@@ -457,7 +459,7 @@ int exercicio13(void) {
 }
 
 int exercicio14(void) {
-    /*
+    /**
     14. Faça um programa que leia um inteiro n (no máximo 50) e imprima uma saída da forma:
     1
         2
@@ -486,7 +488,7 @@ int exercicio14(void) {
 }
 
 int exercicio15(void) {
-    /*
+    /**
     15. Faça um programa que leia um número n e imprima n linhas na tela com o seguinte
     formato (exemplo se n = 6):
 
@@ -517,7 +519,7 @@ int exercicio15(void) {
 }
 
 int exercicio16(void) {
-    /*
+    /**
     16. Faça um programa que leia um número n e imprima n linhas na tela com o seguinte
     formato (exemplo se n = 6):
     + * * * * *
@@ -546,7 +548,7 @@ int exercicio16(void) {
 }
 
 int exercicio17(void) {
-    /*
+    /**
         17. Um jogador da Mega-Sena é supersticioso, e só faz jogos em que
         o primeiro é par,
         o segundo  é ímpar,
@@ -605,7 +607,7 @@ int exercicio18(void) {
 
 int exercicio21(void) {
 
-    /*
+    /**
     Faça um programa que imprima todos os números primos entre 1 e um numero n digitado pelo usuario
     */
 
@@ -631,7 +633,7 @@ int exercicio21(void) {
 }
 
 int exercicio23(void) {
-    /*
+    /**
     Faça um programa que que o usuario iria digitar um numero e descubra todos os primos entre 1 e esse numero
 
     a) Lista de todos os primos nesse intervalo numérico
@@ -686,7 +688,7 @@ int exercicio23(void) {
 
 int exercicio24(void) {
 
-    /*
+    /**
  Faça um programa que leia um número n e imprima n linhas na tela com o seguinte
  formato (exemplo se n = 3):
 
@@ -721,7 +723,7 @@ int exercicio24(void) {
 
 int exercicio25(void) {
 
-    /*
+    /**
       Escreva um programa que solicite um numero ao usuário até que o valor deste esteja entre os  valores 1 e 100
     */
 
@@ -743,7 +745,7 @@ int exercicio25(void) {
 }
 
 int exercicio26(void) {
-    /*
+    /**
     Escreva um programa em C que escreva na tela toda a tabela ASCII(0, 255chars), escrevendo em cada linha o código ASCII e o caractere correspondente.
     */
     int i;
@@ -755,7 +757,7 @@ int exercicio26(void) {
 
 int exercicio27(void) {
 
-    /*
+    /**
       Escreva um program que solicite ao usuário um número e escreva simultaneamente a sequencia crescente e decrescente entre 1 e esse número
     */
 
@@ -776,7 +778,7 @@ int exercicio27(void) {
 
 int exercicio28(void) {
 
-    /*
+    /**
     Escreva um programa que solicite ao usuário um número e um caractere. Em seguida terá que preencher n linhas, cada uma delas com n caracteres
     */
 
@@ -802,7 +804,7 @@ int exercicio28(void) {
 }
 
 int exercicio29(void) {
-    /*
+    /**
       Faça um algoritmo que peça para o coloque a tabuada de todos os numeros de 1 até o numero que o usuário digitar
     */
     int d, res;
@@ -821,137 +823,152 @@ int exercicio29(void) {
     return 0;
 }
 
+int displayMenuAndGetChoice(){
+    int escolha;
+    printf("(1) Exercicio 1 - Lista 2\n");
+    printf("(2) Exercicio 2 - Lista 2\n");
+    printf("(3) Exercicio 3 - Lista 2\n");
+    printf("(4) Exercicio 4 - Lista 2\n");
+    printf("(5) Exercicio 5 - Lista 2\n");
+    printf("(6) Exercicio 6 - Lista 2\n");
+    printf("(7) Exercicio 7 - Lista 2\n");
+    printf("(8) Exercicio 8 - Lista 2\n");
+    printf("(9) Exercicio 9 - Lista 2\n");
+    printf("(10) Exercicio 10 - Lista 2\n");
+    printf("(11) Exercicio 11 - Lista 2\n");
+    printf("(12) Exercicio 12 - Lista 2\n");
+    printf("(13) Exercicio 13 - Lista 2\n");
+    printf("(14) Exercicio 14 - Lista 2\n");
+    printf("(15) Exercicio 15 - Lista 2\n");
+    printf("(16) Exercicio 16 - Lista 2\n");
+    printf("(17) Exercicio 17 - Lista 2\n");
+    printf("(18) Exercicio 18\n");
+    printf("(21) Exercicio 21\n");
+    printf("(22) Exercicio 22\n");
+    printf("(23) Exercicio 23\n");
+    printf("(24) Exercicio 24\n");
+    printf("(25) Exercicio 25\n");
+    printf("(26) Exercicio 26\n");
+    printf("(27) Exercicio 27\n");
+    printf("(28) Exercicio 28\n");
+    printf("(29) Exercicio 29\n");
+    printf("Qual exercício você gostaria de realizar ?\n");
+
+    scanf("%d", &escolha);
+
+    return escolha;
+}
+
+void executeExercise(int choice){
+switch (choice) {
+        case 1:
+            exercicio01();
+            break;
+        case 2:
+            exercicio02();
+            break;
+        case 3:
+            exercicio03();
+            break;
+        case 4:
+            exercicio04();
+            break;
+        case 5:
+            exercicio05();
+            break;
+        case 6:
+            exercicio06();
+            break;
+        case 7:
+            exercicio07();
+            break;
+        case 8:
+            exercicio08();
+            break;
+        case 9:
+            exercicio09();
+            break;
+        case 10:
+            exercicio10();
+            break;
+        case 11:
+            exercicio11();
+            break;
+        case 12:
+            exercicio12();
+            break;
+        case 13:
+            exercicio13();
+            break;
+        case 14:
+            exercicio14();
+            break;
+        case 15:
+            exercicio15();
+            break;
+        case 16:
+            exercicio16();
+            break;
+        case 17:
+            exercicio17();
+            break;
+        case 18:
+            exercicio18();
+            break;
+        case 21:
+            exercicio21();
+            break;
+        case 23:
+            exercicio23();
+            break;
+        case 24:
+            exercicio24();
+            break;
+        case 25:
+            exercicio25();
+            break;
+        case 26:
+            exercicio26();
+            break;
+        case 27:
+            exercicio27();
+            break;
+        case 28:
+            exercicio28();
+            break;
+        case 29:
+            exercicio29();
+            break;
+        default:
+            printf("Exercicio não existente na lista.\n");
+            break;
+    }
+}
+
+bool getExitChoice(){
+    int sair;
+    do{
+        printf("Deseja sair? (1) - Sim (0) - Não: ");
+        scanf("%d", &sair);
+    }  while (sair != 0 && sair != 1);
+    return sair;
+}
+
 int main(void) {
     setlocale(LC_ALL, "Portuguese");
 
-    int sair = 1;
+    bool sair = false;
+
     do {
-        int escolha;
-        printf("(1) Exercicio 1 - Lista 2\n");
-        printf("(2) Exercicio 2 - Lista 2\n");
-        printf("(3) Exercicio 3 - Lista 2\n");
-        printf("(4) Exercicio 4 - Lista 2\n");
-        printf("(5) Exercicio 5 - Lista 2\n");
-        printf("(6) Exercicio 6 - Lista 2\n");
-        printf("(7) Exercicio 7 - Lista 2\n");
-        printf("(8) Exercicio 8 - Lista 2\n");
-        printf("(9) Exercicio 9 - Lista 2\n");
-        printf("(10) Exercicio 10 - Lista 2\n");
-        printf("(11) Exercicio 11 - Lista 2\n");
-        printf("(12) Exercicio 12 - Lista 2\n");
-        printf("(13) Exercicio 13 - Lista 2\n");
-        printf("(14) Exercicio 14 - Lista 2\n");
-        printf("(15) Exercicio 15 - Lista 2\n");
-        printf("(16) Exercicio 16 - Lista 2\n");
-        printf("(17) Exercicio 17 - Lista 2\n");
-        printf("(18) Exercicio 18\n");
-        printf("(21) Exercicio 21\n");
-        printf("(22) Exercicio 22\n");
-        printf("(23) Exercicio 23\n");
-        printf("(24) Exercicio 24\n");
-        printf("(25) Exercicio 25\n");
-        printf("(26) Exercicio 26\n");
-        printf("(27) Exercicio 27\n");
-        printf("(28) Exercicio 28\n");
-        printf("(29) Exercicio 29\n");
-        printf("Qual exercício você gostaria de realizar ?\n");
+        int escolha = displayMenuAndGetChoice();
 
-        scanf("%d", &escolha);
-
-        switch (escolha) {
-            case 1:
-                exercicio01();
-                break;
-            case 2:
-                exercicio02();
-                break;
-            case 3:
-                exercicio03();
-                break;
-            case 4:
-                exercicio04();
-                break;
-            case 5:
-                exercicio05();
-                break;
-            case 6:
-                exercicio06();
-                break;
-            case 7:
-                exercicio07();
-                break;
-            case 8:
-                exercicio08();
-                break;
-            case 9:
-                exercicio09();
-                break;
-            case 10:
-                exercicio10();
-                break;
-            case 11:
-                exercicio11();
-                break;
-            case 12:
-                exercicio12();
-                break;
-            case 13:
-                exercicio13();
-                break;
-            case 14:
-                exercicio14();
-                break;
-            case 15:
-                exercicio15();
-                break;
-            case 16:
-                exercicio16();
-                break;
-            case 17:
-                exercicio17();
-                break;
-            case 18:
-                exercicio18();
-                break;
-            case 21:
-                exercicio21();
-                break;
-            case 23:
-                exercicio23();
-                break;
-            case 24:
-                exercicio24();
-                break;
-            case 25:
-                exercicio25();
-                break;
-            case 26:
-                exercicio26();
-                break;
-            case 27:
-                exercicio27();
-                break;
-            case 28:
-                exercicio28();
-                break;
-            case 29:
-                exercicio29();
-                break;
-            default:
-                printf("Exercicio não existente na lista.\n");
-                break;
+        if (escolha >= 1 && escolha <= MAX_EXERCISES) {
+            executeExercise(escolha);
+        } else {
+            printf("Op??o inv?lida!\n");
         }
-        printf("Deseja sair? (1) - Sim (0) - Não: ");
-        scanf("%d", &sair);
-
-        while (sair != 0 && sair != 1) {
-            printf("Opção inválida, digite novamente!\n");
-            printf("Deseja sair? (1) - Sim (0) - Não: ");
-            scanf("%d", &sair);
-        }
-    } while (sair != 1);
-
-    printf("Fim do Programa!\n");
-    printf("Até Breve!");
+        sair = getExitChoice();
+    } while (!sair);
+    printf("Obrigado por utilizar o programa!\n");
     return 0;
 }

@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
+#include <locale.h>
 
-int exercicio01(void)
-{
+#define MAX_EXERCISES 10
+
+int exercicio01(void) {
 
     /*
     1. Qual é o tipo de variável correta para armazenar as seguintes informações:
@@ -21,8 +24,7 @@ int exercicio01(void)
     printf("d. A Área do seu quintal.\n\n");
 }
 
-int exercicio02(void)
-{
+int exercicio02(void) {
     printf("Exercício 02 - Lista01\n");
 
     /*
@@ -41,8 +43,8 @@ int exercicio02(void)
     printf("2- Na segunda  linha atribuiimos '6' a ela. Aqui, '6' é interpretado como um caractere, nao como um numero inteiro. Portanto, o valor armazenado em 'a' sera o codigo ASCII correspondente ao caractere '6', que e 54 em decimal.\n");
     printf("3- Na terceira linha atribuimos o valor inteiro 6 diretamente a variavel 'a'. Aqui, 6 e um valor numerico inteiro. Portanto, o valor armazenado em 'a' sera 6.\n\n");
 }
-int exercicio03(void)
-{
+
+int exercicio03(void) {
     printf("Exercício 03 - Lista01\n");
 
     /*
@@ -59,8 +61,7 @@ int exercicio03(void)
     printf("%.02lf\n\n", f);
 }
 
-int exercicio04(void)
-{
+int exercicio04(void) {
 
     printf("Exercício 04 - Lista01\n");
 
@@ -91,8 +92,7 @@ int exercicio04(void)
     return 0;
 }
 
-int exercicio05(void)
-{
+int exercicio05(void) {
     printf("Exercício 05 - Lista01\n");
 
     /*
@@ -115,33 +115,21 @@ int exercicio05(void)
     printf("Atribua um inteiro a C: \n");
     scanf("%f", &ladoC);
 
-    if ((ladoA * ladoB * ladoC) <= 0)
-    {
+    if ((ladoA * ladoB * ladoC) <= 0) {
         printf("Valores inválidos\n");
     }
 
-    if (ladoA < ladoB + ladoC && ladoB < ladoA + ladoC && ladoC < ladoA + ladoB)
-    {
-        if (ladoA != ladoB && ladoB != ladoC && ladoA != ladoC)
-        {
+    if (ladoA < ladoB + ladoC && ladoB < ladoA + ladoC && ladoC < ladoA + ladoB) {
+        if (ladoA != ladoB && ladoB != ladoC && ladoA != ladoC) {
             printf("o triângulo %.02f , %.02f, %.02f e Escaleno\n", ladoA, ladoB, ladoC);
-        }
-        else if (ladoA == ladoB && ladoB == ladoC)
-        {
+        } else if (ladoA == ladoB && ladoB == ladoC) {
             printf("Triâgulo equilátero\n");
-        }
-        else
-        {
-            if (ladoA == ladoB)
-            {
+        } else {
+            if (ladoA == ladoB) {
                 printf("Triângulo Isósceles pois ladoA: %.02f = ladoB: %.02f\n", ladoA, ladoB);
-            }
-            else if (ladoB == ladoC)
-            {
+            } else if (ladoB == ladoC) {
                 printf("Triângulo Isósceles pois ladoB: %.02f - ladoC: %.02f\n", ladoB, ladoC);
-            }
-            else
-            {
+            } else {
                 printf("Triângulo Isósceles pois ladoA: %.02f - ladoC: %.02f\n", ladoA, ladoC);
             }
         }
@@ -150,17 +138,14 @@ int exercicio05(void)
         numF = sqrt(numS * (numS - ladoA) * (numS - ladoB) * (numS - ladoC));
 
         printf("Área do triângulo digitado = %.02f", numF);
-    }
-    else
-    {
+    } else {
         printf("Os valores informados nao formam um triângulo.\n");
     }
 
     return 0;
 }
 
-int exercicio06(void)
-{
+int exercicio06(void) {
 
     printf("Exercício 06 - Lista01\n");
 
@@ -185,15 +170,12 @@ int exercicio06(void)
     printf("Digite um numero inteiro:");
     scanf("%d", &a);
 
-    if (a < 100)
-    {
+    if (a < 100) {
         if (a % 2 == 0)
             printf("Par <= 100\n");
         else
             printf("Ímpar < 100\n");
-    }
-    else
-    {
+    } else {
         if (a % 2 == 0)
             printf("Par >= 100\n");
         else
@@ -202,8 +184,7 @@ int exercicio06(void)
     return 0;
 }
 
-int exercicio07(void)
-{
+int exercicio07(void) {
     printf("Exercício 07 - Lista01\n");
     /*
     7. Escreva um programa lê três números e os imprime em ordem (ordem crescente).
@@ -220,33 +201,22 @@ int exercicio07(void)
     printf("Atribua um inteiro a C: \n");
     scanf("%d", &num3);
 
-    if (num1 < num2 && num1 < num3 && num2 < num3)
-    {
+    if (num1 < num2 && num1 < num3 && num2 < num3) {
         printf("Números em ordem crescente\n");
         printf("%d, %d, %d\n", num1, num2, num3);
-    }
-    else if (num1 < num2 && num1 < num3 && num3 < num2)
-    {
+    } else if (num1 < num2 && num1 < num3 && num3 < num2) {
         printf("Números em ordem crescente\n");
         printf("%d, %d, %d\n", num1, num3, num2);
-    }
-    else if (num3 < num2 && num3 < num1 && num1 < num2)
-    {
+    } else if (num3 < num2 && num3 < num1 && num1 < num2) {
         printf("Números em ordem crescente\n");
         printf("%d, %d, %d\n", num3, num1, num2);
-    }
-    else if (num3 < num2 && num3 < num1 && num2 < num1)
-    {
+    } else if (num3 < num2 && num3 < num1 && num2 < num1) {
         printf("Números em ordem crescente\n");
         printf("%d, %d, %d\n", num3, num2, num1);
-    }
-    else if (num2 < num1 && num2 < num3 && num1 < num3)
-    {
+    } else if (num2 < num1 && num2 < num3 && num1 < num3) {
         printf("Números em ordem crescente\n");
         printf("%d, %d, %d\n", num2, num1, num3);
-    }
-    else if (num2 < num1 && num2 < num3 && num3 < num1)
-    {
+    } else if (num2 < num1 && num2 < num3 && num3 < num1) {
         printf("Números em ordem crescente\n");
         printf("%d, %d, %d\n", num2, num3, num1);
     }
@@ -254,8 +224,7 @@ int exercicio07(void)
     return 0;
 }
 
-int exercicio08(void)
-{
+int exercicio08(void) {
     printf("Exercício 08 - Lista01\n");
 
     /*
@@ -273,8 +242,7 @@ int exercicio08(void)
 
     scanf("%c", &temp);
 
-    if (temp == 'F' || temp == 'f')
-    {
+    if (temp == 'F' || temp == 'f') {
 
         printf("Digite a temperatura em F\n");
         scanf("%f", &F);
@@ -282,25 +250,21 @@ int exercicio08(void)
         conversionToCelsius = (F - 32) * (5.0 / 9.0);
 
         printf("%.02fF = %.02fC \n", F, conversionToCelsius);
-    }
-    else if (temp == 'C' || temp == 'c')
-    {
+    } else if (temp == 'C' || temp == 'c') {
         printf("Digite a temperatura em C\n");
         scanf("%f", &C);
 
         conversionToFahrenheit = (C * (9.0 / 5.0)) + 32;
 
         printf("%.02fC = %.02fF \n", C, conversionToFahrenheit);
-    }
-    else
-    {
+    } else {
         printf("Unidade de medida nao identificada\n");
     }
 
     return 0;
 }
-int exercicio09(void)
-{
+
+int exercicio09(void) {
     printf("Exercício 09 - Lista01\n");
 
     /*
@@ -313,18 +277,14 @@ int exercicio09(void)
     printf("Digite um ano\n");
     scanf("%d", &year);
 
-    if ((year % 4 == 0) && (year % 100 != 0 || year % 400 == 0))
-    {
+    if ((year % 4 == 0) && (year % 100 != 0 || year % 400 == 0)) {
         printf("%d é bissexto\n", year);
-    }
-    else
-    {
+    } else {
         printf("%d não é bissexto\n", year);
     }
 }
 
-int exercicio10(void)
-{
+int exercicio10(void) {
     printf("Exercício 10 - Lista01\n");
 
     /*
@@ -341,23 +301,18 @@ int exercicio10(void)
     printf("Digite a segunda data (dd mm aaaa): ");
     scanf("%d %d %d", &dia2, &mes2, &ano2);
 
-    if (ano1 == ano2 && mes1 == mes2 && dia1 == dia2)
-    {
+    if (ano1 == ano2 && mes1 == mes2 && dia1 == dia2) {
         printf("As duas datas sao Cronologicamente iguais: %02d/%02d/%d\n", dia1, mes1, ano1);
-    }
-    else if (ano1 > ano2 || (ano1 == ano2 && mes1 > mes2) || (ano1 == ano2 && mes1 == mes2 && dia1 > dia2))
-    {
+    } else if (ano1 > ano2 || (ano1 == ano2 && mes1 > mes2) || (ano1 == ano2 && mes1 == mes2 && dia1 > dia2)) {
         printf("A primeira data e Cronologicamente maior: %02d/%02d/%d\n", dia1, mes1, ano1);
-    }
-    else
-    {
+    } else {
         printf("A segunda data e Cronologicamente maior: %02d/%02d/%d\n", dia2, mes2, ano2);
     }
 
     return 0;
 }
-int exercicio11(void)
-{
+
+int exercicio11(void) {
     printf("Exercício 11 - Lista01\n");
 
     /*
@@ -382,72 +337,53 @@ int exercicio11(void)
     printf("Idade: ");
     scanf("%d", &idade);
 
-    if (idade < 0 || idade > 120)
-    {
+    if (idade < 0 || idade > 120) {
         printf("idade invalida! \n");
     }
     printf("Anos de contribuicao: \n");
     scanf("%d", &contribuicao);
 
-    if (contribuicao < 0 || contribuicao > 120)
-    {
+    if (contribuicao < 0 || contribuicao > 120) {
         printf("contribuicao invalida! \n");
     }
 
-    if (idade * contribuicao <= 0 && contribuicao == 0)
-    {
+    if (idade * contribuicao <= 0 && contribuicao == 0) {
         printf("Erro na digitação dos dados\n");
         return 0;
     }
 
-    if (contribuicao + 3 > idade && idade < 18)
-    {
+    if (contribuicao + 3 > idade && idade < 18) {
         printf("(Erro) Tempo de contribuicao invalido.\n");
         return 0;
     }
 
-    if (sexo == 'M' || sexo == 'm')
-    {
-        if (idade >= 65 && contribuicao >= 10)
-        {
+    if (sexo == 'M' || sexo == 'm') {
+        if (idade >= 65 && contribuicao >= 10) {
             printf("Aposentável!\n");
             printf("É do sexo masculino, possui pelo menos 65 anos, e pelo menos 10 anos de contribuicao.\n");
-        }
-        else if (idade >= 63 && contribuicao >= 15)
-        {
+        } else if (idade >= 63 && contribuicao >= 15) {
             printf("Aposentavel!\n");
             printf("É do sexo masculino, possui pelo menos 63 anos, e pelo menos 15 anos de contribuicao\n");
-        }
-        else
-        {
+        } else {
             printf("E do sexo masculino e nao é aposentavel\n");
         }
-    }
-    else if (sexo == 'F' || sexo == 'f')
-    {
-        if (idade >= 63 && contribuicao >= 10)
-        {
+    } else if (sexo == 'F' || sexo == 'f') {
+        if (idade >= 63 && contribuicao >= 10) {
             printf("Aposentavel!\n");
             printf("Sexo feminino, possui pelo menos 63 anos, e pelo menos 10 anos de contribuicao.\n");
-        }
-        else if (idade >= 61 && contribuicao >= 15)
-        {
+        } else if (idade >= 61 && contribuicao >= 15) {
             printf("Aposentavel!\n");
             printf("Sexo feminino, possui pelo menos 61 anos, e pelo menos 15 anos de contribuicao.\n");
-        }
-        else
-        {
+        } else {
             printf("E do sexo feminino e nao é aposentavel\n");
         }
-    }
-    else
-    {
+    } else {
         printf("Sexo nao reconhecido.");
     }
     return 0;
 }
-int exercicio12(void)
-{
+
+int exercicio12(void) {
 
     /*
     Escreva um programa que leia um inteiro positivo n e imprima todos os números pares
@@ -459,36 +395,31 @@ int exercicio12(void)
     scanf("%d", &numero);
     printf("-----------------\n");
     printf("pares entre 1 e %d\n", numero);
-    for (int i = 1; i <= numero; i++)
-    {
-        if (i % 2 == 0)
-        {
+    for (int i = 1; i <= numero; i++) {
+        if (i % 2 == 0) {
             printf("Par: %d \n", i);
         }
     }
     printf("-----------------\n");
 }
 
-int exercicio13(void)
-{
+int exercicio13(void) {
     printf("Exercicio 13 \n");
 
     printf(" Exercicio que coloca um inteiro positivo n, e imprima as potencias : 2^0, 2^1, 2^2, ...., 2 ^ n \n\n ");
 
     long numb,
-        aux = 1;
+            aux = 1;
     printf("Digite um numero natural: \n");
     scanf("%li", &numb);
 
-    for (int i = 0; i <= numb; i++)
-    {
+    for (int i = 0; i <= numb; i++) {
         printf("2^%d = %li\n", i, aux);
         aux = aux * 2;
     }
 }
 
-int exercicio14(void)
-{
+int exercicio14(void) {
     printf("Exercicio 14 \n");
 
     printf(" Faca um programa que leia dois numeros inteiros positivos a e b Utilizando lacos, calculo o valor inteiro de 'a' elvado 'b'\n\n ");
@@ -500,14 +431,13 @@ int exercicio14(void)
     printf("Digite a expoente\n");
     scanf("%d", &b);
     printf("%d^0 = 1\n", a);
-    for (int i = 1; i <= b; i++)
-    {
+    for (int i = 1; i <= b; i++) {
         resultado *= a;
         printf("%d^%d = %d\n", a, i, resultado);
     }
 }
-int exercicio15(void)
-{
+
+int exercicio15(void) {
     printf("Exercicio 15 \n");
 
     printf("Faça um algoritmo que descobra se um numero é primo ou não \n");
@@ -518,58 +448,48 @@ int exercicio15(void)
 
     printf("Os divisores de %d são: \n", numb);
     printf("------------------------\n");
-    for (int i = numb; i >= 1; i--)
-    {
-        if (numb % i == 0)
-        {
+    for (int i = numb; i >= 1; i--) {
+        if (numb % i == 0) {
             cont++;
             printf("%d \n", i);
         }
     }
     printf("------------------------\n");
 
-    if (cont > 2)
-    {
+    if (cont > 2) {
         printf("O numero %d nao é primo \n", numb);
-    }
-    else
-    {
+    } else {
         printf("O numero %d é primo \n", numb);
     }
 
     return 0;
 }
 
-int main(void)
-{
-    int sair = 1;
-    do
-    {
-        int escolha;
-        printf("Qual exercício você gostaria de realizar ?\n");
-        printf("(1) Exercicio 1\n");
-        printf("(2) Exercicio 2\n");
-        printf("(3) Exercicio 3\n");
-        printf("(4) Exercicio 4\n");
-        printf("(5) Exercicio 5\n");
-        printf("(6) Exercicio 6\n");
-        printf("(7) Exercicio 7\n");
-        printf("(8) Exercicio 8\n");
-        printf("(9) Exercicio 9\n");
-        printf("(10) Exercicio 10\n");
-        printf("(11) Exercicio 11\n");
-        printf("(12) Exercicio 12\n");
-        printf("(13) Exercicio 13\n");
-        printf("(14) Exercicio 14\n");
-        printf("(15) Exercicio 15\n");
-        printf("(16) Exercicio 16\n");
-        printf("(17) Exercicio 17\n");
-        printf("(18) Exercicio 18\n");
+int displayMenuAndGetChoice() {
+    printf("Exercício 01:\n");
+    printf("Exercício 02:\n");
+    printf("Exercício 03:\n");
+    printf("Exercício 04:\n");
+    printf("Exercício 05:\n");
+    printf("Exercício 06:\n");
+    printf("Exercício 07:\n");
+    printf("Exercício 08:\n");
+    printf("Exercício 09:\n");
+    printf("Exercício 10:\n");
+    printf("Exercício 11:\n");
+    printf("Exercício 12:\n");
+    printf("Exercício 13:\n");
+    printf("Exercício 14:\n");
+    printf("Exercício 15:\n");
+    printf("Digite o número do exercício que deseja executar: ");
 
-        scanf("%d", &escolha);
+    int escolha;
+    scanf("%d", &escolha);
+    return escolha;
+}
 
-        switch (escolha)
-        {
+void executeExercise(int choice) {
+    switch (choice) {
         case 1:
             exercicio01();
             break;
@@ -616,24 +536,37 @@ int main(void)
             exercicio15();
             break;
         default:
-            printf("Escolha inválida.\n");
+            printf("Opção inválida!\n");
             break;
-        }
-        printf("Deseja sair? (1) - Sim (0) - Não: ");
-        scanf("%d", &sair);
+    }
+}
 
+bool getExitChoice() {
+    int sair;
+    do {
+        printf("Deseja sair? Digite (1) para Sim ou (0) para Não: ");
         scanf("%d", &sair);
+    } while (sair != 0 && sair != 1);
+    return sair;
+}
 
-        while (sair != 0 && sair != 1)
-        {
-            printf("Opção inválida, digite novamente!\n");
-            printf("Deseja sair? (1) - Sim (0) - Não: ");
-            scanf("%d", &sair);
+
+int main(void) {
+    setlocale(LC_ALL, "Portuguese");
+
+    bool sair = false;
+    do {
+        int escolha = displayMenuAndGetChoice();
+
+        if (escolha >= 1 && escolha <= MAX_EXERCISES) {
+            executeExercise(escolha);
+        } else {
+            printf("Opção inválida!\n");
         }
-    } while (sair != 1);
-    
-    printf("Fim do Programa!\n");
-    printf("Até Breve!");
+        sair = getExitChoice();
+    } while (!sair);
+    printf("Obrigado por utilizar o programa!\n");
+    return 0;
 
     return 0;
 }
