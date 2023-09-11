@@ -267,18 +267,14 @@ int exercicio10(void) {
     a) Crie uma função para leitura dos valores do 1 campo(vetor)    
     b) Some os valores do vetor e coloque o resultao no 2 campo
     c) Crie uma função para imprimir os valores de registro
-    
      */
 
     Reg minhaReg;
 
-    // Preencha minhaReg com valores
     minhaReg = leReg();
 
-    // Realize a soma e atualize minhaReg
     minhaReg = somaVetorSegundoAtributo(minhaReg);
 
-    // Imprima os valores da estrutura
     imprimeReg(minhaReg);
 
     return 0;
