@@ -1,8 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="lista_5_C_funcoes" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" singleton="false" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="2_listas" TARGET_NAME="exe05.c" CONFIG_NAME="lista_5_C_funcoes">
-    <option name="sourceFile" value="D:\Systems_Analysis_and_Development_FATEC\ADS_FATEC\1_semestre\algoritmos_e_logica_de_programacao\2_listas\lista_5_C_funcoes\exe05.c" />
-    <method v="2">
-      <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-    </method>
-  </configuration>
-</component>
