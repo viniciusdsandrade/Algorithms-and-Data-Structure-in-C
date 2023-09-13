@@ -291,7 +291,7 @@ int displayMenuAndGetChoice() {
     printf("Exerc?cio 08:\n");
     printf("Exerc?cio 09:\n");
     printf("Exercício 10: \n");
-    printf("Digite o n?mero do exerc?cio que deseja executar");
+    printf("Digite o n?número do Exercício que deseja executar");
 
     int escolha;
     scanf("%d", &escolha);

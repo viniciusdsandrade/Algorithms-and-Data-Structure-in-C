@@ -4,8 +4,6 @@
 #include <malloc.h>
 #include "global.h"
 
-#define MAX_DIMENSAO 1000 // Defina o valor máximo que você deseja suportar
-
 /**
  * Calcula o máximo divisor comum (MDC) de dois números inteiros.
  *
@@ -29,8 +27,8 @@ int mdc(int m, int n) {
  * Esta função calcula a potência de um número inteiro 'a' elevado a 'b'. Ela
  * multiplica o valor de 'a' por si mesmo 'b' vezes para calcular o resultado.
  *
- * @param a O número inteiro a ser elevado à potência.
- * @param b O expoente inteiro.
+ * @param a  O número inteiro a ser elevado à potência.
+ * @param b  O expoente inteiro.
  * @return O resultado da operação 'a' elevado a 'b'.
  *
  * Exemplo de uso:
@@ -47,24 +45,25 @@ int fun1(int a, int b) {
 /**
  * Verifica se dois números são amigáveis.
  *
- * Esta função verifica se dois números inteiros 'a' e 'i' são amigáveis. Dois
+ * Esta função verifica se dois números inteiros 'a' e 'b' são amigáveis. Dois
  * números são considerados amigáveis se a soma dos divisores próprios de 'a' é
- * igual a 'i' e a soma dos divisores próprios de 'i' é igual a 'a'.
+ * igual a 'b' e a soma dos divisores próprios de 'b' é igual a 'a'.
  *
  * @param a Um número inteiro.
- * @param i Outro número inteiro para comparar com 'a'.
+ * @param b Outro número inteiro para comparar com 'a'.
  * @return 'true' se os números forem amigáveis, 'false' caso contrário.
  *
  * Exemplo de uso:
  * bool resultado = amigos(220, 284); // Verifica se 220 e 284 são amigáveis
  */
-bool amigos(int a, int i) {
+bool amigos(int a, int b) {
     int somaDivisoresA = 0, somaDivisoresB = 0;
-    for (int j = 1; j < a; j++) {
-        if (a % j == 0) somaDivisoresA += j;
-        if (i % j == 0) somaDivisoresB += j;
+    for (int i = 1; i < a; i++) {
+        if (a % i == 0) somaDivisoresA += i;
+        if (b % i == 0) somaDivisoresB += i;
     }
-    return somaDivisoresA == i && somaDivisoresB == a;
+    return somaDivisoresA == b &&
+           somaDivisoresB == a;
 }
 
 /**
@@ -90,78 +89,72 @@ double media(double pDouble[], int qtd) {
     return soma / qtd;
 }
 
-/**
- * Preenche uma matriz quadrada com valores inseridos pelo usuário.
- *
- * Esta função preenche uma matriz quadrada com valores inseridos pelo usuário.
- * A matriz deve ter a dimensão especificada.
- *
- * @param matriz Uma matriz quadrada a ser preenchida pelo usuário.
- * @param dimensao A dimensão da matriz quadrada (número de linhas e colunas).
- *
- * Exemplo de uso:
- * int minhaMatriz[MAX_DIMENSAO][MAX_DIMENSAO];
- * preencheMatrizQuadrada(minhaMatriz, 3); // Preenche matriz 3x3
- */
-void preencheMatrizQuadrada(int matriz[][MAX_DIMENSAO], int dimensao) {
-    printf("Digite os valores da matriz de dimensao %d x %d: ", dimensao, dimensao);
-    for (int i = 0; i < dimensao; i++) {
-        printf("Digite os valores da linha %d: ", i + 1);
-        for (int j = 0; j < dimensao; j++) {
-            scanf("%d", &matriz[i][j]);
-        }
-    }
-}
 
 /**
- * Calcula a soma de um array de números.
+ * Calcula a média aritmética de um conjunto de números.
  *
- * @param numeros Array contendo os números para os quais deseja-se calcular a soma.
+ * Esta função calcula a média aritmética de um conjunto de números representados
+ * pelo array 'numeros' com 'quantidade' elementos.
+ *
+ * @param numeros Um array contendo os números para os quais deseja-se calcular a média.
  * @param quantidade A quantidade de elementos no array 'numeros'.
- * @return A soma dos números no array.
+ * @return A média aritmética dos números no array 'numeros'.
  */
-double calcularSoma(double numeros[], int quantidade) {
+double calcularMedia(double numeros[], int quantidade) {
     double soma = 0;
     for (int i = 0; i < quantidade; i++) {
         soma += numeros[i];
     }
-    return soma;
+    return soma / quantidade;
 }
 
 /**
- * Calcula a soma dos quadrados das diferenças em relação à média.
+ * Calcula a soma dos quadrados das diferenças entre cada número e a média.
  *
- * @param numeros Array contendo os números para os quais deseja-se calcular a soma dos quadrados das diferenças.
+ * Esta função calcula a soma dos quadrados das diferenças entre cada número no array
+ * 'numeros' e a média 'media' fornecida, com base na quantidade de elementos 'quantidade'.
+ *
+ * @param numeros Um array contendo os números para os quais deseja-se calcular a soma dos quadrados das diferenças.
  * @param quantidade A quantidade de elementos no array 'numeros'.
  * @param media A média dos números no array 'numeros'.
- * @return A soma dos quadrados das diferenças entre os números e a média.
+ * @return A soma dos quadrados das diferenças entre cada número e a média.
  */
-double calcularSomaQuadradosDasDiferencas(double numeros[], int quantidade, double media) {
-    double somaQuadradosDasDiferencas = 0;
+double calcularSomaQuadradosDasDiferencas(const double numeros[],
+                                          int quantidade,
+                                          double media) {
+    double somaQuadrados = 0;
     for (int i = 0; i < quantidade; i++) {
         double diferenca = numeros[i] - media;
-        somaQuadradosDasDiferencas += diferenca * diferenca;
+        somaQuadrados += diferenca * diferenca;
     }
-    return somaQuadradosDasDiferencas;
+    return somaQuadrados;
 }
 
 /**
- * Calcula o desvio padrão amostral de um array de números.
+ * Calcula o desvio padrão amostral de um conjunto de números.
  *
- * @param numeros Array contendo os números para os quais deseja-se calcular o desvio padrão amostral.
+ * Esta função calcula o desvio padrão amostral de um conjunto de números representados
+ * pelo array 'numeros' com 'quantidade' elementos. O desvio padrão amostral é uma medida
+ * de dispersão que indica o quanto os valores do conjunto se desviam da média.
+ *
+ * @param numeros Um array contendo os números para os quais deseja-se calcular o desvio padrão amostral.
  * @param quantidade A quantidade de elementos no array 'numeros'.
- * @return O desvio padrão amostral dos números no array.
- * @note O desvio padrão amostral não é definido para menos de dois valores, nesse caso o valor retornado será 0.
+ * @return O desvio padrão amostral dos números no array 'numeros'. Retorna 0 se houver menos de dois valores.
+ * @note O desvio padrão amostral não é definido para menos de dois valores.
  */
 double desvioPadrao(double numeros[], int quantidade) {
     if (quantidade <= 1) {
+        printf("O desvio padrão amostral não é definido para menos de dois valores.\n");
         return 0;
     }
 
-    double media = calcularSoma(numeros, quantidade) / quantidade;
+    double media = calcularMedia(numeros, quantidade);
     double somaQuadradosDasDiferencas = calcularSomaQuadradosDasDiferencas(numeros, quantidade, media);
     double varianciaAmostral = somaQuadradosDasDiferencas / (quantidade - 1);
     double desvioPadraoAmostral = sqrt(varianciaAmostral);
+
+    printf("Média: %.2lf\n", media);
+    printf("Variância amostral: %.2lf\n", varianciaAmostral);
 
     return desvioPadraoAmostral;
 }
@@ -180,7 +173,6 @@ void preencheVetorDouble(int qtd, double pDouble[qtd]) {
         scanf("%lf", &pDouble[i]);
     }
 }
-
 
 /**
  * Preenche um vetor de números de ponto flutuante com valores fornecidos pelo usuário.
@@ -207,6 +199,25 @@ double *preencheVetorDoubleReturn(int qtd) {
 }
 
 /**
+ * Preenche uma matriz quadrada com valores fornecidos pelo usuário.
+ *
+ * Esta função solicita ao usuário que insira os valores para preencher uma matriz
+ * de dimensão 'dimensao' x 'dimensao'. Os valores são inseridos linha por linha.
+ *
+ * @param matriz A matriz que será preenchida com os valores fornecidos pelo usuário.
+ * @param dimensao A dimensão da matriz quadrada (número de linhas e colunas).
+ */
+void preencheMatrizQuadrada(int matriz[30][30], int dimensao) {
+    printf("Digite os valores da matriz de dimensao %d x %d:\n", dimensao, dimensao);
+    for (int i = 0; i < dimensao; i++) {
+        printf("Digite os valores da linha %d: ", i + 1);
+        for (int j = 0; j < dimensao; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+}
+
+/**
  * Calcula a matriz transposta de uma matriz quadrada.
  *
  * Esta função calcula a matriz transposta de uma matriz quadrada fornecida e a armazena na matriz
@@ -216,7 +227,7 @@ double *preencheVetorDoubleReturn(int qtd) {
  * @param matrizTransposta A matriz onde a matriz transposta será armazenada.
  * @param dimensao A dimensão da matriz (número de linhas e colunas).
  */
-void transposta(double matriz[30][30], double matrizTransposta[30][30], int dimensao) {
+void transposta(int **matriz, int **matrizTransposta, int dimensao) {
     for (int i = 0; i < dimensao; i++) {
         for (int j = 0; j < dimensao; j++) {
             matrizTransposta[i][j] = matriz[j][i];
@@ -232,12 +243,12 @@ void transposta(double matriz[30][30], double matrizTransposta[30][30], int dime
  * @param matriz A matriz a ser impressa.
  * @param dimensao A dimensão da matriz (número de linhas e colunas).
  */
-void imprimeMatrizQuadrada(double matriz[][MAX_DIMENSAO], int dimensao) {
+void imprimeMatrizQuadrada(int **matriz, int dimensao) {
     printf("Matriz %d x %d:\n", dimensao, dimensao);
 
     for (int i = 0; i < dimensao; i++) {
         for (int j = 0; j < dimensao; j++) {
-            printf("%.2lf\t", matriz[i][j]); // Usando "\t" para espaçamento entre elementos
+            printf("%d\t", matriz[i][j]);
         }
         printf("\n");
     }
@@ -252,24 +263,24 @@ void imprimeMatrizQuadrada(double matriz[][MAX_DIMENSAO], int dimensao) {
  * @return Verdadeiro se a^2 + b^2 for igual a n, falso caso contrário.
  */
 int test(int a, int b, int n) {
-    return a * a + b * b == n;
+    return (a * a + b * b == n) ? 1 : 0;
 }
 
 /**
- * Verifica se n é um número pitagórico.
+ * Verifica se um inteiro é um número pitagórico.
  *
- * @param n Inteiro alvo.
- * @return Verdadeiro se n for pitagórico, falso caso contrário.
+ * @param n Inteiro a ser verificado.
+ * @return Verdadeiro se n for um número pitagórico, falso caso contrário.
  */
 int pitagorico(int n) {
-    for (int a = 1; a * a < n; a++) {
-        int b_quadrado = n - a * a;
-        int b = (int) sqrt(b_quadrado);
-        if (test(a, b, n)) {
-            return 1;  // n é um número pitagórico
+    for (int a = 1; a <= n; a++) {
+        for (int b = 1; b <= n; b++) {
+            if (test(a, b, n)) {
+                return 1; // Se encontrar a e b que satisfazem a^2 + b^2 = n, retorna 1
+            }
         }
     }
-    return 0;  // n não é um número pitagórico
+    return 0; // Se nenhum par de a e b satisfizer a^2 + b^2 = n, retorna 0
 }
 
 /**
@@ -280,21 +291,19 @@ int pitagorico(int n) {
  */
 int menor_base_log(int n) {
     if (n <= 1) {
-        return n;  // Para n <= 1, o resultado é n
+        return n;
     }
 
-    int menor_base = n;  // Inicializa com um valor maior do que n
+    int menor_base = n;
 
-    // Encontra os fatores primos de 2
     while (n % 2 == 0) {
-        n /= 2;
+        n = n / 2;
         menor_base = 2;
     }
 
-    // Encontra os fatores primos ímpares
     for (int i = 3; i * i <= n; i += 2) {
         while (n % i == 0) {
-            n /= i;
+            n = n / i;
             menor_base = i;
         }
     }
@@ -302,13 +311,195 @@ int menor_base_log(int n) {
     return menor_base;
 }
 
+/**
+ * Calcula a soma de uma linha ou coluna de uma matriz.
+ *
+ * @param matrix A matriz para a qual a soma será calculada.
+ * @param size O tamanho da matriz (número de linhas e colunas).
+ * @param isRow Indica se a soma será calculada para uma linha (1) ou coluna (0).
+ * @param index O índice da linha ou coluna para o qual a soma será calculada.
+ * @return A soma da linha ou coluna especificada na matriz.
+ */
+int calculaSoma(int matriz[30][30], int tamanho, int linha, int indice) {
+    int soma = 0;
+    for (int i = 0; i < tamanho; i++) {
+        if (linha) {
+            soma += matriz[indice][i];
+        } else {
+            soma += matriz[i][indice];
+        }
+    }
+    return soma;
+}
 
+/**
+ * Verifica se uma matriz é um "quadrado mágico".
+ *
+ * Um "quadrado mágico" é uma matriz quadrada na qual a soma de cada linha, coluna e ambas as diagonais
+ * é a mesma.
+ *
+ * @param matrix A matriz a ser verificada.
+ * @param size O tamanho da matriz quadrada (número de linhas e colunas).
+ * @return Verdadeiro se a matriz for um "quadrado mágico"; caso contrário, falso.
+ */
+bool isMagico(int matriz[30][30], int tamanho) {
+    int soma = calculaSoma(matriz, tamanho, 1, 0); // Calcula a soma da primeira linha
+    int diagonalPrincipal = 0, diagonalSecundaria = 0;
 
+    for (int i = 0; i < tamanho; i++) {
+        int somaLinha = calculaSoma(matriz, tamanho, 1, i);
+        int somaColuna = calculaSoma(matriz, tamanho, 0, i);
 
+        diagonalPrincipal += matriz[i][i];
+        diagonalSecundaria += matriz[i][tamanho - i - 1];
 
+        if (somaLinha != soma || somaColuna != soma) {
+            return false; // Se alguma linha ou coluna não tiver a soma correta, não é um quadrado mágico
+        }
+    }
 
+    return (diagonalPrincipal == soma && diagonalSecundaria == soma);
+}
 
+/**
+ * Verifica se um número pode ser inserido em uma linha específica do tabuleiro Sudoku.
+ *
+ * @param linha O índice da linha que será verificada.
+ * @param numero O número a ser inserido.
+ * @param tabuleiro O tabuleiro Sudoku.
+ * @return Verdadeiro se o número puder ser inserido na linha; caso contrário, falso.
+ */
+bool verificaLinha(int linha, int numero, int tabuleiro[9][9]) {
+    for (int coluna = 0; coluna < 9; coluna++) {
+        if (tabuleiro[linha][coluna] == numero) {
+            return false; // Número já existe na linha
+        }
+    }
+    return true;
+}
 
+/**
+ * Verifica se um número pode ser inserido em uma coluna específica do tabuleiro Sudoku.
+ *
+ * @param coluna O índice da coluna que será verificada.
+ * @param numero O número a ser inserido.
+ * @param tabuleiro O tabuleiro Sudoku.
+ * @return Verdadeiro se o número puder ser inserido na coluna; caso contrário, falso.
+ */
+bool verificaColuna(int coluna, int numero, int tabuleiro[9][9]) {
+    for (int linha = 0; linha < 9; linha++) {
+        if (tabuleiro[linha][coluna] == numero) {
+            return false; // Número já existe na coluna
+        }
+    }
+    return true;
+}
 
+/**
+ * Verifica se um número pode ser inserido em um quadrante específico do tabuleiro Sudoku.
+ *
+ * @param linha O índice da linha na qual o número está sendo inserido.
+ * @param coluna O índice da coluna na qual o número está sendo inserido.
+ * @param numero O número a ser inserido.
+ * @param tabuleiro O tabuleiro Sudoku.
+ * @return Verdadeiro se o número puder ser inserido no quadrante; caso contrário, falso.
+ */
+bool verificaQuadrante(int linha, int coluna, int numero, int tabuleiro[9][9]) {
+    int linhaInicial = (linha / 3) * 3;
+    int colunaInicial = (coluna / 3) * 3;
 
+    for (int i = linhaInicial; i < linhaInicial + 3; i++) {
+        for (int j = colunaInicial; j < colunaInicial + 3; j++) {
+            if (tabuleiro[i][j] == numero) {
+                return false; // Número já existe no quadrante
+            }
+        }
+    }
+    return true;
+}
 
+/**
+ * Realiza a multiplicação de duas matrizes quadradas e armazena o resultado em uma terceira matriz.
+ *
+ * Esta função recebe duas matrizes quadradas de dimensão 'n x n', mat1 e mat2, e calcula o produto das
+ * duas matrizes, armazenando o resultado na matriz matRes.
+ *
+ * @param mat1 A primeira matriz quadrada de entrada a ser multiplicada.
+ * @param mat2 A segunda matriz quadrada de entrada a ser multiplicada.
+ * @param matRes A matriz onde o resultado da multiplicação será armazenado.
+ * @param n A dimensão das matrizes quadradas (número de linhas e colunas).
+ */
+void multiplica(double mat1[30][30], double mat2[30][30], double matRes[30][30], int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            matRes[i][j] = 0; // Inicializa o elemento da matriz resultante como 0.
+            for (int k = 0; k < n; k++) {
+                matRes[i][j] += mat1[i][k] * mat2[k][j]; // Calcula o produto e acumula na matriz resultante.
+            }
+        }
+    }
+}
+
+/**
+ * Determina as cidades com entrada e sem saída.
+ *
+ * Esta função recebe como parâmetros uma matriz quadrada 'mat' indicando as estradas entre as cidades,
+ * um inteiro 'n' correspondendo às dimensões da matriz e um vetor 'resposta' de tamanho 'n'.
+ * O vetor 'resposta' é preenchido de tal forma que resposta[i] recebe 1 se a cidade i satisfizer a propriedade
+ * de ter entrada e não ter saída, caso contrário, resposta[i] recebe 0.
+ *
+ * @param mat A matriz representando as estradas entre as cidades.
+ * @param n O número de cidades.
+ * @param resposta O vetor de resposta.
+ */
+void cidadesComEntradaSemSaida(int mat[30][30], int n, int resposta[]) {
+    for (int i = 0; i < n; i++) {
+        resposta[i] = 1; // Inicializa como 1, ou seja, assume que a cidade i tem entrada.
+
+        for (int j = 0; j < n; j++) {
+            if (mat[j][i] == 1) {
+                resposta[i] = 0; // A cidade i tem uma estrada de entrada, então não atende ao critério.
+                break;
+            }
+        }
+
+        for (int j = 0; j < n; j++) {
+            if (mat[i][j] == 1) {
+                resposta[i] = 1; // A cidade i tem uma estrada de saída, atende ao critério.
+                break;
+            }
+        }
+    }
+}
+
+/**
+ * Determina as cidades com saída mas sem entrada.
+ *
+ * Esta função recebe como parâmetros uma matriz quadrada 'mat' indicando as estradas entre as cidades,
+ * um inteiro 'n' correspondendo às dimensões da matriz e um vetor 'resposta' de tamanho 'n'.
+ * O vetor 'resposta' é preenchido de tal forma que resposta[i] recebe 1 se a cidade i satisfizer a propriedade
+ * de ter saída mas não ter entrada, caso contrário, resposta[i] recebe 0.
+ *
+ * @param mat A matriz representando as estradas entre as cidades.
+ * @param n O número de cidades.
+ * @param resposta O vetor de resposta.
+ */
+void cidadesComSaidaSemEntrada(int mat[30][30], int n, int resposta[]) {
+    for (int i = 0; i < n; i++) {
+        resposta[i] = 1; // Inicializa como 1, ou seja, assume que a cidade i tem saída.
+
+        for (int j = 0; j < n; j++) {
+            if (mat[i][j] == 1) {
+                resposta[i] = 0; // A cidade i tem uma estrada de saída, então não atende ao critério.
+                break;
+            }
+        }
+
+        for (int j = 0; j < n; j++) {
+            if (mat[j][i] == 1) {
+                resposta[i] = 1; // A cidade i tem uma estrada de entrada, atende ao critério.
+                break;
+            }
+        }
+    }
+}
