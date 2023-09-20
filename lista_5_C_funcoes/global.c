@@ -89,7 +89,6 @@ double media(double pDouble[], int qtd) {
     return soma / qtd;
 }
 
-
 /**
  * Calcula a média aritmética de um conjunto de números.
  *
@@ -100,7 +99,7 @@ double media(double pDouble[], int qtd) {
  * @param quantidade A quantidade de elementos no array 'numeros'.
  * @return A média aritmética dos números no array 'numeros'.
  */
-double calcularMedia(double numeros[], int quantidade) {
+double calcularMedia(const double numeros[], int quantidade) {
     double soma = 0;
     for (int i = 0; i < quantidade; i++) {
         soma += numeros[i];

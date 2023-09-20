@@ -10,8 +10,8 @@ void imprimeProduto(Produto vet[], int n);
 Aluno *leAlunos(int n);
 Alune *leAlunes(int n);
 void imprimeAluno(Aluno aluno);
-void listarTurma(Aluno turma[], int n);
-double mediaAlunes(Alune turma[], int n);
+void listarTurma(Aluno aluno[], int n);
+double mediaAlunes(Alune alunes[], int n);
 
 Ponto lePonto();
 void imprimePonto(Ponto p);
@@ -21,5 +21,7 @@ Ponto subtraiPonto(Ponto p1, Ponto p2);
 Reg leReg(void);
 Reg somaVetorSegundoAtributo(Reg reg);
 void imprimeReg(Reg reg);
+
+char *concatena(char *s1, char *s2);
 
 #endif //INC_2_LISTAS_GLOBAL_H

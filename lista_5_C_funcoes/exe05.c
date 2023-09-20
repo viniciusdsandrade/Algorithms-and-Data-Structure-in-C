@@ -173,11 +173,10 @@ int exercicio05(void) {
     printf("Digite um número inteiro positivo: ");
     scanf("%d", &n);
 
-    if (pitagorico(n)) {
+    if (pitagorico(n))
         printf("%d é um número pitagórico.\n", n);
-    } else {
+    else
         printf("%d não é um número pitagórico.\n", n);
-    }
 
     return 0;
 }
@@ -304,11 +303,11 @@ int exercicio09(void) {
     int matriz[30][30];
     preencheMatrizQuadrada(matriz, 30);
 
-    if (isMagico(matriz, 30)) {
+    if (isMagico(matriz, 30))
         printf("A matriz é um quadrado mágico");
-    } else {
+    else
         printf("A matriz não é um quadrado mágico");
-    }
+
     return 0;
 }
 
@@ -350,11 +349,11 @@ int exercicio10(void) {
         }
     }
 
-    if (tabuleiroValido) {
+    if (tabuleiroValido)
         printf("O tabuleiro Sudoku é válido!\n");
-    } else {
+    else
         printf("O tabuleiro Sudoku não é válido!\n");
-    }
+
     return 0;
 }
 
@@ -505,7 +504,7 @@ void executeExercise(int choice) {
             exercicio12();
             break;
         default:
-            printf("Opção inválida!\n");
+            printf("Opção invalida!\n");
             break;
     }
 }
@@ -513,7 +512,7 @@ void executeExercise(int choice) {
 bool getExitChoice(void) {
     int sair;
     do {
-        printf("Deseja sair? Digite (1) para Sim ou (0) para N?o: ");
+        printf("Deseja sair? Digite (1) para Sim ou (0) para Não: ");
         scanf("%d", &sair);
     } while (sair != 0 && sair != 1);
     return sair;

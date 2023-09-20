@@ -25,7 +25,7 @@ int exercicio01(void) {
     scanf("%d", &n);
 
     if (n < 1 || n > 50) {
-        printf("Valor invalido");
+        printf("Valor inválido");
         return 0;
     }
 

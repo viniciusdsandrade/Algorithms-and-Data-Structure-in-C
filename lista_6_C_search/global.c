@@ -1,6 +1,7 @@
 #include <math.h>
 #include <malloc.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
  * @struct Produto
@@ -250,9 +251,9 @@ void imprimeAluno(Aluno a) {
  * @param turma O array de estruturas Aluno representando a turma.
  * @param n O número de alunos na turma.
  */
-void listarTurma(Aluno turma[], int n) {
+void listarTurma(Aluno alunos[], int n) {
     for (int i = 0; i < n; i++) {
-        imprimeAluno(turma[i]);
+        imprimeAluno(alunos[i]);
     }
 }
 
@@ -263,10 +264,10 @@ void listarTurma(Aluno turma[], int n) {
  * @param n O número de alunos na estrutura.
  * @return A média das notas dos alunos.
  */
-double mediaAlunes(struct Alune alunos[], int n) {
+double mediaAlunes(struct Alune alunes[], int n) {
     double soma = 0;
     for (int i = 0; i < n; i++) {
-        soma += alunos[i].nota;
+        soma += alunes[i].nota;
     }
     return soma / n;
 }
@@ -385,12 +386,10 @@ Reg leReg(void) {
 Reg somaVetorSegundoAtributo(Reg reg) {
     int soma = 0;
 
-    // Calcula a soma dos valores do vetor do primeiro atributo
     for (int i = 0; i < 3; i++) {
         soma += reg.vet[i];
     }
 
-    // Armazena o resultado no segundo atributo (reg.vet[1])
     Reg resultado = reg;
     resultado.vet[1] = soma;
 
@@ -415,4 +414,33 @@ void imprimeReg(Reg reg) {
     printf("\n");
 
     printf("Variável inteira (n): %d\n", reg.n);
+}
+
+/**
+ * Função que concatena duas strings.
+ *
+ * Esta função concatena duas strings e retorna uma nova string com o resultado.
+ *
+ * @param s1 A primeira string a ser concatenada.
+ * @param s2 A segunda string a ser concatenada.
+ * @return Uma nova string com o resultado da concatenação.
+ */
+char *concatena(char *s1, char *s2) {
+    int tam1 = strlen(s1);
+    int tam2 = strlen(s2);
+    int tam3 = tam1 + tam2 + 1;
+
+    char *s3 = (char *) malloc(tam3 * sizeof(char));
+
+    for (int i = 0; i < tam1; i++) {
+        s3[i] = s1[i];
+    }
+
+    for (int i = 0; i < tam2; i++) {
+        s3[tam1 + i] = s2[i];
+    }
+
+    s3[tam3 - 1] = '\0';
+
+    return s3;
 }
