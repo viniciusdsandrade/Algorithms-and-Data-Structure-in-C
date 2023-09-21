@@ -6,8 +6,8 @@
 
 int exercicio01(void) {
     /**
-    1. Faça um programa que imprima um menu de 4 pratos na tela e uma quinta opção para sair do programa.
-    O programa deve imprimir o prato solicitado. O programa deve terminarquando for escolhido a quinta opção.
+    <p>1. Faça um programa que imprima um menu de 4 pratos na tela e uma quinta opção para sair do programa.
+    <p>O programa deve imprimir o prato solicitado. O programa deve terminarquando for escolhido a quinta opção.
     */
 
     printf("\nExe01 - Lista02\n");
@@ -63,8 +63,8 @@ int exercicio01(void) {
 
 int exercicio02(void) {
     /**
-    2. Faça um programa que lê dois números inteiros positivos a e b.
-    Utilizando laços, o seu programa deve calcular e imprimir o valor a^b.
+    <p>2. Faça um programa que lê dois números inteiros positivos a e b.
+    <p>Utilizando laços, o seu programa deve calcular e imprimir o valor a^b.
     */
 
     printf("\nExe02 - Lista02\n");
@@ -89,8 +89,8 @@ int exercicio02(void) {
 
 int exercicio03(void) {
     /**
-     3.Faça um programa que lê um númerone que compute e imprima o valor do somatório de 1 até n.
-    OBS: Não use formulas como a da soma de uma P.A.
+    <p> 3.Faça um programa que lê um númerone que compute e imprima o valor do somatório de 1 até n.
+    <p> OBS: Não use formulas como a da soma de uma P.A.
      */
 
     printf("\nExe03 - Lista02\n");
@@ -109,9 +109,9 @@ int exercicio03(void) {
 
 int exercicio04(void) {
     /**
-    4. No exemplo dos números primos visto em aula, não precisamos testar todos os números
+    <p>4. No exemplo dos números primos visto em aula, não precisamos testar todos os números
     entre 2, . . . , (n?1), para verificar se dividem ou não n. Basta testarmos até n/2. Por que?
-    Qual o maior divisor possível de n? Na verdade basta testarmos os números 2, . . . ,pn.
+    <p>Qual o maior divisor possível de n? Na verdade basta testarmos os números 2, . . . ,pn.
     Por que?
     */
 
@@ -121,8 +121,8 @@ int exercicio04(void) {
 
 int exercicio05(void) {
     /**
-        5. Considere o programa para determinar se uma sequência de n números digitados pelo
-        usuário está ordenada ou não. Faça o programa usando uma variável contadora.
+        <p>5. Considere o programa para determinar se uma sequência de n números digitados pelo
+        <p>usuário está ordenada ou não. Faça o programa usando uma variável contadora.
     */
 
     int qtdNumber, anterior, atual, ordenado = 1;
@@ -153,10 +153,10 @@ int exercicio05(void) {
 
 int exercicio06(void) {
     /**
-    6. Faça um programa em C que calcule o máximo divisor comum de dois números m, n. Você
-    deve utilizar a seguinte regra do cálculo do mdc com m # n
-    mdc(m, n) = m se n = 0
-    mdc(m, n) = mdc(n,m%n) se n > 0
+    <p>6. Faça um programa em C que calcule o máximo divisor comum de dois números m, n. Você
+    <p>deve utilizar a seguinte regra do cálculo do mdc com m # n
+    <p>mdc(m, n) = m se n = 0
+    <p>mdc(m, n) = mdc(n,m%n) se n > 0
   */
 
     printf("\nExe06 - Lista02\n");
@@ -489,15 +489,15 @@ int exercicio14(void) {
 
 int exercicio15(void) {
     /**
-    15. Faça um programa que leia um número n e imprima n linhas na tela com o seguinte
-    formato (exemplo se n = 6):
-
-    1
-    1 2
-    1 2 3
-    1 2 3 4
-    1 2 3 4 5
-    1 2 3 4 5 6
+    <p>15. Faça um programa que leia um número n e imprima n linhas na tela com o seguinte
+    <p>formato (exemplo se n = 6):
+    <p>
+    <p>1
+    <p>1 2
+    <p>1 2 3
+    <p>1 2 3 4
+    <p>1 2 3 4 5
+    <p>1 2 3 4 5 6
     */
 
     printf("\nExe15 - Lista02\n");
@@ -520,14 +520,15 @@ int exercicio15(void) {
 
 int exercicio16(void) {
     /**
-    16. Faça um programa que leia um número n e imprima n linhas na tela com o seguinte
-    formato (exemplo se n = 6):
-    + * * * * *
-    * + * * * *
-    * * + * * *
-    * * * + * *
-    * * * * + *
-    * * * * * +
+    <p>16. Faça um programa que leia um número n e imprima n linhas na tela com o seguinte
+    <p>formato (exemplo se n = 6):
+     <p>
+    <p>+ * * * * *
+    <p>* + * * * *
+    <p>* * + * * *
+    <p>* * * + * *
+    <p>* * * * + *
+    <p>* * * * * +
     */
 
     printf("\nExe16 - Lista02\n");
@@ -549,15 +550,15 @@ int exercicio16(void) {
 
 int exercicio17(void) {
     /**
-        17. Um jogador da Mega-Sena é supersticioso, e só faz jogos em que
-        o primeiro é par,
-        o segundo  é ímpar,
-        o terceiro é par,
-        o quarto   é ímpar,
-        o quinto   é par e
-        o sexto    é ímpar.
-        Faça um programa que imprima todas as possibilidades de jogos
-        que este jogador supersticioso pode jogar.
+        <p>17. Um jogador da Mega-Sena é supersticioso, e só faz jogos em que
+        <p>o primeiro é par,
+        <p>o segundo  é ímpar,
+        <p>o terceiro é par,
+        <p>o quarto   é ímpar,
+        <p>o quinto   é par e
+        <p>o sexto    é ímpar.
+        <p>Faça um programa que imprima todas as possibilidades de jogos
+        <p>que este jogador supersticioso pode jogar.
     */
 
     printf("\nExe17 - Lista02\n");
@@ -634,11 +635,11 @@ int exercicio21(void) {
 
 int exercicio23(void) {
     /**
-    Faça um programa que que o usuario iria digitar um numero e descubra todos os primos entre 1 e esse numero
-
-    a) Lista de todos os primos nesse intervalo numérico
-    b) Exiba o maior número primo
-    c) Exiba o menor número primo
+    <p>Faça um programa que que o usuario iria digitar um numero e descubra todos os primos entre 1 e esse numero
+<p>
+    <p>a) Lista de todos os primos nesse intervalo numérico
+    <p>b) Exiba o maior número primo
+    <p>c) Exiba o menor número primo
     */
 
     int n, i, j, count = 0, max_prime = 0, min_prime = 0;
@@ -689,12 +690,12 @@ int exercicio23(void) {
 int exercicio24(void) {
 
     /**
- Faça um programa que leia um número n e imprima n linhas na tela com o seguinte
- formato (exemplo se n = 3):
-
- A
- B B
- C C C
+ <p>Faça um programa que leia um número n e imprima n linhas na tela com o seguinte
+ <p>formato (exemplo se n = 3):
+<p>
+ <p>A
+ <p>B B
+ <p>C C C
 
  */
 

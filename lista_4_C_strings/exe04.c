@@ -6,12 +6,12 @@
 #define MAX_EXERCISES 10
 
 int exercicio01(void) {
-    /*
-        1 - Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
-        caracteres e que entao salve a inversa desta string em uma nova string.
-
-        Refaca o programa de tal forma que nao seja utilizado nenhum vetor adicional!
-        Ou seja, devemos computar a inversa no proprio vetor original da string lida.
+    /**
+       <p> 1 - Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
+        <p>caracteres e que entao salve a inversa desta string em uma nova string.
+        <p>
+       <p> Refaca o programa de tal forma que nao seja utilizado nenhum vetor adicional!
+        <p>Ou seja, devemos computar a inversa no proprio vetor original da string lida.
     */
 
     printf("\nExercicio01 - Lista04\n");
@@ -39,20 +39,20 @@ int exercicio01(void) {
 }
 
 int exercicio02(void) {
-    /*
-        2. Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
-        caracteres e que entao salve a string lida em uma nova removendo-se os espacos.
-        Exemplo de entrada:
-
-        Out of the night that covers me
-
-        e vetor resultante:
-
-        Outofthenightthatcoversme
-
-        Refaca o programa de tal forma que nao seja utilizado nenhum vetor adicional! Ou seja
-        devemos deixar a string sem espacos no proprio vetor original da string lida sem o uso de
-        nenhum outro vetor auxiliar.
+    /**
+        <p>2. Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
+        <p>caracteres e que entao salve a string lida em uma nova removendo-se os espacos.
+        <p>Exemplo de entrada:
+<p>
+        <p>Out of the night that covers me
+<p>
+        <p>e vetor resultante:
+<p>
+        <p>Outofthenightthatcoversme
+<p>
+        <p>Refaca o programa de tal forma que nao seja utilizado nenhum vetor adicional! Ou seja
+        <p>devemos deixar a string sem espacos no proprio vetor original da string lida sem o uso de
+        <p>nenhum outro vetor auxiliar.
     */
 
     printf("\nExercicio02 - Lista04\n");
@@ -77,20 +77,20 @@ int exercicio02(void) {
 }
 
 int exercicio03(void) {
-    /*
-        3. Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
-        caracteres e que entao salve a string lida em uma nova removendo-se os espacos extras
-        entre as palavras.
-
-        Exemplo de entrada:
-        Out of    the    night    that   covers me
-
-        e vetor resultante:
-        Out of the night that covers me
-
-        Refaca o programa de tal forma que nao seja utilizado nenhum vetor adicional! Ou seja
-        devemos deixar a string sem espacos extras no proprio vetor original da string lida sem o
-        uso de nenhum outro vetor auxiliar.
+    /**
+        <p>3. Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
+        <p>caracteres e que entao salve a string lida em uma nova removendo-se os espacos extras
+        <p>entre as palavras.
+<p>
+        <p>Exemplo de entrada:
+        <p>Out of    the    night    that   covers me
+<p>
+        <p>e vetor resultante:
+        <p>ut of the night that covers me
+<p>
+        <p>Refaca o programa de tal forma que nao seja utilizado nenhum vetor adicional! Ou seja
+        <p>devemos deixar a string sem espacos extras no proprio vetor original da string lida sem o
+        <p>uso de nenhum outro vetor auxiliar.
     */
 
     printf("\nExercicio03 - Lista04\n");
@@ -120,11 +120,11 @@ int exercicio03(void) {
 }
 
 int exercicio04(void) {
-    /*
-        4. Escreva um programa que leia duas palavras do teclado e determina se a segunda e um
-        anagrama da primeira. Uma palavra e um anagrama de outra se todas as letras de uma
-        ocorrem na outra, em mesmo numero, independente da posicao. Exemplos: ROMA, MORA,
-        ORAM, AMOR, RAMO sao anagramas entre si.
+    /**
+        <p>4. Escreva um programa que leia duas palavras do teclado e determina se a segunda e um
+        <p>anagrama da primeira. Uma palavra e um anagrama de outra se todas as letras de uma
+        <p>ocorrem na outra, em mesmo numero, independente da posicao. Exemplos: ROMA, MORA,
+        <p>ORAM, AMOR, RAMO sao anagramas entre si.
     */
 
     printf("\nExercicio04 - Lista04\n");
@@ -147,13 +147,11 @@ int exercicio04(void) {
     int tamStr1 = strlen(str1) - 1;
     int tamStr2 = strlen(str2) - 1;
 
-    // Verifica se as strings tem o mesmo tamanho
     if (tamStr1 != tamStr2) {
         printf("Não e anagrama!\n");
         return 0;
     }
 
-    // Verifica se as strings tem os mesmos caracteres
     for (i = 0; i < tamStr1; i++) {
         for (j = 0; j < tamStr2; j++) {
             // Verifica se os caracteres são iguais sem distinção de maiúsculas e minúsculas
@@ -164,7 +162,6 @@ int exercicio04(void) {
         }
     }
 
-    // Verifica se a string 2 ficou vazia
     for (i = 0; i < tamStr2; i++) {
         if (str2[i] != ' ') {
             printf("Não é anagrama!\n");
@@ -182,7 +179,7 @@ int exercicio04(void) {
 
 int exercicio05(void) {
 
-    /*
+    /**
         5. Faça um programa que leia duas strings e elimine, da segunda string, todas as ocorrências
         dos caracteres da primeira string.
     */
@@ -222,10 +219,10 @@ int exercicio05(void) {
 }
 
 int exercicio06(void) {
-    /*
-        6. Faça um programa que leia um texto T (com espacos) e uma palavra p do teclado. Em
+    /**
+        <p>6. Faça um programa que leia um texto T (com espacos) e uma palavra p do teclado. Em
         seguida o programa devera imprimir todas as posicoes onde ocorrem a palavra p em T.
-        Se por exemplo T = "duas bananas e 4 abacates. Nao havera mais bananas.", e p ="bananas",
+        <p>Se por exemplo T = "duas bananas e 4 abacates. Nao havera mais bananas.", e p ="bananas",
         então o programa deveria imprimir 5 e 43.
     */
 
@@ -273,17 +270,17 @@ int exercicio06(void) {
 }
 
 int exercicio07(void) {
-    /*
+    /**
     7. Escreva um programa que lê uma string de atÉ 50 caracteres, e imprime "Palindromo"caso
-    a string seja um palindromo e "Nao Palindromo" caso contr?rio.
+    <p>a string seja um palindromo e "Nao Palindromo" caso contr?rio.
 
-    OBS: Um palindromo é uma palavra ou frase, que é igual quando lida da esquerda para a
+    <p>OBS: Um palindromo é uma palavra ou frase, que é igual quando lida da esquerda para a
     direita ou da direita para a esquerda (assuma que s? s?o usados caracteres min?sculos
     e sem acentos. Espa?os em brancos devem ser descartados).
 
-    Exemplo de palindromo: saudavel leva duas.
+    <p>Exemplo de palindromo: saudavel leva duas.
 
-    DESAFIO: Adapte o código do palindro para que ele reconheça se uma frase com Letras maiusculas e minusculas e inclusive com pontuação é um palindro
+    <p>DESAFIO: Adapte o código do palindro para que ele reconheça se uma frase com Letras maiusculas e minusculas e inclusive com pontuação é um palindro
     inclusive com espaços extras e outras anomalias da lingua portuguesa
     */
 
@@ -315,13 +312,13 @@ int exercicio07(void) {
 }
 
 int exercicio08(void) {
-    /*
+    /**
         8. Faca um programa que leia duas palavras e verifique se uma delas pode ser obtida por
-        meio da remove o de letras da outra. A ordem das letras nao pode ser alterada.
+       <p> meio da remove o de letras da outra. A ordem das letras nao pode ser alterada.
 
-        Por exemplo:
+       <p> Por exemplo:
 
-        moda e uma subsequencia em moradia
+        <p>moda e uma subsequencia em moradia
         cereja e uma subsequencia em cerveja
    */
 
@@ -353,7 +350,6 @@ int exercicio08(void) {
         }
     }
 
-    // Agora verificamos se a segunda palavra é subsequencia da primeira
     i = 0;
     j = 0;
     int isSub2 = 0;
@@ -378,7 +374,7 @@ int exercicio08(void) {
 }
 
 int exercicio09(void) {
-    /*
+    /**
     9. Historicamente Cesar foi o primeiro a codificar mensagens. Ele reorganizava o texto de
     suas mensagens de maneira que o texto parecia n?o ter sentido. Cada mensagem sempre
     possua uma contagem de letras cujo total equivalia a um quadrado perfeito, dependendo
@@ -387,20 +383,19 @@ int exercicio09(void) {
     caracteres requeriam um quadrado de dez por dez, etc. Seus oficiais sabiam que deviam
     transcrever o texto preenchendo as casas do quadrado sempre que uma mensagem aleat?ria
     chegasse. Ao fazerem isso, podiam ler a mensagem na vertical e seu sentido se tornaria
-    claro.
-    Escreva um programa que le o tamanho de uma string e em seguida uma string. Depois o
+    claro.Escreva um programa que le o tamanho de uma string e em seguida uma string. Depois o
     programa escreve a mensagem decifrada.
-    Exemplo:
-    36
-    MEEUMOCSHMSC1T*AGU0A***L2****T*****A
-    Esta mensagem pode ser transcrita em um quadrado perfeito 6x6.
-    M E E U M O
-    C S H M S C
-    1 T * A G U
-    0 A * * * L
-    2 * * * * T
-    * * * * * A
-    Lendo cada coluna da matriz (desconsiderando o caractere ?*?), a sa?da deve ser:
+   <p>Exemplo:
+    <p>36
+    <p>MEEUMOCSHMSC1T*AGU0A***L2****T*****A
+    <p>Esta mensagem pode ser transcrita em um quadrado perfeito 6x6.
+    <p>M E E U M O
+    <p>C S H M S C
+    <p>1 T * A G U
+    <p>0 A * * * L
+    <p>2 * * * * T
+    <p>* * * * * A
+    <p>Lendo cada coluna da matriz (desconsiderando o caractere ?*?), a sa?da deve ser:
     MC102 ESTA EH UMA MSG OCULTA.
     */
     return 0;
@@ -412,16 +407,16 @@ int exercicio10(void) {
 }
 
 int exercicio11(void) {
-    /*
+    /**
         Ler uma string de ate 79 caracteres e salvar a inversa desta em um
-        vetor. Imprimir a inversa da string lida.
+        <p>vetor. Imprimir a inversa da string lida.
+<p>
+        <p>Exemplo de entrada:
+        <p>Out of the night that covers me
+        <p>e vetor resultante:
+        <p>em srevoc taht thgin eht fo tuO
 
-        Exemplo de entrada:
-        Out of the night that covers me
-        e vetor resultante:
-        em srevoc taht thgin eht fo tuO
-
-        Refaca o programa de tal forma que nao seja utilizado nenhum vetor
+       <p> Refaca o programa de tal forma que nao seja utilizado nenhum vetor
         */
 
     char st1[80], stInversa[80];
@@ -458,10 +453,11 @@ int exercicio11(void) {
 
 int exercicio12(void) {
 
-    /*
+    /**
        Como exemplo de uso de strings vamos implementar duas
-       funcionalidades basicas de processadores de texto:
-       1 - Contar o numero de palavras em um texto.
+       <p>funcionalidades basicas de processadores de texto:
+
+       <p>1 - Contar o numero de palavras em um texto.
      */
 
     printf("1 - Contar o numero de palavras em um texto.\n");
@@ -496,16 +492,16 @@ int exercicio12(void) {
 }
 
 int exercicio13(void) {
-    /*
+    /**
       Fazer um programa que acha todas as posicoes de ocorrencia de uma
-      palavra em um texto.
+      <p>palavra em um texto.
 
-      Entrada:
-      Texto=  a tete tetete
-      Palavra=  tete
+     <p> Entrada:
+      <p>Texto=  a tete tetete
+      <p>Palavra=  tete
 
-      Saida:
-      2, 7 e 9.
+    <p> Saida:
+    <p>  2, 7 e 9.
     */
 
     printf("2 - Fazer a busca de uma palavra em um texto e:\n");
@@ -573,7 +569,8 @@ int exercicio14(void) {
     return 0;
 }
 
-int exercicio15(void) { /*
+int exercicio15(void) {
+    /**
       Refaca o exemplo visto em aula de inversao de uma string de tal
       forma que nao seja utilizado nenhum vetor adicional! Ou seja
       devemos computar a inversa no proprio vetor original.
@@ -600,13 +597,11 @@ int exercicio15(void) { /*
 }
 
 int exercicio16(void) {
-    // Fazer a busca de uma palavra em um texto e:
-    // a) retornar quantas vezes essa palavra esta inserida em determinado texto
-    // b) retornar a posicao da primeira ocorrencia dessa palavra
-
-    printf("2 - Fazer a busca de uma palavra em um texto e:\n");
-    printf("a) retornar quantas vezes essa palavra esta inserida em determinado texto\n");
-    printf("b) retornar a(s) posicoes de todas as ocorrencias dessa palavra\n");
+    /**
+     Fazer a busca de uma palavra em um texto e:
+     <p>a) retornar quantas vezes essa palavra esta inserida em determinado texto
+    <p>b) retornar a posicao da primeira ocorrencia dessa palavra
+     */
 
     char s[80];
     char palavra[80];
@@ -624,7 +619,6 @@ int exercicio16(void) {
     int freq = 0;
 
     int i, j;
-    // Percorre o texto
     for (i = 0; i <= tamTexto - tamPalavra; i++) {
         j = 0; // Inicializa o passo que vai percorre a palavra
         // Percorre a palavra
@@ -632,7 +626,6 @@ int exercicio16(void) {
             j++; // Incrementa o contador
         }
 
-        // Se j == tamPalavra, significa que a palavra foi encontrada
         if (j == tamPalavra) {
             freq++; // Incrementa o contador de frequencia
             printf("Encontrada na posicao [%d - %d]\n", i, i + tamPalavra - 1);
@@ -648,19 +641,6 @@ int exercicio16(void) {
     return 0;
 }
 
-int exercicio17(void) {
-
-    return 0;
-}
-
-int exercicio18(void) {
-
-    return 0;
-}
-
-int exercicio19(void) {
-    return 0;
-}
 
 int displayMenuAndGetChoice() {
     printf("Escolha uma opcao:\n");
@@ -680,9 +660,6 @@ int displayMenuAndGetChoice() {
     printf("14 - Exercicio 14\n");
     printf("15 - Exercicio 15\n");
     printf("16 - Exercicio 16\n");
-    printf("17 - Exercicio 17\n");
-    printf("18 - Exercicio 18\n");
-    printf("19 - Exercicio 19\n");
     printf("20 - Sair\n");
     printf("Digite sua escolha: ");
 
@@ -740,15 +717,6 @@ void executeExercise(int choice) {
             break;
         case 16:
             exercicio16();
-            break;
-        case 17:
-            exercicio17();
-            break;
-        case 18:
-            exercicio18();
-            break;
-        case 19:
-            exercicio19();
             break;
         default:
             printf("Opcao invalida!\n");

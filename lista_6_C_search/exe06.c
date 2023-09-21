@@ -9,18 +9,18 @@
 int exercicio01(void) {
     /**
     1. Suponha que criamos uma estrutura para armazenar produtos de um supermercado:
-
-     typedef struct Produto{
-        char nome[80];
-        double preco;
-        int quantidade;
-    }Produto;
-
-    Implemente duas funções, uma que devolve o vetor ordenado por preços e outra que devolve
-    o vetor ordenado pela quantidade de itens no estoque. Os protótipos s?o:
-
-    void ordenaPreco(Produto vet[], int n);
-    void ordenaQuantidade(Produto vet[], int n);
+<p>
+    <p>  typedef struct Produto{
+      <p>   char nome[80];
+      <p>   double preco;
+      <p>   int quantidade;
+   <p>  }Produto;
+<p>
+   <p>  Implemente duas funções, uma que devolve o vetor ordenado por preços e outra que devolve
+    o vetor ordenado pela quantidade de itens no estoque. Os protótipos são:
+<p>
+   <p>  void ordenaPreco(Produto vet[], int n);
+   <p> void ordenaQuantidade(Produto vet[], int n);
      */
 
     printf("Digite a quantidade de produtos: ");
@@ -43,19 +43,19 @@ int exercicio01(void) {
 int exercicio02(void) {
     /**
      2. Suponha que criamos uma estrutura para armazenar Datas:
+<p>
+    <p>  typedef struct Data{
+   <p>      int dia;
+    <p>     int mes;
+     <p>    int ano;
+    <p> }Data;
+     <p>
 
-     typedef struct Data{
-        int dia;
-        int mes;
-        int ano;
-    }Data;
+   <p>  Implemente um algoritmo que receba um vetor de Datas como parâmetro e que retorne as datas em ordem cronológica.
 
-    Implemente um algoritmo que receba um vetor de Datas como parâmetro e que retorne as
-    datas em ordem cronológica. Protótipo da função ?:
+    <p>  Protótipo da função : void ordena(struct Data vet[], int tam);
 
-    void ordena(struct Data vet[], int tam);
-
-    Dica: Ordene o vetor separadamente por cada um dos campos.
+    <p> Dica: Ordene o vetor separadamente por cada um dos campos.
     */
 
     printf("Digite a quantidade de datas: ");
@@ -72,34 +72,34 @@ int exercicio03(void) {
     /**
     3. Suponha que criamos uma estrutura para armazenar dados de pessoas e uma outra estrutura
     para armazenar dados de várias pessoas como uma base de dados.
-
-    typedef struct Pessoa{
-        int rg;
-        int cpf;
-        char nome[80];
-    }Pessoa;
-
-    typedef struct Base{
-        int armazenado; //Deve sempre corresponder ao número de pessoas na base
-        Pessoa pessoas[100];
-    }Base;
-
-    Crie fun??es para cada uma das opera??es abaixo:
-
-    a) Cria base: esta fun??o devolve uma Base onde o campo armazenado ? inicializado
+<p>
+  <p>   typedef struct Pessoa{
+   <p>      int rg;
+  <p>       int cpf;
+   <p>      char nome[80];
+   <p>  }Pessoa;
+<p>
+   <p>  typedef struct Base{
+   <p>     int armazenado; //Deve sempre corresponder ao número de pessoas na base
+   <p>      Pessoa pessoas[100];
+   <p>  }Base;
+<p>
+   <p>  Crie funções para cada uma das operações abaixo:
+<p>
+   <p>  a) Cria base: esta fun??o devolve uma Base onde o campo armazenado ? inicializado
     com 0.
-    Base cria_base();
-
-    b) Inclui Pessoa: esta função recebe como parâmetro um dado do tipo Pessoa e o inclui
+  <p>   Base cria_base();
+<p>
+  <p>   b) Inclui Pessoa: esta função recebe como parâmetro um dado do tipo Pessoa e o inclui
     na base (também passada por parâmetro) caso já não exista na base uma pessoa com
     o mesmo RG. A função devolve 1 caso a incluso tenha ocorrido, devolve 0 caso a
     Base esteja cheia e devolve -1 caso j? exista uma pessoa com o RG informado.
-    int insere_base(Pessoa p, Base base);
-
-    c) Exclui Pessoa: esta fun??o recebe como parâmetro um dado do tipo int representando
+  <p>   int insere_base(Pessoa p, Base base);
+<p>
+  <p>   c) Exclui Pessoa: esta fun??o recebe como parâmetro um dado do tipo int representando
     o RG de uma pessoa e o exclui da base caso esteja presente. A fun??o devolve 1 caso a
     exclusão tenha ocorrido, e devolve 0 caso n?o exista uma pessoa com o RG informado.
-    int remove_base(int rg, Base base);
+   <p>  int remove_base(int rg, Base base);
     */
     return 0;
 }
@@ -184,14 +184,14 @@ int exercicio06(void) {
 int exercicio07(void) {
 
     /**
-    <p>struct Aluno leAluno ( ) ;
+    struct Aluno leAluno ( ) ;
     <p> Esta função faz a leitura dos dados de um registro Aluno e devolve o
     registro lido.
-
+<p>
     <p>void imprimeAluno (struct Aluno a) ;
     <p>Esta função recebe como par?metro um registro Aluno e imprime os
     dados do registro.
-
+<p>
    <p> void listarTurma (struc t Aluno turma [ ], int n ) ;
    <p> Esta função recebe como parâmetros um vetor do tipo Aluno
    <p> representando uma turma, e também um inteiro n indicando o
@@ -216,8 +216,8 @@ int exercicio07(void) {
 int exercicio08(void) {
     /**
      Crie um novo tipo de registro para armazenar alunos com RA e idade.
-     faça a leitura de 5 alunos em uma função.
-     Calcule e imprima a m?dia das idades dos alunos.
+     <p> faça a leitura de 5 alunos em uma função.
+     <p> Função Calcule e imprima a m?dia das idades dos alunos.
      */
 
     int numAlunes;
@@ -234,11 +234,11 @@ int exercicio08(void) {
 int exercicio09(void) {
     /**
     
-    Crie um novo tipo de registro para armazenar coordenadas no plano
+    <p>Crie um novo tipo de registro para armazenar coordenadas no plano
     cartesiano.
-    Crie uma Fun??o para imprimir um ponto do tipo criado.
-    Crie uma Fun??o para cada uma destas opera??es: soma de dois
-    pontos, subtra??o de dois pontos, multiplica??o por um escalar.
+    <p>Crie uma Função para imprimir um ponto do tipo criado.
+    <p>Crie uma Função para cada uma destas operações: soma de dois
+    pontos, subtraçõo de dois pontos, multiplicação por um escalar.
     */
 
     printf("Digite as coordenadas do ponto 1:\n");
@@ -272,10 +272,10 @@ int exercicio10(void) {
     /**
     Defina uma variável do tipo registro que tenha dois campinas, senodo o  1 um vetor de 3 elementos do tipo inteiro
     e o 2 campo um valor inteiro. Faça:
-    
-    a) Crie uma função para leitura dos valores do 1 campo(vetor)    
-    b) Some os valores do vetor e coloque o resultao no 2 campo
-    c) Crie uma função para imprimir os valores de registro
+    <p>
+    <p>a) Crie uma função para leitura dos valores do 1 campo(vetor)
+   <p>b) Some os valores do vetor e coloque o resultao no 2 campo
+    <p>c) Crie uma função para imprimir os valores de registro
      */
 
     Reg minhaReg;
@@ -292,9 +292,11 @@ int exercicio10(void) {
 int exercicio11(void) {
 
     /** Crie uma função que recebe duas strings de tamanhos quaisqueres e que devolve a concatenação destas
-     * lembre-se que uma função não pode devolver um vetor, mas ela pode devolver um ponteiro, o protótipo da função será
+     * lembre-se que uma função não pode devolver um vetor, mas ela pode devolver um ponteiro,
      *
-     * char * concatena(char *s1, char *s2);
+     * o protótipo da função será
+     *
+     * <p>char * concatena(char *s1, char *s2);
      */
 
     char *s1 = "Hello";

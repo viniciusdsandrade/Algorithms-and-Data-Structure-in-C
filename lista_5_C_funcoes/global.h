@@ -1,7 +1,7 @@
 #ifndef INC_2_LISTAS_GLOBAL_H
 #define INC_2_LISTAS_GLOBAL_H
 
-int fun1(int a, int b);
+int pot(int a, int b);
 int mdc(int m, int n);
 bool amigos(int a, int b);
 double media(double pDouble[], int qtd);
@@ -11,8 +11,8 @@ double *preencheVetorDoubleReturn(int qtd);
 void transposta(int **matriz, int **matrizTransposta, int dimensao);
 void imprimeMatrizQuadrada(int **matriz, int dimensao);
 int menor_base_log(int n);
-int pitagorico(int n);
-int test(int a, int b, int n);
+bool pitagorico(int n);
+int isSumSquare(int a, int b, int n);
 bool isMagico(int matrix[30][30], int size);
 int calculaSoma(int matrix[30][30], int size, int isRow, int index);
 bool verificaLinha(int linha, int numero, int tabuleiro[9][9]);

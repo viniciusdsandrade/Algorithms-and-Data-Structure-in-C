@@ -32,9 +32,9 @@ int mdc(int m, int n) {
  * @return O resultado da operação 'a' elevado a 'b'.
  *
  * Exemplo de uso:
- * int resultado = fun1(2, 3); // Calcula 2 elevado a 3 (2^3)
+ * int resultado = pot(2, 3); // Calcula 2 elevado a 3 (2^3)
  */
-int fun1(int a, int b) {
+int pot(int a, int b) {
     int p = 1;
     for (int i = 0; i < b; i++) {
         p *= a;
@@ -261,7 +261,7 @@ void imprimeMatrizQuadrada(int **matriz, int dimensao) {
  * @param n Inteiro alvo.
  * @return Verdadeiro se a^2 + b^2 for igual a n, falso caso contrário.
  */
-int test(int a, int b, int n) {
+int isSumSquare(int a, int b, int n) {
     return (a * a + b * b == n) ? 1 : 0;
 }
 
@@ -271,15 +271,15 @@ int test(int a, int b, int n) {
  * @param n Inteiro a ser verificado.
  * @return Verdadeiro se n for um número pitagórico, falso caso contrário.
  */
-int pitagorico(int n) {
+bool pitagorico(int n) {
     for (int a = 1; a <= n; a++) {
         for (int b = 1; b <= n; b++) {
-            if (test(a, b, n)) {
-                return 1; // Se encontrar a e b que satisfazem a^2 + b^2 = n, retorna 1
+            if (isSumSquare(a, b, n)) {
+                return true; // Se encontrar a e b que satisfazem a^2 + b^2 = n, retorna 1
             }
         }
     }
-    return 0; // Se nenhum par de a e b satisfizer a^2 + b^2 = n, retorna 0
+    return false; // Se nenhum par de a e b satisfizer a^2 + b^2 = n, retorna 0
 }
 
 /**
