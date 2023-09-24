@@ -8,7 +8,7 @@
 int exercicio01(void) {
 
     /**
-     <p>1. Considere o cÛdigo em C abaixo (assuma que no lugar de D seja usado o ˙ltimo dÌgito de
+     <p>1. Considere o c√≥digo em C abaixo (assuma que no lugar de D seja usado o √∫ltimo d√≠gito de
        <p> seu RA):
       <p>  #include <stdio.h>
       <p>  int fun1(int a, int b);
@@ -16,7 +16,7 @@ int exercicio01(void) {
        <p> int j=1;
        <p> int main(){
         <p>    int i, j;
-         <p>   int a = D;///Use o ˙ltimo dÌgito de seu RA.
+         <p>   int a = D;///Use o √∫ltimo d√≠gito de seu RA.
           <p>  if(a % 2 == 0)
           <p>      a = 2;
            <p> else
@@ -36,15 +36,15 @@ int exercicio01(void) {
          <p>   return p+j;
       <p>  }
 <p>
-        <p>(a) (0.5 pontos) Determine quais s„o as vari·veis locais e globais deste programa. Para
-        <p>cada vari·vel local identifique a que funÁ„o esta pertence.
+        <p>(a) (0.5 pontos) Determine quais s√£o as vari√°veis locais e globais deste programa. Para
+        <p>cada vari√°vel local identifique a que fun√ß√£o esta pertence.
 <p>
-        <p>(b) (1.5 pontos) Mostre o que ser· impresso na tela do computador quando for executado
-        <p>este programa (lembre-se de usar o ˙ltimo dÌgito de seu RA no lugar de D).
+        <p>(b) (1.5 pontos) Mostre o que ser√° impresso na tela do computador quando for executado
+        <p>este programa (lembre-se de usar o √∫ltimo d√≠gito de seu RA no lugar de D).
      */
 
     int i, j;
-    int a = 6;///Use o ˙ltimo dÌgito de seu RA.
+    int a = 6;///Use o √∫ltimo d√≠gito de seu RA.
     if (a % 2 == 0)
         a = 2;
     else
@@ -61,20 +61,20 @@ int exercicio01(void) {
 int exercicio02(void) {
 
     /**
-     <p>2. Escreva uma funÁ„o que recebe dois n˙meros inteiros positivos a e b por par‚metro e
-  determina se eles s„o amigos ou n„o, devolvendo 1 caso sejam amigos, e 0 caso contr·rio.
+     <p>2. Escreva uma fun√ß√£o que recebe dois n√∫meros inteiros positivos a e b por par√¢metro e
+  determina se eles s√£o amigos ou n√£o, devolvendo 1 caso sejam amigos, e 0 caso contr√°rio.
 <p>
-    <p>Dois n˙meros s„o amigos se cada n˙mero È igual ‡ soma dos divisores prÛprios do outro
-(os divisores prÛprios de um n˙mero m s„o os divisores estritamente menores que m).
+    <p>Dois n√∫meros s√£o amigos se cada n√∫mero √© igual √† soma dos divisores pr√≥prios do outro
+(os divisores pr√≥prios de um n√∫mero m s√£o os divisores estritamente menores que m).
 <p>
    <p> Por exemplo:
 <p>
-    <p>os divisores prÛprios de 220 s„o 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 e 110,
-cuja soma È 284;
-    <p>e os divisores prÛprios de 284 s„o 1, 2, 4, 71 e 142, cuja soma È 220. Logo, 220 e
-284 s„o n˙meros amigos.
+    <p>os divisores pr√≥prios de 220 s√£o 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 e 110,
+cuja soma √© 284;
+    <p>e os divisores pr√≥prios de 284 s√£o 1, 2, 4, 71 e 142, cuja soma √© 220. Logo, 220 e
+284 s√£o n√∫meros amigos.
 <p>
-   <p> O protÛtipo da funÁ„o deve ser: int amigos(int a, int b);
+   <p> O prot√≥tipo da fun√ß√£o deve ser: int amigos(int a, int b);
      */
 
     int a, b;
@@ -85,9 +85,9 @@ cuja soma È 284;
     scanf("%d", &b);
 
     if (amigos(a, b)) {
-        printf("%d e %d s„o amigos", a, b);
+        printf("%d e %d s√£o amigos", a, b);
     } else {
-        printf("%d e %d n„o s„o amigos", a, b);
+        printf("%d e %d n√£o s√£o amigos", a, b);
     }
     return 0;
 }
@@ -95,15 +95,14 @@ cuja soma È 284;
 int exercicio03(void) {
 
     /**
-    3. Escreva uma funÁ„o que calcule o m·ximo divisor comum de dois n˙meros m e n
-    passados por par‚metro.
+    3. Escreva uma fun√ß√£o que calcule o m√°ximo divisor comum de dois n√∫meros m e n
+    passados por par√¢metro.
 
-    <p>VocÍ deve utilizar a seguinte regra do c·lculo do mdc onde m e n s„o n˙meros inteiros positivos:
+    <p>Voc√™ deve utilizar a seguinte regra do c√°lculo do mdc onde m e n s√£o n√∫meros inteiros positivos:
     <p>mdc(m; n) = m se n = 0
     <p>mdc(m; n) = mdc(n, m%n) se n > 0
-    <p> O protÛtipo da funÁ„o deve ser: int mdc(int m, int n);
+    <p> O prot√≥tipo da fun√ß√£o deve ser: int mdc(int m, int n);
      */
-
     int m, n;
     printf("Digite o valor de m: ");
     scanf("%d", &m);
@@ -111,7 +110,7 @@ int exercicio03(void) {
     printf("Digite o valor de n: ");
     scanf("%d", &n);
 
-    printf("O MDC de %d e %d È %d", m, n, mdc(m, n));
+    printf("O MDC de %d e %d √© %d", m, n, mdc(m, n));
 
     return 0;
 }
@@ -119,23 +118,23 @@ int exercicio03(void) {
 int exercicio04(void) {
 
     /**
-     4. Escreva uma funÁ„o que recebe um valor inteiro positivo n como par‚metro
+     4. Escreva uma fun√ß√£o que recebe um valor inteiro positivo n como par√¢metro
      e devolve um valor inteiro b tal que bk = n para algum inteiro k,
-     e b seja o menor possÌvel.
+     e b seja o menor poss√≠vel.
 <p>
-     Por exemplo: se n = 27 ent„o o valor devolvido deve ser 3,
-     j· se n = 12 ent„o o valor devolvido deve ser 12.
+     Por exemplo: se n = 27 ent√£o o valor devolvido deve ser 3,
+     j√° se n = 12 ent√£o o valor devolvido deve ser 12.
 <p>
-     N„o use funÁıes de bibliotecas na sua soluÁ„o.
+     N√£o use fun√ß√µes de bibliotecas na sua solu√ß√£o.
 <p>
-     O protÛtipo da funÁ„o deve ser: int menor_base_log(int n);
+     O prot√≥tipo da fun√ß√£o deve ser: int menor_base_log(int n);
      */
 
     int n;
     printf("Digite o valor de n: ");
     scanf("%d", &n);
 
-    printf("O menor valor de b tal que bk = %d È %d", n, menor_base_log(n));
+    printf("O menor valor de b tal que bk = %d √© %d", n, menor_base_log(n));
 
     return 0;
 }
@@ -143,19 +142,19 @@ int exercicio04(void) {
 int exercicio05(void) {
 
     /**
-    5. Um inteiro positivo n È pitagÛrico se existem inteiros positivos a e b tais que a^2+b^2 = n.
-    Por exemplo, 13 È pitagÛrico pois 2^2 + 3^2 = 13.
+    5. Um inteiro positivo n √© pitag√≥rico se existem inteiros positivos a e b tais que a^2+b^2 = n.
+    Por exemplo, 13 √© pitag√≥rico pois 2^2 + 3^2 = 13.
 <p>
-    <p>(a) Escreva uma funÁ„o que recebe como par‚metro trÍs inteiros a, b e n, e que devolve
-    1 caso a^2+b^2 = n e devolve 0 caso contr·rio.
+    <p>(a) Escreva uma fun√ß√£o que recebe como par√¢metro tr√™s inteiros a, b e n, e que devolve
+    1 caso a^2+b^2 = n e devolve 0 caso contr√°rio.
 <p>
-    O protÛtipo da funÁ„o deve ser: int teste(int a, int b, int n);
+    O prot√≥tipo da fun√ß√£o deve ser: int teste(int a, int b, int n);
 <p>
-    (b) Utilize a funÁ„o do item anterior e escreva uma outra funÁ„o que recebe como par‚metro
-    um inteiro positivo n e verifica se n È pitagÛrico, devolvendo 1 caso n seja
-    pitagÛrico e 0 caso contr·rio.
+    (b) Utilize a fun√ß√£o do item anterior e escreva uma outra fun√ß√£o que recebe como par√¢metro
+    um inteiro positivo n e verifica se n √© pitag√≥rico, devolvendo 1 caso n seja
+    pitag√≥rico e 0 caso contr√°rio.
 <p>
-    O protÛtipo da funÁ„o deve ser: int pitagorico(int n);
+    O prot√≥tipo da fun√ß√£o deve ser: int pitagorico(int n);
      */
 
     int a, b, n;
@@ -168,13 +167,13 @@ int exercicio05(void) {
     printf("Digite o valor de n: ");
     scanf("%d", &n);
 
-    printf("Digite um n˙mero inteiro positivo: ");
+    printf("Digite um n√∫mero inteiro positivo: ");
     scanf("%d", &n);
 
     if (pitagorico(n))
-        printf("%d È um n˙mero pitagÛrico.\n", n);
+        printf("%d √© um n√∫mero pitag√≥rico.\n", n);
     else
-        printf("%d n„o È um n˙mero pitagÛrico.\n", n);
+        printf("%d n√£o √© um n√∫mero pitag√≥rico.\n", n);
 
     return 0;
 }
@@ -182,50 +181,50 @@ int exercicio05(void) {
 int exercicio06(void) {
 
     /**
-     6. Escreva uma funÁ„o que recebe um vetor de n˙meros reais e o seu tamanho por par‚metro
-     e devolve a mÈdia aritmÈtica dos n˙meros do vetor.
+     6. Escreva uma fun√ß√£o que recebe um vetor de n√∫meros reais e o seu tamanho por par√¢metro
+     e devolve a m√©dia aritm√©tica dos n√∫meros do vetor.
 
-     <p> O protÛtipo da funÁ„o deve ser: double media(double v[], int tam);
+     <p> O prot√≥tipo da fun√ß√£o deve ser: double media(double v[], int tam);
      */
 
     int qtd;
-    printf("Quantos numeros vocÍ quer digitar? ");
+    printf("Quantos numeros voc√™ quer digitar? ");
     scanf("%d", &qtd);
 
     double numeros[qtd];
     int i;
 
     for (i = 0; i < qtd; i++) {
-        printf("Digite o %d∫ n˙mero: ", i + 1);
+        printf("Digite o %d¬∫ n√∫mero: ", i + 1);
         scanf("%lf", &numeros[i]);
     }
 
-    printf("A mÈdia dos n˙meros digitados È %lf", media(numeros, qtd));
+    printf("A m√©dia dos n√∫meros digitados √© %lf", media(numeros, qtd));
     return 0;
 }
 
 int exercicio07(void) {
 
     /**
-    7. Escreva uma funÁ„o que recebe um vetor de n˙meros reais e o seu tamanho
-    por par‚metro e devolve o desvio padr„o dos n˙meros do vetor usando a
-    seguinte fÛrmula:
+    7. Escreva uma fun√ß√£o que recebe um vetor de n√∫meros reais e o seu tamanho
+    por par√¢metro e devolve o desvio padr√£o dos n√∫meros do vetor usando a
+    seguinte f√≥rmula:
 <p>
-     Desvio padr„o = ?((?(xi - x)≤) / (n - 1))
+     Desvio padr√£o = ?((?(xi - x)¬≤) / (n - 1))
 <p>
-     onde n È o n˙mero de elementos.
+     onde n √© o n√∫mero de elementos.
      <p>
-     O protÛtipo da funÁ„o deve ser: double desvioPadrao(double v[], int tam);
+     O prot√≥tipo da fun√ß√£o deve ser: double desvioPadrao(double v[], int tam);
      */
 
     int qtd;
-    printf("Quantos numeros vocÍ quer digitar? ");
+    printf("Quantos numeros voc√™ quer digitar? ");
     scanf("%d", &qtd);
 
     double numeros[qtd];
     preencheVetorDouble(qtd, numeros);
 
-    printf("O desvio padr„o dos n˙meros digitados È %lf", desvioPadrao(numeros, qtd));
+    printf("O desvio padr√£o dos n√∫meros digitados √© %lf", desvioPadrao(numeros, qtd));
 
     return 0;
 }
@@ -233,14 +232,14 @@ int exercicio07(void) {
 int exercicio08(void) {
 
     /**
-    8. Escreva uma funÁ„o que recebe como par‚metro duas matrizes quadradas de tamanho
-    no m·ximo 30 X 30, onde a primeira matriz corresponde a uma matriz de entrada e a
+    8. Escreva uma fun√ß√£o que recebe como par√¢metro duas matrizes quadradas de tamanho
+    no m√°ximo 30 X 30, onde a primeira matriz corresponde a uma matriz de entrada e a
     segunda corresponde a uma matriz resposta.
 <p>
-   <p> A funÁ„o deve calcular a transposta da matriz de entrada e guardar o resultado na matriz resposta.
-    <p>A funÁ„o tambÈm recebe como par‚metro um inteiro n que indica as dimensıes das matrizes.
+   <p> A fun√ß√£o deve calcular a transposta da matriz de entrada e guardar o resultado na matriz resposta.
+    <p>A fun√ß√£o tamb√©m recebe como par√¢metro um inteiro n que indica as dimens√µes das matrizes.
 <p>
-    O protÛtipo da funÁ„o deve ser:
+    O prot√≥tipo da fun√ß√£o deve ser:
      <p>
     void transposta(double mat1[30][30], double matRes[30][30], int n);
      */
@@ -282,33 +281,33 @@ int exercicio08(void) {
 int exercicio09(void) {
 
     /**
-    <p> 9. Uma matriz quadrada de inteiros È um quadrado m·gico se
+    <p> 9. Uma matriz quadrada de inteiros √© um quadrado m√°gico se
     <p> a) a soma dos elementos de cada linha,
     <p> b) a soma dos elementos de cada coluna,
     <p> c) a soma dos elementos da diagonal principal
-    <p> e a soma da diagonal secund·ria s„o todos iguais.
+    <p> e a soma da diagonal secund√°ria s√£o todos iguais.
 <p>
-     <p>A matriz abaixo È um exemplo de quadrado m·gico:
+     <p>A matriz abaixo √© um exemplo de quadrado m√°gico:
 <p>
     <p>[3  4  8]
     <p>[10 5  0]
     <p>[2  6  7]
 <p><p>
 
-    Escreva uma funÁ„o que recebe como par‚metro uma matriz quadrada de tamanho no
-    m·ximo 30 X 30, e suas dimensıes n, e determina se ela È um quadrado m·gico devolvendo
-    1 caso seja e 0 caso contr·rio.
+    Escreva uma fun√ß√£o que recebe como par√¢metro uma matriz quadrada de tamanho no
+    m√°ximo 30 X 30, e suas dimens√µes n, e determina se ela √© um quadrado m√°gico devolvendo
+    1 caso seja e 0 caso contr√°rio.
 <p>
-     O protÛtipo da funÁ„o deve ser: int magico(int mat[30][30], int n);
+     O prot√≥tipo da fun√ß√£o deve ser: int magico(int mat[30][30], int n);
      */
 
     int matriz[30][30];
     preencheMatrizQuadrada(matriz, 30);
 
     if (isMagico(matriz, 30))
-        printf("A matriz È um quadrado m·gico");
+        printf("A matriz √© um quadrado m√°gico");
     else
-        printf("A matriz n„o È um quadrado m·gico");
+        printf("A matriz n√£o √© um quadrado m√°gico");
 
     return 0;
 }
@@ -316,27 +315,27 @@ int exercicio09(void) {
 int exercicio10(void) {
     /**
     10. No jogo Sudoku temos uma matriz 9 X 9 dividida em 9 quadrados de 3 X 3 preenchidos
-    previamente com alguns n˙meros entre 1 e 9 (veja o exemplo ‡ esquerda abaixo).
+    previamente com alguns n√∫meros entre 1 e 9 (veja o exemplo √† esquerda abaixo).
 <p>
-    Uma soluÁ„o para uma inst‚ncia do jogo consiste no preenchimento de todas as posiÁıes vazias
-    com n˙meros entre 1 e 9 respeitando-se as seguintes regras:
+    Uma solu√ß√£o para uma inst√¢ncia do jogo consiste no preenchimento de todas as posi√ß√µes vazias
+    com n√∫meros entre 1 e 9 respeitando-se as seguintes regras:
 <p>
-    <p>(a) N„o pode haver n˙meros repetidos em um mesmo quadrado, ou seja, cada n˙mero
+    <p>(a) N√£o pode haver n√∫meros repetidos em um mesmo quadrado, ou seja, cada n√∫mero
     entre 1 e 9 deve aparecer exatamente uma vez em cada quadrado.
-    <p>(b) N„o pode haver n˙meros repetidos em nenhuma linha da matriz.
-    <p>(c) N„o pode haver n˙meros repetidos em nenhuma coluna da matriz.
+    <p>(b) N√£o pode haver n√∫meros repetidos em nenhuma linha da matriz.
+    <p>(c) N√£o pode haver n√∫meros repetidos em nenhuma coluna da matriz.
 <p>
-    Escreva uma funÁ„o que receba uma matriz 9 X 9 como par‚metro, que represente uma
-    proposta de soluÁ„o para um Sudoku, e teste se a matriz È uma soluÁ„o v·lida para o jogo,
-    devolvendo True em caso verdadeiro e False, caso contr·rio.
+    Escreva uma fun√ß√£o que receba uma matriz 9 X 9 como par√¢metro, que represente uma
+    proposta de solu√ß√£o para um Sudoku, e teste se a matriz √© uma solu√ß√£o v√°lida para o jogo,
+    devolvendo True em caso verdadeiro e False, caso contr√°rio.
      <p>
-    A seguinte funÁ„o deve ser implementada:
+    A seguinte fun√ß√£o deve ser implementada:
     */
 
     printf("Digite os valores do seu Sudoku:\n");
 
     int tabuleiro[9][9];
-    bool tabuleiroValido = true; // Assume que o tabuleiro È v·lido atÈ encontrar uma violaÁ„o
+    bool tabuleiroValido = true; // Assume que o tabuleiro √© v√°lido at√© encontrar uma viola√ß√£o
 
     for (int i = 0; i < 9 && tabuleiroValido; i++) {
         for (int j = 0; j < 9; j++) {
@@ -353,17 +352,17 @@ int exercicio10(void) {
     }
 
     if (tabuleiroValido)
-        printf("O tabuleiro Sudoku È v·lido!\n");
+        printf("O tabuleiro Sudoku √© v√°lido!\n");
     else
-        printf("O tabuleiro Sudoku n„o È v·lido!\n");
+        printf("O tabuleiro Sudoku n√£o √© v√°lido!\n");
 
     return 0;
 }
 
 int exercicio11(void) {
     /**
-    11. Suponha que uma matriz bin·ria represente ligaÁıes entre cidades, e que, se uma posiÁ„o
-    (i,j) possui o valor 1, ent„o h· uma estrada da cidade i para a cidade j. Seja o seguinte
+    11. Suponha que uma matriz bin√°ria represente liga√ß√µes entre cidades, e que, se uma posi√ß√£o
+    (i,j) possui o valor 1, ent√£o h√° uma estrada da cidade i para a cidade j. Seja o seguinte
 
     <p>exemplo de matriz:
  <p>
@@ -371,34 +370,34 @@ int exercicio11(void) {
    <p> [0 0 0]
     <p>[1 0 0]
  <p>
-  <p>  Neste caso, h· caminhos disponÌveis da cidade 0 para a 1 e 2, e da 2 para 0.
-    Para cada item abaixo escreva uma funÁ„o que recebe como par‚metro uma matriz quadrada
-    indicando as estradas entre as cidades, um inteiro n correspondendo as dimensıes
-    da matriz e um vetor resposta (que ter· tamanho n).
+  <p>  Neste caso, h√° caminhos dispon√≠veis da cidade 0 para a 1 e 2, e da 2 para 0.
+    Para cada item abaixo escreva uma fun√ß√£o que recebe como par√¢metro uma matriz quadrada
+    indicando as estradas entre as cidades, um inteiro n correspondendo as dimens√µes
+    da matriz e um vetor resposta (que ter√° tamanho n).
  <p>
-    <p>  O protÛtipo da funÁ„o deve ser:
+    <p>  O prot√≥tipo da fun√ß√£o deve ser:
       <p>void verifica(int mat[30][30], int n, int resposta[]);
  <p>
-   <p> a) A funÁ„o deve determinar as cidades com entrada e sem saÌda, indicando isto no vetor
-    resposta, tal que resposta[i] recebe 1 caso a cidade i satisfaÁa esta propriedade e 0
-    caso contr·rio.
+   <p> a) A fun√ß√£o deve determinar as cidades com entrada e sem sa√≠da, indicando isto no vetor
+    resposta, tal que resposta[i] recebe 1 caso a cidade i satisfa√ßa esta propriedade e 0
+    caso contr√°rio.
 <p>
-    <p>b) A funÁ„o deve determinar as cidades com saÌda mas sem entrada, indicando isto no
-    vetor resposta, tal que resposta[i] recebe 1 caso a cidade i satisfaÁa esta propriedade
-    e 0 caso contr·rio.
+    <p>b) A fun√ß√£o deve determinar as cidades com sa√≠da mas sem entrada, indicando isto no
+    vetor resposta, tal que resposta[i] recebe 1 caso a cidade i satisfa√ßa esta propriedade
+    e 0 caso contr√°rio.
     */
 
     int matriz[MAX_DIMENSAO][MAX_DIMENSAO];
     int dimensao;
 
-    printf("Digite a dimens„o da matriz: ");
+    printf("Digite a dimens√£o da matriz: ");
     scanf("%d", &dimensao);
     preencheMatrizQuadrada(matriz, dimensao);
 
     int resposta[dimensao];
 
     cidadesComEntradaSemSaida(matriz, dimensao, resposta);
-    printf("Cidades com entrada e sem saÌda:\n");
+    printf("Cidades com entrada e sem sa√≠da:\n");
     for (int i = 0; i < dimensao; i++) {
         if (resposta[i]) {
             printf("%d ", i);
@@ -408,7 +407,7 @@ int exercicio11(void) {
     printf("\n");
 
     cidadesComSaidaSemEntrada(matriz, dimensao, resposta);
-    printf("Cidades com saÌda e sem entrada:\n");
+    printf("Cidades com sa√≠da e sem entrada:\n");
     for (int i = 0; i < dimensao; i++) {
         if (resposta[i]) {
             printf("%d ", i);
@@ -421,13 +420,13 @@ int exercicio11(void) {
 int exercicio12(void) {
 
     /**
-    10. Escreva uma funÁ„o que recebe como par‚metro trÍs matrizes quadradas de tamanho no
-    m·ximo 30 X 30, onde a primeira e a segunda matriz correspondem a entrada e a terceira
+    10. Escreva uma fun√ß√£o que recebe como par√¢metro tr√™s matrizes quadradas de tamanho no
+    m√°ximo 30 X 30, onde a primeira e a segunda matriz correspondem a entrada e a terceira
     corresponde a uma matriz resposta.
-    <p>A funÁ„o deve calcular a multiplicaÁ„o da primeira pela segunda matriz e guardar o resultado na matriz resposta.
-    <p> A funÁ„o tambÈm recebe como par‚metro um inteiro n que indica as dimensıes das matrizes.
+    <p>A fun√ß√£o deve calcular a multiplica√ß√£o da primeira pela segunda matriz e guardar o resultado na matriz resposta.
+    <p> A fun√ß√£o tamb√©m recebe como par√¢metro um inteiro n que indica as dimens√µes das matrizes.
     <p>
-   <p>  O protÛtipo da funÁ„o deve ser:
+   <p>  O prot√≥tipo da fun√ß√£o deve ser:
     <p>
    <p>  void transposta(double mat1[30][30], double matRes[30][30], int n);
      */
@@ -444,26 +443,26 @@ int exercicio12(void) {
 
     multiplica(matrizA, matrizB, matrizResultado, 30);
 
-    printf("O resultado da multiplicaÁ„o das matrizes A e B È:\n");
+    printf("O resultado da multiplica√ß√£o das matrizes A e B √©:\n");
     imprimeMatrizQuadrada((int **) matrizResultado, 30);
 
     return 0;
 }
 
 int displayMenuAndGetChoice(void) {
-    printf("ExercÌcio 01:\n");
-    printf("ExercÌcio 02:\n");
-    printf("ExercÌcio 03:\n");
-    printf("ExercÌcio 04:\n");
-    printf("ExercÌcio 05:\n");
-    printf("ExercÌcio 06:\n");
-    printf("ExercÌcio 07:\n");
-    printf("ExercÌcio 08:\n");
-    printf("ExercÌcio 09:\n");
-    printf("ExercÌcio 10: \n");
-    printf("ExercÌcio 11: \n");
-    printf("ExercÌcio 12: \n");
-    printf("Digite o n˙mero do ExercÌcio que deseja executar");
+    printf("Exerc√≠cio 01:\n");
+    printf("Exerc√≠cio 02:\n");
+    printf("Exerc√≠cio 03:\n");
+    printf("Exerc√≠cio 04:\n");
+    printf("Exerc√≠cio 05:\n");
+    printf("Exerc√≠cio 06:\n");
+    printf("Exerc√≠cio 07:\n");
+    printf("Exerc√≠cio 08:\n");
+    printf("Exerc√≠cio 09:\n");
+    printf("Exerc√≠cio 10: \n");
+    printf("Exerc√≠cio 11: \n");
+    printf("Exerc√≠cio 12: \n");
+    printf("Digite o n√∫mero do Exerc√≠cio que deseja executar");
 
     int escolha;
     scanf("%d", &escolha);
@@ -509,7 +508,7 @@ void executeExercise(int choice) {
             exercicio12();
             break;
         default:
-            printf("OpÁ„o invalida!\n");
+            printf("Op√ß√£o invalida!\n");
             break;
     }
 }
@@ -517,7 +516,7 @@ void executeExercise(int choice) {
 bool getExitChoice(void) {
     int sair;
     do {
-        printf("Deseja sair? Digite (1) para Sim ou (0) para N„o: ");
+        printf("Deseja sair? Digite (1) para Sim ou (0) para N√£o: ");
         scanf("%d", &sair);
     } while (sair != 0 && sair != 1);
     return sair;
@@ -534,7 +533,7 @@ int main(void) {
         if (escolha >= 1 && escolha <= MAX_EXERCISES) {
             executeExercise(escolha);
         } else {
-            printf("OpÁ„o inv·lida!\n");
+            printf("Op√ß√£o inv√°lida!\n");
         }
         sair = getExitChoice();
     } while (!sair);
