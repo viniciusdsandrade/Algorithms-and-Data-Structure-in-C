@@ -16,8 +16,8 @@ int exercicio01(void) {
       <p>   int quantidade;
    <p>  }Produto;
 <p>
-   <p>  Implemente duas funções, uma que devolve o vetor ordenado por preços e outra que devolve
-    o vetor ordenado pela quantidade de itens no estoque. Os protótipos são:
+   <p>  Implemente duas funÃ§Ãµes, uma que devolve o vetor ordenado por preÃ§os e outra que devolve
+    o vetor ordenado pela quantidade de itens no estoque. Os protÃ³tipos sÃ£o:
 <p>
    <p>  void ordenaPreco(Produto vet[], int n);
    <p> void ordenaQuantidade(Produto vet[], int n);
@@ -51,13 +51,12 @@ int exercicio02(void) {
     <p> }Data;
      <p>
 
-   <p>  Implemente um algoritmo que receba um vetor de Datas como parâmetro e que retorne as datas em ordem cronológica.
+   <p>  Implemente um algoritmo que receba um vetor de Datas como parÃ¢metro e que retorne as datas em ordem cronolÃ³gica.
 
-    <p>  Protótipo da função : void ordena(struct Data vet[], int tam);
+    <p>  ProtÃ³tipo da funÃ§Ã£o : void ordena(struct Data vet[], int tam);
 
     <p> Dica: Ordene o vetor separadamente por cada um dos campos.
     */
-
     printf("Digite a quantidade de datas: ");
     int n;
 
@@ -71,7 +70,7 @@ int exercicio02(void) {
 int exercicio03(void) {
     /**
     3. Suponha que criamos uma estrutura para armazenar dados de pessoas e uma outra estrutura
-    para armazenar dados de várias pessoas como uma base de dados.
+    para armazenar dados de vÃ¡rias pessoas como uma base de dados.
 <p>
   <p>   typedef struct Pessoa{
    <p>      int rg;
@@ -80,25 +79,25 @@ int exercicio03(void) {
    <p>  }Pessoa;
 <p>
    <p>  typedef struct Base{
-   <p>     int armazenado; //Deve sempre corresponder ao número de pessoas na base
+   <p>     int armazenado; //Deve sempre corresponder ao nÃºmero de pessoas na base
    <p>      Pessoa pessoas[100];
    <p>  }Base;
 <p>
-   <p>  Crie funções para cada uma das operações abaixo:
+   <p>  Crie funÃ§Ãµes para cada uma das operaÃ§Ãµes abaixo:
 <p>
    <p>  a) Cria base: esta fun??o devolve uma Base onde o campo armazenado ? inicializado
     com 0.
   <p>   Base cria_base();
 <p>
-  <p>   b) Inclui Pessoa: esta função recebe como parâmetro um dado do tipo Pessoa e o inclui
-    na base (também passada por parâmetro) caso já não exista na base uma pessoa com
-    o mesmo RG. A função devolve 1 caso a incluso tenha ocorrido, devolve 0 caso a
+  <p>   b) Inclui Pessoa: esta funÃ§Ã£o recebe como parÃ¢metro um dado do tipo Pessoa e o inclui
+    na base (tambÃ©m passada por parÃ¢metro) caso jÃ¡ nÃ£o exista na base uma pessoa com
+    o mesmo RG. A funÃ§Ã£o devolve 1 caso a incluso tenha ocorrido, devolve 0 caso a
     Base esteja cheia e devolve -1 caso j? exista uma pessoa com o RG informado.
   <p>   int insere_base(Pessoa p, Base base);
 <p>
-  <p>   c) Exclui Pessoa: esta fun??o recebe como parâmetro um dado do tipo int representando
+  <p>   c) Exclui Pessoa: esta fun??o recebe como parÃ¢metro um dado do tipo int representando
     o RG de uma pessoa e o exclui da base caso esteja presente. A fun??o devolve 1 caso a
-    exclusão tenha ocorrido, e devolve 0 caso n?o exista uma pessoa com o RG informado.
+    exclusÃ£o tenha ocorrido, e devolve 0 caso n?o exista uma pessoa com o RG informado.
    <p>  int remove_base(int rg, Base base);
     */
     return 0;
@@ -106,20 +105,20 @@ int exercicio03(void) {
 
 int exercicio04(void) {
     /**
- * Função para buscar uma pessoa por RG em um vetor de cadastro ordenado por RG.
+ * FunÃ§Ã£o para buscar uma pessoa por RG em um vetor de cadastro ordenado por RG.
  *
- * Esta função realize uma busca binária em um vetor de cadastro de pessoas ordenado
+ * Esta funÃ§Ã£o realize uma busca binÃ¡ria em um vetor de cadastro de pessoas ordenado
  * em ordem crescente por valor de RG. Se uma pessoa com o RG especificado for encontrada,
- * a função retorna o índice dessa pessoa no vetor de cadastro. Caso contrário, ela
- * retorna -1, indicando que a pessoa não foi encontrada.
+ * a funÃ§Ã£o retorna o Ã­ndice dessa pessoa no vetor de cadastro. Caso contrÃ¡rio, ela
+ * retorna -1, indicando que a pessoa nÃ£o foi encontrada.
  *
  * @param cadastro O vetor de cadastro de pessoas ordenado por RG.
  * @param tamanho O tamanho do vetor de cadastro.
  * @param rg O RG a ser buscado.
- * @return O índice da pessoa com o RG especificado no vetor de cadastro ou -1 se não
+ * @return O Ã­ndice da pessoa com o RG especificado no vetor de cadastro ou -1 se nÃ£o
  * for encontrada.
  *
- * @note Para usar esta função, é importante que o vetor de cadastro esteja ordenado
+ * @note Para usar esta funÃ§Ã£o, Ã© importante que o vetor de cadastro esteja ordenado
  * em ordem crescente por valor de RG.
  */
     return 0;
@@ -127,20 +126,20 @@ int exercicio04(void) {
 
 int exercicio05(void) {
     /**
- * Função para buscar todas as ocorrências de uma chave em um vetor.
+ * FunÃ§Ã£o para buscar todas as ocorrÃªncias de uma chave em um vetor.
  *
- * Esta função realiza uma busca em um vetor 'vet' de tamanho 'tam' e procura pela
- * chave especificada. Ela registra todas as posições onde a chave foi encontrada no
- * vetor 'posicoes' e retorna o número total de ocorrências da chave em '*n'.
+ * Esta funÃ§Ã£o realiza uma busca em um vetor 'vet' de tamanho 'tam' e procura pela
+ * chave especificada. Ela registra todas as posiÃ§Ãµes onde a chave foi encontrada no
+ * vetor 'posicoes' e retorna o nÃºmero total de ocorrÃªncias da chave em '*n'.
  *
  * @param vet O vetor no qual realizar a busca.
  * @param tam O tamanho do vetor 'vet'.
  * @param chave A chave a ser procurada no vetor.
- * @param posicoes Um vetor onde as posições da chave encontradas serão armazenadas.
- * @param n Um ponteiro para armazenar o número de ocorrências da chave.
+ * @param posicoes Um vetor onde as posiÃ§Ãµes da chave encontradas serÃ£o armazenadas.
+ * @param n Um ponteiro para armazenar o nÃºmero de ocorrÃªncias da chave.
  *
- * @note A chamada desta função deve fornecer um vetor 'posicoes' com espaço suficiente
- * para acomodar todas as possíveis ocorrências da chave (por exemplo, tamanho 'tam').
+ * @note A chamada desta funÃ§Ã£o deve fornecer um vetor 'posicoes' com espaÃ§o suficiente
+ * para acomodar todas as possÃ­veis ocorrÃªncias da chave (por exemplo, tamanho 'tam').
  */
 
     return 0;
@@ -185,21 +184,21 @@ int exercicio07(void) {
 
     /**
     struct Aluno leAluno ( ) ;
-    <p> Esta função faz a leitura dos dados de um registro Aluno e devolve o
+    <p> Esta funÃ§Ã£o faz a leitura dos dados de um registro Aluno e devolve o
     registro lido.
 <p>
     <p>void imprimeAluno (struct Aluno a) ;
-    <p>Esta função recebe como par?metro um registro Aluno e imprime os
+    <p>Esta funÃ§Ã£o recebe como par?metro um registro Aluno e imprime os
     dados do registro.
 <p>
    <p> void listarTurma (struc t Aluno turma [ ], int n ) ;
-   <p> Esta função recebe como parâmetros um vetor do tipo Aluno
-   <p> representando uma turma, e também um inteiro n indicando o
-   <p> tamanho do vetor. A função imprime os dados de todos os alunos.
+   <p> Esta funÃ§Ã£o recebe como parÃ¢metros um vetor do tipo Aluno
+   <p> representando uma turma, e tambÃ©m um inteiro n indicando o
+   <p> tamanho do vetor. A funÃ§Ã£o imprime os dados de todos os alunos.
     */
 
     int numAlunos;
-    printf("Digite o número de alunos: ");
+    printf("Digite o nÃºmero de alunos: ");
     scanf("%d", &numAlunos);
     Aluno *alunos = leAlunos(numAlunos);
 
@@ -216,8 +215,8 @@ int exercicio07(void) {
 int exercicio08(void) {
     /**
      Crie um novo tipo de registro para armazenar alunos com RA e idade.
-     <p> faça a leitura de 5 alunos em uma função.
-     <p> Função Calcule e imprima a m?dia das idades dos alunos.
+     <p> faÃ§a a leitura de 5 alunos em uma funÃ§Ã£o.
+     <p> FunÃ§Ã£o Calcule e imprima a m?dia das idades dos alunos.
      */
 
     int numAlunes;
@@ -236,9 +235,9 @@ int exercicio09(void) {
     
     <p>Crie um novo tipo de registro para armazenar coordenadas no plano
     cartesiano.
-    <p>Crie uma Função para imprimir um ponto do tipo criado.
-    <p>Crie uma Função para cada uma destas operações: soma de dois
-    pontos, subtraçõo de dois pontos, multiplicação por um escalar.
+    <p>Crie uma FunÃ§Ã£o para imprimir um ponto do tipo criado.
+    <p>Crie uma FunÃ§Ã£o para cada uma destas operaÃ§Ãµes: soma de dois
+    pontos, subtraÃ§Ãµo de dois pontos, multiplicaÃ§Ã£o por um escalar.
     */
 
     printf("Digite as coordenadas do ponto 1:\n");
@@ -256,13 +255,13 @@ int exercicio09(void) {
     printf("Soma dos pontos:\n");
     imprimePonto(somaPonto(p1, p2));
 
-    printf("Subtração dos pontos:\n");
+    printf("SubtraÃ§Ã£o dos pontos:\n");
     imprimePonto(subtraiPonto(p1, p2));
 
-    printf("Multiplicação do ponto 1 por um escalar:\n");
+    printf("MultiplicaÃ§Ã£o do ponto 1 por um escalar:\n");
     imprimePonto(multiplicaPonto(p1, 2));
 
-    printf("Multiplicação do ponto 2 por um escalar:\n");
+    printf("MultiplicaÃ§Ã£o do ponto 2 por um escalar:\n");
     imprimePonto(multiplicaPonto(p2, 2));
 
     return 0;
@@ -270,12 +269,12 @@ int exercicio09(void) {
 
 int exercicio10(void) {
     /**
-    Defina uma variável do tipo registro que tenha dois campinas, senodo o  1 um vetor de 3 elementos do tipo inteiro
-    e o 2 campo um valor inteiro. Faça:
+    Defina uma variÃ¡vel do tipo registro que tenha dois campinas, senodo o  1 um vetor de 3 elementos do tipo inteiro
+    e o 2 campo um valor inteiro. FaÃ§a:
     <p>
-    <p>a) Crie uma função para leitura dos valores do 1 campo(vetor)
+    <p>a) Crie uma funÃ§Ã£o para leitura dos valores do 1 campo(vetor)
    <p>b) Some os valores do vetor e coloque o resultao no 2 campo
-    <p>c) Crie uma função para imprimir os valores de registro
+    <p>c) Crie uma funÃ§Ã£o para imprimir os valores de registro
      */
 
     Reg minhaReg;
@@ -291,10 +290,10 @@ int exercicio10(void) {
 
 int exercicio11(void) {
 
-    /** Crie uma função que recebe duas strings de tamanhos quaisqueres e que devolve a concatenação destas
-     * lembre-se que uma função não pode devolver um vetor, mas ela pode devolver um ponteiro,
+    /** Crie uma funÃ§Ã£o que recebe duas strings de tamanhos quaisqueres e que devolve a concatenaÃ§Ã£o destas
+     * lembre-se que uma funÃ§Ã£o nÃ£o pode devolver um vetor, mas ela pode devolver um ponteiro,
      *
-     * o protótipo da função será
+     * o protÃ³tipo da funÃ§Ã£o serÃ¡
      *
      * <p>char * concatena(char *s1, char *s2);
      */
@@ -312,19 +311,19 @@ int exercicio11(void) {
 }
 
 int displayMenuAndGetChoice(void) {
-    printf("Exercício 01:\n");
-    printf("Exercício 02:\n");
-    printf("Exercício 03:\n");
-    printf("Exercício 04:\n");
-    printf("Exercício 05:\n");
-    printf("Exercício 06:\n");
-    printf("Exercício 07:\n");
-    printf("Exercício 08:\n");
-    printf("Exercício 09:\n");
-    printf("Exercício 10: \n");
-    printf("Exercício 11: \n");
-    printf("Exercício 12: \n");
-    printf("Digite o n?número do Exercício que deseja executar");
+    printf("ExercÃ­cio 01:\n");
+    printf("ExercÃ­cio 02:\n");
+    printf("ExercÃ­cio 03:\n");
+    printf("ExercÃ­cio 04:\n");
+    printf("ExercÃ­cio 05:\n");
+    printf("ExercÃ­cio 06:\n");
+    printf("ExercÃ­cio 07:\n");
+    printf("ExercÃ­cio 08:\n");
+    printf("ExercÃ­cio 09:\n");
+    printf("ExercÃ­cio 10: \n");
+    printf("ExercÃ­cio 11: \n");
+    printf("ExercÃ­cio 12: \n");
+    printf("Digite o n?nÃºmero do ExercÃ­cio que deseja executar");
 
     int escolha;
     scanf("%d", &escolha);
@@ -367,7 +366,7 @@ void executeExercise(int choice) {
             exercicio11();
             break;
         default:
-            printf("Opção inválida!\n");
+            printf("OpÃ§Ã£o invÃ¡lida!\n");
             break;
     }
 }
@@ -392,7 +391,7 @@ int main(void) {
         if (escolha >= 1 && escolha <= MAX_EXERCISES) {
             executeExercise(escolha);
         } else {
-            printf("Opção inválida!\n");
+            printf("OpÃ§Ã£o invÃ¡lida!\n");
         }
         sair = getExitChoice();
     } while (!sair);
