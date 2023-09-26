@@ -444,3 +444,45 @@ char *concatena(char *s1, char *s2) {
 
     return s3;
 }
+
+/*
+ * Implemente a função de remoção de um elemento do vetor de tal forma que
+ * se o número de elementos armazenados (size) for menor do que 1/4maxSize,
+ * então o tamanho do vetor alocado deve ter tamanho igual a metade do anterior.
+ * A função deve devolver o endereço do início do vetor, sendo um novo alocado ou não.
+ * ALém disso a função deve atualizar os valores size e maxSize caso necessário.
+ */
+int *removeElemento(int *vet, int *size, int *maxSize, int pos) {
+    if (pos < 0 || pos >= *size) {
+        return vet;
+    }
+
+    int *novoVet = NULL;
+    int novoSize = *size - 1;
+    int novoMaxSize = *maxSize;
+
+    if (novoSize < *maxSize / 4) {
+        novoMaxSize = *maxSize / 2;
+        novoVet = (int *) malloc(novoMaxSize * sizeof(int));
+    }
+
+    int j = 0;
+    for (int i = 0; i < *size; i++) {
+        if (i != pos) {
+            if (novoVet != NULL) {
+                novoVet[j] = vet[i];
+            }
+            j++;
+        }
+    }
+
+    if (novoVet != NULL) {
+        free(vet);
+        vet = novoVet;
+    }
+
+    *size = novoSize;
+    *maxSize = novoMaxSize;
+
+    return vet;
+}
