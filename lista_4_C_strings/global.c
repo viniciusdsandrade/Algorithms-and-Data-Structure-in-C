@@ -4,6 +4,8 @@
 #include <ctype.h>
 #include <stdbool.h>
 
+#include "global.h"
+
 /**
  * Função para inverter um texto.
  *
@@ -71,7 +73,7 @@ char *inversorTexto2(char *texto)
  * @param s A string na qual as palavras serão contadas.
  * @return O número de palavras na string.
  */
-int contadorDePalavras(char *s)
+int contadorDePalavras(const char *s)
 {
     int i = 0, n = 0;
     while (s[i] != '\0')

@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
-#include <malloc.h>
 #include "global.h"
 
 #define MAX_DIMENSION 30

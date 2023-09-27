@@ -278,7 +278,7 @@ double mediaAlunes(struct Alune alunes[], int n) {
  *
  * @return Uma estrutura Ponto preenchida com as coordenadas lidas.
  */
-Ponto lePonto() {
+Ponto *lePonto() {
 
     Ponto *ponto = malloc(sizeof(Ponto));
 
@@ -293,7 +293,7 @@ Ponto lePonto() {
     printf("Digite a coordenada y: ");
     scanf("%lf", &ponto->y);
 
-    return *ponto;
+    return ponto;
 }
 
 /**
@@ -302,8 +302,8 @@ Ponto lePonto() {
  * @param p A estrutura Ponto a ser impressa.
  */
 void imprimePonto(Ponto p) {
-    printf("x: %lf\n", p.x);
-    printf("y: %lf\n", p.y);
+    printf("x: %.2lf\n", p.x);
+    printf("y: %.2lf\n", p.y);
 }
 
 /**
@@ -317,6 +317,28 @@ Ponto somaPonto(Ponto p1, Ponto p2) {
     Ponto soma;
     soma.x = p1.x + p2.x;
     soma.y = p1.y + p2.y;
+    return soma;
+}
+
+/**
+ * Soma dois pontos e retorna um novo ponto.
+ *
+ * Esta função aloca dinamicamente memória para armazenar o resultado da soma dos
+ * pontos `p1` e `p2`. Certifique-se de liberar essa memória usando `free` quando
+ * o resultado não for mais necessário para evitar vazamentos de memória.
+ *
+ * @param p1 - O primeiro ponto a ser somado.
+ * @param p2 - O segundo ponto a ser somado.
+ * @return Um novo ponto que é a soma de `p1` e `p2`, ou NULL em caso de erro de alocação.
+ */
+Ponto *somaPonto2(Ponto *p1, Ponto *p2) {
+    Ponto *soma = malloc(sizeof(Ponto));
+    if(soma == NULL) {
+        fprintf(stderr, "Erro na alocação de memória\n");
+        exit(1);
+    }
+    soma->x = p1->x + p2->x;
+    soma->y = p1->y + p2->y;
     return soma;
 }
 
@@ -360,7 +382,6 @@ double distanciaPonto(Ponto p1, Ponto p2) {
     distancia = sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
     return distancia;
 }
-
 
 /**
  * Função que lê valores para a estrutura Reg e retorna a estrutura preenchida.

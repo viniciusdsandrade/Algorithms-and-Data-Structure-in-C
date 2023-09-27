@@ -131,21 +131,21 @@ int exercise03(void) {
 }
 
 int exercise04(void) {
-    /*
+    /**
      * 4. Suponha que criamos uma estrutura para armazenar dados de pessoas e uma outra estrutura
-     *
-     * typedef struct Pessoa{
-     *     int rg;
-     *     int cpf;
-     *     char nome[80];
-     * }Pessoa;
-     *
-     * Pessoa cadastro[100];
-     *
-     * Suponha que o vetor esteja ordenado em ordem crescente por valor de RG.
-     * Implemente uma função de busca por RG, que opera como a busca binária, e que caso exista uma
-     * pessoa no cadastro com o RG a ser buscado, devolve o índice deste no cadastro, e devolve -1
-     * caso não exista uma pessoa com o RG a ser buscado
+     * <p>
+     * <p>typedef struct Pessoa{
+     *<p>     int rg;
+     * <p>    int cpf;
+     * <p>    char nome[80];
+     * <p>}Pessoa;
+     *<p>
+     * <p>Pessoa cadastro[100];
+     *<p>
+     * <p>Suponha que o vetor esteja ordenado em ordem crescente por valor de RG.
+     * <p>Implemente uma função de busca por RG, que opera como a busca binária, e que caso exista uma
+     * <p>pessoa no cadastro com o RG a ser buscado, devolve o índice deste no cadastro, e devolve -1
+     * <p>caso não exista uma pessoa com o RG a ser buscado
      * */
 
     Pessoa cadastro[100];
@@ -292,20 +292,27 @@ int exercise08(void) {
 }
 
 int exercise09(void) {
+
     /**
-    
-    <p>Crie um novo tipo de registro para armazenar coordenadas no plano
+    Crie um novo tipo de registro para armazenar coordenadas no plano
     cartesiano.
     <p>Crie uma Função para imprimir um ponto do tipo criado.
     <p>Crie uma Função para cada uma destas operações: soma de dois
     pontos, subtraçõo de dois pontos, multiplicação por um escalar.
     */
 
+    Ponto *p3 = malloc(sizeof(Ponto));
+    Ponto *p4 = malloc(sizeof(Ponto));
+    p3->x = 1;
+    p3->y = 2;
+    p4->x = 3;
+    p4->y = 4;
+
     printf("Enter the coordinates of point 1:\n");
-    Ponto p1 = lePonto();
+    Ponto p1 = *lePonto();
 
     printf("Enter the coordinates of point 2:\n");
-    Ponto p2 = lePonto();
+    Ponto p2 = *lePonto();
 
     printf("Point 1:\n");
     imprimePonto(p1);
@@ -315,6 +322,10 @@ int exercise09(void) {
 
     printf("Sum of the points:\n");
     imprimePonto(somaPonto(p1, p2));
+
+    Ponto *resultado = somaPonto2(p3, p4);
+    printf("Sum of the points:\n");
+    imprimePonto(*resultado);
 
     printf("Subtraction of the points:\n");
     imprimePonto(subtraiPonto(p1, p2));

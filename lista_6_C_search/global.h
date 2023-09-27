@@ -13,9 +13,10 @@ void imprimeAluno(Aluno aluno);
 void listarTurma(Aluno aluno[], int n);
 double mediaAlunes(Alune alunes[], int n);
 
-
+Ponto *lePonto();
 void imprimePonto(Ponto p);
 Ponto somaPonto(Ponto p1, Ponto p2);
+Ponto *somaPonto2(Ponto *p1, Ponto *p2);
 Ponto subtraiPonto(Ponto p1, Ponto p2);
 
 Reg leReg(void);
@@ -39,6 +40,5 @@ int buscaBinaria(Pessoa cadastro[], int tamanho, int rg);
 
 Pessoa lePessoa();
 void buscar(const int vet[], int tam, int chave, int posicoes[], int n);
-
 
 #endif //INC_2_LISTAS_GLOBAL_H

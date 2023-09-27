@@ -5,7 +5,7 @@
 
 #define MAX_EXERCISES 10
 
-int exercicio01(void) {
+int exercise01(void) {
     /**
        <p> 1 - Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
         <p>caracteres e que entao salve a inversa desta string em uma nova string.
@@ -38,7 +38,7 @@ int exercicio01(void) {
     return 0;
 }
 
-int exercicio02(void) {
+int exercise02(void) {
     /**
         <p>2. Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
         <p>caracteres e que entao salve a string lida em uma nova removendo-se os espacos.
@@ -74,9 +74,10 @@ int exercicio02(void) {
 
     strSemEspaco[j] = '\0';
     printf("String sem espaco: %s", strSemEspaco);
+    return 0;
 }
 
-int exercicio03(void) {
+int exercise03(void) {
     /**
         <p>3. Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
         <p>caracteres e que entao salve a string lida em uma nova removendo-se os espacos extras
@@ -119,9 +120,9 @@ int exercicio03(void) {
     return 0;
 }
 
-int exercicio04(void) {
+int exercise04(void) {
     /**
-        <p>4. Escreva um programa que leia duas palavras do teclado e determina se a segunda e um
+        4. Escreva um programa que leia duas palavras do teclado e determina se a segunda e um
         <p>anagrama da primeira. Uma palavra e um anagrama de outra se todas as letras de uma
         <p>ocorrem na outra, em mesmo numero, independente da posicao. Exemplos: ROMA, MORA,
         <p>ORAM, AMOR, RAMO sao anagramas entre si.
@@ -177,7 +178,7 @@ int exercicio04(void) {
     return 0;
 }
 
-int exercicio05(void) {
+int exercise05(void) {
 
     /**
         5. Faça um programa que leia duas strings e elimine, da segunda string, todas as ocorrências
@@ -218,7 +219,7 @@ int exercicio05(void) {
     return 0;
 }
 
-int exercicio06(void) {
+int exercise06(void) {
     /**
         <p>6. Faça um programa que leia um texto T (com espacos) e uma palavra p do teclado. Em
         seguida o programa devera imprimir todas as posicoes onde ocorrem a palavra p em T.
@@ -269,9 +270,9 @@ int exercicio06(void) {
     return 0;
 }
 
-int exercicio07(void) {
+int exercise07(void) {
     /**
-    7. Escreva um programa que lê uma string de atÉ 50 caracteres, e imprime "Palindromo"caso
+    7. Escreva um programa que lê uma string de atÉ 50 caracteres, e imprime "Palindrome"caso
     <p>a string seja um palindromo e "Nao Palindromo" caso contr?rio.
 
     <p>OBS: Um palindromo é uma palavra ou frase, que é igual quando lida da esquerda para a
@@ -280,7 +281,7 @@ int exercicio07(void) {
 
     <p>Exemplo de palindromo: saudavel leva duas.
 
-    <p>DESAFIO: Adapte o código do palindro para que ele reconheça se uma frase com Letras maiusculas e minusculas e inclusive com pontuação é um palindro
+    <p>DESAFIO: Adapte o código do palindromo para que ele reconheça se uma frase com Letras maiusculas e minusculas e inclusive com pontuação é um palindro
     inclusive com espaços extras e outras anomalias da lingua portuguesa
     */
 
@@ -298,20 +299,18 @@ int exercicio07(void) {
     }
 
     int tam = strlen(str) - 1;
-    int i = 0;
-    int j = tam - 1;
 
     str[tam] = '\0';
 
     if (isPalindrome(str) == 0)
-        printf("\n'%s' NÃO é palíndromo!\n", str);
+        printf("\n'%s' NÃO é palindrome!\n", str);
     else
-        printf("\n'%s' É palíndromo!\n", str);
+        printf("\n'%s' É palindrome!\n", str);
 
     return 0;
 }
 
-int exercicio08(void) {
+int exercise08(void) {
     /**
         8. Faca um programa que leia duas palavras e verifique se uma delas pode ser obtida por
        <p> meio da remove o de letras da outra. A ordem das letras nao pode ser alterada.
@@ -373,7 +372,7 @@ int exercicio08(void) {
     return 0;
 }
 
-int exercicio09(void) {
+int exercise09(void) {
     /**
     9. Historicamente Cesar foi o primeiro a codificar mensagens. Ele reorganizava o texto de
     suas mensagens de maneira que o texto parecia n?o ter sentido. Cada mensagem sempre
@@ -401,12 +400,12 @@ int exercicio09(void) {
     return 0;
 }
 
-int exercicio10(void) {
+int exercise10(void) {
 
     return 0;
 }
 
-int exercicio11(void) {
+int exercise11(void) {
     /**
         Ler uma string de ate 79 caracteres e salvar a inversa desta em um
         <p>vetor. Imprimir a inversa da string lida.
@@ -431,7 +430,7 @@ int exercicio11(void) {
 
     for (tam = 0; (st1[tam] != '\0') && (st1[tam] != '\n'); tam++);
 
-    printf("\ntamanho da string com strlen: %d\n", strlen(st1) - 1);
+    printf("\ntamanho da string com strlen: %llu\n", strlen(st1) - 1);
     printf("Tamanho da string com for:    %d\n", tam);
 
     for (j = comStrlen - 1, i = 0; j >= 0; j--, i++)
@@ -449,9 +448,11 @@ int exercicio11(void) {
     char *st4 = inversorTexto2(st1);
     printf("Inversa: %s\n", st3);
     printf("Inversa: %s \n", st4);
+
+    return 0;
 }
 
-int exercicio12(void) {
+int exercise12(void) {
 
     /**
        Como exemplo de uso de strings vamos implementar duas
@@ -491,7 +492,7 @@ int exercicio12(void) {
     return 0;
 }
 
-int exercicio13(void) {
+int exercise13(void) {
     /**
       Fazer um programa que acha todas as posicoes de ocorrencia de uma
       <p>palavra em um texto.
@@ -539,11 +540,11 @@ int exercicio13(void) {
     return 0;
 }
 
-int exercicio14(void) {
+int exercise14(void) {
     /*
         Escreva um programa que le uma string de ate 50 caracteres, e
-        imprime \Palindromo"caso a string seja um palindromo e
-        "Nao Palindromo"caso contrario.
+        imprime \Palindrome"caso a string seja um palindrome e
+        "Nao Palindrome"caso contrario.
     */
 
     printf("Digite um string de ate 50 caracteres:");
@@ -558,18 +559,18 @@ int exercicio14(void) {
 
     while (i < j) {
         if (s[i] != s[j]) {
-            printf(" Nao e palindromo\n");
+            printf(" Nao e palindrome\n");
             return 0;
         }
         i++;
         j--;
     }
-    printf("%s E palindromo\n", s);
+    printf("%s E palindrome\n", s);
 
     return 0;
 }
 
-int exercicio15(void) {
+int exercise15(void) {
     /**
       Refaca o exemplo visto em aula de inversao de uma string de tal
       forma que nao seja utilizado nenhum vetor adicional! Ou seja
@@ -583,7 +584,7 @@ int exercicio15(void) {
     fgets(s, sizeof(s), stdin);
 
     int tam = strlen(s) - 1;
-    int i = 0;
+    int i;
 
     for (i = 0; i < tam; i++) {
         char temp = s[i];
@@ -596,7 +597,7 @@ int exercicio15(void) {
     return 0;
 }
 
-int exercicio16(void) {
+int exercise16(void) {
     /**
      Fazer a busca de uma palavra em um texto e:
      <p>a) retornar quantas vezes essa palavra esta inserida em determinado texto
@@ -641,27 +642,20 @@ int exercicio16(void) {
     return 0;
 }
 
-
-int displayMenuAndGetChoice() {
-    printf("Escolha uma opcao:\n");
-    printf("1 - Exercicio 1\n");
-    printf("2 - Exercicio 2\n");
-    printf("3 - Exercicio 3\n");
-    printf("4 - Exercicio 4\n");
-    printf("5 - Exercicio 5\n");
-    printf("6 - Exercicio 6\n");
-    printf("7 - Exercicio 7\n");
-    printf("8 - Exercicio 8\n");
-    printf("9 - Exercicio 9\n");
-    printf("10 - Exercicio 10\n");
-    printf("11 - Exercicio 11\n");
-    printf("12 - Exercicio 12\n");
-    printf("13 - Exercicio 13\n");
-    printf("14 - Exercicio 14\n");
-    printf("15 - Exercicio 15\n");
-    printf("16 - Exercicio 16\n");
-    printf("20 - Sair\n");
-    printf("Digite sua escolha: ");
+int displayMenuAndGetChoice(void) {
+    printf("Exercise 01:\n");
+    printf("Exercise 02:\n");
+    printf("Exercise 03:\n");
+    printf("Exercise 04:\n");
+    printf("Exercise 05:\n");
+    printf("Exercise 06:\n");
+    printf("Exercise 07:\n");
+    printf("Exercise 08:\n");
+    printf("Exercise 09:\n");
+    printf("Exercise 10:\n");
+    printf("Exercise 11:\n");
+    printf("Exercise 12:\n");
+    printf("Enter the number of the exercise you want to execute: ");
 
     int choice;
     scanf("%d", &choice);
@@ -671,86 +665,84 @@ int displayMenuAndGetChoice() {
 void executeExercise(int choice) {
     switch (choice) {
         case 1:
-            exercicio01();
+            exercise01();
             break;
         case 2:
-            exercicio02();
+            exercise02();
             break;
         case 3:
-            exercicio03();
+            exercise03();
             break;
         case 4:
-            exercicio04();
+            exercise04();
             break;
         case 5:
-            exercicio05();
+            exercise05();
             break;
         case 6:
-            exercicio06();
+            exercise06();
             break;
         case 7:
-            exercicio07();
+            exercise07();
             break;
         case 8:
-            exercicio08();
+            exercise08();
             break;
         case 9:
-            exercicio09();
+            exercise09();
             break;
         case 10:
-            exercicio10();
+            exercise10();
             break;
         case 11:
-            exercicio11();
+            exercise11();
             break;
         case 12:
-            exercicio12();
+            exercise12();
             break;
         case 13:
-            exercicio13();
+            exercise13();
             break;
         case 14:
-            exercicio14();
+            exercise14();
             break;
         case 15:
-            exercicio15();
+            exercise15();
             break;
         case 16:
-            exercicio16();
+            exercise16();
             break;
         default:
-            printf("Opcao invalida!\n");
+            printf("Invalid option!\n");
             break;
     }
 }
 
-bool getExitChoice() {
-    int sair;
+bool getExitChoice(void) {
+    int exitChoice;
     do {
-        printf("Deseja sair? (1) - Sim (0) - Nao: ");
-        scanf("%d", &sair);
-
-
-    } while (sair != 0 && sair != 1);
-    return sair;
+        printf("Do you want to exit?\n"
+               "Enter (1) for Yes or (0) for No: ");
+        scanf("%d", &exitChoice);
+    } while (exitChoice != 0 && exitChoice != 1);
+    return exitChoice;
 }
 
 int main(void) {
     setlocale(LC_ALL, "Portuguese");
 
-    bool sair = false;
-    do{
-        int escolha = displayMenuAndGetChoice();
+    bool exitProgram = false;
 
-        if(escolha >= 1 && escolha <= MAX_EXERCISES)
-            executeExercise(escolha);
-        else {
-            printf("Opcao invalida!\n");
-        }
+    do {
+        int choice = displayMenuAndGetChoice();
 
-        sair = getExitChoice();
-    } while (!sair);
-    printf("Fim do Programa!\n");
-    printf("Ate Breve!");
+        if (choice >= 1 && choice <= MAX_EXERCISES)
+            executeExercise(choice);
+        else
+            printf("Invalid option!\n");
+
+        exitProgram = getExitChoice();
+    } while (!exitProgram);
+    printf("Thank you for using the program!\n");
     return 0;
 }
