@@ -6,7 +6,7 @@
 
 #define MAX_EXERCISES 11
 
-int exercicio01(void) {
+int exercise01(void) {
     /**
     1. Suponha que criamos uma estrutura para armazenar produtos de um supermercado:
 <p>
@@ -23,24 +23,28 @@ int exercicio01(void) {
    <p> void ordenaQuantidade(Produto vet[], int n);
      */
 
-    printf("Digite a quantidade de produtos: ");
+    printf("Enter the quantity of products: ");
     int n;
     scanf("%d", &n);
 
     Produto *produtos = lerProdutos(n);
 
     ordenaPreco(produtos, n);
-    printf("Produtos ordenados por pre?o:\n");
+    printf("Products sorted by price:\n");
     imprimeProduto(produtos, n);
+    printf("\n");
 
     ordenaQtd(produtos, n);
-    printf("Produtos ordenados por quantidade:\n");
+    printf("Products sorted by quantity:\n");
     imprimeProduto(produtos, n);
+    printf("\n");
+
+    free(produtos);
 
     return 0;
 }
 
-int exercicio02(void) {
+int exercise02(void) {
     /**
      2. Suponha que criamos uma estrutura para armazenar Datas:
 <p>
@@ -58,28 +62,26 @@ int exercicio02(void) {
     <p> Dica: Ordene o vetor separadamente por cada um dos campos.
     */
 
-    printf("Digite a quantidade de datas: ");
+    printf("Enter the quantity of dates: ");
     int n;
     scanf("%d", &n);
 
-    Data datas[100];
+    Data datas[n];
 
     for (int i = 0; i < n; ++i) {
-        printf("Digite os dados da %dº data:\n", i + 1);
+        printf("Enter data %d details:\n", i + 1);
         datas[i] = leData();
     }
 
-    ordena(datas, 3);
+    ordena(datas, n);
 
-    printf("Datas ordenadas:\n");
-    for (int i = 0; i < n; ++i) {
-        imprimeData(datas[i]);
-    }
+    printf("Sorted dates:\n");
+    imprimeDatas(datas, n);
 
     return 0;
 }
 
-int exercicio03(void) {
+int exercise03(void) {
     /**
     3. Suponha que criamos uma estrutura para armazenar dados de pessoas e uma outra estrutura
     para armazenar dados de várias pessoas como uma base de dados.
@@ -114,23 +116,21 @@ int exercicio03(void) {
     */
 
     Base base = cria_base();
-    Pessoa pessoas[100];
 
-    printf("Digite a quantidade de pessoas: ");
-    int n;
-    scanf("%d", &n);
+    Pessoa p1 = lePessoa();
+    Pessoa p2 = lePessoa();
+    Pessoa p3 = lePessoa();
 
-    for (int i = 0; i < n; ++i) {
-        printf("Digite os dados da %dº pessoa:\n", i + 1);
-        pessoas[i] = lePessoa();
+    insere_base(p1, base);
+    insere_base(p2, base);
+    insere_base(p3, base);
 
-    }
-    //Corrigir
+    remove_base(1, base);
 
     return 0;
 }
 
-int exercicio04(void) {
+int exercise04(void) {
     /*
      * 4. Suponha que criamos uma estrutura para armazenar dados de pessoas e uma outra estrutura
      *
@@ -151,29 +151,29 @@ int exercicio04(void) {
     Pessoa cadastro[100];
     int n;
 
-    printf("Digite a quantidade de pessoas: ");
+    printf("Enter the quantity of people: ");
     scanf("%d", &n);
 
     for (int i = 0; i < n; ++i) {
-        printf("Digite os dados da %dº pessoa:\n", i + 1);
+        printf("Enter details for person %d:\n", i + 1);
         cadastro[i] = lePessoa();
     }
 
     int rg;
-    printf("Digite o RG a ser buscado: ");
+    printf("Enter the RG to be searched: ");
     scanf("%d", &rg);
 
     int indice = buscaBinaria(cadastro, 3, rg);
 
-    if (indice != -1) {
-        printf("Pessoa encontrada no índice %d", indice);
-    } else {
-        printf("Pessoa não encontrada!");
-    }
+    if (indice != -1)
+        printf("Person found at index %d\n", indice);
+    else
+        printf("Person not found!\n");
+
     return 0;
 }
 
-int exercicio05(void) {
+int exercise05(void) {
 /**  Refaça as funções de busca sequencial e busca binária vistas em aula assumindo que o
 vetor possui chaves que podem aparecer repetidas. Neste caso, você deve retornar em um
 outro vetor todas as posições onde a chave foi encontrada.
@@ -187,13 +187,17 @@ em n o número de ocorrências da chave.
 <p>(por exemplo, tam) para guardar todas as possíveis ocorrências da chave.
  */
 
-    int vet[10] = {1, 2, 3, 4, 5, 6, 7, 7, 7, 10};
+    int vet[10] = {
+            1, 2, 3,
+            4, 5, 6,
+            7, 7, 7, 10
+    };
     int posicoes[10];
     int n = 0;
-    buscar(vet, 10, 7, posicoes, (int)* &n);
+    buscar(vet, 10, 7, posicoes, (int) *&n);
 
-    printf("O número 7 aparece %d vezes no vetor.\n", n);
-    printf("As posições onde o número 7 aparece são: ");
+    printf("The number 7 appears %d times in the array.\n", n);
+    printf("The positions where the number 7 appears are: ");
     for (int i = 0; i < n; ++i) {
         printf("%d ", posicoes[i]);
     }
@@ -202,7 +206,7 @@ em n o número de ocorrências da chave.
     return 0;
 }
 
-int exercicio06(void) {
+int exercise06(void) {
 
     /**
      6. O que ser? impresso pelo programa abaixo?
@@ -237,7 +241,7 @@ int exercicio06(void) {
     return 0;
 }
 
-int exercicio07(void) {
+int exercise07(void) {
 
     /**
     struct Aluno leAluno ( ) ;
@@ -255,7 +259,7 @@ int exercicio07(void) {
     */
 
     int numAlunos;
-    printf("Digite o número de alunos: ");
+    printf("Enter the number of students: ");
     scanf("%d", &numAlunos);
     Aluno *alunos = leAlunos(numAlunos);
 
@@ -269,7 +273,7 @@ int exercicio07(void) {
     return 0;
 }
 
-int exercicio08(void) {
+int exercise08(void) {
     /**
      Crie um novo tipo de registro para armazenar alunos com RA e idade.
      <p> faça a leitura de 5 alunos em uma função.
@@ -277,17 +281,17 @@ int exercicio08(void) {
      */
 
     int numAlunes;
-    printf("Digite o n?mero de alunos: ");
+    printf("Enter the number of students: ");
     scanf("%d", &numAlunes);
     Alune *alunes = leAlunes(numAlunes);
 
-    printf("A m?dia das idades ?: %.2f", mediaAlunes(alunes, 5));
+    printf("The average of ages is: %.2f", mediaAlunes(alunes, 5));
 
     free(alunes);
     return 0;
 }
 
-int exercicio09(void) {
+int exercise09(void) {
     /**
     
     <p>Crie um novo tipo de registro para armazenar coordenadas no plano
@@ -297,34 +301,34 @@ int exercicio09(void) {
     pontos, subtraçõo de dois pontos, multiplicação por um escalar.
     */
 
-    printf("Digite as coordenadas do ponto 1:\n");
+    printf("Enter the coordinates of point 1:\n");
     Ponto p1 = lePonto();
 
-    printf("Digite as coordenadas do ponto 2:\n");
+    printf("Enter the coordinates of point 2:\n");
     Ponto p2 = lePonto();
 
-    printf("Ponto 1:\n");
+    printf("Point 1:\n");
     imprimePonto(p1);
 
-    printf("Ponto 2:\n");
+    printf("Point 2:\n");
     imprimePonto(p2);
 
-    printf("Soma dos pontos:\n");
+    printf("Sum of the points:\n");
     imprimePonto(somaPonto(p1, p2));
 
-    printf("Subtração dos pontos:\n");
+    printf("Subtraction of the points:\n");
     imprimePonto(subtraiPonto(p1, p2));
 
-    printf("Multiplicação do ponto 1 por um escalar:\n");
+    printf("Multiplication of point 1 by a scalar:\n");
     imprimePonto(multiplicaPonto(p1, 2));
 
-    printf("Multiplicação do ponto 2 por um escalar:\n");
+    printf("Multiplication of point 2 by a scalar:\n");
     imprimePonto(multiplicaPonto(p2, 2));
 
     return 0;
 }
 
-int exercicio10(void) {
+int exercise10(void) {
     /**
     Defina uma variável do tipo registro que tenha dois campinas, senodo o  1 um vetor de 3 elementos do tipo inteiro
     e o 2 campo um valor inteiro. Faça:
@@ -345,7 +349,7 @@ int exercicio10(void) {
     return 0;
 }
 
-int exercicio11(void) {
+int exercise11(void) {
 
     /** Crie uma função que recebe duas strings de tamanhos quaisqueres e que devolve a concatenação destas
      * lembre-se que uma função não pode devolver um vetor, mas ela pode devolver um ponteiro,
@@ -367,98 +371,100 @@ int exercicio11(void) {
     return 0;
 }
 
-int exercicio12(void){
+int exercise12(void) {
 
     return 0;
 }
 
 int displayMenuAndGetChoice(void) {
-    printf("Exercício 01:\n");
-    printf("Exercício 02:\n");
-    printf("Exercício 03:\n");
-    printf("Exercício 04:\n");
-    printf("Exercício 05:\n");
-    printf("Exercício 06:\n");
-    printf("Exercício 07:\n");
-    printf("Exercício 08:\n");
-    printf("Exercício 09:\n");
-    printf("Exercício 10: \n");
-    printf("Exercício 11: \n");
-    printf("Exercício 12: \n");
-    printf("Digite o número do Exercício que deseja executar: ");
+    printf("Exercise 01:\n");
+    printf("Exercise 02:\n");
+    printf("Exercise 03:\n");
+    printf("Exercise 04:\n");
+    printf("Exercise 05:\n");
+    printf("Exercise 06:\n");
+    printf("Exercise 07:\n");
+    printf("Exercise 08:\n");
+    printf("Exercise 09:\n");
+    printf("Exercise 10:\n");
+    printf("Exercise 11:\n");
+    printf("Exercise 12:\n");
+    printf("Enter the number of the exercise you want to execute: ");
 
-    int escolha;
-    scanf("%d", &escolha);
-    return escolha;
+    int choice;
+    scanf("%d", &choice);
+    return choice;
 }
 
 void executeExercise(int choice) {
     switch (choice) {
         case 1:
-            exercicio01();
+            exercise01();
             break;
         case 2:
-            exercicio02();
+            exercise02();
             break;
         case 3:
-            exercicio03();
+            exercise03();
             break;
         case 4:
-            exercicio04();
+            exercise04();
             break;
         case 5:
-            exercicio05();
+            exercise05();
             break;
         case 6:
-            exercicio06();
+            exercise06();
             break;
         case 7:
-            exercicio07();
+            exercise07();
             break;
         case 8:
-            exercicio08();
+            exercise08();
             break;
         case 9:
-            exercicio09();
+            exercise09();
             break;
         case 10:
-            exercicio10();
+            exercise10();
             break;
         case 11:
-            exercicio11();
+            exercise11();
             break;
         case 12:
-            exercicio12();
+            exercise12();
             break;
         default:
-            printf("Opção inválida!\n");
+            printf("Invalid option!\n");
             break;
     }
 }
 
-bool getExitChoice() {
-    int sair;
+bool getExitChoice(void) {
+    int exitChoice;
     do {
-        printf("Deseja sair? Digite (1) para Sim ou (0) para Não: ");
-        scanf("%d", &sair);
-    } while (sair != 0 && sair != 1);
-    return sair;
+        printf("Do you want to exit?\n"
+               "Enter (1) for Yes or (0) for No: ");
+        scanf("%d", &exitChoice);
+    } while (exitChoice != 0 && exitChoice != 1);
+    return exitChoice;
 }
 
 int main(void) {
     setlocale(LC_ALL, "Portuguese");
 
-    bool sair = false;
-    do {
-        int escolha = displayMenuAndGetChoice();
+    bool exitProgram = false;
 
-        if (escolha >= 1 && escolha <= MAX_EXERCISES) {
-            executeExercise(escolha);
+    do {
+        int choice = displayMenuAndGetChoice();
+
+        if (choice >= 1 && choice <= MAX_EXERCISES) {
+            executeExercise(choice);
         } else {
-            printf("Opção inválida!\n");
+            printf("Invalid option!\n");
         }
-        sair = getExitChoice();
-    } while (!sair);
-    printf("Obrigado por utilizar o programa!\n");
+        exitProgram = getExitChoice();
+    } while (!exitProgram);
+    printf("Thank you for using the program!\n");
     return 0;
 }

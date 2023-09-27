@@ -9,9 +9,9 @@
  * Estrutura que representa um produto com nome, preço e quantidade.
  */
 typedef struct Produto {
-    char nome[80];      /**< Nome do produto. */
-    double preco;       /**< Preço do produto. */
-    int quantidade;     /**< Quantidade disponível do produto. */
+    char nome[80];
+    double preco;
+    int quantidade;
 } Produto;
 
 /**
@@ -20,8 +20,8 @@ typedef struct Produto {
  * Estrutura que representa um aluno com nome e nota.
  */
 typedef struct Aluno {
-    char nome[80];      /**< Nome do aluno. */
-    float nota;         /**< Nota do aluno. */
+    char nome[80];
+    float nota;
 } Aluno;
 
 /**
@@ -30,8 +30,8 @@ typedef struct Aluno {
  * Estrutura que representa um aluno com RA (Registro Acadêmico) e nota.
  */
 typedef struct Alune {
-    int ra;             /**< Registro Acadêmico (RA) do aluno. */
-    double nota;        /**< Nota do aluno. */
+    int ra;
+    double nota;
 } Alune;
 
 /**
@@ -40,8 +40,8 @@ typedef struct Alune {
  * Estrutura que representa um ponto no plano cartesiano com coordenadas x e y.
  */
 typedef struct Ponto {
-    double x;           /**< Coordenada x do ponto. */
-    double y;           /**< Coordenada y do ponto. */
+    double x;
+    double y;
 } Ponto;
 
 
@@ -52,8 +52,8 @@ typedef struct Ponto {
  * e uma variável inteira.
  */
 typedef struct Reg {
-    int vet[3];  /**< Vetor de inteiros com 3 elementos. */
-    int n;       /**< Variável inteira. */
+    int vet[3];
+    int n;
 } Reg;
 
 /**
@@ -62,9 +62,9 @@ typedef struct Reg {
  * Estrutura que representa uma data com dia, mês e ano.
  */
 typedef struct Data {
-    int dia; /**< Dia da data. */
-    int mes; /**< Mês da data. */
-    int ano; /**< Ano da data. */
+    int dia;
+    int mes;
+    int ano;
 } Data;
 
 /**
@@ -73,9 +73,9 @@ typedef struct Data {
  * Estrutura que representa uma pessoa com RG, CPF e nome.
  */
 typedef struct Pessoa {
-    int rg; /**< Registro Geral (RG) da pessoa. */
-    int cpf; /**< Cadastro de Pessoa Física (CPF) da pessoa. */
-    char nome[80]; /**< Nome da pessoa. */
+    int rg;
+    int cpf;
+    char nome[80];
 } Pessoa;
 
 /**
@@ -84,8 +84,8 @@ typedef struct Pessoa {
  * Estrutura que representa uma base de dados de pessoas.
  */
 typedef struct Base {
-    int armazenado; /**< Número de pessoas armazenadas na base. Deve sempre corresponder ao número de pessoas na base. */
-    Pessoa pessoas[100]; /**< Array de pessoas armazenadas na base. */
+    int armazenado;
+    Pessoa pessoas[100];
 } Base;
 
 /**
@@ -100,11 +100,11 @@ typedef struct Base {
 Produto *lerProdutos(int n) {
     Produto *produtos = malloc(n * sizeof(Produto));
     for (int i = 0; i < n; i++) {
-        printf("Digite o nome do produto %d: ", i + 1);
+        printf("Name of product %d:     ", i + 1);
         scanf("%s", produtos[i].nome);
-        printf("Digite o preço do produto %d: ", i + 1);
+        printf("Price of product %d:    ", i + 1);
         scanf("%lf", &produtos[i].preco);
-        printf("Digite a quantidade do produto %d: ", i + 1);
+        printf("Quantity of product %d: ", i + 1);
         scanf("%d", &produtos[i].quantidade);
     }
     return produtos;
@@ -163,9 +163,10 @@ void ordenaQtd(Produto vet[], int n) {
  */
 void imprimeProduto(Produto vet[], int n) {
     for (int i = 0; i < n; i++) {
-        printf("Nome: %s\n", vet[i].nome);
-        printf("Preço: %.2lf\n", vet[i].preco);
-        printf("Quantidade: %d\n", vet[i].quantidade);
+        printf("Name:     %s\n", vet[i].nome);
+        printf("Price:    %.2lf\n", vet[i].preco);
+        printf("Quantity: %d\n", vet[i].quantidade);
+        putchar('\n');
     }
 }
 
@@ -278,12 +279,21 @@ double mediaAlunes(struct Alune alunes[], int n) {
  * @return Uma estrutura Ponto preenchida com as coordenadas lidas.
  */
 Ponto lePonto() {
-    Ponto p;
-    printf("Digite o valor de x: ");
-    scanf("%lf", &p.x);
-    printf("Digite o valor de y: ");
-    scanf("%lf", &p.y);
-    return p;
+
+    Ponto *ponto = malloc(sizeof(Ponto));
+
+    if(ponto == NULL) {
+        fprintf(stderr, "Erro na alocação de memória\n");
+        exit(1);
+    }
+
+    printf("Digite a coordenada x: ");
+    scanf("%lf", &ponto->x);
+
+    printf("Digite a coordenada y: ");
+    scanf("%lf", &ponto->y);
+
+    return *ponto;
 }
 
 /**
@@ -446,84 +456,152 @@ char *concatena(char *s1, char *s2) {
 }
 
 /**
- * Ordena um array de estruturas Data em ordem crescente.
+ * Função que realiza a troca de duas estruturas Data.
  *
- * Esta função utiliza o algoritmo de ordenação bolha para ordenar um array de
- * estruturas Data com base nos campos ano, mês e dia em ordem crescente.
- *
- * @param vet Um array de estruturas Data a ser ordenado.
- * @param tam O número de elementos no array vet.
+ * @param a O ponteiro para a primeira estrutura Data.
+ * @param b O ponteiro para a segunda estrutura Data.
  */
-void ordena(struct Data vet[], int tam) {
+void swapData(Data *a, Data *b) {
+    Data temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+/**
+ * Função que ordena um vetor de estruturas Data por dia.
+ *
+ * @param vet Um vetor de estruturas Data.
+ * @param tam O tamanho do vetor.
+ */
+void ordenaPorDia(Data vet[], int tam) {
     for (int i = 0; i < tam - 1; i++) {
-        for (int j = i + 1; j < tam; j++) {
-            if (vet[i].ano > vet[j].ano) {
-                struct Data aux = vet[i];
-                vet[i] = vet[j];
-                vet[j] = aux;
-            } else if (vet[i].ano == vet[j].ano) {
-                if (vet[i].mes > vet[j].mes) {
-                    struct Data aux = vet[i];
-                    vet[i] = vet[j];
-                    vet[j] = aux;
-                } else if (vet[i].mes == vet[j].mes) {
-                    if (vet[i].dia > vet[j].dia) {
-                        struct Data aux = vet[i];
-                        vet[i] = vet[j];
-                        vet[j] = aux;
-                    }
-                }
+        for (int j = 0; j < tam - i - 1; j++) {
+            if (vet[j].ano > vet[j + 1].ano ||
+                (vet[j].ano == vet[j + 1].ano && vet[j].mes > vet[j + 1].mes) ||
+                (vet[j].ano == vet[j + 1].ano && vet[j].mes == vet[j + 1].mes && vet[j].dia > vet[j + 1].dia)) {
+                swapData(&vet[j], &vet[j + 1]);
             }
         }
     }
 }
 
 /**
- * Função que lê os dados de uma estrutura Data.
+ * Função que ordena um vetor de estruturas Data por mês.
  *
- * Esta função solicita ao usuário que insira os valores para os campos dia, mês e ano
- * de uma estrutura Data. Em seguida, ela retorna a estrutura Data preenchida.
+ * @param vet Um vetor de estruturas Data.
+ * @param tam O tamanho do vetor.
+ */
+void ordenaPorMes(Data vet[], int tam) {
+    for (int i = 0; i < tam - 1; i++) {
+        for (int j = 0; j < tam - i - 1; j++) {
+            if (vet[j].ano > vet[j + 1].ano ||
+                (vet[j].ano == vet[j + 1].ano && vet[j].mes > vet[j + 1].mes)) {
+                swapData(&vet[j], &vet[j + 1]);
+            }
+        }
+    }
+}
+
+/**
+ * Função que ordena um vetor de estruturas Data por ano.
+ *
+ * @param vet Um vetor de estruturas Data.
+ * @param tam O tamanho do vetor.
+ */
+void ordenaPorAno(Data vet[], int tam) {
+    for (int i = 0; i < tam - 1; i++) {
+        for (int j = 0; j < tam - i - 1; j++) {
+            if (vet[j].ano > vet[j + 1].ano) {
+                swapData(&vet[j], &vet[j + 1]);
+            }
+        }
+    }
+}
+
+/**
+ * Função que ordena um vetor de estruturas Data por ano, mês e dia.
+ *
+ * @param vet Um vetor de estruturas Data.
+ * @param tam O tamanho do vetor.
+ */
+void ordena(Data vet[], int tam) {
+    ordenaPorAno(vet, tam);
+
+    // Em seguida, ordena por mês dentro do mesmo ano
+    int i = 0;
+    while (i < tam) {
+        int j = i;
+        while (j < tam && vet[j].ano == vet[i].ano) {
+            j++;
+        }
+        ordenaPorMes(&vet[i], j - i);
+        i = j;
+    }
+
+    // Por fim, ordena por dia dentro do mesmo ano e mês
+    i = 0;
+    while (i < tam) {
+        int j = i;
+        while (j < tam && vet[j].ano == vet[i].ano && vet[j].mes == vet[i].mes) {
+            j++;
+        }
+        ordenaPorDia(&vet[i], j - i);
+        i = j;
+    }
+}
+
+
+/**
+ * Função que lê os dados de uma estrutura Data a partir da entrada padrão.
  *
  * @return A estrutura Data preenchida.
  */
-struct Data leData(void) {
+Data leData(void) {
     struct Data data;
 
-    printf("Digite o dia: ");
+    printf("Day: ");
     scanf("%d", &(data.dia));
 
-    printf("Digite o mês: ");
+    printf("Month: ");
     scanf("%d", &(data.mes));
 
-    printf("Digite o ano: ");
+    printf("Year: ");
     scanf("%d", &(data.ano));
 
     return data;
 }
 
 /**
- * Função que imprime os dados de uma estrutura Data.
+ * Função que imprime as datas contidas em um vetor de estruturas Data.
  *
- * Esta função imprime os valores dos campos dia, mês e ano de uma estrutura Data.
- *
- * @param data A estrutura Data cujos valores serão impressos.
+ * @param datas Um vetor de estruturas Data.
+ * @param tam O tamanho do vetor.
  */
-void imprimeData(struct Data data) {
-    printf("Dia: %d\n", data.dia);
-    printf("Mês: %d\n", data.mes);
-    printf("Ano: %d\n", data.ano);
+void imprimeDatas(Data datas[], int tam) {
+    for (int i = 0; i < tam; i++) {
+        printf("Dia: %d, Mês: %d, Ano: %d\n", datas[i].dia, datas[i].mes, datas[i].ano);
+    }
 }
 
-Base cria_base(){
+Base cria_base() {
     Base base;
     base.armazenado = 0;
     return base;
 }
 
-int remove_base(int rg, Base base){
-    for (int i = 0; i < base.armazenado; i++){
-        if (base.pessoas[i].rg == rg){
-            for (int j = i; j < base.armazenado - 1; j++){
+int insere_base(Pessoa p, Base base) {
+    if (base.armazenado < 100) {
+        base.pessoas[base.armazenado] = p;
+        base.armazenado++;
+        return 1;
+    }
+    return 0;
+}
+
+int remove_base(int rg, Base base) {
+    for (int i = 0; i < base.armazenado; i++) {
+        if (base.pessoas[i].rg == rg) {
+            for (int j = i; j < base.armazenado - 1; j++) {
                 base.pessoas[j] = base.pessoas[j + 1];
             }
             base.armazenado--;
@@ -563,11 +641,11 @@ Pessoa lePessoa() {
     return pessoa;
 }
 
-void buscar(const int vet[], int tam, int chave, int posicoes[], int n){
+void buscar(const int vet[], int tam, int chave, int posicoes[], int n) {
     int i = 0;
     int j = 0;
-    while (i < tam && j < n){
-        if (vet[i] == chave){
+    while (i < tam && j < n) {
+        if (vet[i] == chave) {
             posicoes[j] = i;
             j++;
         }
