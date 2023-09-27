@@ -140,7 +140,7 @@ void ordenaPreco(Produto vet[], int n) {
  * @param vet O array de produtos a ser ordenado.
  * @param n O número de elementos no array.
  */
-void ordenaQuant(Produto vet[], int n) {
+void ordenaQtd(Produto vet[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = i + 1; j < n; j++) {
             if (vet[i].quantidade > vet[j].quantidade) {
@@ -518,15 +518,6 @@ Base cria_base(){
     Base base;
     base.armazenado = 0;
     return base;
-}
-
-int insere_base(Pessoa p, Base base){
-    if (base.armazenado < 100){
-        base.pessoas[base.armazenado] = p;
-        base.armazenado++;
-        return 1;
-    }
-    return 0;
 }
 
 int remove_base(int rg, Base base){

@@ -4,7 +4,7 @@
 
 Produto *lerProdutos(int n);
 void ordenaPreco(Produto vet[], int n);
-void ordenaQuant(Produto vet[], int n);
+void ordenaQtd(Produto vet[], int n);
 void imprimeProduto(Produto vet[], int n);
 
 Aluno *leAlunos(int n);

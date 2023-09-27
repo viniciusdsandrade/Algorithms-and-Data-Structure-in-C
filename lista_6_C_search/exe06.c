@@ -6,10 +6,6 @@
 
 #define MAX_EXERCISES 11
 
-int buscaBinaria(Pessoa pPessoa[3], int i, int rg);
-
-Pessoa lePessoa();
-
 int exercicio01(void) {
     /**
     1. Suponha que criamos uma estrutura para armazenar produtos de um supermercado:
@@ -37,7 +33,7 @@ int exercicio01(void) {
     printf("Produtos ordenados por pre?o:\n");
     imprimeProduto(produtos, n);
 
-    ordenaQuant(produtos, n);
+    ordenaQtd(produtos, n);
     printf("Produtos ordenados por quantidade:\n");
     imprimeProduto(produtos, n);
 
@@ -61,23 +57,17 @@ int exercicio02(void) {
 
     <p> Dica: Ordene o vetor separadamente por cada um dos campos.
     */
+
     printf("Digite a quantidade de datas: ");
     int n;
+    scanf("%d", &n);
 
-    Data data1;
-    Data data2;
-    Data data3;
+    Data datas[100];
 
-    printf("Digite os dados da 1º data:\n");
-    data1 = leData();
-
-    printf("Digite os dados da 2º data:\n");
-    data2 = leData();
-
-    printf("Digite os dados da 3º data:\n");
-    data3 = leData();
-
-    Data datas[3] = {data1, data2, data3};
+    for (int i = 0; i < n; ++i) {
+        printf("Digite os dados da %dº data:\n", i + 1);
+        datas[i] = leData();
+    }
 
     ordena(datas, 3);
 
@@ -124,27 +114,18 @@ int exercicio03(void) {
     */
 
     Base base = cria_base();
+    Pessoa pessoas[100];
 
-    Pessoa pessoa1;
-    pessoa1.rg = 1;
-    pessoa1.cpf = 1;
-    strcpy(pessoa1.nome, "Pessoa 1");
+    printf("Digite a quantidade de pessoas: ");
+    int n;
+    scanf("%d", &n);
 
-    Pessoa pessoa2;
-    pessoa2.rg = 2;
-    pessoa2.cpf = 2;
-    strcpy(pessoa2.nome, "Pessoa 2");
+    for (int i = 0; i < n; ++i) {
+        printf("Digite os dados da %dº pessoa:\n", i + 1);
+        pessoas[i] = lePessoa();
 
-    Pessoa pessoa3;
-    pessoa3.rg = 3;
-    pessoa3.cpf = 3;
-    strcpy(pessoa3.nome, "Pessoa 3");
-
-    insere_base(pessoa1, base);
-    insere_base(pessoa2, base);
-    insere_base(pessoa3, base);
-
-    remove_base(2, base);
+    }
+    //Corrigir
 
     return 0;
 }
@@ -167,11 +148,11 @@ int exercicio04(void) {
      * caso não exista uma pessoa com o RG a ser buscado
      * */
 
-    printf("Digite a quantidade de pessoas: ");
-    int n;
-    scanf("%d", &n);
-
     Pessoa cadastro[100];
+    int n;
+
+    printf("Digite a quantidade de pessoas: ");
+    scanf("%d", &n);
 
     for (int i = 0; i < n; ++i) {
         printf("Digite os dados da %dº pessoa:\n", i + 1);
@@ -191,7 +172,6 @@ int exercicio04(void) {
     }
     return 0;
 }
-
 
 int exercicio05(void) {
 /**  Refaça as funções de busca sequencial e busca binária vistas em aula assumindo que o
