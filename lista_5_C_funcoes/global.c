@@ -4,6 +4,8 @@
 #include <malloc.h>
 #include "global.h"
 
+#define MAX_DIMENSION 30
+
 /**
  * Calcula o máximo divisor comum (MDC) de dois números inteiros.
  *
@@ -81,7 +83,7 @@ bool amigos(int a, int b) {
  * double numeros[] = {10.5, 20.0, 15.3, 8.7};
  * double resultado = media(numeros, 4); // Calcula média dos 4 números
  */
-double media(double pDouble[], int qtd) {
+double media(const double pDouble[], int qtd) {
     double soma = 0;
     for (int i = 0; i < qtd; i++) {
         soma += pDouble[i];
@@ -173,45 +175,55 @@ void preencheVetorDouble(int qtd, double pDouble[qtd]) {
     }
 }
 
+
 /**
- * Preenche um vetor de números de ponto flutuante com valores fornecidos pelo usuário.
+ * Lê os elementos de uma matriz quadrada da entrada padrão.
  *
- * Esta função solicita ao usuário que insira valores para cada posição do vetor de números de ponto flutuante.
- *
- * @param qtd O número de elementos a serem preenchidos no vetor.
- * @return Um vetor alocado dinamicamente contendo os valores inseridos pelo usuário.
+ * @param matrix A matriz a ser preenchida com os elementos lidos.
+ * @param dimension A dimensão da matriz (número de linhas e colunas).
  */
-double *preencheVetorDoubleReturn(int qtd) {
-    double *pDouble = (double *) malloc(qtd * sizeof(double));
-
-    if (pDouble == NULL) {
-        printf("Erro: Falha na alocação de memória.\n");
-        return NULL;
+void readMatrix(int matrix[MAX_DIMENSION][MAX_DIMENSION], int dimension) {
+    printf("Digite os elementos da matriz:\n");
+    for (int i = 0; i < dimension; ++i) {
+        for (int j = 0; j < dimension; ++j) {
+            printf("[%d][%d]: ", i, j);
+            scanf("%d", &matrix[i][j]);
+        }
     }
-
-    for (int i = 0; i < qtd; i++) {
-        printf("Digite o %dº número: ", i + 1);
-        scanf("%lf", &pDouble[i]);
-    }
-
-    return pDouble;
 }
 
 /**
- * Preenche uma matriz quadrada com valores fornecidos pelo usuário.
+ * Imprime os elementos de uma matriz quadrada.
  *
- * Esta função solicita ao usuário que insira os valores para preencher uma matriz
- * de dimensão 'dimensao' x 'dimensao'. Os valores são inseridos linha por linha.
- *
- * @param matriz A matriz que será preenchida com os valores fornecidos pelo usuário.
- * @param dimensao A dimensão da matriz quadrada (número de linhas e colunas).
+ * @param matrix A matriz a ser impressa.
+ * @param dimension A dimensão da matriz (número de linhas e colunas).
  */
-void preencheMatrizQuadrada(int matriz[30][30], int dimensao) {
-    printf("Digite os valores da matriz de dimensao %d x %d:\n", dimensao, dimensao);
-    for (int i = 0; i < dimensao; i++) {
-        printf("Digite os valores da linha %d: ", i + 1);
-        for (int j = 0; j < dimensao; j++) {
-            scanf("%d", &matriz[i][j]);
+void printMatrix(int matrix[MAX_DIMENSION][MAX_DIMENSION], int dimension) {
+    for (int i = 0; i < dimension; ++i) {
+        printf("[");
+        for (int j = 0; j < dimension; ++j) {
+            printf("%d", matrix[i][j]);
+            if (j < dimension - 1) {
+                printf("\t"); // Espaço entre os elementos
+            }
+        }
+        printf("]\n");
+    }
+}
+
+/**
+ * Calcula a matriz transposta de uma matriz quadrada.
+ *
+ * @param inputMatrix A matriz de entrada.
+ * @param resultMatrix A matriz que conterá a transposta após a execução.
+ * @param dimension A dimensão da matriz (número de linhas e colunas).
+ */
+void transpose(int inputMatrix[MAX_DIMENSION][MAX_DIMENSION],
+               int resultMatrix[MAX_DIMENSION][MAX_DIMENSION],
+               int dimension) {
+    for (int i = 0; i < dimension; ++i) {
+        for (int j = 0; j < dimension; ++j) {
+            resultMatrix[i][j] = inputMatrix[j][i];
         }
     }
 }
@@ -219,37 +231,21 @@ void preencheMatrizQuadrada(int matriz[30][30], int dimensao) {
 /**
  * Calcula a matriz transposta de uma matriz quadrada.
  *
- * Esta função calcula a matriz transposta de uma matriz quadrada fornecida e a armazena na matriz
- * transposta especificada.
- *
- * @param matriz A matriz de entrada da qual será calculada a matriz transposta.
- * @param matrizTransposta A matriz onde a matriz transposta será armazenada.
- * @param dimensao A dimensão da matriz (número de linhas e colunas).
+ * @param inputMatrix A matriz de entrada.
+ * @param resultMatrix A matriz que conterá a transposta após a execução.
+ * @param dimension A dimensão da matriz (número de linhas e colunas).
  */
-void transposta(int **matriz, int **matrizTransposta, int dimensao) {
-    for (int i = 0; i < dimensao; i++) {
-        for (int j = 0; j < dimensao; j++) {
-            matrizTransposta[i][j] = matriz[j][i];
+void multiplySquareMatrix(int matrixA[MAX_DIMENSION][MAX_DIMENSION],
+                          int matrixB[MAX_DIMENSION][MAX_DIMENSION],
+                          int resultMatrix[MAX_DIMENSION][MAX_DIMENSION],
+                          int dimension) {
+    for (int i = 0; i < dimension; ++i) {
+        for (int j = 0; j < dimension; ++j) {
+            resultMatrix[i][j] = 0;
+            for (int k = 0; k < dimension; ++k) {
+                resultMatrix[i][j] += matrixA[i][k] * matrixB[k][j];
+            }
         }
-    }
-}
-
-/**
- * Imprime uma matriz quadrada.
- *
- * Esta função imprime os elementos de uma matriz quadrada com a dimensão especificada.
- *
- * @param matriz A matriz a ser impressa.
- * @param dimensao A dimensão da matriz (número de linhas e colunas).
- */
-void imprimeMatrizQuadrada(int **matriz, int dimensao) {
-    printf("Matriz %d x %d:\n", dimensao, dimensao);
-
-    for (int i = 0; i < dimensao; i++) {
-        for (int j = 0; j < dimensao; j++) {
-            printf("%d\t", matriz[i][j]);
-        }
-        printf("\n");
     }
 }
 
@@ -275,7 +271,7 @@ bool pitagorico(int n) {
     for (int a = 1; a <= n; a++) {
         for (int b = 1; b <= n; b++) {
             if (isSumSquare(a, b, n)) {
-                return true; // Se encontrar a e b que satisfazem a^2 + b^2 = n, retorna 1
+                return true;
             }
         }
     }

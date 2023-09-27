@@ -3,12 +3,12 @@
 #include "global.c"
 
 #define MAX_EXERCISES 12
-#define MAX_DIMENSAO 30
+#define MAX_DIMENSION 30
 
-int exercicio01(void) {
+int exercise01(void) {
 
     /**
-     <p>1. Considere o código em C abaixo (assuma que no lugar de D seja usado o último dígito de
+     1. Considere o código em C abaixo (assuma que no lugar de D seja usado o último dígito de
        <p> seu RA):
       <p>  #include <stdio.h>
       <p>  int fun1(int a, int b);
@@ -58,10 +58,10 @@ int exercicio01(void) {
     return 0;
 }
 
-int exercicio02(void) {
+int exercise02(void) {
 
     /**
-     <p>2. Escreva uma função que recebe dois números inteiros positivos a e b por parâmetro e
+     2. Escreva uma função que recebe dois números inteiros positivos a e b por parâmetro e
   determina se eles são amigos ou não, devolvendo 1 caso sejam amigos, e 0 caso contrário.
 <p>
     <p>Dois números são amigos se cada número é igual à soma dos divisores próprios do outro
@@ -78,21 +78,22 @@ cuja soma é 284;
      */
 
     int a, b;
-    printf("Digite o valor de a: ");
+    printf("Enter the value of a: ");
     scanf("%d", &a);
 
-    printf("Digite o valor de b: ");
+    printf("Enter the value of b: ");
     scanf("%d", &b);
 
-    if (amigos(a, b)) {
-        printf("%d e %d são amigos", a, b);
-    } else {
-        printf("%d e %d não são amigos", a, b);
-    }
+    if (amigos(a, b))
+        printf("%d and %d are friends\n", a, b);
+    else
+        printf("%d and %d are not friends\n", a, b);
+
     return 0;
+
 }
 
-int exercicio03(void) {
+int exercise03(void) {
 
     /**
     3. Escreva uma função que calcule o máximo divisor comum de dois números m e n
@@ -104,18 +105,18 @@ int exercicio03(void) {
     <p> O protótipo da função deve ser: int mdc(int m, int n);
      */
     int m, n;
-    printf("Digite o valor de m: ");
+    printf("Enter the value of m: ");
     scanf("%d", &m);
 
-    printf("Digite o valor de n: ");
+    printf("Enter the value of n: ");
     scanf("%d", &n);
 
-    printf("O MDC de %d e %d é %d", m, n, mdc(m, n));
+    printf("MDC(%d,%d) = %d\n", m, n, mdc(m, n));
 
     return 0;
 }
 
-int exercicio04(void) {
+int exercise04(void) {
 
     /**
      4. Escreva uma função que recebe um valor inteiro positivo n como parâmetro
@@ -131,15 +132,15 @@ int exercicio04(void) {
      */
 
     int n;
-    printf("Digite o valor de n: ");
+    printf("Enter the value of n: ");
     scanf("%d", &n);
 
-    printf("O menor valor de b tal que bk = %d é %d", n, menor_base_log(n));
+    printf("The smallest value of b such that b^k = %d --> %d\n", n, menor_base_log(n));
 
     return 0;
 }
 
-int exercicio05(void) {
+int exercise05(void) {
 
     /**
     5. Um inteiro positivo n é pitagórico se existem inteiros positivos a e b tais que a^2+b^2 = n.
@@ -158,27 +159,25 @@ int exercicio05(void) {
      */
 
     int a, b, n;
-    printf("Digite o valor de a: ");
+    printf("Enter the value of a: ");
     scanf("%d", &a);
 
-    printf("Digite o valor de b: ");
+    printf("Enter the value of b: ");
     scanf("%d", &b);
 
-    printf("Digite o valor de n: ");
-    scanf("%d", &n);
-
-    printf("Digite um número inteiro positivo: ");
+    printf("Enter the value of n: ");
     scanf("%d", &n);
 
     if (pitagorico(n))
-        printf("%d é um número pitagórico.\n", n);
+        printf("%d is a Pythagorean number.\n", n);
     else
-        printf("%d não é um número pitagórico.\n", n);
+        printf("%d is not a Pythagorean number.\n", n);
 
     return 0;
+
 }
 
-int exercicio06(void) {
+int exercise06(void) {
 
     /**
      6. Escreva uma função que recebe um vetor de números reais e o seu tamanho por parâmetro
@@ -188,22 +187,23 @@ int exercicio06(void) {
      */
 
     int qtd;
-    printf("Quantos numeros você quer digitar? ");
+    printf("How many numbers do you want to enter? ");
     scanf("%d", &qtd);
 
-    double numeros[qtd];
+    double numbers[qtd];
     int i;
 
     for (i = 0; i < qtd; i++) {
-        printf("Digite o %dº número: ", i + 1);
-        scanf("%lf", &numeros[i]);
+        printf("number[%d] = ", i + 1);
+        scanf("%lf", &numbers[i]);
     }
 
-    printf("A média dos números digitados é %lf", media(numeros, qtd));
+    printf("average = %.2lf\n", media(numbers, qtd));
     return 0;
+
 }
 
-int exercicio07(void) {
+int exercise07(void) {
 
     /**
     7. Escreva uma função que recebe um vetor de números reais e o seu tamanho
@@ -218,18 +218,18 @@ int exercicio07(void) {
      */
 
     int qtd;
-    printf("Quantos numeros você quer digitar? ");
+    printf("How many numbers do you want to enter? ");
     scanf("%d", &qtd);
 
-    double numeros[qtd];
-    preencheVetorDouble(qtd, numeros);
+    double numbers[qtd];
+    preencheVetorDouble(qtd, numbers);
 
-    printf("O desvio padrão dos números digitados é %lf", desvioPadrao(numeros, qtd));
+    printf("The standard deviation of the entered numbers is %lf", desvioPadrao(numbers, qtd));
 
     return 0;
 }
 
-int exercicio08(void) {
+int exercise08(void) {
 
     /**
     8. Escreva uma função que recebe como parâmetro duas matrizes quadradas de tamanho
@@ -244,44 +244,36 @@ int exercicio08(void) {
     void transposta(double mat1[30][30], double matRes[30][30], int n);
      */
 
-    int dimensao;
-    printf("Digite a dimensao da matriz: ");
-    scanf("%d", &dimensao);
+    int dimension;
 
-    if (dimensao <= 0 || dimensao > MAX_DIMENSAO) {
-        printf("Dimensao invalida.\n");
+    printf("Enter the dimension of the matrix (max %d): ", MAX_DIMENSION);
+    scanf("%d", &dimension);
+
+    if (dimension <= 0 || dimension > MAX_DIMENSION) {
+        printf("Invalid dimension.\n");
         return 1;
     }
 
-    int **matriz = (int **) malloc(dimensao * sizeof(int *));
-    int **matrizTransposta = (int **) malloc(dimensao * sizeof(int *));
+    int inputMatrix[MAX_DIMENSION][MAX_DIMENSION];
+    int transposedMatrix[MAX_DIMENSION][MAX_DIMENSION];
 
-    for (int i = 0; i < dimensao; i++) {
-        matriz[i] = (int *) malloc(dimensao * sizeof(int));
-        matrizTransposta[i] = (int *) malloc(dimensao * sizeof(int));
-    }
+    readMatrix(inputMatrix, dimension);
 
-    preencheMatrizQuadrada(matriz, dimensao);
+    printf("Original Matrix:\n");
+    printMatrix(inputMatrix, dimension);
 
-    transposta(matriz, matrizTransposta, dimensao);
+    transpose(inputMatrix, transposedMatrix, dimension);
 
-    imprimeMatrizQuadrada(matrizTransposta, dimensao);
-
-    for (int i = 0; i < dimensao; i++) {
-        free(matriz[i]);
-        free(matrizTransposta[i]);
-    }
-
-    free(matriz);
-    free(matrizTransposta);
+    printf("Transposed Matrix:\n");
+    printMatrix(transposedMatrix, dimension);
 
     return 0;
 }
 
-int exercicio09(void) {
+int exercise09(void) {
 
     /**
-    <p> 9. Uma matriz quadrada de inteiros é um quadrado mágico se
+    9. Uma matriz quadrada de inteiros é um quadrado mágico se
     <p> a) a soma dos elementos de cada linha,
     <p> b) a soma dos elementos de cada coluna,
     <p> c) a soma dos elementos da diagonal principal
@@ -301,18 +293,23 @@ int exercicio09(void) {
      O protótipo da função deve ser: int magico(int mat[30][30], int n);
      */
 
-    int matriz[30][30];
-    preencheMatrizQuadrada(matriz, 30);
+    int matrix[30][30];
+    int dimension;
 
-    if (isMagico(matriz, 30))
-        printf("A matriz é um quadrado mágico");
+    printf("Enter the dimension of the matrix: ");
+    scanf("%d", &dimension);
+
+    readMatrix(matrix, dimension);
+
+    if (isMagico(matrix, 30))
+        printf("The matrix is a magic square");
     else
-        printf("A matriz não é um quadrado mágico");
+        printf("The matrix is not a magic square");
 
     return 0;
 }
 
-int exercicio10(void) {
+int exercise10(void) {
     /**
     10. No jogo Sudoku temos uma matriz 9 X 9 dividida em 9 quadrados de 3 X 3 preenchidos
     previamente com alguns números entre 1 e 9 (veja o exemplo à esquerda abaixo).
@@ -332,7 +329,7 @@ int exercicio10(void) {
     A seguinte função deve ser implementada:
     */
 
-    printf("Digite os valores do seu Sudoku:\n");
+    printf("Enter the values of your Sudoku board:\n");
 
     int tabuleiro[9][9];
     bool tabuleiroValido = true; // Assume que o tabuleiro é válido até encontrar uma violação
@@ -352,14 +349,14 @@ int exercicio10(void) {
     }
 
     if (tabuleiroValido)
-        printf("O tabuleiro Sudoku é válido!\n");
+        printf("The Sudoku board is valid!\n");
     else
-        printf("O tabuleiro Sudoku não é válido!\n");
+        printf("The Sudoku board is not valid!\n");
 
     return 0;
 }
 
-int exercicio11(void) {
+int exercise11(void) {
     /**
     11. Suponha que uma matriz binária represente ligações entre cidades, e que, se uma posição
     (i,j) possui o valor 1, então há uma estrada da cidade i para a cidade j. Seja o seguinte
@@ -387,17 +384,17 @@ int exercicio11(void) {
     e 0 caso contrário.
     */
 
-    int matriz[MAX_DIMENSAO][MAX_DIMENSAO];
+    int matriz[MAX_DIMENSION][MAX_DIMENSION];
     int dimensao;
 
-    printf("Digite a dimensão da matriz: ");
+    printf("Enter the dimension of the matrix: ");
     scanf("%d", &dimensao);
-    preencheMatrizQuadrada(matriz, dimensao);
+    readMatrix(matriz, dimensao);
 
     int resposta[dimensao];
 
     cidadesComEntradaSemSaida(matriz, dimensao, resposta);
-    printf("Cidades com entrada e sem saída:\n");
+    printf("Cities with input and no output:\n");
     for (int i = 0; i < dimensao; i++) {
         if (resposta[i]) {
             printf("%d ", i);
@@ -407,7 +404,7 @@ int exercicio11(void) {
     printf("\n");
 
     cidadesComSaidaSemEntrada(matriz, dimensao, resposta);
-    printf("Cidades com saída e sem entrada:\n");
+    printf("Cities with output and no input:\n");
     for (int i = 0; i < dimensao; i++) {
         if (resposta[i]) {
             printf("%d ", i);
@@ -417,7 +414,7 @@ int exercicio11(void) {
     return 0;
 }
 
-int exercicio12(void) {
+int exercise12(void) {
 
     /**
     10. Escreva uma função que recebe como parâmetro três matrizes quadradas de tamanho no
@@ -428,115 +425,119 @@ int exercicio12(void) {
     <p>
    <p>  O protótipo da função deve ser:
     <p>
-   <p>  void transposta(double mat1[30][30], double matRes[30][30], int n);
+
      */
 
-    int matrizA[30][30];
-    int matrizB[30][30];
-    int matrizResultado[30][30];
+    int matrizA[MAX_DIMENSION][MAX_DIMENSION];
+    int matrizB[MAX_DIMENSION][MAX_DIMENSION];
+    int matrizResultado[MAX_DIMENSION][MAX_DIMENSION];
+    int dimensao;
 
-    printf("Preencha a matriz A:\n");
-    preencheMatrizQuadrada(matrizA, 30);
+    printf("Enter the dimension of the matrices: ");
+    scanf("%d", &dimensao);
 
-    printf("Preencha a matriz B:\n");
-    preencheMatrizQuadrada(matrizB, 30);
+    readMatrix(matrizA, dimensao);
+    printMatrix(matrizA, dimensao);
 
-    multiplica(matrizA, matrizB, matrizResultado, 30);
+    readMatrix(matrizB, dimensao);
+    printMatrix(matrizB, dimensao);
 
-    printf("O resultado da multiplicação das matrizes A e B é:\n");
-    imprimeMatrizQuadrada((int **) matrizResultado, 30);
+    multiplySquareMatrix(matrizA, matrizB, matrizResultado, dimensao);
+    printf("The result of the multiplication of matrices A and B is:\n");
+    printMatrix(matrizResultado, dimensao);
 
     return 0;
 }
 
 int displayMenuAndGetChoice(void) {
-    printf("Exercício 01:\n");
-    printf("Exercício 02:\n");
-    printf("Exercício 03:\n");
-    printf("Exercício 04:\n");
-    printf("Exercício 05:\n");
-    printf("Exercício 06:\n");
-    printf("Exercício 07:\n");
-    printf("Exercício 08:\n");
-    printf("Exercício 09:\n");
-    printf("Exercício 10: \n");
-    printf("Exercício 11: \n");
-    printf("Exercício 12: \n");
-    printf("Digite o número do Exercício que deseja executar");
+    printf("Exercise 01:\n");
+    printf("Exercise 02:\n");
+    printf("Exercise 03:\n");
+    printf("Exercise 04:\n");
+    printf("Exercise 05:\n");
+    printf("Exercise 06:\n");
+    printf("Exercise 07:\n");
+    printf("Exercise 08:\n");
+    printf("Exercise 09:\n");
+    printf("Exercise 10:\n");
+    printf("Exercise 11:\n");
+    printf("Exercise 12:\n");
+    printf("Enter the number of the exercise you want to execute: ");
 
-    int escolha;
-    scanf("%d", &escolha);
-    return escolha;
+    int choice;
+    scanf("%d", &choice);
+    return choice;
 }
 
 void executeExercise(int choice) {
     switch (choice) {
         case 1:
-            exercicio01();
+            exercise01();
             break;
         case 2:
-            exercicio02();
+            exercise02();
             break;
         case 3:
-            exercicio03();
+            exercise03();
             break;
         case 4:
-            exercicio04();
+            exercise04();
             break;
         case 5:
-            exercicio05();
+            exercise05();
             break;
         case 6:
-            exercicio06();
+            exercise06();
             break;
         case 7:
-            exercicio07();
+            exercise07();
             break;
         case 8:
-            exercicio08();
+            exercise08();
             break;
         case 9:
-            exercicio09();
+            exercise09();
             break;
         case 10:
-            exercicio10();
+            exercise10();
             break;
         case 11:
-            exercicio11();
+            exercise11();
             break;
         case 12:
-            exercicio12();
+            exercise12();
             break;
         default:
-            printf("Opção invalida!\n");
+            printf("Invalid option!\n");
             break;
     }
 }
 
 bool getExitChoice(void) {
-    int sair;
+    int exitChoice;
     do {
-        printf("Deseja sair? Digite (1) para Sim ou (0) para Não: ");
-        scanf("%d", &sair);
-    } while (sair != 0 && sair != 1);
-    return sair;
+        printf("Do you want to exit?\n"
+               "Enter (1) for Yes or (0) for No: ");
+        scanf("%d", &exitChoice);
+    } while (exitChoice != 0 && exitChoice != 1);
+    return exitChoice;
 }
 
 int main(void) {
     setlocale(LC_ALL, "Portuguese");
 
-    bool sair = false;
+    bool exitProgram = false;
 
     do {
-        int escolha = displayMenuAndGetChoice();
+        int choice = displayMenuAndGetChoice();
 
-        if (escolha >= 1 && escolha <= MAX_EXERCISES) {
-            executeExercise(escolha);
+        if (choice >= 1 && choice <= MAX_EXERCISES) {
+            executeExercise(choice);
         } else {
-            printf("Opção inválida!\n");
+            printf("Invalid option!\n");
         }
-        sair = getExitChoice();
-    } while (!sair);
-    printf("Obrigado por usar o programa!\n");
+        exitProgram = getExitChoice();
+    } while (!exitProgram);
+    printf("Thank you for using the program!\n");
     return 0;
 }
