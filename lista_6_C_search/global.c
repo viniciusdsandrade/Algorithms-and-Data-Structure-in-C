@@ -406,7 +406,7 @@ Reg somaVetorSegundoAtributo(Reg reg) {
  */
 void imprimeReg(Reg reg) {
     printf("Valores da estrutura Reg:\n");
-    
+
     printf("Vetor de inteiros: ");
     for (int i = 0; i < 3; i++) {
         printf("%d ", reg.vet[i]);
@@ -445,44 +445,141 @@ char *concatena(char *s1, char *s2) {
     return s3;
 }
 
-/*
- * Implemente a função de remoção de um elemento do vetor de tal forma que
- * se o número de elementos armazenados (size) for menor do que 1/4maxSize,
- * então o tamanho do vetor alocado deve ter tamanho igual a metade do anterior.
- * A função deve devolver o endereço do início do vetor, sendo um novo alocado ou não.
- * ALém disso a função deve atualizar os valores size e maxSize caso necessário.
+/**
+ * Ordena um array de estruturas Data em ordem crescente.
+ *
+ * Esta função utiliza o algoritmo de ordenação bolha para ordenar um array de
+ * estruturas Data com base nos campos ano, mês e dia em ordem crescente.
+ *
+ * @param vet Um array de estruturas Data a ser ordenado.
+ * @param tam O número de elementos no array vet.
  */
-int *removeElemento(int *vet, int *size, int *maxSize, int pos) {
-    if (pos < 0 || pos >= *size) {
-        return vet;
-    }
-
-    int *novoVet = NULL;
-    int novoSize = *size - 1;
-    int novoMaxSize = *maxSize;
-
-    if (novoSize < *maxSize / 4) {
-        novoMaxSize = *maxSize / 2;
-        novoVet = (int *) malloc(novoMaxSize * sizeof(int));
-    }
-
-    int j = 0;
-    for (int i = 0; i < *size; i++) {
-        if (i != pos) {
-            if (novoVet != NULL) {
-                novoVet[j] = vet[i];
+void ordena(struct Data vet[], int tam) {
+    for (int i = 0; i < tam - 1; i++) {
+        for (int j = i + 1; j < tam; j++) {
+            if (vet[i].ano > vet[j].ano) {
+                struct Data aux = vet[i];
+                vet[i] = vet[j];
+                vet[j] = aux;
+            } else if (vet[i].ano == vet[j].ano) {
+                if (vet[i].mes > vet[j].mes) {
+                    struct Data aux = vet[i];
+                    vet[i] = vet[j];
+                    vet[j] = aux;
+                } else if (vet[i].mes == vet[j].mes) {
+                    if (vet[i].dia > vet[j].dia) {
+                        struct Data aux = vet[i];
+                        vet[i] = vet[j];
+                        vet[j] = aux;
+                    }
+                }
             }
-            j++;
+        }
+    }
+}
+
+/**
+ * Função que lê os dados de uma estrutura Data.
+ *
+ * Esta função solicita ao usuário que insira os valores para os campos dia, mês e ano
+ * de uma estrutura Data. Em seguida, ela retorna a estrutura Data preenchida.
+ *
+ * @return A estrutura Data preenchida.
+ */
+struct Data leData(void) {
+    struct Data data;
+
+    printf("Digite o dia: ");
+    scanf("%d", &(data.dia));
+
+    printf("Digite o mês: ");
+    scanf("%d", &(data.mes));
+
+    printf("Digite o ano: ");
+    scanf("%d", &(data.ano));
+
+    return data;
+}
+
+/**
+ * Função que imprime os dados de uma estrutura Data.
+ *
+ * Esta função imprime os valores dos campos dia, mês e ano de uma estrutura Data.
+ *
+ * @param data A estrutura Data cujos valores serão impressos.
+ */
+void imprimeData(struct Data data) {
+    printf("Dia: %d\n", data.dia);
+    printf("Mês: %d\n", data.mes);
+    printf("Ano: %d\n", data.ano);
+}
+
+Base cria_base(){
+    Base base;
+    base.armazenado = 0;
+    return base;
+}
+
+int insere_base(Pessoa p, Base base){
+    if (base.armazenado < 100){
+        base.pessoas[base.armazenado] = p;
+        base.armazenado++;
+        return 1;
+    }
+    return 0;
+}
+
+int remove_base(int rg, Base base){
+    for (int i = 0; i < base.armazenado; i++){
+        if (base.pessoas[i].rg == rg){
+            for (int j = i; j < base.armazenado - 1; j++){
+                base.pessoas[j] = base.pessoas[j + 1];
+            }
+            base.armazenado--;
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int buscaBinaria(Pessoa cadastro[], int tamanho, int rg) {
+    int inicio = 0;
+    int fim = tamanho - 1;
+
+    while (inicio <= fim) {
+        int meio = (inicio + fim) / 2;
+
+        if (cadastro[meio].rg == rg) {
+            return meio; // Encontrou o RG, retorna o índice
+        } else if (cadastro[meio].rg < rg) {
+            inicio = meio + 1;
+        } else {
+            fim = meio - 1;
         }
     }
 
-    if (novoVet != NULL) {
-        free(vet);
-        vet = novoVet;
+    return -1; // RG não encontrado
+}
+
+Pessoa lePessoa() {
+    Pessoa pessoa;
+    printf("Digite o RG: ");
+    scanf("%d", &pessoa.rg);
+    printf("Digite o CPF: ");
+    scanf("%d", &pessoa.cpf);
+    printf("Digite o nome: ");
+    scanf("%s", pessoa.nome);
+    return pessoa;
+}
+
+void buscar(const int vet[], int tam, int chave, int posicoes[], int n){
+    int i = 0;
+    int j = 0;
+    while (i < tam && j < n){
+        if (vet[i] == chave){
+            posicoes[j] = i;
+            j++;
+        }
+        i++;
     }
-
-    *size = novoSize;
-    *maxSize = novoMaxSize;
-
-    return vet;
 }

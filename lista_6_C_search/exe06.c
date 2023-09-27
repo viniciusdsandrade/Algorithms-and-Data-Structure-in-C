@@ -6,6 +6,10 @@
 
 #define MAX_EXERCISES 11
 
+int buscaBinaria(Pessoa pPessoa[3], int i, int rg);
+
+Pessoa lePessoa();
+
 int exercicio01(void) {
     /**
     1. Suponha que criamos uma estrutura para armazenar produtos de um supermercado:
@@ -60,10 +64,28 @@ int exercicio02(void) {
     printf("Digite a quantidade de datas: ");
     int n;
 
-    Data data;
+    Data data1;
+    Data data2;
+    Data data3;
 
+    printf("Digite os dados da 1º data:\n");
+    data1 = leData();
 
-    scanf("%d", &n);
+    printf("Digite os dados da 2º data:\n");
+    data2 = leData();
+
+    printf("Digite os dados da 3º data:\n");
+    data3 = leData();
+
+    Data datas[3] = {data1, data2, data3};
+
+    ordena(datas, 3);
+
+    printf("Datas ordenadas:\n");
+    for (int i = 0; i < n; ++i) {
+        imprimeData(datas[i]);
+    }
+
     return 0;
 }
 
@@ -85,62 +107,117 @@ int exercicio03(void) {
 <p>
    <p>  Crie funções para cada uma das operações abaixo:
 <p>
-   <p>  a) Cria base: esta fun??o devolve uma Base onde o campo armazenado ? inicializado
+   <p>  a) Cria base: esta função devolve uma Base onde o campo armazenado ? inicializado
     com 0.
   <p>   Base cria_base();
 <p>
   <p>   b) Inclui Pessoa: esta função recebe como parâmetro um dado do tipo Pessoa e o inclui
     na base (também passada por parâmetro) caso já não exista na base uma pessoa com
     o mesmo RG. A função devolve 1 caso a incluso tenha ocorrido, devolve 0 caso a
-    Base esteja cheia e devolve -1 caso j? exista uma pessoa com o RG informado.
+    Base esteja cheia e devolve -1 caso já exista uma pessoa com o RG informado.
   <p>   int insere_base(Pessoa p, Base base);
 <p>
-  <p>   c) Exclui Pessoa: esta fun??o recebe como parâmetro um dado do tipo int representando
-    o RG de uma pessoa e o exclui da base caso esteja presente. A fun??o devolve 1 caso a
-    exclusão tenha ocorrido, e devolve 0 caso n?o exista uma pessoa com o RG informado.
+  <p>   c) Exclui Pessoa: esta função recebe como parâmetro um dado do tipo int representando
+    o RG de uma pessoa e o exclui da base caso esteja presente. A função devolve 1 caso a
+    exclusão tenha ocorrido, e devolve 0 caso não exista uma pessoa com o RG informado.
    <p>  int remove_base(int rg, Base base);
     */
+
+    Base base = cria_base();
+
+    Pessoa pessoa1;
+    pessoa1.rg = 1;
+    pessoa1.cpf = 1;
+    strcpy(pessoa1.nome, "Pessoa 1");
+
+    Pessoa pessoa2;
+    pessoa2.rg = 2;
+    pessoa2.cpf = 2;
+    strcpy(pessoa2.nome, "Pessoa 2");
+
+    Pessoa pessoa3;
+    pessoa3.rg = 3;
+    pessoa3.cpf = 3;
+    strcpy(pessoa3.nome, "Pessoa 3");
+
+    insere_base(pessoa1, base);
+    insere_base(pessoa2, base);
+    insere_base(pessoa3, base);
+
+    remove_base(2, base);
+
     return 0;
 }
 
 int exercicio04(void) {
-    /**
- * Função para buscar uma pessoa por RG em um vetor de cadastro ordenado por RG.
- *
- * Esta função realize uma busca binária em um vetor de cadastro de pessoas ordenado
- * em ordem crescente por valor de RG. Se uma pessoa com o RG especificado for encontrada,
- * a função retorna o índice dessa pessoa no vetor de cadastro. Caso contrário, ela
- * retorna -1, indicando que a pessoa não foi encontrada.
- *
- * @param cadastro O vetor de cadastro de pessoas ordenado por RG.
- * @param tamanho O tamanho do vetor de cadastro.
- * @param rg O RG a ser buscado.
- * @return O índice da pessoa com o RG especificado no vetor de cadastro ou -1 se não
- * for encontrada.
- *
- * @note Para usar esta função, é importante que o vetor de cadastro esteja ordenado
- * em ordem crescente por valor de RG.
- */
+    /*
+     * 4. Suponha que criamos uma estrutura para armazenar dados de pessoas e uma outra estrutura
+     *
+     * typedef struct Pessoa{
+     *     int rg;
+     *     int cpf;
+     *     char nome[80];
+     * }Pessoa;
+     *
+     * Pessoa cadastro[100];
+     *
+     * Suponha que o vetor esteja ordenado em ordem crescente por valor de RG.
+     * Implemente uma função de busca por RG, que opera como a busca binária, e que caso exista uma
+     * pessoa no cadastro com o RG a ser buscado, devolve o índice deste no cadastro, e devolve -1
+     * caso não exista uma pessoa com o RG a ser buscado
+     * */
+
+    printf("Digite a quantidade de pessoas: ");
+    int n;
+    scanf("%d", &n);
+
+    Pessoa cadastro[100];
+
+    for (int i = 0; i < n; ++i) {
+        printf("Digite os dados da %dº pessoa:\n", i + 1);
+        cadastro[i] = lePessoa();
+    }
+
+    int rg;
+    printf("Digite o RG a ser buscado: ");
+    scanf("%d", &rg);
+
+    int indice = buscaBinaria(cadastro, 3, rg);
+
+    if (indice != -1) {
+        printf("Pessoa encontrada no índice %d", indice);
+    } else {
+        printf("Pessoa não encontrada!");
+    }
     return 0;
 }
 
+
 int exercicio05(void) {
-    /**
- * Função para buscar todas as ocorrências de uma chave em um vetor.
- *
- * Esta função realiza uma busca em um vetor 'vet' de tamanho 'tam' e procura pela
- * chave especificada. Ela registra todas as posições onde a chave foi encontrada no
- * vetor 'posicoes' e retorna o número total de ocorrências da chave em '*n'.
- *
- * @param vet O vetor no qual realizar a busca.
- * @param tam O tamanho do vetor 'vet'.
- * @param chave A chave a ser procurada no vetor.
- * @param posicoes Um vetor onde as posições da chave encontradas serão armazenadas.
- * @param n Um ponteiro para armazenar o número de ocorrências da chave.
- *
- * @note A chamada desta função deve fornecer um vetor 'posicoes' com espaço suficiente
- * para acomodar todas as possíveis ocorrências da chave (por exemplo, tamanho 'tam').
+/**  Refaça as funções de busca sequencial e busca binária vistas em aula assumindo que o
+vetor possui chaves que podem aparecer repetidas. Neste caso, você deve retornar em um
+outro vetor todas as posições onde a chave foi encontrada.
+
+<p> Protótipo da função:
+<p> void busca(int vet[], int tam, int chave, int posicoes[], int n)
+
+<p> Você deve devolver em posicoes[] as posições de vet que possuem a chave, e devolver
+em n o número de ocorrências da chave.
+<p> OBS: Na chamada desta função, o vetor posições deve ter espaço suficiente
+<p>(por exemplo, tam) para guardar todas as possíveis ocorrências da chave.
  */
+
+    int vet[10] = {1, 2, 3, 4, 5, 6, 7, 7, 7, 10};
+    int posicoes[10];
+    int n = 0;
+    buscar(vet, 10, 7, posicoes, (int)* &n);
+
+    printf("O número 7 aparece %d vezes no vetor.\n", n);
+    printf("As posições onde o número 7 aparece são: ");
+    for (int i = 0; i < n; ++i) {
+        printf("%d ", posicoes[i]);
+    }
+    printf("\n");
 
     return 0;
 }
@@ -216,7 +293,7 @@ int exercicio08(void) {
     /**
      Crie um novo tipo de registro para armazenar alunos com RA e idade.
      <p> faça a leitura de 5 alunos em uma função.
-     <p> Função Calcule e imprima a m?dia das idades dos alunos.
+     <p> Função Calcule e imprima a média das idades dos alunos.
      */
 
     int numAlunes;
@@ -310,6 +387,11 @@ int exercicio11(void) {
     return 0;
 }
 
+int exercicio12(void){
+
+    return 0;
+}
+
 int displayMenuAndGetChoice(void) {
     printf("Exercício 01:\n");
     printf("Exercício 02:\n");
@@ -323,7 +405,7 @@ int displayMenuAndGetChoice(void) {
     printf("Exercício 10: \n");
     printf("Exercício 11: \n");
     printf("Exercício 12: \n");
-    printf("Digite o n?número do Exercício que deseja executar");
+    printf("Digite o número do Exercício que deseja executar");
 
     int escolha;
     scanf("%d", &escolha);
@@ -365,17 +447,19 @@ void executeExercise(int choice) {
         case 11:
             exercicio11();
             break;
+        case 12:
+            exercicio12();
+            break;
         default:
             printf("Opção inválida!\n");
             break;
     }
 }
 
-
 bool getExitChoice() {
     int sair;
     do {
-        printf("Deseja sair? Digite (1) para Sim ou (0) para N?o: ");
+        printf("Deseja sair? Digite (1) para Sim ou (0) para Não: ");
         scanf("%d", &sair);
     } while (sair != 0 && sair != 1);
     return sair;

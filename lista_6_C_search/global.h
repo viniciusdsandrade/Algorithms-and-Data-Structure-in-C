@@ -24,4 +24,17 @@ void imprimeReg(Reg reg);
 
 char *concatena(char *s1, char *s2);
 
+void ordena(struct Data vet[], int tam);
+struct Data leData(void);
+void imprimeData(struct Data data);
+
+Base cria_base();
+int insere_base(Pessoa p, Base base);
+int remove_base(int rg, Base base);
+int buscaBinaria(Pessoa cadastro[], int tamanho, int rg);
+
+Pessoa lePessoa();
+void buscar(const int vet[], int tam, int chave, int posicoes[], int n);
+
+
 #endif //INC_2_LISTAS_GLOBAL_H
