@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <locale.h>
-#include "global.c"
+#include "global.h"
 
 #define MAX_EXERCISES 12
 #define MAX_DIMENSION 30

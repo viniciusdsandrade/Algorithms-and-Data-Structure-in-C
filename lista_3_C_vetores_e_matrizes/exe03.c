@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdbool.h>
-#include "global.c"
+#include "global.h"
 
 #define MAX 50
 

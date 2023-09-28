@@ -2,11 +2,22 @@
 #define INC_2_LISTAS_GLOBAL_H
 #include "global.c"
 
+int binarySearch(const int vet[], int tam, int chave);
+int linearSearch(const int vet[], int tam, int chave);
+void insertionSort(int vet[], int tam);
+void bubbleSort(int vet[], int tam);
+
+void troca(int *a, int *b);
+int indiceMenor(const int vet[], int tam, int ini);
+void selectionSort(int vet[], int tam);
+void selectionSortAbstrato(int vet[], int tam);
+
 Produto *lerProdutos(int n);
 void ordenaPreco(Produto vet[], int n);
 void ordenaQtd(Produto vet[], int n);
 void imprimeProduto(Produto vet[], int n);
 
+Aluno leAluno();
 Aluno *leAlunos(int n);
 Alune *leAlunes(int n);
 void imprimeAluno(Aluno aluno);
@@ -33,12 +44,11 @@ void ordenaPorAno(Data vet[], int tam);
 void ordena(Data vet[], int tam);
 void imprimeDatas(Data datas[], int tam);
 
-        Base cria_base();
+Base cria_base();
 int insere_base(Pessoa p, Base base);
 int remove_base(int rg, Base base);
 int buscaBinaria(Pessoa cadastro[], int tamanho, int rg);
 
 Pessoa lePessoa();
-void buscar(const int vet[], int tam, int chave, int posicoes[], int n);
 
 #endif //INC_2_LISTAS_GLOBAL_H

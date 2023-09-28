@@ -4,7 +4,7 @@
 #include <locale.h>
 #include "global.h"
 
-#define MAX_EXERCISES 11
+#define MAX_EXERCISES 30
 
 int exercise01(void) {
     /**
@@ -190,11 +190,12 @@ em n o número de ocorrências da chave.
     int vet[10] = {
             1, 2, 3,
             4, 5, 6,
-            7, 7, 7, 10
+            7, 7, 7,
+            10
     };
     int posicoes[10];
     int n = 0;
-    buscar(vet, 10, 7, posicoes, (int) *&n);
+    //buscar(vet, 10, 7, posicoes, (int) *&n);
 
     printf("The number 7 appears %d times in the array.\n", n);
     printf("The positions where the number 7 appears are: ");
@@ -384,6 +385,422 @@ int exercise11(void) {
 
 int exercise12(void) {
 
+    int vetor[10] = {14, 7, 8, 34, 56, 4, 0, 9, -8, 100};
+    printf("Vetor desordenado:\n");
+    for (int i = 0; i < 10; ++i) {
+        printf("%d ", vetor[i]);
+    }
+
+    selectionSort(vetor, 10);
+
+    printf("\nVetor ordenado:\n");
+    for (int i = 0; i < 10; ++i) {
+        printf("%d ", vetor[i]);
+    }
+
+    return 0;
+}
+
+int exercise13(void) {
+
+    int vetor[10] = {14, 7, 8, 34, 56, 4, 0, 9, -8, 100};
+    printf("Vetor desordenado:\n");
+    for (int i = 0; i < 10; ++i) {
+        printf("%d ", vetor[i]);
+    }
+
+    bubbleSort(vetor, 10);
+
+    printf("\nVetor ordenado:\n");
+    for (int i = 0; i < 10; ++i) {
+        printf("%d ", vetor[i]);
+    }
+
+    return 0;
+}
+
+int exercise14(void) {
+
+    int vetor[10] = {14, 7, 8, 34, 56, 4, 0, 9, -8, 100};
+    printf("Vetor desordenado:\n");
+    for (int i = 0; i < 10; ++i) {
+        printf("%d ", vetor[i]);
+    }
+
+    insertionSort(vetor, 10);
+
+    printf("\nVetor ordenado:\n");
+    for (int i = 0; i < 10; ++i) {
+        printf("%d ", vetor[i]);
+    }
+
+    return 0;
+}
+
+int exercise15(void) {
+
+    int vetor[10] = {14, 7, 8, 34, 56, 4, 0, 9, -8, 100};
+    printf("Vetor desordenado:\n");
+    for (int i = 0; i < 10; ++i) {
+        printf("%d ", vetor[i]);
+    }
+
+    binarySearch(vetor, 10, 100);
+
+    printf("\nVetor ordenado:\n");
+    for (int i = 0; i < 10; ++i) {
+        printf("%d ", vetor[i]);
+    }
+
+    return 0;
+}
+
+int exercise16(void) {
+
+    int vetor[10] = {14, 7, 8, 34, 56, 4, 0, 9, -8, 100};
+    printf("Vetor desordenado:\n");
+    for (int i = 0; i < 10; ++i) {
+        printf("%d ", vetor[i]);
+    }
+
+    linearSearch(vetor, 10, 100);
+
+    printf("\nVetor ordenado:\n");
+    for (int i = 0; i < 10; ++i) {
+        printf("%d ", vetor[i]);
+    }
+
+    return 0;
+}
+
+int exercise17(void) {
+
+    int num, q = 1;
+    int *p;
+
+    num = 100;
+    p = &num;
+    q = *p;
+
+    printf("\n%d\n", q);
+
+    return 0;
+}
+
+int exercise18(void) {
+
+    int b;
+    int *c;
+
+    b = 10;
+    c = &b;
+    *c = 11;
+
+    printf("\n%d\n", b);
+
+    return 0;
+}
+
+int exercise19(void) {
+    int b, a;
+    int *c;
+
+    b = 10;
+    c = &a;
+    *c = 11;
+    a = b * (*c);
+    printf("\n%d\n", a);
+}
+
+void nao_troca(int x, int y) {
+    int aux;
+    aux = x;
+    x = y;
+    y = aux;
+}
+
+int exercise20(void) {
+
+    int x = 4, y = 5;
+    nao_troca(x, y);
+
+    printf("\n%d %d\n", x, y);
+    return 0;
+}
+
+int exercise21(void) {
+    int x = 4, y = 5;
+    troca(&x, &y);
+
+    printf("\n%d %d\n", x, y);
+
+    return 0;
+}
+
+void maxAndMin(const int vet[],
+               int tam,
+               int *min,
+               int *max) {
+
+    *min = vet[0];
+    *max = vet[0];
+
+    for (int i = 0; i < tam; ++i) {
+        if (vet[i] < *min)
+            *min = vet[i];
+        if (vet[i] > *max)
+            *max = vet[i];
+    }
+}
+
+int exercise22(void) {
+
+    int vet[] = {10, 80, 5, -10, 45, -20, 100, 200, 10};
+    int min, max;
+
+    maxAndMin(vet, 9, &min, &max);
+    printf("O menor valor %d, o maior valor %d\n", min, max);
+}
+
+int exercise23(void) {
+
+    int a[] = {1, 2, 3, 4, 5};
+    int *b, i;
+
+    b = a;
+    printf("Conteudo de B\n");
+    for (i = 0; i < 5; i++) {
+        printf("%d\n", b[i]);
+        b[i] = i * i;
+    }
+
+    printf("Conteudo de A\n");
+    for (i = 0; i < 5; i++)
+        printf("%d\n", a[i]);
+
+    return 0;
+}
+
+int exercise24(void) {
+
+    int a = 3, b = 2, *p = NULL, *q = NULL;
+
+    p = &a;
+    q = p;
+    *q = *q + 1;
+    q = &b;
+    b = b + 1;
+
+    printf("%d\n", *q);
+    printf("%d\n", *p);
+
+    return 0;
+}
+
+void strcat2(const char *s1,
+             const char *s2,
+             char *s3) {
+
+    int i = 0, j = 0;
+
+    while (s1[i] != '\0') {
+        s3[i] = s1[i];
+        i++;
+    }
+
+    while (s2[j] != '\0') {
+        s3[i] = s2[j];
+        i++;
+        j++;
+    }
+
+    s3[i] = '\0';
+}
+
+int exercise25(void) {
+
+    double *v1, *v2, prodEsc;
+    int n, i;
+
+    printf("Digite o tamanho dos vetores: ");
+    scanf("%d", &n);
+
+    v1 = malloc(n * sizeof(double));
+    v2 = malloc(n * sizeof(double));
+
+    printf("Digite os elementos do vetor 1: ");
+    for (i = 0; i < n; i++)
+        scanf("%lf", &v1[i]);
+
+    printf("Digite os elementos do vetor 2: ");
+    for (i = 0; i < n; i++)
+        scanf("%lf", &v2[i]);
+
+    prodEsc = 0;
+    for (i = 0; i < n; i++)
+        prodEsc += v1[i] * v2[i];
+
+    printf("Produto escalar: %lf\n", prodEsc);
+    free(v1);
+    free(v2);
+
+    return 0;
+}
+
+int exercise26(void) {
+
+    char s1[100], s2[100], *s3;
+    fgets(s1, 100, stdin);
+    s1[strlen(s1) - 1] = '\0'; // remove o \n do final da string
+    fgets(s2, 100, stdin);
+    s2[strlen(s2) - 1] = '\0'; // remove o \n do final da string
+
+    s3 = concatena(s1, s2);
+    printf("%s\n", s3);
+    free(s3);
+    return 0;
+}
+
+
+int *uniao(const int vet1[],
+           int n1,
+           const int vet2[],
+           int n2) {
+
+    int *vet3 = malloc((n1 + n2) * sizeof(int));
+    int i, j, k;
+
+    for (i = 0; i < n1; i++)
+        vet3[i] = vet1[i];
+
+    for (j = 0; j < n2; j++) {
+        for (k = 0; k < n1; k++) {
+            if (vet2[j] == vet1[k])
+                break;
+        }
+        if (k == n1) {
+            vet3[i] = vet2[j];
+            i++;
+        }
+    }
+    return vet3;
+}
+
+int exercise27(void) {
+
+    int vet1[] = {1, 2, 3, 4, 5};
+    int vet2[] = {4, 5, 6, 7, 8};
+
+    int *vet3 = uniao(vet1, 5, vet2, 5);
+
+    for (int i = 0; i < 8; i++)
+        printf("%d ", vet3[i]);
+
+    printf("\n");
+
+    free(vet3);
+    return 0;
+}
+
+int *initVet(int *size, int *maxSize) {
+    int *v = malloc(*maxSize * sizeof(int));
+    *size = 0;
+    *maxSize = 4;
+    return v;
+}
+
+void printVet(int *vet, int size, int maxSize) {
+    int i;
+    printf("Vetor de tamanho %d (max alocado %d)\n", size, maxSize);
+    for (i = 0; i < size; i++) {
+        printf("%d ", vet[i]);
+    }
+    printf("\n");
+}
+
+int *addVet(int *v, int *size, int *maxSize, int e) {
+    if (*size < *maxSize) {
+        v[*size] = e;
+        (*size)++;
+        return v;
+    } else {
+        int *vaux = malloc(2 * (*maxSize) * sizeof(int));
+        for (int i = 0; i < *size; ++i) {
+            vaux[i] = v[i];
+        }
+        vaux[*size] = e;
+        (*size)++;
+        *maxSize *= 2;
+
+        free(v);
+        return vaux;
+    }
+}
+
+int find(const int *v, int size, int e) {
+    for (int i = 0; i < size; i++) {
+        if (v[i] == e)
+            return i;
+    }
+    return -1;
+}
+
+int *removeVet(int *v, int *size, int *maxSize, int e) {
+    int pos = find(v, *size, e);
+    if (pos != -1) {
+        for (int i = pos; i < *size - 1; i++) {
+            v[i] = v[i + 1];
+        }
+        (*size)--;
+        if (*size < *maxSize / 2) {
+            int *vaux = malloc((*maxSize / 2) * sizeof(int));
+            for (int i = 0; i < *size; ++i) {
+                vaux[i] = v[i];
+            }
+            *maxSize /= 2;
+            free(v);
+            return vaux;
+        }
+    }
+    return v;
+}
+
+int exercise28(void) {
+
+    int *vet, size, maxSize;
+
+    vet = initVet(&size, &maxSize);
+
+    for(int i = 0; i < 20; i++){
+        vet = addVet(vet, &size, &maxSize, i);
+    }
+
+    printVet(vet, size, maxSize);
+
+    vet = removeVet(vet, &size, &maxSize, 14);
+    printVet(vet, size, maxSize);
+
+    for(int i = 5; i < 15; i++){
+        vet = removeVet(vet, &size, &maxSize, i);
+    }
+
+    for(int i = 0; i < 20; i++){
+        vet = removeVet(vet, &size, &maxSize, i);
+    }
+
+    printVet(vet, size, maxSize);
+
+    free(vet);
+    return 0;
+}
+
+int exercise29(void) {
+
+    return 0;
+}
+
+int exercise30(void) {
+
     return 0;
 }
 
@@ -400,6 +817,25 @@ int displayMenuAndGetChoice(void) {
     printf("Exercise 10:\n");
     printf("Exercise 11:\n");
     printf("Exercise 12:\n");
+    printf("Exercise 13:\n");
+    printf("Exercise 14:\n");
+    printf("Exercise 15:\n");
+    printf("Exercise 16:\n");
+    printf("Exercise 17:\n");
+    printf("Exercise 18:\n");
+    printf("Exercise 19:\n");
+    printf("Exercise 20:\n");
+    printf("Exercise 21:\n");
+    printf("Exercise 22:\n");
+    printf("Exercise 23:\n");
+    printf("Exercise 24:\n");
+    printf("Exercise 25:\n");
+    printf("Exercise 26:\n");
+    printf("Exercise 27:\n");
+    printf("Exercise 28:\n");
+    printf("Exercise 29:\n");
+    printf("Exercise 30:\n");
+
     printf("Enter the number of the exercise you want to execute: ");
 
     int choice;
@@ -444,6 +880,60 @@ void executeExercise(int choice) {
             break;
         case 12:
             exercise12();
+            break;
+        case 13:
+            exercise13();
+            break;
+        case 14:
+            exercise14();
+            break;
+        case 15:
+            exercise15();
+            break;
+        case 16:
+            exercise16();
+            break;
+        case 17:
+            exercise17();
+            break;
+        case 18:
+            exercise18();
+            break;
+        case 19:
+            exercise19();
+            break;
+        case 20:
+            exercise20();
+            break;
+        case 21:
+            exercise21();
+            break;
+        case 22:
+            exercise22();
+            break;
+        case 23:
+            exercise23();
+            break;
+        case 24:
+            exercise24();
+            break;
+        case 25:
+            exercise25();
+            break;
+        case 26:
+            exercise26();
+            break;
+        case 27:
+            exercise27();
+            break;
+        case 28:
+            exercise28();
+            break;
+        case 29:
+            exercise29();
+            break;
+        case 30:
+            exercise30();
             break;
         default:
             printf("Invalid option!\n");

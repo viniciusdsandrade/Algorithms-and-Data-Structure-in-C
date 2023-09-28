@@ -14,7 +14,7 @@
  *
  * @param text A string a ser invertida.
  * @return Um ponteiro para a string resultante, que é a versão invertida do texto
- *         de entrada. O chamador é responsável por liberar a memória alocada
+ *         de entrada. O chamador é responsive por liberar a memória alocada
  *         dinamicamente quando não precisar mais dela.
  *         Em caso de erro na alocação de memória, retorna NULL.
  */
@@ -113,7 +113,7 @@ int contadorDePalavras2(char *s)
 
     while (s[i] != '\0')
     {
-        while (s[i] == ' ' || ispunct(s[i])) // Ignorar espacos e caracteres de pontuacao
+        while (s[i] == ' ' || ispunct(s[i])) // Ignorant espacos e caracteres de pontuacao
         {
             i++;
         }

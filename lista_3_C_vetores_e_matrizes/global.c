@@ -3,6 +3,7 @@
 #include <math.h>
 #include <time.h>
 
+
 /**
  * Função para imprimir uma linha de caracteres.
  *

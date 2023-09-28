@@ -1,9 +1,14 @@
 #ifndef INC_2_LISTAS_GLOBAL_H
 #define INC_2_LISTAS_GLOBAL_H
+#include "global.c"
 
 #define MAX_DIMENSION 30
-
+void somaMatriz(double mat1[MAX_DIMENSION][MAX_DIMENSION], double mat2[MAX_DIMENSION][MAX_DIMENSION], double matRes[MAX_DIMENSION][MAX_DIMENSION], int n);
+void multiplicaMatriz(double mat1[MAX_DIMENSION][MAX_DIMENSION], double mat2[MAX_DIMENSION][MAX_DIMENSION], double matRes[MAX_DIMENSION][MAX_DIMENSION], int n);
+void leVetor(int vet[], int tam);
+void imprimeVetor(int vet[], int tam);
 int pot(int a, int b);
+long fat(long n);
 int mdc(int m, int n);
 bool amigos(int a, int b);
 double media(const double pDouble[], int qtd);

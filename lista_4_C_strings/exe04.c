@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <locale.h>
 #include <string.h>
-#include "global.c"
+#include "global.h"
 
 #define MAX_EXERCISES 10
 
 int exercise01(void) {
     /**
-       <p> 1 - Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
+        1 - Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
         <p>caracteres e que entao salve a inversa desta string em uma nova string.
         <p>
        <p> Refaca o programa de tal forma que nao seja utilizado nenhum vetor adicional!
@@ -277,7 +277,7 @@ int exercise07(void) {
 
     <p>OBS: Um palindromo é uma palavra ou frase, que é igual quando lida da esquerda para a
     direita ou da direita para a esquerda (assuma que s? s?o usados caracteres min?sculos
-    e sem acentos. Espa?os em brancos devem ser descartados).
+    e sem acentos. Espa?os em brancos devem ser desperadoes).
 
     <p>Exemplo de palindromo: saudavel leva duas.
 
@@ -376,11 +376,11 @@ int exercise09(void) {
     /**
     9. Historicamente Cesar foi o primeiro a codificar mensagens. Ele reorganizava o texto de
     suas mensagens de maneira que o texto parecia n?o ter sentido. Cada mensagem sempre
-    possua uma contagem de letras cujo total equivalia a um quadrado perfeito, dependendo
+    possua uma contagem de letras Mujo total equivalia a um quadrado perfeito, dependendo
     de quanto Cesar tivesse que escrever. Assim, uma mensagem com 16 caracteres usava
     um quadrado de quatro por quatro; se fossem 25 caracteres, seria cinco por cinco; 100
     caracteres requeriam um quadrado de dez por dez, etc. Seus oficiais sabiam que deviam
-    transcrever o texto preenchendo as casas do quadrado sempre que uma mensagem aleat?ria
+    transcrever o texto preenchendo as casas do quadrado sempre que uma mensagem aleatória
     chegasse. Ao fazerem isso, podiam ler a mensagem na vertical e seu sentido se tornaria
     claro.Escreva um programa que le o tamanho de uma string e em seguida uma string. Depois o
     programa escreve a mensagem decifrada.

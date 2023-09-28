@@ -1,9 +1,106 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
-#include "global.h"
 
 #define MAX_DIMENSION 30
+
+/**
+ * Multiplica duas matrizes quadradas de dimensão 'n' e armazena o resultado em uma terceira matriz.
+ *
+ * Esta função recebe duas matrizes quadradas 'mat1' e 'mat2' de dimensão 'n' e calcula o produto
+ * de matriz 'mat1' x 'mat2', armazenando o resultado na matriz 'matRes'. Ela utiliza loops aninhados
+ * para realizar a multiplicação de matrizes.
+ *
+ * @param mat1 A primeira matriz de entrada.
+ * @param mat2 A segunda matriz de entrada.
+ * @param matRes A matriz onde o resultado da multiplicação será armazenado.
+ * @param n A dimensão das matrizes e o número de linhas/colunas.
+ */
+void multiplicaMatriz(double mat1[MAX_DIMENSION][MAX_DIMENSION],
+                      double mat2[MAX_DIMENSION][MAX_DIMENSION],
+                      double matRes[MAX_DIMENSION][MAX_DIMENSION],
+                      int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            matRes[i][j] = 0;
+            for (int k = 0; k < n; k++) {
+                matRes[i][j] += mat1[i][k] * mat2[k][j];
+            }
+        }
+    }
+}
+
+/**
+ * Soma duas matrizes de dimensão 'n' e armazena o resultado em uma terceira matriz.
+ *
+ * Esta função recebe duas matrizes 'mat1' e 'mat2' de dimensão 'n' e calcula a soma
+ * 'mat1' + 'mat2', armazenando o resultado na matriz 'matRes'. Ela utiliza loops aninhados
+ * para realizar a adição de matrizes.
+ *
+ * @param mat1 A primeira matriz de entrada.
+ * @param mat2 A segunda matriz de entrada.
+ * @param matRes A matriz onde o resultado da adição será armazenado.
+ * @param n A dimensão das matrizes e o número de linhas/colunas.
+ */
+void somaMatriz(double mat1[MAX_DIMENSION][MAX_DIMENSION],
+                double mat2[MAX_DIMENSION][MAX_DIMENSION],
+                double matRes[MAX_DIMENSION][MAX_DIMENSION],
+                int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            matRes[i][j] = mat1[i][j] + mat2[i][j];
+        }
+    }
+}
+
+/**
+ * Lê valores inteiros de um vetor de tamanho 'tam' a partir da entrada padrão.
+ *
+ * Esta função lê valores inteiros do usuário e os armazena em um vetor 'vet' de tamanho 'tam'.
+ *
+ * @param vet O vetor onde os valores serão armazenados.
+ * @param tam O tamanho do vetor 'vet'.
+ */
+void leVetor(int vet[], int tam) {
+    for (int i = 0; i < tam; i++) {
+        printf("Digite numero: ");
+        scanf("%d", &vet[i]);
+    }
+}
+
+/**
+ * Imprime os elementos de uma matriz com 'linha' linhas e 'coluna' colunas.
+ *
+ * Esta função imprime os elementos de uma matriz 'mat' com 'linha' linhas e 'coluna' colunas.
+ * Os elementos são impressos em formato de matriz.
+ *
+ * @param mat A matriz a ser impressa.
+ * @param linha O número de linhas da matriz.
+ * @param coluna O número de colunas da matriz.
+ */
+void imprimeMatriz(int mat[MAX_DIMENSION][MAX_DIMENSION], int linha, int coluna) {
+    for (int i = 0; i < linha; i++) {
+        for (int j = 0; j < coluna; j++) {
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+/**
+ * Imprime os elementos de um vetor de tamanho 'tam'.
+ *
+ * Esta função imprime os elementos de um vetor 'vet' de tamanho 'tam'. Os elementos são
+ * impressos no formato "vet[i] = valor".
+ *
+ * @param vet O vetor a ser impresso.
+ * @param tam O tamanho do vetor 'vet'.
+ */
+void imprimeVetor(int vet[], int tam) {
+    for (int i = 0; i < tam; i++) {
+        printf("vet[%d] = %d", i, vet[i]);
+    }
+}
 
 /**
  * Calcula o máximo divisor comum (MDC) de dois números inteiros.
@@ -23,24 +120,46 @@ int mdc(int m, int n) {
 }
 
 /**
- * Calcula a potência de um número inteiro 'a' elevado a 'b'.
+ * Calcula a potência de um número inteiro.
  *
- * Esta função calcula a potência de um número inteiro 'a' elevado a 'b'. Ela
- * multiplica o valor de 'a' por si mesmo 'b' vezes para calcular o resultado.
+ * Esta função calcula a potência de um número inteiro 'a' elevado a um expoente
+ * inteiro 'b'. Ela trata de maneira adequada os casos em que 'b' é 0 (retorna 1),
+ * 'b' é negativo (calcula a potência inversa) e 'b' é positivo (usando um loop).
  *
- * @param a  O número inteiro a ser elevado à potência.
- * @param b  O expoente inteiro.
+ * @param a O número base.
+ * @param b O expoente.
  * @return O resultado da operação 'a' elevado a 'b'.
- *
- * Exemplo de uso:
- * int resultado = pot(2, 3); // Calcula 2 elevado a 3 (2^3)
  */
 int pot(int a, int b) {
-    int p = 1;
-    for (int i = 0; i < b; i++) {
-        p *= a;
-    }
-    return p;
+    if (b == 0) return 1;
+    if (b < 0) return 1 / pot(a, -b);
+
+    int result = a;
+    for (int i = 1; i < b; i++)
+        result *= a;
+
+    return result;
+}
+
+/**
+ * Calcula o fatorial de um número inteiro não negativo.
+ *
+ * Esta função calcula o fatorial de um número inteiro 'n'. Ela trata de maneira
+ * adequada o caso em que 'n' é negativo (retorna -1 como erro) e o caso em que
+ * 'n' é igual a 0 (retorna 1, pois o fatorial de 0 é 1). Usa recursão para calcular
+ * o fatorial de 'n'.
+ *
+ * @param n O número para calcular o fatorial.
+ * @return O fatorial de 'n' ou -1 em caso de erro.
+ */
+long fat(long n) {
+    if (n < 0)
+        return -1;
+
+    if (n == 0)
+        return 1;
+
+    return n * fat(n - 1);
 }
 
 /**
@@ -410,28 +529,6 @@ bool verificaQuadrante(int linha, int coluna, int numero, int tabuleiro[9][9]) {
         }
     }
     return true;
-}
-
-/**
- * Realiza a multiplicação de duas matrizes quadradas e armazena o resultado em uma terceira matriz.
- *
- * Esta função recebe duas matrizes quadradas de dimensão 'n x n', mat1 e mat2, e calcula o produto das
- * duas matrizes, armazenando o resultado na matriz matRes.
- *
- * @param mat1 A primeira matriz quadrada de entrada a ser multiplicada.
- * @param mat2 A segunda matriz quadrada de entrada a ser multiplicada.
- * @param matRes A matriz onde o resultado da multiplicação será armazenado.
- * @param n A dimensão das matrizes quadradas (número de linhas e colunas).
- */
-void multiplica(double mat1[30][30], double mat2[30][30], double matRes[30][30], int n) {
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            matRes[i][j] = 0; // Inicializa o elemento da matriz resultante como 0.
-            for (int k = 0; k < n; k++) {
-                matRes[i][j] += mat1[i][k] * mat2[k][j]; // Calcula o produto e acumula na matriz resultante.
-            }
-        }
-    }
 }
 
 /**

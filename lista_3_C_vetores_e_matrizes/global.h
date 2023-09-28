@@ -1,5 +1,6 @@
 #ifndef LISTA_3_GLOBAL_H
 #define LISTA_3_GLOBAL_H
+#include "global.c"
 
 void linha(int tamanho, char caractere);
 void limparTela();
