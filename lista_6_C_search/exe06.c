@@ -470,6 +470,8 @@ int exercise16(void) {
         printf("%d ", vetor[i]);
     }
 
+    printf("\n");
+
     return 0;
 }
 
@@ -498,6 +500,8 @@ int exercise18(void) {
 
     printf("\n%d\n", b);
 
+    printf("\n");
+
     return 0;
 }
 
@@ -509,7 +513,10 @@ int exercise19(void) {
     c = &a;
     *c = 11;
     a = b * (*c);
+
     printf("\n%d\n", a);
+
+    return 0;
 }
 
 void nao_troca(int x, int y) {
@@ -525,6 +532,7 @@ int exercise20(void) {
     nao_troca(x, y);
 
     printf("\n%d %d\n", x, y);
+
     return 0;
 }
 
@@ -560,6 +568,10 @@ int exercise22(void) {
 
     maxAndMin(vet, 9, &min, &max);
     printf("O menor valor %d, o maior valor %d\n", min, max);
+
+    printf("\n");
+
+    return 0;
 }
 
 int exercise23(void) {
@@ -578,6 +590,8 @@ int exercise23(void) {
     for (i = 0; i < 5; i++)
         printf("%d\n", a[i]);
 
+    printf("\n");
+
     return 0;
 }
 
@@ -594,28 +608,11 @@ int exercise24(void) {
     printf("%d\n", *q);
     printf("%d\n", *p);
 
+    printf("\n");
+
     return 0;
 }
 
-void strcat2(const char *s1,
-             const char *s2,
-             char *s3) {
-
-    int i = 0, j = 0;
-
-    while (s1[i] != '\0') {
-        s3[i] = s1[i];
-        i++;
-    }
-
-    while (s2[j] != '\0') {
-        s3[i] = s2[j];
-        i++;
-        j++;
-    }
-
-    s3[i] = '\0';
-}
 
 int exercise25(void) {
 
@@ -651,9 +648,9 @@ int exercise26(void) {
 
     char s1[100], s2[100], *s3;
     fgets(s1, 100, stdin);
-    s1[strlen(s1) - 1] = '\0'; // remove o \n do final da string
+    s1[strlen(s1) - 1] = '\0';
     fgets(s2, 100, stdin);
-    s2[strlen(s2) - 1] = '\0'; // remove o \n do final da string
+    s2[strlen(s2) - 1] = '\0';
 
     s3 = concatena(s1, s2);
     printf("%s\n", s3);
