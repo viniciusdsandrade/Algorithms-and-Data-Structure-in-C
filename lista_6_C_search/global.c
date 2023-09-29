@@ -184,7 +184,10 @@ void bubbleSort(int vet[], int tam) {
     for (i = tam - 1; i > 0; i--) {
         for (j = 0; j < i; j++) {
             if (vet[j] > vet[j + 1]) {
-                troca(&vet[j], &vet[j + 1]);
+                int aux = vet[j];
+                vet[j] = vet[j + 1];
+                vet[j + 1] = aux;
+                //troca(&vet[j], &vet[j + 1]);
             }
         }
     }
@@ -383,24 +386,6 @@ void imprimeProduto(Produto vet[], int n) {
         putchar('\n');
     }
 }
-
-/**
- * Lê os dados de um produto (nome, preço e quantidade) da entrada padrão.
-  @return Uma estrutura Produto preenchida com os dados lidos.
-*/
-Produto *leProdutos(int n) {
-    Produto *produtos = malloc(n * sizeof(Produto));
-    for (int i = 0; i < n; i++) {
-        printf("Digite o nome do produto %d: ", i + 1);
-        scanf("%s", produtos[i].nome);
-        printf("Digite o preço do produto %d: ", i + 1);
-        scanf("%lf", &produtos[i].preco);
-        printf("Digite a quantidade do produto %d: ", i + 1);
-        scanf("%d", &produtos[i].quantidade);
-    }
-    return produtos;
-}
-
 
 /**
  * Lê os dados de um vetor de alunos da entrada padrão.

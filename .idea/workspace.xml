@@ -9,8 +9,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="&lt;Fix&gt;[lista06] : corrigindo lista06">
+    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="&lt;Fix&gt;[lista06] : corrigindo lista06 2.0">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista_6_C_search/exe06.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_6_C_search/exe06.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_6_C_search/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_6_C_search/global.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +179,7 @@
       <workItem from="1695936434234" duration="25000" />
       <workItem from="1695936472188" duration="40000" />
       <workItem from="1695955494435" duration="95000" />
-      <workItem from="1695955645639" duration="1704000" />
+      <workItem from="1695955645639" duration="2870000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;Feat&gt; :  Finalizando 'lista5-funcoes'">
       <option name="closed" value="true" />
@@ -298,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695844480657</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="&lt;Fix&gt;[lista06] : corrigindo lista06 2.0">
+      <option name="closed" value="true" />
+      <created>1695957399220</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1695957399220</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +336,8 @@
     <MESSAGE value="&lt;Build&gt;[lista06] : Finalizando lista06" />
     <MESSAGE value="&lt;Fix&gt;[lista05] : corrigindo lista05" />
     <MESSAGE value="&lt;Fix&gt;[lista06] : corrigindo lista06" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;Fix&gt;[lista06] : corrigindo lista06" />
+    <MESSAGE value="&lt;Fix&gt;[lista06] : corrigindo lista06 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="&lt;Fix&gt;[lista06] : corrigindo lista06 2.0" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
