@@ -732,6 +732,7 @@ int *addVet(int *v, int *size, int *maxSize, int e) {
         return vaux;
     }
 }
+
 int find(const int *v, int size, int e) {
     for (int i = 0; i < size; i++) {
         if (v[i] == e)
