@@ -3,6 +3,56 @@
 #include <stdio.h>
 #include <string.h>
 
+typedef struct Cell {
+    char car;
+    int peso;
+} Cell;
+
+char *replicarStringComEspacos(const char *vetor, int vezes) {
+    if (vetor == NULL || vezes <= 0) {
+        return NULL;
+    }
+
+    size_t tamanhoOriginal = strlen(vetor);
+    size_t tamanhoReplicado = (tamanhoOriginal + 1) * vezes;
+    tamanhoReplicado--;
+
+    char *resultado = (char *)malloc(tamanhoReplicado + 1);
+
+    if (resultado == NULL) {
+        return NULL;
+    }
+
+    resultado[0] = '\0';
+
+    for (int i = 0; i < vezes; i++) {
+        strcat(resultado, vetor);
+        if (i < vezes - 1) {
+            strcat(resultado, " ");
+        }
+    }
+
+    return resultado;
+}
+
+int somaPeso(Cell vet[], int n) {
+
+    int pesoTotal = 0;
+
+    for (int i = 0; i < n; i++) {
+        char letraAtual = vet[i].car;
+        int pesoAtual = vet[i].peso;
+        int sequencia = 1;
+
+        while (i + 1 < n && vet[i + 1].car == letraAtual) {
+            sequencia++;
+            i++;
+        }
+        pesoTotal += sequencia * pesoAtual;
+    }
+    return pesoTotal;
+}
+
 /**
  * @struct Produto
  *
@@ -649,7 +699,6 @@ char *concatena(char *s1, char *s2) {
         sres[t1 + i] = s2[i];
     sres[t1 + t2] = '\0';
 
-    //free(sres);
     return sres;
 }
 
@@ -693,7 +742,8 @@ void ordenaPorMes(Data vet[], int tam) {
     for (int i = 0; i < tam - 1; i++) {
         for (int j = 0; j < tam - i - 1; j++) {
             if (vet[j].ano > vet[j + 1].ano ||
-                (vet[j].ano == vet[j + 1].ano && vet[j].mes > vet[j + 1].mes)) {
+                (vet[j].ano == vet[j + 1].ano &&
+                vet[j].mes > vet[j + 1].mes)) {
                 swapData(&vet[j], &vet[j + 1]);
             }
         }
@@ -745,7 +795,6 @@ void ordena(Data vet[], int tam) {
         i = j;
     }
 }
-
 
 /**
  * Função que lê os dados de uma estrutura Data a partir da entrada padrão.

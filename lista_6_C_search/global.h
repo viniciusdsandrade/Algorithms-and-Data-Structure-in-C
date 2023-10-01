@@ -2,6 +2,23 @@
 #define INC_2_LISTAS_GLOBAL_H
 #include "global.c"
 
+void maxAndMin(const int vet[],
+               int tam,
+               int *min,
+               int *max);
+int *uniao(const int vet1[],
+           int n1,
+           const int vet2[],
+           int n2);
+int *initVet(int *size, int *maxSize);
+void printVet(int *vet, int size, int maxSize);
+int *addVet(int *v, int *size, int *maxSize, int e);
+int find(const int *v, int size, int e);
+int *removeVet(int *v, int *size, int *maxSize, int e);
+
+char *replicarStringComEspacos(const char *vetor, int vezes);
+int somaPeso(Cell vet[], int n);
+
 int binarySearch(const int vet[], int tam, int chave);
 int linearSearch(const int vet[], int tam, int chave);
 void insertionSort(int vet[], int tam);
