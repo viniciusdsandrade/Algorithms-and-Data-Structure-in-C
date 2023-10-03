@@ -16,10 +16,12 @@
  * @param matRes A matriz onde o resultado da multiplicação será armazenado.
  * @param n A dimensão das matrizes e o número de linhas/colunas.
  */
-void multiplicaMatriz(double mat1[MAX_DIMENSION][MAX_DIMENSION],
-                      double mat2[MAX_DIMENSION][MAX_DIMENSION],
-                      double matRes[MAX_DIMENSION][MAX_DIMENSION],
-                      int n) {
+void multiplicaMatriz(
+        double mat1[MAX_DIMENSION][MAX_DIMENSION],
+        double mat2[MAX_DIMENSION][MAX_DIMENSION],
+        double matRes[MAX_DIMENSION][MAX_DIMENSION],
+        int n
+) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             matRes[i][j] = 0;
@@ -42,10 +44,12 @@ void multiplicaMatriz(double mat1[MAX_DIMENSION][MAX_DIMENSION],
  * @param matRes A matriz onde o resultado da adição será armazenado.
  * @param n A dimensão das matrizes e o número de linhas/colunas.
  */
-void somaMatriz(double mat1[MAX_DIMENSION][MAX_DIMENSION],
-                double mat2[MAX_DIMENSION][MAX_DIMENSION],
-                double matRes[MAX_DIMENSION][MAX_DIMENSION],
-                int n) {
+void somaMatriz(
+        double mat1[MAX_DIMENSION][MAX_DIMENSION],
+        double mat2[MAX_DIMENSION][MAX_DIMENSION],
+        double matRes[MAX_DIMENSION][MAX_DIMENSION],
+        int n
+) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             matRes[i][j] = mat1[i][j] + mat2[i][j];
@@ -78,7 +82,11 @@ void leVetor(int vet[], int tam) {
  * @param linha O número de linhas da matriz.
  * @param coluna O número de colunas da matriz.
  */
-void imprimeMatriz(int mat[MAX_DIMENSION][MAX_DIMENSION], int linha, int coluna) {
+void imprimeMatriz(
+        int mat[MAX_DIMENSION][MAX_DIMENSION],
+        int linha,
+        int coluna
+) {
     for (int i = 0; i < linha; i++) {
         for (int j = 0; j < coluna; j++) {
             printf("%d ", mat[i][j]);
@@ -238,9 +246,11 @@ double calcularMedia(const double numeros[], int quantidade) {
  * @param media A média dos números no array 'numeros'.
  * @return A soma dos quadrados das diferenças entre cada número e a média.
  */
-double calcularSomaQuadradosDasDiferencas(const double numeros[],
-                                          int quantidade,
-                                          double media) {
+double calcularSomaQuadradosDasDiferencas(
+        const double numeros[],
+        int quantidade,
+        double media
+) {
     double somaQuadrados = 0;
     for (int i = 0; i < quantidade; i++) {
         double diferenca = numeros[i] - media;
@@ -336,9 +346,11 @@ void printMatrix(int matrix[MAX_DIMENSION][MAX_DIMENSION], int dimension) {
  * @param resultMatrix A matriz que conterá a transposta após a execução.
  * @param dimension A dimensão da matriz (número de linhas e colunas).
  */
-void transpose(int inputMatrix[MAX_DIMENSION][MAX_DIMENSION],
-               int resultMatrix[MAX_DIMENSION][MAX_DIMENSION],
-               int dimension) {
+void transpose(
+        int inputMatrix[MAX_DIMENSION][MAX_DIMENSION],
+        int resultMatrix[MAX_DIMENSION][MAX_DIMENSION],
+        int dimension
+) {
     for (int i = 0; i < dimension; ++i) {
         for (int j = 0; j < dimension; ++j) {
             resultMatrix[i][j] = inputMatrix[j][i];
@@ -353,10 +365,12 @@ void transpose(int inputMatrix[MAX_DIMENSION][MAX_DIMENSION],
  * @param resultMatrix A matriz que conterá a transposta após a execução.
  * @param dimension A dimensão da matriz (número de linhas e colunas).
  */
-void multiplySquareMatrix(int matrixA[MAX_DIMENSION][MAX_DIMENSION],
-                          int matrixB[MAX_DIMENSION][MAX_DIMENSION],
-                          int resultMatrix[MAX_DIMENSION][MAX_DIMENSION],
-                          int dimension) {
+void multiplySquareMatrix(
+        int matrixA[MAX_DIMENSION][MAX_DIMENSION],
+        int matrixB[MAX_DIMENSION][MAX_DIMENSION],
+        int resultMatrix[MAX_DIMENSION][MAX_DIMENSION],
+        int dimension
+) {
     for (int i = 0; i < dimension; ++i) {
         for (int j = 0; j < dimension; ++j) {
             resultMatrix[i][j] = 0;
@@ -433,7 +447,12 @@ int menor_base_log(int n) {
  * @param index O índice da linha ou coluna para o qual a soma será calculada.
  * @return A soma da linha ou coluna especificada na matriz.
  */
-int calculaSoma(int matriz[30][30], int tamanho, int linha, int indice) {
+int calculaSoma(
+        int matriz[30][30],
+        int tamanho,
+        int linha,
+        int indice
+) {
     int soma = 0;
     for (int i = 0; i < tamanho; i++) {
         if (linha) {
@@ -482,7 +501,11 @@ bool isMagico(int matriz[30][30], int tamanho) {
  * @param tabuleiro O tabuleiro Sudoku.
  * @return Verdadeiro se o número puder ser inserido na linha; caso contrário, falso.
  */
-bool verificaLinha(int linha, int numero, int tabuleiro[9][9]) {
+bool verificaLinha(
+        int linha,
+        int numero,
+        int tabuleiro[9][9]
+) {
     for (int coluna = 0; coluna < 9; coluna++) {
         if (tabuleiro[linha][coluna] == numero) {
             return false; // Número já existe na linha
@@ -499,7 +522,11 @@ bool verificaLinha(int linha, int numero, int tabuleiro[9][9]) {
  * @param tabuleiro O tabuleiro Sudoku.
  * @return Verdadeiro se o número puder ser inserido na coluna; caso contrário, falso.
  */
-bool verificaColuna(int coluna, int numero, int tabuleiro[9][9]) {
+bool verificaColuna(
+        int coluna,
+        int numero,
+        int tabuleiro[9][9]
+) {
     for (int linha = 0; linha < 9; linha++) {
         if (tabuleiro[linha][coluna] == numero) {
             return false; // Número já existe na coluna
@@ -517,7 +544,12 @@ bool verificaColuna(int coluna, int numero, int tabuleiro[9][9]) {
  * @param tabuleiro O tabuleiro Sudoku.
  * @return Verdadeiro se o número puder ser inserido no quadrante; caso contrário, falso.
  */
-bool verificaQuadrante(int linha, int coluna, int numero, int tabuleiro[9][9]) {
+bool verificaQuadrante(
+        int linha,
+        int coluna,
+        int numero,
+        int tabuleiro[9][9]
+) {
     int linhaInicial = (linha / 3) * 3;
     int colunaInicial = (coluna / 3) * 3;
 
@@ -543,7 +575,11 @@ bool verificaQuadrante(int linha, int coluna, int numero, int tabuleiro[9][9]) {
  * @param n O número de cidades.
  * @param resposta O vetor de resposta.
  */
-void cidadesComEntradaSemSaida(int mat[30][30], int n, int resposta[]) {
+void cidadesComEntradaSemSaida(
+        int mat[30][30],
+        int n,
+        int resposta[]
+) {
     for (int i = 0; i < n; i++) {
         resposta[i] = 1; // Inicializa como 1, ou seja, assume que a cidade i tem entrada.
 
@@ -575,7 +611,11 @@ void cidadesComEntradaSemSaida(int mat[30][30], int n, int resposta[]) {
  * @param n O número de cidades.
  * @param resposta O vetor de resposta.
  */
-void cidadesComSaidaSemEntrada(int mat[30][30], int n, int resposta[]) {
+void cidadesComSaidaSemEntrada(
+        int mat[30][30],
+        int n,
+        int resposta[]
+) {
     for (int i = 0; i < n; i++) {
         resposta[i] = 1; // Inicializa como 1, ou seja, assume que a cidade i tem saída.
 

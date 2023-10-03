@@ -9,9 +9,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="&lt;Fix&gt;[lista06] : corrigindo lista06 2.0">
+    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista_6_C_search/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_6_C_search/global.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges_C/challange3_C/desafio3.c" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange3_C/desafio3.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +24,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,7 +56,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.gutterIcons&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -180,6 +180,7 @@
       <workItem from="1695955645639" duration="2983000" />
       <workItem from="1695989140148" duration="1439000" />
       <workItem from="1695990682317" duration="3896000" />
+      <workItem from="1696333934334" duration="3250000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;Feat&gt; :  Finalizando 'lista5-funcoes'">
       <option name="closed" value="true" />
@@ -325,7 +326,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695958626590</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="&lt;Fix&gt;[lista06] : Adicionando funcoes no global.h">
+      <option name="closed" value="true" />
+      <created>1696199523508</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1696199523508</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Merge remote-tracking branch 'origin/main'">
+      <option name="closed" value="true" />
+      <created>1696199547649</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1696199547649</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,13 +364,14 @@
     <MESSAGE value="&lt;Feat&gt; :  Finalizando 'lista5-funcoes'" />
     <MESSAGE value="&lt;Fix&gt; :  lista5 e lista6" />
     <MESSAGE value="&lt;Fix&gt; :  adicionando documentação" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="&lt;Build&gt; :  Exercicios com ponteiros e alocação dinâmica de memória" />
     <MESSAGE value="&lt;Build&gt;[lista06] : Finalizando lista06" />
     <MESSAGE value="&lt;Fix&gt;[lista05] : corrigindo lista05" />
     <MESSAGE value="&lt;Fix&gt;[lista06] : corrigindo lista06" />
     <MESSAGE value="&lt;Fix&gt;[lista06] : corrigindo lista06 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;Fix&gt;[lista06] : corrigindo lista06 2.0" />
+    <MESSAGE value="&lt;Fix&gt;[lista06] : Adicionando funcoes no global.h" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
