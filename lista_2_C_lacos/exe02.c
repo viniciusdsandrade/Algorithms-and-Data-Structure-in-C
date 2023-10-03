@@ -485,6 +485,7 @@ int exercicio14(void) {
         }
         printf("\n");
     }
+    return 0;
 }
 
 int exercicio15(void) {
@@ -546,6 +547,7 @@ int exercicio16(void) {
         }
         printf("\n");
     }
+    return 0;
 }
 
 int exercicio17(void) {
@@ -583,6 +585,7 @@ int exercicio17(void) {
 
     // imprime o número total de jogos possíveis
     printf("Numero total de jogos: %.0lf", cont);
+    return 0;
 }
 
 int exercicio18(void) {

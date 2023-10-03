@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 
-int exercicio01(void)
+void exercicio01(void)
 {
     /*
     1.
@@ -11,7 +11,7 @@ int exercicio01(void)
     return 0;
 }
 
-int exercicio02(void)
+void exercicio02(void)
 {
     /*
     2.
@@ -20,7 +20,7 @@ int exercicio02(void)
     return 0;
 }
 
-int exercicio03(void)
+void exercicio03(void)
 {
     /*
     3.
@@ -74,7 +74,7 @@ int exercicio08(void)
     return 0;
 }
 
-int exercicio09(void)
+void exercicio09(void)
 {
     /*
     9.
@@ -101,7 +101,7 @@ int exercicio11(void)
     return 0;
 }
 
-int exercicio12(void)
+void exercicio12(void)
 {
     /*
     12.
@@ -119,7 +119,7 @@ int exercicio13(void)
     return 0;
 }
 
-int exercicio14(void)
+void exercicio14(void)
 {
     /*
     14.

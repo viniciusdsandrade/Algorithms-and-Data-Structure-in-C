@@ -5,7 +5,7 @@
 
 #define MAX_EXERCISES 10
 
-int exercicio01(void) {
+void exercicio01(void) {
 
     /*
     1. Qual é o tipo de variável correta para armazenar as seguintes informações:
@@ -24,7 +24,7 @@ int exercicio01(void) {
     printf("d. A Área do seu quintal.\n\n");
 }
 
-int exercicio02(void) {
+void exercicio02(void) {
     printf("Exercício 02 - Lista01\n");
 
     /*
@@ -44,7 +44,7 @@ int exercicio02(void) {
     printf("3- Na terceira linha atribuimos o valor inteiro 6 diretamente a variavel 'a'. Aqui, 6 e um valor numerico inteiro. Portanto, o valor armazenado em 'a' sera 6.\n\n");
 }
 
-int exercicio03(void) {
+void exercicio03(void) {
     printf("Exercício 03 - Lista01\n");
 
     /*
@@ -135,7 +135,7 @@ int exercicio05(void) {
         }
 
         numS = (ladoA + ladoB + ladoC) / 2;
-        numF = sqrt(numS * (numS - ladoA) * (numS - ladoB) * (numS - ladoC));
+        numF = sqrtf(numS * (numS - ladoA) * (numS - ladoB) * (numS - ladoC));
 
         printf("Área do triângulo digitado = %.02f", numF);
     } else {
@@ -264,7 +264,7 @@ int exercicio08(void) {
     return 0;
 }
 
-int exercicio09(void) {
+void exercicio09(void) {
     printf("Exercício 09 - Lista01\n");
 
     /*
@@ -383,7 +383,7 @@ int exercicio11(void) {
     return 0;
 }
 
-int exercicio12(void) {
+void exercicio12(void) {
 
     /*
     Escreva um programa que leia um inteiro positivo n e imprima todos os números pares
@@ -417,9 +417,10 @@ int exercicio13(void) {
         printf("2^%d = %li\n", i, aux);
         aux = aux * 2;
     }
+    return 0;
 }
 
-int exercicio14(void) {
+void exercicio14(void) {
     printf("Exercicio 14 \n");
 
     printf(" Faca um programa que leia dois numeros inteiros positivos a e b Utilizando lacos, calculo o valor inteiro de 'a' elvado 'b'\n\n ");
