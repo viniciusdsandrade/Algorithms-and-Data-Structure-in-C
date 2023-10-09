@@ -47,11 +47,11 @@ void writeImage(char *arqSaida, int R[MAX][MAX], int G[MAX][MAX], int B[MAX][MAX
 }
 
 void esticarContraste(int R[MAX][MAX], int G[MAX][MAX], int B[MAX][MAX], int novaR[MAX][MAX], int novaG[MAX][MAX], int novaB[MAX][MAX], int cols, int rows){
-	// Insira seu código aqui
+	// Insira seu código
 }
 
 void escalaCinza(int R[MAX][MAX], int G[MAX][MAX], int B[MAX][MAX], int novaR[MAX][MAX], int novaG[MAX][MAX], int novaB[MAX][MAX], int cols, int rows){
-	// Insira seu código aqui
+	// Insira seu código
 }
 
 int main(int argc, char **argv) {
@@ -72,7 +72,7 @@ int main(int argc, char **argv) {
 
   scanf("%s", efeito);
 
-	// Insira seu código aqui
+	// Insira seu código
 
 
   return 0;
