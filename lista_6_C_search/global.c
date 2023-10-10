@@ -17,7 +17,7 @@ char *replicarStringComEspacos(const char *vetor, int vezes) {
     size_t tamanhoReplicado = (tamanhoOriginal + 1) * vezes;
     tamanhoReplicado--;
 
-    char *resultado = (char *)malloc(tamanhoReplicado + 1);
+    char *resultado = (char *) malloc(tamanhoReplicado + 1);
 
     if (resultado == NULL) {
         return NULL;
@@ -743,7 +743,7 @@ void ordenaPorMes(Data vet[], int tam) {
         for (int j = 0; j < tam - i - 1; j++) {
             if (vet[j].ano > vet[j + 1].ano ||
                 (vet[j].ano == vet[j + 1].ano &&
-                vet[j].mes > vet[j + 1].mes)) {
+                 vet[j].mes > vet[j + 1].mes)) {
                 swapData(&vet[j], &vet[j + 1]);
             }
         }
@@ -863,13 +863,12 @@ int buscaBinaria(Pessoa cadastro[], int tamanho, int rg) {
     while (inicio <= fim) {
         int meio = (inicio + fim) / 2;
 
-        if (cadastro[meio].rg == rg) {
+        if (cadastro[meio].rg == rg)
             return meio; // Encontrou o RG, retorna o índice
-        } else if (cadastro[meio].rg < rg) {
+        else if (cadastro[meio].rg < rg)
             inicio = meio + 1;
-        } else {
+        else
             fim = meio - 1;
-        }
     }
 
     return -1; // RG não encontrado

@@ -658,7 +658,6 @@ int exercise26(void) {
     return 0;
 }
 
-
 int *uniao(const int vet1[],
            int n1,
            const int vet2[],
@@ -767,7 +766,7 @@ int exercise28(void) {
 
     vet = initVet(&size, &maxSize);
 
-    for(int i = 0; i < 20; i++){
+    for (int i = 0; i < 20; i++) {
         vet = addVet(vet, &size, &maxSize, i);
     }
 
@@ -776,11 +775,11 @@ int exercise28(void) {
     vet = removeVet(vet, &size, &maxSize, 14);
     printVet(vet, size, maxSize);
 
-    for(int i = 5; i < 15; i++){
+    for (int i = 5; i < 15; i++) {
         vet = removeVet(vet, &size, &maxSize, i);
     }
 
-    for(int i = 0; i < 20; i++){
+    for (int i = 0; i < 20; i++) {
         vet = removeVet(vet, &size, &maxSize, i);
     }
 
@@ -790,15 +789,55 @@ int exercise28(void) {
     return 0;
 }
 
-int exercise29(void) {
+int exercise29(int argc, char *argv[]) {
 
+    FILE *arq = fopen(argv[1], "r");
+
+    if (arq == NULL) {
+        printf("Erro ao abrir o arquivo!\n");
+        return 1;
+    }
+
+    char aux;
+    int size = 0;
+    while (fscanf(arq, "%c", &aux) != EOF) {
+        size++;
+    }
+
+    char *texto = malloc(size * sizeof(char));
+
+    rewind(arq);
+    int i = 0;
+    while (fscanf(arq, "%c", &aux) != EOF) {
+        texto[i] = aux;
+        i++;
+    }
+
+    texto[i] = '\0';
+    printf("%s", texto);
+
+    rewind(arq);
+    i = 0;
+    while (texto[i] != '\0') {
+        if (texto[i] == 'a')
+            texto[i] = 'A';
+
+        fprintf(arq, "%c", texto[i]);
+        i++;
+    }
+
+
+    free(texto);
+    fclose(arq);
     return 0;
 }
+
 
 int exercise30(void) {
 
     return 0;
 }
+
 
 int displayMenuAndGetChoice(void) {
     printf("Exercise 01:\n");
@@ -926,7 +965,6 @@ void executeExercise(int choice) {
             exercise28();
             break;
         case 29:
-            exercise29();
             break;
         case 30:
             exercise30();
