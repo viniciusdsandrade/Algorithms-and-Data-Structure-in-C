@@ -9,10 +9,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="Fix[Desafio03] : Aprendendo a abrir e manipular arquivos em C">
+    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="Fix[Desafio04] : Finalizando desafio04">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/_aux/lab-imagem.c" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/_aux/lab-imagem.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/_aux/lab-imagem.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq01.in" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq01.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq03.in" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq03.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq05.in" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq05.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq07.in" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq07.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq09.in" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq09.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq11.in" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq11.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq13.in" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq13.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq16.in" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq16.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq18.in" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/dados/arq18.in" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/enunciado.html" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/enunciado.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exe06.exe" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,29 +52,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "ignore_missing_gitignore": "true",
-    "last_opened_file_path": "C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/Algorithms-and-Data-Structure-in-C/lista_6_C_search/exe06.c",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/Algorithms-and-Data-Structure-in-C/challanges_C/challange4_C/dados/lab-imagem.c&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\challanges_C\challange4_C\dados" />
       <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_6_C_search\slides" />
       <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_extra_2_C\slides" />
     </key>
@@ -99,12 +112,6 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="exe01.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="exe01.c" CONFIG_NAME="exe01.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_1_C_condicionais\exe01.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="exe02.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="exe02.c" CONFIG_NAME="exe02.c">
       <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_2_C_lacos\exe02.c" />
       <method v="2">
@@ -124,14 +131,14 @@
       </method>
     </configuration>
     <configuration name="lab-imagem.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="lab-imagem.c" CONFIG_NAME="lab-imagem.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\challanges_C\challange4_C\_aux\lab-imagem.c" />
+      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\challanges_C\challange4_C\dados\lab-imagem.c" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="C/C++ File.exe01.c" />
       <item itemvalue="C/C++ File.exe02.c" />
+      <item itemvalue="C/C++ File.lab-imagem.c" />
       <item itemvalue="C/C++ File.exe03.c" />
       <item itemvalue="C/C++ File.exe04.c" />
       <item itemvalue="C/C++ File.IFBA_algoritmos.c" />
@@ -139,7 +146,6 @@
       <item itemvalue="C/C++ File.desafio3.c" />
       <item itemvalue="C/C++ File.desafio02.c" />
       <item itemvalue="C/C++ File.desafio1.c" />
-      <item itemvalue="C/C++ File.lab-imagem.c" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -188,7 +194,11 @@
       <workItem from="1696948813879" duration="1405000" />
       <workItem from="1697048993053" duration="280000" />
       <workItem from="1697049288225" duration="2491000" />
-      <workItem from="1697074533145" duration="258000" />
+      <workItem from="1697074533145" duration="2369000" />
+      <workItem from="1697076951293" duration="1285000" />
+      <workItem from="1697078280793" duration="104000" />
+      <workItem from="1697078395509" duration="1960000" />
+      <workItem from="1697080414257" duration="4396000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;Feat&gt; :  Finalizando 'lista5-funcoes'">
       <option name="closed" value="true" />
@@ -398,7 +408,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696950150192</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Fix[Desafio04] : Finalizando desafio04">
+      <option name="closed" value="true" />
+      <created>1697075093797</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1697075093797</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +447,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="Fix[Desafio03] Refatorando desafio3.c" />
     <MESSAGE value="Fix[Desafio03] : Aprendendo a abrir e manipular arquivos em C" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix[Desafio03] : Aprendendo a abrir e manipular arquivos em C" />
+    <MESSAGE value="Fix[Desafio04] : Finalizando desafio04" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix[Desafio04] : Finalizando desafio04" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

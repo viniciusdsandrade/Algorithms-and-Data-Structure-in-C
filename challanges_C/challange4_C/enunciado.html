@@ -169,10 +169,10 @@
         Implementados</h2>
 
     <h3>
-        <a id="user-content-escala-de-cinza" class="anchor" href="#escala-de-cinza" aria-hidden="true"><span
+        <a id="user-content-escala-de-cinzaPPM" class="anchor" href="#escala-de-cinzaPPM" aria-hidden="true"><span
                 aria-hidden="true" class="octicon octicon-link"></span></a>Escala de Cinza</h3>
 
-    <p>Uma imagem pode ser convertida em escala de cinza modificando todas 3 matrizes para terem em cada posição um
+    <p>Uma imagem pode ser convertida em escala de cinzaPPM modificando todas 3 matrizes para terem em cada posição um
         mesmo valor.
         Para cada posição <code>(x,y)</code> mantemos o brilho da imagem original, utilizando como novo valor da posição
         <code>(x,y)</code> de cada matriz, o piso da média das 3 intensidades originais.</p>
@@ -187,10 +187,10 @@ novaB[X][Y] = novaR[X][Y]
 </code></pre>
 
     <h6>
-        <a id="user-content-figura-4-exemplo-de-escala-de-cinza-na-foto-da-lena" class="anchor"
-           href="#figura-4-exemplo-de-escala-de-cinza-na-foto-da-lena" aria-hidden="true"><span aria-hidden="true"
+        <a id="user-content-figura-4-exemplo-de-escala-de-cinzaPPM-na-foto-da-lena" class="anchor"
+           href="#figura-4-exemplo-de-escala-de-cinzaPPM-na-foto-da-lena" aria-hidden="true"><span aria-hidden="true"
                                                                                                 class="octicon octicon-link"></span></a><strong>Figura
-        4</strong>: Exemplo de escala de cinza na foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a>.</h6>
+        4</strong>: Exemplo de escala de cinzaPPM na foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a>.</h6>
 
     <ul>
         <li><p><strong>(a)</strong> Imagem original.<br>
@@ -202,7 +202,7 @@ novaB[X][Y] = novaR[X][Y]
                                                             style="max-width:100%;"></a>
             <a href="lenna_hist_b.png" target="_blank"><img src="lenna_hist_b.png" width="400" height="300"
                                                             style="max-width:100%;"></a></p></li>
-        <li><p><strong>(b)</strong> Imagem em escala de cinza.<br>
+        <li><p><strong>(b)</strong> Imagem em escala de cinzaPPM.<br>
             <a href="lenna_cinza.png" target="_blank"><img src="lenna_cinza.png" width="200" height="200"
                                                            style="max-width:100%;"></a>
             <a href="lenna_cinza_hist_r.png" target="_blank"><img src="lenna_cinza_hist_r.png" width="400" height="300"
@@ -214,10 +214,10 @@ novaB[X][Y] = novaR[X][Y]
     </ul>
 
     <h3>
-        <a id="user-content-esticar-contraste" class="anchor" href="#esticar-contraste" aria-hidden="true"><span
+        <a id="user-content-esticar-contrastePPM" class="anchor" href="#esticar-contrastePPM" aria-hidden="true"><span
                 aria-hidden="true" class="octicon octicon-link"></span></a>Esticar Contraste</h3>
 
-    <p>O filtro esticar contraste distribui as intensidades de cada componente RGB para a faixa 0-255.
+    <p>O filtro esticar contrastePPM distribui as intensidades de cada componente RGB para a faixa 0-255.
         Assim, estica a curva original dos histogramas de cada componente como visto no exemplo da Figura 5.</p>
 
     <p>Esse filtro ajusta as cores esticando os valores de cada componente RGB individualmente.
@@ -242,10 +242,10 @@ novaB[X][Y] = ⌊((imagemB[X][Y] - minB(imagem)) * 255)/(maxB(imagem) - minB(ima
 </code></pre>
 
     <h6>
-        <a id="user-content-figura-5-exemplo-de-esticar-contraste-na-foto-da-lena" class="anchor"
-           href="#figura-5-exemplo-de-esticar-contraste-na-foto-da-lena" aria-hidden="true"><span aria-hidden="true"
+        <a id="user-content-figura-5-exemplo-de-esticar-contrastePPM-na-foto-da-lena" class="anchor"
+           href="#figura-5-exemplo-de-esticar-contrastePPM-na-foto-da-lena" aria-hidden="true"><span aria-hidden="true"
                                                                                                   class="octicon octicon-link"></span></a><strong>Figura
-        5</strong>: Exemplo de esticar contraste na foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a>.</h6>
+        5</strong>: Exemplo de esticar contrastePPM na foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a>.</h6>
 
     <ul>
         <li><p><strong>(a)</strong> Imagem original.<br>
@@ -257,7 +257,7 @@ novaB[X][Y] = ⌊((imagemB[X][Y] - minB(imagem)) * 255)/(maxB(imagem) - minB(ima
                                                             style="max-width:100%;"></a>
             <a href="lenna_hist_b.png" target="_blank"><img src="lenna_hist_b.png" width="400" height="300"
                                                             style="max-width:100%;"></a></p></li>
-        <li><p><strong>(b)</strong> Imagem com contraste esticado.<br>
+        <li><p><strong>(b)</strong> Imagem com contrastePPM esticado.<br>
             <a href="lenna_esticar.png" target="_blank"><img src="lenna_esticar.png" width="200" height="200"
                                                              style="max-width:100%;"></a>
             <a href="lenna_esticar_hist_r.png" target="_blank"><img src="lenna_esticar_hist_r.png" width="400"
@@ -275,14 +275,14 @@ novaB[X][Y] = ⌊((imagemB[X][Y] - minB(imagem)) * 255)/(maxB(imagem) - minB(ima
 
     <p>A função <code>main</code> receberá em <code>argv</code> dois nomes de arquivos que serão copiados para as
         variáveis <code>arqEntrada</code> e <code>arqSaida</code>, respectivamente.
-        Na entrada padrão será recebido o efeito a ser aplicado, <code>cinza</code> ou <code>esticar</code>, e será
+        Na entrada padrão será recebido o efeito a ser aplicado, <code>cinzaPPM</code> ou <code>esticar</code>, e será
         armazenado na váriavel <code>efeito</code>.
         Conforme implementação parcial da função <code>main</code> nos arquivo auxiliares <a
                 href="aux/lab-imagem.c"><code>lab-imagem.c</code></a>.Em <code>arqEntrada</code> estará o nome do
         arquivo contendo a imagem original, e em <code>arqSaida</code> o nome do arquivo de saída que deverá ser escrito
         pelo seu programa.
         Em <code>efeito</code> estará qual efeito deverá ser aplicado no arquivo de entrada (<code>arqEntrada</code>) e
-        escrito no arquivo de saída (<code>arqSaida</code>): <code>cinza</code> ou <code>esticar</code>.</p>
+        escrito no arquivo de saída (<code>arqSaida</code>): <code>cinzaPPM</code> ou <code>esticar</code>.</p>
 
     <h2>
         <a id="user-content-saída" class="anchor" href="#sa%C3%ADda" aria-hidden="true"><span aria-hidden="true"
@@ -297,7 +297,7 @@ novaB[X][Y] = ⌊((imagemB[X][Y] - minB(imagem)) * 255)/(maxB(imagem) - minB(ima
     </h2>
 
     <h6>
-        <a id="user-content-teste-03---escala-de-cinza" class="anchor" href="#teste-03---escala-de-cinza"
+        <a id="user-content-teste-03---escala-de-cinzaPPM" class="anchor" href="#teste-03---escala-de-cinzaPPM"
            aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 03 - Escala de
         Cinza</h6>
 
@@ -581,7 +581,7 @@ novaB[X][Y] = ⌊((imagemB[X][Y] - minB(imagem)) * 255)/(maxB(imagem) - minB(ima
     </ul>
 
     <h6>
-        <a id="user-content-teste-04---esticar-contraste" class="anchor" href="#teste-04---esticar-contraste"
+        <a id="user-content-teste-04---esticar-contrastePPM" class="anchor" href="#teste-04---esticar-contrastePPM"
            aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 04 - Esticar
         Contraste</h6>
 
