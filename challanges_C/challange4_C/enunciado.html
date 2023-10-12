@@ -2,227 +2,312 @@
 <html>
 <head>
     <meta http-equiv='content-type' content='text/html; charset=utf-8'>
-    <title>Trabalho Arquivos</title>        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Trabalho Arquivos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='https://sindresorhus.com/github-markdown-css/github-markdown.css'>
     <style>
         .markdown-body {
-        box-sizing: border-box;
-        min-width: 200px;
-        max-width: 980px;
-        margin: 0 auto;
-        padding: 45px;
-        font-family: 'Noto Sans', sans-serif;
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+            font-family: 'Noto Sans', sans-serif;
         }
-        .markdown-body h6 { margin-bottom: 0; }
+
+        .markdown-body h6 {
+            margin-bottom: 0;
+        }
+
         .markdown-body h6 + ul li {
-        display: inline-block;
-        width: 100%;
-        max-width: 426px;
-        vertical-align: top;
+            display: inline-block;
+            width: 100%;
+            max-width: 426px;
+            vertical-align: top;
         }
+
         .markdown-body h6 + ul li pre {
-          max-height: 400px;
+            max-height: 400px;
         }
     </style>
 </head>
 <body>
-    <article class='markdown-body'>
-<h3>Fatec Campinas - ADS</h3>
+<article class='markdown-body'>
+    <h3>Fatec Campinas - ADS</h3>
 
-<h3>Linguagem de Programação</h3>
+    <h3>Linguagem de Programação</h3>
 
-<h1>Trabalho Arquivos - Imagens</h1>
-<p>Entrega: MS Teams</p>
-<p>Até 4 pessoas</p>
+    <h1>Trabalho Arquivos - Imagens</h1>
+    <p>Entrega: MS Teams</p>
+    <p>Até 4 pessoas</p>
 
-<p><em>Professor:</em> Alexandre Ferreira<br>
+    <p><em>Professor:</em> Alexandre Ferreira<br>
 
-<hr>
+    <hr>
 
-<h2>
-<a id="user-content-descrição" class="anchor" href="#descri%C3%A7%C3%A3o" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Descrição</h2>
+    <h2>
+        <a id="user-content-descrição" class="anchor" href="#descri%C3%A7%C3%A3o" aria-hidden="true"><span
+                aria-hidden="true" class="octicon octicon-link"></span></a>Descrição</h2>
 
-<p>Esta tarefa tem como objetivo exercitar o processamento de arquivos e matrizes.</p>
+    <p>Esta tarefa tem como objetivo exercitar o processamento de arquivos e matrizes.</p>
 
-<p>Programas de edição e processamento de imagens, como
-<a href="http://www.gimp.org/">Gimp</a> e
-<a href="http://www.adobe.com/products/photoshop.html">Adobe Photoshop</a>,
-possuem diversos filtros que são utilizados para se manipular as cores de uma imagem, tais como
-<a href="https://docs.gimp.org/en/gimp-layer-equalize.html"><em>Equalizar</em></a>,
-<a href="https://docs.gimp.org/en/gimp-layer-white-balance.html"><em>Equilíbrio de Branco</em></a>,
-<a href="https://docs.gimp.org/en/plug-in-c-astretch.html"><em>Esticar Contraste</em></a>,
-<a href="https://docs.gimp.org/en/plug-in-normalize.html"><em>Normalizar</em></a>,
-e <a href="https://docs.gimp.org/en/plug-in-color-enhance.html"><em>Realce de Cor</em></a>.</p>
+    <p>Programas de edição e processamento de imagens, como
+        <a href="http://www.gimp.org/">Gimp</a> e
+        <a href="http://www.adobe.com/products/photoshop.html">Adobe Photoshop</a>,
+        possuem diversos filtros que são utilizados para se manipular as cores de uma imagem, tais como
+        <a href="https://docs.gimp.org/en/gimp-layer-equalize.html"><em>Equalizar</em></a>,
+        <a href="https://docs.gimp.org/en/gimp-layer-white-balance.html"><em>Equilíbrio de Branco</em></a>,
+        <a href="https://docs.gimp.org/en/plug-in-c-astretch.html"><em>Esticar Contraste</em></a>,
+        <a href="https://docs.gimp.org/en/plug-in-normalize.html"><em>Normalizar</em></a>,
+        e <a href="https://docs.gimp.org/en/plug-in-color-enhance.html"><em>Realce de Cor</em></a>.</p>
 
-<p>Uma imagem digital nada mais é do que a projeção de uma matriz, que
-representa a imagem, na tela do computador.
-Cada posição da matriz possui um valor que indica a intensidade e cor
-que deve ser projetada na posição correspondente da imagem na tela do computador.
-Cada uma dessas posições é denominada de pixel (<a href="https://en.wikipedia.org/wiki/Pixel"><em>picture element</em></a>).
-As imagens coloridas utilizam o sistema RGB (<em>Red</em>, <em>Green</em>, <em>Blue</em>) onde
-para cada pixel temos três valores indicando respectivamente a intensidade das cores vermelho, verde e azul, que quando projetadas em conjunto podem formar uma cor dentre milhares de possibilidades.
-Uma imagem de <code>n x m</code> pixeis pode ser representada com 3 matrizes <code>n x m</code>, cada uma para
-as intensidades de R, G e B respectivamente, do sistema RGB.
-Logo, para cada cor do RGB temos uma matriz, onde cada posição <strong>(x,y)</strong> tem um certo valor <strong>p(x,y)</strong> indicando a intensidade daquela cor naquele pixel.
-Por exemplo, a cor preta numa posição <code>(x,y)</code> é representada pelas três matrizes com valores iguais a zero nesta posição,
-e o branco com as três com o valor máximo (no caso 255).
-As coordenadas da matriz seguem a
-ordem <em>raster</em> (de cima para baixo, da esquerda para direita).
-A Figura 1 apresenta um exemplo que caracteriza essa forma de representação de
-imagens.</p>
+    <p>Uma imagem digital nada mais é do que a projeção de uma matriz, que
+        representa a imagem, na tela do computador.
+        Cada posição da matriz possui um valor que indica a intensidade e cor
+        que deve ser projetada na posição correspondente da imagem na tela do computador.
+        Cada uma dessas posições é denominada de pixel (<a href="https://en.wikipedia.org/wiki/Pixel"><em>picture
+            element</em></a>).
+        As imagens coloridas utilizam o sistema RGB (<em>Red</em>, <em>Green</em>, <em>Blue</em>) onde
+        para cada pixel temos três valores indicando respectivamente a intensidade das cores vermelho, verde e azul, que
+        quando projetadas em conjunto podem formar uma cor dentre milhares de possibilidades.
+        Uma imagem de <code>n x m</code> pixeis pode ser representada com 3 matrizes <code>n x m</code>, cada uma para
+        as intensidades de R, G e B respectivamente, do sistema RGB.
+        Logo, para cada cor do RGB temos uma matriz, onde cada posição <strong>(x,y)</strong> tem um certo valor
+        <strong>p(x,y)</strong> indicando a intensidade daquela cor naquele pixel.
+        Por exemplo, a cor preta numa posição <code>(x,y)</code> é representada pelas três matrizes com valores iguais a
+        zero nesta posição,
+        e o branco com as três com o valor máximo (no caso 255).
+        As coordenadas da matriz seguem a
+        ordem <em>raster</em> (de cima para baixo, da esquerda para direita).
+        A Figura 1 apresenta um exemplo que caracteriza essa forma de representação de
+        imagens.</p>
 
-<h6>
-<a id="user-content-figura-1-visualização-de-uma-pequena-região-da-foto-da-lena" class="anchor" href="#figura-1-visualiza%C3%A7%C3%A3o-de-uma-pequena-regi%C3%A3o-da-foto-da-lena" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Figura 1</strong>: Visualização de uma pequena região da foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a>.</h6>
+    <h6>
+        <a id="user-content-figura-1-visualização-de-uma-pequena-região-da-foto-da-lena" class="anchor"
+           href="#figura-1-visualiza%C3%A7%C3%A3o-de-uma-pequena-regi%C3%A3o-da-foto-da-lena" aria-hidden="true"><span
+                aria-hidden="true" class="octicon octicon-link"></span></a><strong>Figura 1</strong>: Visualização de
+        uma pequena região da foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a>.</h6>
 
-<ul>
-<li><p><strong>(a)</strong> Imagem no formato PPM.
-<a href="lenna.png" target="_blank"><img src="lenna.png" width="256" height="256" style="max-width:100%;"></a></p></li>
-<li><p><strong>(b)</strong> Zoom na região do olho com valores das componentes RGB de alguns pixels.
-<a href="lenna_pixels.png" target="_blank"><img src="lenna_pixels.png" width="256" height="256" style="max-width:100%;"></a></p></li>
-</ul>
+    <ul>
+        <li><p><strong>(a)</strong> Imagem no formato PPM.
+            <a href="lenna.png" target="_blank"><img src="lenna.png" width="256" height="256"
+                                                     style="max-width:100%;"></a></p></li>
+        <li><p><strong>(b)</strong> Zoom na região do olho com valores das componentes RGB de alguns pixels.
+            <a href="lenna_pixels.png" target="_blank"><img src="lenna_pixels.png" width="256" height="256"
+                                                            style="max-width:100%;"></a></p></li>
+    </ul>
 
-<p>Para uma imagem podemos gerar o <a href="https://pt.wikipedia.org/wiki/Histograma">histograma</a> das intensidades de cada cor do RGB.
-Os histogramas das cores RGB são a base de muitos filtros existentes, como os citados anteriormente.
-No histograma da foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a> (veja Figura 2), vemos como a imagem está muito vermelha, pois a distribuição da intensidade do vermelhor está em geral com valores mais altos.</p>
+    <p>Para uma imagem podemos gerar o <a href="https://pt.wikipedia.org/wiki/Histograma">histograma</a> das
+        intensidades de cada cor do RGB.
+        Os histogramas das cores RGB são a base de muitos filtros existentes, como os citados anteriormente.
+        No histograma da foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a> (veja Figura 2), vemos como a
+        imagem está muito vermelha, pois a distribuição da intensidade do vermelhor está em geral com valores mais
+        altos.</p>
 
-<p>Neste laboratórios vamos implementar alguns filtros para imagens PPM que utilizam o sistema RGB.</p>
+    <p>Neste laboratórios vamos implementar alguns filtros para imagens PPM que utilizam o sistema RGB.</p>
 
-<h6>
-<a id="user-content-figura-2-histograma-de-cada-componente-rgb-da-foto-da-lena" class="anchor" href="#figura-2-histograma-de-cada-componente-rgb-da-foto-da-lena" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Figura 2</strong>: Histograma de cada componente RGB da foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a>.</h6>
+    <h6>
+        <a id="user-content-figura-2-histograma-de-cada-componente-rgb-da-foto-da-lena" class="anchor"
+           href="#figura-2-histograma-de-cada-componente-rgb-da-foto-da-lena" aria-hidden="true"><span
+                aria-hidden="true" class="octicon octicon-link"></span></a><strong>Figura 2</strong>: Histograma de cada
+        componente RGB da foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a>.</h6>
 
-<p><a href="lenna_hist_r.png" target="_blank"><img src="lenna_hist_r.png" width="260" height="195" style="max-width:100%;"></a><a href="lenna_hist_g.png" target="_blank"><img src="lenna_hist_g.png" width="260" height="195" style="max-width:100%;"></a><a href="lenna_hist_b.png" target="_blank"><img src="lenna_hist_b.png" width="260" height="195" style="max-width:100%;"></a></p>
+    <p><a href="lenna_hist_r.png" target="_blank"><img src="lenna_hist_r.png" width="260" height="195"
+                                                       style="max-width:100%;"></a><a href="lenna_hist_g.png"
+                                                                                      target="_blank"><img
+            src="lenna_hist_g.png" width="260" height="195" style="max-width:100%;"></a><a href="lenna_hist_b.png"
+                                                                                           target="_blank"><img
+            src="lenna_hist_b.png" width="260" height="195" style="max-width:100%;"></a></p>
 
-<h2>
-<a id="user-content-imagens-ppm" class="anchor" href="#imagens-ppm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Imagens PPM</h2>
+    <h2>
+        <a id="user-content-imagens-ppm" class="anchor" href="#imagens-ppm" aria-hidden="true"><span aria-hidden="true"
+                                                                                                     class="octicon octicon-link"></span></a>Imagens
+        PPM</h2>
 
-<p>As imagens coloridas PPM (<a href="https://en.wikipedia.org/wiki/Netpbm_format"><em>Portable PixMap</em></a>)
-podem ser escritas como arquivos de texto simples.
-O arquivo começa com um marcador do tipo de arquivo que define se a imagem será colorida e se os valores serão representados em ASCII ou em binário.
-No nosso caso, vamos apenas usar o valor <code>P3</code> que indica que o arquivo é texto (ASCII), e que as intensidades de cores vão de 0 até 255. Em seguida, são definidos o comprimento(<strong>W</strong>) e altura da imagem (<strong>H</strong>).</p>
+    <p>As imagens coloridas PPM (<a href="https://en.wikipedia.org/wiki/Netpbm_format"><em>Portable PixMap</em></a>)
+        podem ser escritas como arquivos de texto simples.
+        O arquivo começa com um marcador do tipo de arquivo que define se a imagem será colorida e se os valores serão
+        representados em ASCII ou em binário.
+        No nosso caso, vamos apenas usar o valor <code>P3</code> que indica que o arquivo é texto (ASCII), e que as
+        intensidades de cores vão de 0 até 255. Em seguida, são definidos o comprimento(<strong>W</strong>) e altura da
+        imagem (<strong>H</strong>).</p>
 
-<p>Antes dos valores dos pixels, é definido o valor da intensidade(<strong>Imax</strong>) máxima adotada na imagem. No nosso caso o valor de <strong>Imax</strong> será sempre 255.</p>
+    <p>Antes dos valores dos pixels, é definido o valor da intensidade(<strong>Imax</strong>) máxima adotada na imagem.
+        No nosso caso o valor de <strong>Imax</strong> será sempre 255.</p>
 
-<p>O restante do arquivo é composto pelos valores  RGB de  cada pixel na ordem <em>raster</em>. Os valores podem ser separados por qualquer quantidade de caracteres invisíveis (espaço, tab ou quebra de linha).
-No exemplo abaixo da Figura 3, podemos ver que o pixel da posição <code>(0,0)</code> tem intensidades de cor
-255 para o vermelho, 0 para o verde, e 0 para o azul, enquanto o pixel da posição <code>(0,2)</code>
-possui intensidades 0 para o vermelho, 0 para o verde e 255 para o azul.</p>
+    <p>O restante do arquivo é composto pelos valores RGB de cada pixel na ordem <em>raster</em>. Os valores podem ser
+        separados por qualquer quantidade de caracteres invisíveis (espaço, tab ou quebra de linha).
+        No exemplo abaixo da Figura 3, podemos ver que o pixel da posição <code>(0,0)</code> tem intensidades de cor
+        255 para o vermelho, 0 para o verde, e 0 para o azul, enquanto o pixel da posição <code>(0,2)</code>
+        possui intensidades 0 para o vermelho, 0 para o verde e 255 para o azul.</p>
 
-<h6>
-<a id="user-content-figura-3-exemplo-de-imagem-ppm" class="anchor" href="#figura-3-exemplo-de-imagem-ppm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Figura 3</strong>: Exemplo de imagem PPM.</h6>
+    <h6>
+        <a id="user-content-figura-3-exemplo-de-imagem-ppm" class="anchor" href="#figura-3-exemplo-de-imagem-ppm"
+           aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Figura 3</strong>:
+        Exemplo de imagem PPM.</h6>
 
-<ul>
-<li><p><strong>(a)</strong> Imagem ampliada.<br>
-<a href="Tiny6pixel.png" target="_blank"><img src="Tiny6pixel.png" width="192" height="128" style="max-width:100%;"></a></p></li>
-<li>
-<p><strong>(b)</strong> Arquivo PPM.  </p>
+    <ul>
+        <li><p><strong>(a)</strong> Imagem ampliada.<br>
+            <a href="Tiny6pixel.png" target="_blank"><img src="Tiny6pixel.png" width="192" height="128"
+                                                          style="max-width:100%;"></a></p></li>
+        <li>
+            <p><strong>(b)</strong> Arquivo PPM. </p>
 
-<pre><code>P3
+            <pre><code>P3
 3 2
 255
 255   0   0     0 255   0     0   0 255
 255 255   0   255 255 255     0   0   0
 </code></pre>
-</li>
-</ul>
+        </li>
+    </ul>
 
-<h2>
-<a id="user-content-efeitos-a-serem-implementados" class="anchor" href="#efeitos-a-serem-implementados" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Efeitos a Serem Implementados</h2>
+    <h2>
+        <a id="user-content-efeitos-a-serem-implementados" class="anchor" href="#efeitos-a-serem-implementados"
+           aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Efeitos a Serem
+        Implementados</h2>
 
-<h3>
-<a id="user-content-escala-de-cinza" class="anchor" href="#escala-de-cinza" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Escala de Cinza</h3>
+    <h3>
+        <a id="user-content-escala-de-cinza" class="anchor" href="#escala-de-cinza" aria-hidden="true"><span
+                aria-hidden="true" class="octicon octicon-link"></span></a>Escala de Cinza</h3>
 
-<p>Uma imagem pode ser convertida em escala de cinza modificando todas 3 matrizes para terem em cada posição um mesmo valor.
-Para cada posição <code>(x,y)</code> mantemos o brilho da imagem original, utilizando como novo valor da posição <code>(x,y)</code> de cada matriz, o piso da média das 3 intensidades originais.</p>
+    <p>Uma imagem pode ser convertida em escala de cinza modificando todas 3 matrizes para terem em cada posição um
+        mesmo valor.
+        Para cada posição <code>(x,y)</code> mantemos o brilho da imagem original, utilizando como novo valor da posição
+        <code>(x,y)</code> de cada matriz, o piso da média das 3 intensidades originais.</p>
 
-<p>Observe na Figura 4 que após o filtro, os histogramas das componentes são iguais.</p>
+    <p>Observe na Figura 4 que após o filtro, os histogramas das componentes são iguais.</p>
 
-<p>Assim:</p>
+    <p>Assim:</p>
 
-<pre lang="PY3"><code>novaR[X][Y] = ⌊(imagemR[X][Y] + imagemG[X][Y] + imagemB[X][Y]) / 3⌋
+    <pre lang="PY3"><code>novaR[X][Y] = ⌊(imagemR[X][Y] + imagemG[X][Y] + imagemB[X][Y]) / 3⌋
 novaG[X][Y] = novaR[X][Y]
 novaB[X][Y] = novaR[X][Y]
 </code></pre>
 
-<h6>
-<a id="user-content-figura-4-exemplo-de-escala-de-cinza-na-foto-da-lena" class="anchor" href="#figura-4-exemplo-de-escala-de-cinza-na-foto-da-lena" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Figura 4</strong>: Exemplo de escala de cinza na foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a>.</h6>
+    <h6>
+        <a id="user-content-figura-4-exemplo-de-escala-de-cinza-na-foto-da-lena" class="anchor"
+           href="#figura-4-exemplo-de-escala-de-cinza-na-foto-da-lena" aria-hidden="true"><span aria-hidden="true"
+                                                                                                class="octicon octicon-link"></span></a><strong>Figura
+        4</strong>: Exemplo de escala de cinza na foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a>.</h6>
 
-<ul>
-<li><p><strong>(a)</strong> Imagem original.<br>
-<a href="lenna.png" target="_blank"><img src="lenna.png" width="200" height="200" style="max-width:100%;"></a>
-<a href="lenna_hist_r.png" target="_blank"><img src="lenna_hist_r.png" width="400" height="300" style="max-width:100%;"></a>
-<a href="lenna_hist_g.png" target="_blank"><img src="lenna_hist_g.png" width="400" height="300" style="max-width:100%;"></a>
-<a href="lenna_hist_b.png" target="_blank"><img src="lenna_hist_b.png" width="400" height="300" style="max-width:100%;"></a></p></li>
-<li><p><strong>(b)</strong> Imagem em escala de cinza.<br>
-<a href="lenna_cinza.png" target="_blank"><img src="lenna_cinza.png" width="200" height="200" style="max-width:100%;"></a>
-<a href="lenna_cinza_hist_r.png" target="_blank"><img src="lenna_cinza_hist_r.png" width="400" height="300" style="max-width:100%;"></a>
-<a href="lenna_cinza_hist_g.png" target="_blank"><img src="lenna_cinza_hist_g.png" width="400" height="300" style="max-width:100%;"></a>
-<a href="lenna_cinza_hist_b.png" target="_blank"><img src="lenna_cinza_hist_b.png" width="400" height="300" style="max-width:100%;"></a></p></li>
-</ul>
+    <ul>
+        <li><p><strong>(a)</strong> Imagem original.<br>
+            <a href="lenna.png" target="_blank"><img src="lenna.png" width="200" height="200"
+                                                     style="max-width:100%;"></a>
+            <a href="lenna_hist_r.png" target="_blank"><img src="lenna_hist_r.png" width="400" height="300"
+                                                            style="max-width:100%;"></a>
+            <a href="lenna_hist_g.png" target="_blank"><img src="lenna_hist_g.png" width="400" height="300"
+                                                            style="max-width:100%;"></a>
+            <a href="lenna_hist_b.png" target="_blank"><img src="lenna_hist_b.png" width="400" height="300"
+                                                            style="max-width:100%;"></a></p></li>
+        <li><p><strong>(b)</strong> Imagem em escala de cinza.<br>
+            <a href="lenna_cinza.png" target="_blank"><img src="lenna_cinza.png" width="200" height="200"
+                                                           style="max-width:100%;"></a>
+            <a href="lenna_cinza_hist_r.png" target="_blank"><img src="lenna_cinza_hist_r.png" width="400" height="300"
+                                                                  style="max-width:100%;"></a>
+            <a href="lenna_cinza_hist_g.png" target="_blank"><img src="lenna_cinza_hist_g.png" width="400" height="300"
+                                                                  style="max-width:100%;"></a>
+            <a href="lenna_cinza_hist_b.png" target="_blank"><img src="lenna_cinza_hist_b.png" width="400" height="300"
+                                                                  style="max-width:100%;"></a></p></li>
+    </ul>
 
-<h3>
-<a id="user-content-esticar-contraste" class="anchor" href="#esticar-contraste" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Esticar Contraste</h3>
+    <h3>
+        <a id="user-content-esticar-contraste" class="anchor" href="#esticar-contraste" aria-hidden="true"><span
+                aria-hidden="true" class="octicon octicon-link"></span></a>Esticar Contraste</h3>
 
-<p>O filtro esticar contraste distribui as intensidades de cada componente RGB para a faixa 0-255.
-Assim, estica a curva original dos histogramas de cada componente como visto no exemplo da Figura 5.</p>
+    <p>O filtro esticar contraste distribui as intensidades de cada componente RGB para a faixa 0-255.
+        Assim, estica a curva original dos histogramas de cada componente como visto no exemplo da Figura 5.</p>
 
-<p>Esse filtro ajusta as cores esticando os valores de cada componente RGB individualmente.
-Para cada matriz (correspondente a uma cor dentre R, G e B), calculamos o valor máximo (<strong>Cmax</strong>) e mínimo (<strong>Cmin</strong>) de intensidade.</p>
+    <p>Esse filtro ajusta as cores esticando os valores de cada componente RGB individualmente.
+        Para cada matriz (correspondente a uma cor dentre R, G e B), calculamos o valor máximo (<strong>Cmax</strong>) e
+        mínimo (<strong>Cmin</strong>) de intensidade.</p>
 
-<p>Os valores das intensidades devem então ser mapeados linearmente de tal forma que o mínimo seja transformado em 0, e o valor máximo seja transformado na intensidade máxima 255.</p>
+    <p>Os valores das intensidades devem então ser mapeados linearmente de tal forma que o mínimo seja transformado em
+        0, e o valor máximo seja transformado na intensidade máxima 255.</p>
 
-<p>No exemplo da Figura 5, a matriz correspondente a componente Azul tem a intesidade mínima <strong>Cmin</strong> 46 e máxima <strong>Cmax</strong> 211.
-Assim, a intensidade original de azul <strong>Borig</strong> será convertida para uma intensidade <strong>Bnova</strong>, onde <code>Bnova = ⌊((Borig - Bmin) * 255)/(Bmax - Bmin)⌋</code>.
-Por exemplo, para a componente azul, os pixels com intensidade igual a 66 (primeiro pico do histograma) serão convertidos para 30 (<code>30 = ⌊(66 - 46) * (255 / (211 - 46))⌋</code>) na imagem resultante.</p>
+    <p>No exemplo da Figura 5, a matriz correspondente a componente Azul tem a intesidade mínima <strong>Cmin</strong>
+        46 e máxima <strong>Cmax</strong> 211.
+        Assim, a intensidade original de azul <strong>Borig</strong> será convertida para uma intensidade
+        <strong>Bnova</strong>, onde <code>Bnova = ⌊((Borig - Bmin) * 255)/(Bmax - Bmin)⌋</code>.
+        Por exemplo, para a componente azul, os pixels com intensidade igual a 66 (primeiro pico do histograma) serão
+        convertidos para 30 (<code>30 = ⌊(66 - 46) * (255 / (211 - 46))⌋</code>) na imagem resultante.</p>
 
-<p>Assim:</p>
+    <p>Assim:</p>
 
-<pre lang="PY3"><code>novaR[X][Y] = ⌊((imagemR[X][Y] - minR(imagem)) * 255)/(maxR(imagem) - minR(imagem))⌋
+    <pre lang="PY3"><code>novaR[X][Y] = ⌊((imagemR[X][Y] - minR(imagem)) * 255)/(maxR(imagem) - minR(imagem))⌋
 novaG[X][Y] = ⌊((imagemG[X][Y] - minG(imagem)) * 255)/(maxG(imagem) - minG(imagem))⌋
 novaB[X][Y] = ⌊((imagemB[X][Y] - minB(imagem)) * 255)/(maxB(imagem) - minB(imagem))⌋
 </code></pre>
 
-<h6>
-<a id="user-content-figura-5-exemplo-de-esticar-contraste-na-foto-da-lena" class="anchor" href="#figura-5-exemplo-de-esticar-contraste-na-foto-da-lena" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>Figura 5</strong>: Exemplo de esticar contraste na foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a>.</h6>
+    <h6>
+        <a id="user-content-figura-5-exemplo-de-esticar-contraste-na-foto-da-lena" class="anchor"
+           href="#figura-5-exemplo-de-esticar-contraste-na-foto-da-lena" aria-hidden="true"><span aria-hidden="true"
+                                                                                                  class="octicon octicon-link"></span></a><strong>Figura
+        5</strong>: Exemplo de esticar contraste na foto da <a href="https://en.wikipedia.org/wiki/Lenna">Lena</a>.</h6>
 
-<ul>
-<li><p><strong>(a)</strong> Imagem original.<br>
-<a href="lenna.png" target="_blank"><img src="lenna.png" width="200" height="200" style="max-width:100%;"></a>
-<a href="lenna_hist_r.png" target="_blank"><img src="lenna_hist_r.png" width="400" height="300" style="max-width:100%;"></a>
-<a href="lenna_hist_g.png" target="_blank"><img src="lenna_hist_g.png" width="400" height="300" style="max-width:100%;"></a>
-<a href="lenna_hist_b.png" target="_blank"><img src="lenna_hist_b.png" width="400" height="300" style="max-width:100%;"></a></p></li>
-<li><p><strong>(b)</strong> Imagem com contraste esticado.<br>
-<a href="lenna_esticar.png" target="_blank"><img src="lenna_esticar.png" width="200" height="200" style="max-width:100%;"></a>
-<a href="lenna_esticar_hist_r.png" target="_blank"><img src="lenna_esticar_hist_r.png" width="400" height="300" style="max-width:100%;"></a>
-<a href="lenna_esticar_hist_g.png" target="_blank"><img src="lenna_esticar_hist_g.png" width="400" height="300" style="max-width:100%;"></a>
-<a href="lenna_esticar_hist_b.png" target="_blank"><img src="lenna_esticar_hist_b.png" width="400" height="300" style="max-width:100%;"></a></p></li>
-</ul>
+    <ul>
+        <li><p><strong>(a)</strong> Imagem original.<br>
+            <a href="lenna.png" target="_blank"><img src="lenna.png" width="200" height="200"
+                                                     style="max-width:100%;"></a>
+            <a href="lenna_hist_r.png" target="_blank"><img src="lenna_hist_r.png" width="400" height="300"
+                                                            style="max-width:100%;"></a>
+            <a href="lenna_hist_g.png" target="_blank"><img src="lenna_hist_g.png" width="400" height="300"
+                                                            style="max-width:100%;"></a>
+            <a href="lenna_hist_b.png" target="_blank"><img src="lenna_hist_b.png" width="400" height="300"
+                                                            style="max-width:100%;"></a></p></li>
+        <li><p><strong>(b)</strong> Imagem com contraste esticado.<br>
+            <a href="lenna_esticar.png" target="_blank"><img src="lenna_esticar.png" width="200" height="200"
+                                                             style="max-width:100%;"></a>
+            <a href="lenna_esticar_hist_r.png" target="_blank"><img src="lenna_esticar_hist_r.png" width="400"
+                                                                    height="300" style="max-width:100%;"></a>
+            <a href="lenna_esticar_hist_g.png" target="_blank"><img src="lenna_esticar_hist_g.png" width="400"
+                                                                    height="300" style="max-width:100%;"></a>
+            <a href="lenna_esticar_hist_b.png" target="_blank"><img src="lenna_esticar_hist_b.png" width="400"
+                                                                    height="300" style="max-width:100%;"></a></p></li>
+    </ul>
 
-<h2>
-<a id="user-content-entrada" class="anchor" href="#entrada" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Entrada</h2>
+    <h2>
+        <a id="user-content-entrada" class="anchor" href="#entrada" aria-hidden="true"><span aria-hidden="true"
+                                                                                             class="octicon octicon-link"></span></a>Entrada
+    </h2>
 
-<p>A função <code>main</code> receberá em <code>argv</code> dois nomes de arquivos que serão copiados para as variáveis <code>arqEntrada</code> e <code>arqSaida</code>, respectivamente.
-Na entrada padrão será recebido o efeito a ser aplicado, <code>cinza</code> ou <code>esticar</code>, e será armazenado na váriavel <code>efeito</code>.
-Conforme implementação parcial da função <code>main</code> nos arquivo auxiliares  <a href="aux/lab-imagem.c"><code>lab-imagem.c</code></a>.Em <code>arqEntrada</code> estará o nome do arquivo contendo a imagem original, e em <code>arqSaida</code> o nome do arquivo de saída que deverá ser escrito pelo seu programa.
-Em <code>efeito</code> estará qual efeito deverá ser aplicado no arquivo de entrada (<code>arqEntrada</code>) e escrito no arquivo de saída (<code>arqSaida</code>): <code>cinza</code> ou <code>esticar</code>.</p>
+    <p>A função <code>main</code> receberá em <code>argv</code> dois nomes de arquivos que serão copiados para as
+        variáveis <code>arqEntrada</code> e <code>arqSaida</code>, respectivamente.
+        Na entrada padrão será recebido o efeito a ser aplicado, <code>cinza</code> ou <code>esticar</code>, e será
+        armazenado na váriavel <code>efeito</code>.
+        Conforme implementação parcial da função <code>main</code> nos arquivo auxiliares <a
+                href="aux/lab-imagem.c"><code>lab-imagem.c</code></a>.Em <code>arqEntrada</code> estará o nome do
+        arquivo contendo a imagem original, e em <code>arqSaida</code> o nome do arquivo de saída que deverá ser escrito
+        pelo seu programa.
+        Em <code>efeito</code> estará qual efeito deverá ser aplicado no arquivo de entrada (<code>arqEntrada</code>) e
+        escrito no arquivo de saída (<code>arqSaida</code>): <code>cinza</code> ou <code>esticar</code>.</p>
 
-<h2>
-<a id="user-content-saída" class="anchor" href="#sa%C3%ADda" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Saída</h2>
+    <h2>
+        <a id="user-content-saída" class="anchor" href="#sa%C3%ADda" aria-hidden="true"><span aria-hidden="true"
+                                                                                              class="octicon octicon-link"></span></a>Saída
+    </h2>
 
-<p>A imagem resultante deverá ser escrita em PPM no arquivo de saída (<code>arqSaida</code>).</p>
+    <p>A imagem resultante deverá ser escrita em PPM no arquivo de saída (<code>arqSaida</code>).</p>
 
-<h2>
-<a id="user-content-exemplos" class="anchor" href="#exemplos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Exemplos</h2>
+    <h2>
+        <a id="user-content-exemplos" class="anchor" href="#exemplos" aria-hidden="true"><span aria-hidden="true"
+                                                                                               class="octicon octicon-link"></span></a>Exemplos
+    </h2>
 
-<h6>
-<a id="user-content-teste-03---escala-de-cinza" class="anchor" href="#teste-03---escala-de-cinza" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 03 - Escala de Cinza</h6>
+    <h6>
+        <a id="user-content-teste-03---escala-de-cinza" class="anchor" href="#teste-03---escala-de-cinza"
+           aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 03 - Escala de
+        Cinza</h6>
 
-<ul>
-<li>
-<p><a href="dados/arq03.in.ppm">arqEntrada</a><br>
-<a href="lenna.png" target="_blank"><img src="lenna.png" width="200" height="200" style="max-width:100%;"></a></p>
+    <ul>
+        <li>
+            <p><a href="dados/arq03.in.ppm">arqEntrada</a><br>
+                <a href="lenna.png" target="_blank"><img src="lenna.png" width="200" height="200"
+                                                         style="max-width:100%;"></a></p>
 
-<pre><code>P3
+            <pre><code>P3
 128 128
 255
 224 137 129 227 135 120 227 137 124 223 134 116 221 137 115 223 131 106 222 130 107 221 129 117 225 131 109 228 139 116 232 145 116 234 151 122 237 149 119 233 140 119 220 120 111 192 84 95 161 62 89 160 65 88 168 73 90 176 73 91 178 76 86 175 78 89 178 76 88 180 78 87 177 79 91 177 73 83 182 81 88 192 86 90 194 87 88 196 92 91 203 96 93 204 97 93 206 100 96 204 97 98 204 106 104 205 99 94 204 97 96 203 102 94 203 98 95 206 105 102 209 100 95 208 103 100 211 101 97 210 101 99 208 104 101 207 101 95 208 105 103 205 102 99 207 105 100 210 105 100 207 104 103 206 104 102 205 106 110 204 102 98 202 101 97 206 100 95 202 103 102 205 103 98 207 101 100 209 99 93 210 103 98 208 106 99 208 102 96 206 100 101 208 108 105 201 99 96 206 101 96 206 101 99 202 100 97 204 101 101 199 98 97 203 99 98 203 98 99 201 98 100 200 96 97 199 99 98 193 91 99 190 91 96 179 86 93 172 77 87 186 81 86 205 103 95 214 117 108 219 130 116 223 137 111 219 137 115 221 123 104 220 128 107 221 128 112 222 129 113 223 133 117 223 128 106 221 127 103 222 128 106 223 127 105 221 128 102 222 133 107 220 132 109 222 136 114 221 131 108 222 139 109 243 195 140 249 208 155 252 213 160 249 209 153 212 142 117 164 72 89 172 79 91 184 90 92 186 92 97 187 92 96 190 92 92 188 98 102 185 91 98 194 91 92 195 91 92 193 93 96 194 96 97 194 95 97 193 90 92 194 97 99 194 97 101 197 94 94 194 94 95 188 86 92 187 87 92 226 137 125 223 134 112
@@ -354,12 +439,13 @@ Em <code>efeito</code> estará qual efeito deverá ser aplicado no arquivo de en
 91 28 61 97 29 63 99 33 70 127 64 97 215 181 168 224 195 178 223 191 172 203 159 137 176 82 87 220 120 103 232 150 118 235 157 119 238 161 123 240 164 126 235 153 121 184 96 105 110 36 77 90 24 67 90 24 65 90 30 72 96 37 77 104 33 79 106 35 80 117 49 89 96 32 79 113 52 94 94 34 83 134 81 121 90 22 73 117 52 100 116 61 109 124 59 111 153 111 151 78 13 66 125 72 113 106 47 96 99 33 79 120 53 93 111 50 93 102 37 87 131 75 125 140 92 136 98 38 81 84 9 49 113 20 51 145 41 59 171 55 62 185 70 73 195 75 75 200 77 76 203 85 82 205 85 82 208 88 80 211 95 87 207 92 88 211 93 86 215 96 88 216 95 88 218 98 92 219 93 84 220 100 91 221 101 95 222 101 92 220 100 92 223 108 101 222 105 102 223 105 99 224 108 101 225 111 105 225 114 107 224 113 103 224 113 105 225 115 106 225 115 104 224 120 110 225 119 105 224 117 107 223 116 102 221 121 109 226 125 111 225 125 113 224 128 117 226 137 122 225 142 126 223 143 128 225 156 138 224 159 141 228 171 154 226 176 157 229 183 170 231 190 178 234 195 182 235 199 184 237 202 188 242 207 183 169 105 114 128 56 75 142 71 81 150 77 88 151 81 93 165 93 98 177 94 96 187 94 92 195 92 89 190 85 84 188 82 83 195 83 83 203 93 88 200 92 87 177 74 82 156 63 83 155 73 92 138 64 89 130 58 83 135 59 83 133 56 77 133 50 72 152 73 94 173 99 112 173 106 118 157 90 107 138 71 94 116 42 70 99 28 61 99 26 59 106 36 65 123 40 67 154 58 72
 88 24 60 94 26 60 95 28 67 112 49 88 212 178 165 222 191 178 219 189 172 200 153 133 176 83 89 221 121 102 233 147 116 236 160 128 238 162 127 240 164 129 234 157 124 149 67 91 103 36 75 88 21 65 88 23 63 89 27 67 96 33 77 113 47 88 108 39 82 115 44 84 109 43 87 108 42 95 137 94 134 107 40 81 100 33 83 118 52 97 112 57 103 116 52 97 123 68 110 123 66 119 128 79 120 106 48 86 83 20 69 110 42 82 111 49 89 88 25 71 111 53 98 106 38 86 141 87 118 119 41 81 147 46 64 161 53 66 172 59 66 191 71 73 199 77 76 203 82 82 205 86 83 208 89 82 210 90 82 209 94 90 209 93 86 213 93 84 213 93 86 216 94 90 215 98 92 219 94 87 221 96 89 222 102 93 222 103 96 223 97 89 222 99 92 224 104 100 223 107 102 224 106 101 225 113 103 224 112 104 222 113 107 224 111 104 225 115 106 224 115 105 225 119 107 224 118 109 223 120 107 224 120 108 222 122 109 223 121 112 225 131 116 225 129 116 225 135 122 225 142 132 224 143 128 224 149 137 225 155 140 226 168 150 227 176 158 229 182 165 229 186 173 233 191 178 235 197 184 237 198 190 241 205 185 209 151 150 141 69 101 140 70 84 142 66 78 151 78 88 158 84 92 179 96 96 203 105 94 203 95 87 201 92 86 199 91 87 210 106 93 213 105 90 196 87 82 164 64 77 151 62 78 134 51 77 122 50 80 138 62 90 142 65 89 134 58 82 143 62 83 167 87 102 177 107 117 170 105 117 146 80 99 116 44 70 98 30 63 94 19 53 99 25 58 117 44 74 153 65 83 178 69 80
 </code></pre>
-</li>
-<li>
-<p><a href="dados/arq03.out.ppm">arqSaida</a><br>
-<a href="lenna_cinza.png" target="_blank"><img src="lenna_cinza.png" width="200" height="200" style="max-width:100%;"></a></p>
+        </li>
+        <li>
+            <p><a href="dados/arq03.out.ppm">arqSaida</a><br>
+                <a href="lenna_cinza.png" target="_blank"><img src="lenna_cinza.png" width="200" height="200"
+                                                               style="max-width:100%;"></a></p>
 
-<pre><code>P3
+            <pre><code>P3
 128 128
 255
 163 163 163 160 160 160 162 162 162 157 157 157 157 157 157 153 153 153 153 153 153 155 155 155 155 155 155 161 161 161 164 164 164 169 169 169 168 168 168 164 164 164 150 150 150 123 123 123 104 104 104 104 104 104 110 110 110 113 113 113 113 113 113 114 114 114 114 114 114 115 115 115 115 115 115 111 111 111 117 117 117 122 122 122 123 123 123 126 126 126 130 130 130 131 131 131 134 134 134 133 133 133 138 138 138 132 132 132 132 132 132 133 133 133 132 132 132 137 137 137 134 134 134 137 137 137 136 136 136 136 136 136 137 137 137 134 134 134 138 138 138 135 135 135 137 137 137 138 138 138 138 138 138 137 137 137 140 140 140 134 134 134 133 133 133 133 133 133 135 135 135 135 135 135 136 136 136 133 133 133 137 137 137 137 137 137 135 135 135 135 135 135 140 140 140 132 132 132 134 134 134 135 135 135 133 133 133 135 135 135 131 131 131 133 133 133 133 133 133 133 133 133 131 131 131 132 132 132 127 127 127 125 125 125 119 119 119 112 112 112 117 117 117 134 134 134 146 146 146 155 155 155 157 157 157 157 157 157 149 149 149 151 151 151 153 153 153 154 154 154 157 157 157 152 152 152 150 150 150 152 152 152 151 151 151 150 150 150 154 154 154 153 153 153 157 157 157 153 153 153 156 156 156 192 192 192 204 204 204 208 208 208 203 203 203 157 157 157 108 108 108 114 114 114 122 122 122 125 125 125 125 125 125 124 124 124 129 129 129 124 124 124 125 125 125 126 126 126 127 127 127 129 129 129 128 128 128 125 125 125 130 130 130 130 130 130 128 128 128 127 127 127 122 122 122 122 122 122 162 162 162 156 156 156
@@ -491,18 +577,21 @@ Em <code>efeito</code> estará qual efeito deverá ser aplicado no arquivo de en
 60 60 60 63 63 63 67 67 67 96 96 96 188 188 188 199 199 199 195 195 195 166 166 166 115 115 115 147 147 147 166 166 166 170 170 170 174 174 174 176 176 176 169 169 169 128 128 128 74 74 74 60 60 60 59 59 59 64 64 64 70 70 70 72 72 72 73 73 73 85 85 85 69 69 69 86 86 86 70 70 70 112 112 112 61 61 61 89 89 89 95 95 95 98 98 98 138 138 138 52 52 52 103 103 103 83 83 83 70 70 70 88 88 88 84 84 84 75 75 75 110 110 110 122 122 122 72 72 72 47 47 47 61 61 61 81 81 81 96 96 96 109 109 109 115 115 115 117 117 117 123 123 123 124 124 124 125 125 125 131 131 131 129 129 129 130 130 130 133 133 133 133 133 133 136 136 136 132 132 132 137 137 137 139 139 139 138 138 138 137 137 137 144 144 144 143 143 143 142 142 142 144 144 144 147 147 147 148 148 148 146 146 146 147 147 147 148 148 148 148 148 148 151 151 151 149 149 149 149 149 149 147 147 147 150 150 150 154 154 154 154 154 154 156 156 156 161 161 161 164 164 164 164 164 164 173 173 173 174 174 174 184 184 184 186 186 186 194 194 194 199 199 199 203 203 203 206 206 206 209 209 209 210 210 210 129 129 129 86 86 86 98 98 98 105 105 105 108 108 108 118 118 118 122 122 122 124 124 124 125 125 125 119 119 119 117 117 117 120 120 120 128 128 128 126 126 126 111 111 111 100 100 100 106 106 106 97 97 97 90 90 90 92 92 92 88 88 88 85 85 85 106 106 106 128 128 128 132 132 132 118 118 118 101 101 101 76 76 76 62 62 62 61 61 61 69 69 69 76 76 76 94 94 94
 57 57 57 60 60 60 63 63 63 83 83 83 185 185 185 197 197 197 193 193 193 162 162 162 116 116 116 148 148 148 165 165 165 174 174 174 175 175 175 177 177 177 171 171 171 102 102 102 71 71 71 58 58 58 58 58 58 61 61 61 68 68 68 82 82 82 76 76 76 81 81 81 79 79 79 81 81 81 121 121 121 76 76 76 72 72 72 89 89 89 90 90 90 88 88 88 100 100 100 102 102 102 109 109 109 80 80 80 57 57 57 78 78 78 83 83 83 61 61 61 87 87 87 76 76 76 115 115 115 80 80 80 85 85 85 93 93 93 99 99 99 111 111 111 117 117 117 122 122 122 124 124 124 126 126 126 127 127 127 131 131 131 129 129 129 130 130 130 130 130 130 133 133 133 135 135 135 133 133 133 135 135 135 139 139 139 140 140 140 136 136 136 137 137 137 142 142 142 144 144 144 143 143 143 147 147 147 146 146 146 147 147 147 146 146 146 148 148 148 148 148 148 150 150 150 150 150 150 150 150 150 150 150 150 151 151 151 152 152 152 157 157 157 156 156 156 160 160 160 166 166 166 165 165 165 170 170 170 173 173 173 181 181 181 187 187 187 192 192 192 196 196 196 200 200 200 205 205 205 208 208 208 210 210 210 170 170 170 103 103 103 98 98 98 95 95 95 105 105 105 111 111 111 123 123 123 134 134 134 128 128 128 126 126 126 125 125 125 136 136 136 136 136 136 121 121 121 101 101 101 97 97 97 87 87 87 84 84 84 96 96 96 98 98 98 91 91 91 96 96 96 118 118 118 133 133 133 130 130 130 108 108 108 76 76 76 63 63 63 55 55 55 60 60 60 78 78 78 100 100 100 109 109 109
 </code></pre>
-</li>
-</ul>
+        </li>
+    </ul>
 
-<h6>
-<a id="user-content-teste-04---esticar-contraste" class="anchor" href="#teste-04---esticar-contraste" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 04 - Esticar Contraste</h6>
+    <h6>
+        <a id="user-content-teste-04---esticar-contraste" class="anchor" href="#teste-04---esticar-contraste"
+           aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 04 - Esticar
+        Contraste</h6>
 
-<ul>
-<li>
-<p><a href="dados/arq04.in.ppm">arqEntrada</a><br>
-<a href="lenna.png" target="_blank"><img src="lenna.png" width="200" height="200" style="max-width:100%;"></a></p>
+    <ul>
+        <li>
+            <p><a href="dados/arq04.in.ppm">arqEntrada</a><br>
+                <a href="lenna.png" target="_blank"><img src="lenna.png" width="200" height="200"
+                                                         style="max-width:100%;"></a></p>
 
-<pre><code>P3
+            <pre><code>P3
 128 128
 255
 224 137 129 227 135 120 227 137 124 223 134 116 221 137 115 223 131 106 222 130 107 221 129 117 225 131 109 228 139 116 232 145 116 234 151 122 237 149 119 233 140 119 220 120 111 192 84 95 161 62 89 160 65 88 168 73 90 176 73 91 178 76 86 175 78 89 178 76 88 180 78 87 177 79 91 177 73 83 182 81 88 192 86 90 194 87 88 196 92 91 203 96 93 204 97 93 206 100 96 204 97 98 204 106 104 205 99 94 204 97 96 203 102 94 203 98 95 206 105 102 209 100 95 208 103 100 211 101 97 210 101 99 208 104 101 207 101 95 208 105 103 205 102 99 207 105 100 210 105 100 207 104 103 206 104 102 205 106 110 204 102 98 202 101 97 206 100 95 202 103 102 205 103 98 207 101 100 209 99 93 210 103 98 208 106 99 208 102 96 206 100 101 208 108 105 201 99 96 206 101 96 206 101 99 202 100 97 204 101 101 199 98 97 203 99 98 203 98 99 201 98 100 200 96 97 199 99 98 193 91 99 190 91 96 179 86 93 172 77 87 186 81 86 205 103 95 214 117 108 219 130 116 223 137 111 219 137 115 221 123 104 220 128 107 221 128 112 222 129 113 223 133 117 223 128 106 221 127 103 222 128 106 223 127 105 221 128 102 222 133 107 220 132 109 222 136 114 221 131 108 222 139 109 243 195 140 249 208 155 252 213 160 249 209 153 212 142 117 164 72 89 172 79 91 184 90 92 186 92 97 187 92 96 190 92 92 188 98 102 185 91 98 194 91 92 195 91 92 193 93 96 194 96 97 194 95 97 193 90 92 194 97 99 194 97 101 197 94 94 194 94 95 188 86 92 187 87 92 226 137 125 223 134 112
@@ -634,12 +723,13 @@ Em <code>efeito</code> estará qual efeito deverá ser aplicado no arquivo de en
 91 28 61 97 29 63 99 33 70 127 64 97 215 181 168 224 195 178 223 191 172 203 159 137 176 82 87 220 120 103 232 150 118 235 157 119 238 161 123 240 164 126 235 153 121 184 96 105 110 36 77 90 24 67 90 24 65 90 30 72 96 37 77 104 33 79 106 35 80 117 49 89 96 32 79 113 52 94 94 34 83 134 81 121 90 22 73 117 52 100 116 61 109 124 59 111 153 111 151 78 13 66 125 72 113 106 47 96 99 33 79 120 53 93 111 50 93 102 37 87 131 75 125 140 92 136 98 38 81 84 9 49 113 20 51 145 41 59 171 55 62 185 70 73 195 75 75 200 77 76 203 85 82 205 85 82 208 88 80 211 95 87 207 92 88 211 93 86 215 96 88 216 95 88 218 98 92 219 93 84 220 100 91 221 101 95 222 101 92 220 100 92 223 108 101 222 105 102 223 105 99 224 108 101 225 111 105 225 114 107 224 113 103 224 113 105 225 115 106 225 115 104 224 120 110 225 119 105 224 117 107 223 116 102 221 121 109 226 125 111 225 125 113 224 128 117 226 137 122 225 142 126 223 143 128 225 156 138 224 159 141 228 171 154 226 176 157 229 183 170 231 190 178 234 195 182 235 199 184 237 202 188 242 207 183 169 105 114 128 56 75 142 71 81 150 77 88 151 81 93 165 93 98 177 94 96 187 94 92 195 92 89 190 85 84 188 82 83 195 83 83 203 93 88 200 92 87 177 74 82 156 63 83 155 73 92 138 64 89 130 58 83 135 59 83 133 56 77 133 50 72 152 73 94 173 99 112 173 106 118 157 90 107 138 71 94 116 42 70 99 28 61 99 26 59 106 36 65 123 40 67 154 58 72
 88 24 60 94 26 60 95 28 67 112 49 88 212 178 165 222 191 178 219 189 172 200 153 133 176 83 89 221 121 102 233 147 116 236 160 128 238 162 127 240 164 129 234 157 124 149 67 91 103 36 75 88 21 65 88 23 63 89 27 67 96 33 77 113 47 88 108 39 82 115 44 84 109 43 87 108 42 95 137 94 134 107 40 81 100 33 83 118 52 97 112 57 103 116 52 97 123 68 110 123 66 119 128 79 120 106 48 86 83 20 69 110 42 82 111 49 89 88 25 71 111 53 98 106 38 86 141 87 118 119 41 81 147 46 64 161 53 66 172 59 66 191 71 73 199 77 76 203 82 82 205 86 83 208 89 82 210 90 82 209 94 90 209 93 86 213 93 84 213 93 86 216 94 90 215 98 92 219 94 87 221 96 89 222 102 93 222 103 96 223 97 89 222 99 92 224 104 100 223 107 102 224 106 101 225 113 103 224 112 104 222 113 107 224 111 104 225 115 106 224 115 105 225 119 107 224 118 109 223 120 107 224 120 108 222 122 109 223 121 112 225 131 116 225 129 116 225 135 122 225 142 132 224 143 128 224 149 137 225 155 140 226 168 150 227 176 158 229 182 165 229 186 173 233 191 178 235 197 184 237 198 190 241 205 185 209 151 150 141 69 101 140 70 84 142 66 78 151 78 88 158 84 92 179 96 96 203 105 94 203 95 87 201 92 86 199 91 87 210 106 93 213 105 90 196 87 82 164 64 77 151 62 78 134 51 77 122 50 80 138 62 90 142 65 89 134 58 82 143 62 83 167 87 102 177 107 117 170 105 117 146 80 99 116 44 70 98 30 63 94 19 53 99 25 58 117 44 74 153 65 83 178 69 80
 </code></pre>
-</li>
-<li>
-<p><a href="dados/arq04.out.ppm">arqSaida</a><br>
-<a href="lenna_esticar.png" target="_blank"><img src="lenna_esticar.png" width="200" height="200" style="max-width:100%;"></a></p>
+        </li>
+        <li>
+            <p><a href="dados/arq04.out.ppm">arqSaida</a><br>
+                <a href="lenna_esticar.png" target="_blank"><img src="lenna_esticar.png" width="200" height="200"
+                                                                 style="max-width:100%;"></a></p>
 
-<pre><code>P3
+            <pre><code>P3
 128 128
 255
 214 149 128 218 147 114 218 149 120 212 146 108 210 149 106 212 143 92 211 142 94 210 141 109 215 143 97 219 152 108 224 158 108 227 165 117 231 163 112 226 153 112 208 131 100 172 91 75 131 67 66 130 71 64 140 79 68 151 79 69 153 83 61 149 85 66 153 83 64 156 85 63 152 86 69 152 79 57 159 88 64 172 94 68 174 95 64 177 100 69 186 105 72 187 106 72 190 109 77 187 106 80 187 116 89 189 108 74 187 106 77 186 111 74 186 107 75 190 114 86 194 109 75 193 112 83 197 110 78 195 110 81 193 113 85 191 110 75 193 114 88 189 111 81 191 114 83 195 114 83 191 113 88 190 113 86 189 116 98 187 111 80 185 110 78 190 109 75 185 112 86 189 112 80 191 110 83 194 108 72 195 112 80 193 116 81 193 111 77 190 109 85 193 118 91 184 108 77 190 110 77 190 110 81 185 109 78 187 110 85 181 107 78 186 108 80 186 107 81 184 107 83 182 105 78 181 108 80 173 99 81 169 99 77 155 94 72 145 84 63 164 88 61 189 112 75 201 128 95 207 142 108 212 149 100 207 149 106 210 134 89 208 140 94 210 140 102 211 141 103 212 145 109 212 140 92 210 138 88 211 140 92 212 138 91 210 140 86 211 145 94 208 144 97 211 148 105 210 143 95 211 152 97 239 213 145 247 227 168 251 233 176 247 228 165 198 155 109 135 78 66 145 86 69 161 98 71 164 100 78 165 100 77 169 100 71 166 107 86 162 99 80 174 99 71 176 99 71 173 101 77 174 105 78 174 103 78 173 98 71 174 106 81 174 106 85 178 102 74 174 102 75 166 94 71 165 95 71 216 149 122 212 146 102
@@ -771,26 +861,32 @@ Em <code>efeito</code> estará qual efeito deverá ser aplicado no arquivo de en
 39 30 23 47 31 26 49 36 37 86 70 78 202 198 188 214 213 204 212 209 194 186 174 140 151 89 63 208 131 88 224 164 111 228 171 112 232 176 119 235 179 123 228 167 115 161 105 91 64 39 47 38 26 32 38 26 29 38 32 40 46 40 47 56 36 51 59 38 52 73 53 66 46 35 51 68 56 74 43 37 57 95 88 115 38 24 41 73 56 83 72 66 97 82 64 100 120 121 162 22 14 30 84 78 103 59 51 77 49 36 51 77 58 72 65 54 72 53 40 63 92 82 122 103 100 139 48 41 54 30 9 4 68 21 7 110 44 20 144 60 24 162 76 41 176 82 44 182 84 46 186 93 55 189 93 55 193 96 52 197 103 63 191 100 64 197 101 61 202 105 64 203 103 64 206 107 71 207 101 58 208 109 69 210 110 75 211 110 71 208 109 71 212 118 85 211 114 86 212 114 81 214 118 85 215 121 91 215 124 94 214 123 88 214 123 91 215 125 92 215 125 89 214 131 98 215 130 91 214 128 94 212 126 86 210 132 97 216 136 100 215 136 103 214 140 109 216 149 117 215 155 123 212 156 126 215 170 142 214 174 146 219 187 166 216 192 171 220 200 191 223 207 204 227 213 210 228 217 213 231 221 219 237 226 211 141 114 105 88 61 44 106 77 54 116 84 64 118 88 72 136 101 80 152 102 77 165 102 71 176 100 66 169 93 58 166 89 57 176 90 57 186 101 64 182 100 63 152 80 55 124 68 57 123 79 71 101 70 66 90 63 57 97 64 57 94 61 47 94 54 40 119 79 74 147 108 102 147 116 111 126 98 94 101 77 74 72 45 37 49 30 23 49 28 20 59 39 29 81 43 32 122 63 40
 35 26 21 43 28 21 44 30 32 67 53 64 198 194 183 211 209 204 207 206 194 182 167 134 151 90 66 210 132 86 226 160 108 230 175 126 232 177 125 235 179 128 227 171 120 115 73 69 55 39 44 35 22 29 35 25 26 36 29 32 46 36 47 68 51 64 61 42 55 70 48 58 63 47 63 61 45 75 99 102 136 60 43 54 51 36 57 74 56 78 67 62 88 72 56 78 81 74 98 81 72 112 88 86 114 59 52 61 28 21 35 64 45 55 65 53 66 35 27 38 65 58 80 59 41 61 105 95 111 76 44 54 113 50 27 131 58 30 145 64 30 170 77 41 181 84 46 186 89 55 189 94 57 193 97 55 195 98 55 194 102 68 194 101 61 199 101 58 199 101 61 203 102 68 202 107 71 207 102 63 210 105 66 211 111 72 211 112 77 212 106 66 211 108 71 214 113 83 212 117 86 214 116 85 215 123 88 214 122 89 211 123 94 214 121 89 215 125 92 214 125 91 215 130 94 214 129 97 212 131 94 214 131 95 211 133 97 212 132 102 215 143 108 215 141 108 215 147 117 215 155 132 214 156 126 214 163 140 215 169 145 216 183 160 218 192 173 220 199 183 220 203 196 226 209 204 228 215 213 231 216 222 236 224 214 194 165 160 105 75 85 103 76 58 106 72 49 118 85 64 127 91 71 155 105 77 186 114 74 186 103 63 184 100 61 181 99 63 195 116 72 199 114 68 177 95 55 135 70 47 118 67 49 95 55 47 80 54 52 101 67 68 106 71 66 95 63 55 107 67 57 139 95 86 152 117 109 143 114 109 111 87 81 72 48 37 48 32 26 43 20 10 49 27 18 73 48 43 120 71 57 153 75 52
 </code></pre>
-</li>
-</ul>
+        </li>
+    </ul>
 
-<h2>Observações</h2>
+    <h2>Observações</h2>
 
-<ul>
-<li>Para evitar problemas de precisão, faça todas as contas e apenas transforme em inteiro o resultado final.</li>
-<li>Você deve incluir, no início do seu programa, uma breve descrição dos objetivos do programa, da entrada e da saída, além do seu nome e do seu RA.</li>
-<li>Indente corretamente o seu código e inclua comentários no decorrer do seu programa.</li>
-<li>Para melhor verificar seus resultados, você pode abrir os arquivos com extensão <strong>ppm</strong>
-diretamente no Linux ou no Windows
-com o visualizador <a href="http://www.irfanview.com/">IrfanView</a> , por exemplo.</li>
-</ul>
+    <ul>
+        <li>Para evitar problemas de precisão, faça todas as contas e apenas transforme em inteiro o resultado final.
+        </li>
+        <li>Você deve incluir, no início do seu programa, uma breve descrição dos objetivos do programa, da entrada e da
+            saída, além do seu nome e do seu RA.
+        </li>
+        <li>Indente corretamente o seu código e inclua comentários no decorrer do seu programa.</li>
+        <li>Para melhor verificar seus resultados, você pode abrir os arquivos com extensão <strong>ppm</strong>
+            diretamente no Linux ou no Windows
+            com o visualizador <a href="http://www.irfanview.com/">IrfanView</a> , por exemplo.
+        </li>
+    </ul>
 
-<h2>Critérios importantes</h2>
+    <h2>Critérios importantes</h2>
 
-<ul>
-<li>Para os programas em linguagem C, os únicos headers aceitos para essa tarefa serão os <code>stdio.h</code>, <code>stdlib.h</code> e <code>math.h</code>.</li>
-</ul>
+    <ul>
+        <li>Para os programas em linguagem C, os únicos headers aceitos para essa tarefa serão os <code>stdio.h</code>,
+            <code>stdlib.h</code> e <code>math.h</code>.
+        </li>
+    </ul>
 
-    </article>
+</article>
 </body>
 </html>
