@@ -10,72 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="Fix[Desafio04] : Finalizando desafio04">
-      <change afterPath="$PROJECT_DIR$/lista_7_C_files/exe07.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lista_7_C_files/global.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lista_7_C_files/global.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange2_C/desafio02.c" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange2_C/desafio2.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._Tiny6pixel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._dados" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._enunciado.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_cinza.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_cinza_hist_b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_cinza_hist_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_cinza_hist_r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_esticar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_esticar_hist_b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_esticar_hist_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_esticar_hist_r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_hist_b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_hist_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_hist_r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_pixels.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/_aux/._lab-imagem.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq01.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq01.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq02.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq02.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq03.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq03.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq04.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq04.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq05.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq05.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq06.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq06.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq07.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq07.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq08.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq08.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq09.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq09.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq10.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq10.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq11.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq11.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq12.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq12.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq13.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq13.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq14.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq14.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq15.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq15.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq16.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq16.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq17.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq17.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq18.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq18.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq19.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq19.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq20.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq20.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/_aux/lab-imagem.c" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/_aux/lab-imagem.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/enunciado.html" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/enunciado.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/enunciado.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +74,7 @@
       <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_extra_2_C\slides" />
     </key>
   </component>
-  <component name="RunManager" selected="C/C++ File.exe07.c">
+  <component name="RunManager" selected="C/C++ File.exe01.c">
     <configuration name="Guaranara_algoritmos.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="Guaranara_algoritmos.c" CONFIG_NAME="Guaranara_algoritmos.c">
       <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_extra_2_C\Guaranara_algoritmos.c" />
       <method v="2">
@@ -238,11 +175,6 @@
       <item itemvalue="C/C++ File.lab-imagem.c" />
       <item itemvalue="C/C++ File.exe07.c (1)" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="C/C++ File.exe07.c (1)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -301,6 +233,7 @@
       <workItem from="1697300687076" duration="453000" />
       <workItem from="1697386826639" duration="2090000" />
       <workItem from="1697390780853" duration="2420000" />
+      <workItem from="1697393424599" duration="81000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;Feat&gt; :  Finalizando 'lista5-funcoes'">
       <option name="closed" value="true" />
