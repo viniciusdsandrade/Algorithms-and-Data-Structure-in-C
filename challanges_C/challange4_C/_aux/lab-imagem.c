@@ -10,15 +10,45 @@
 #pragma ide diagnostic ignored "OCDFAInspection"
 #define MAX 129 // Tamanho máximo da imagem em pixels
 
-void leImagemPPM(char *name, int R[MAX][MAX], int G[MAX][MAX], int B[MAX][MAX], int *cols, int *rows);
+void leImagemPPM(
+        char *name,
+        int R[MAX][MAX],
+        int G[MAX][MAX],
+        int B[MAX][MAX],
+        int *cols,
+        int *rows
+);
 
-void imprimeImagemPPM(char *arqSaida, int R[MAX][MAX], int G[MAX][MAX], int B[MAX][MAX], int cols, int rows);
+void imprimeImagemPPM(
+        char *arqSaida,
+        int R[MAX][MAX],
+        int G[MAX][MAX],
+        int B[MAX][MAX],
+        int cols,
+        int rows
+);
 
-void contrastePPM(int R[MAX][MAX], int G[MAX][MAX], int B[MAX][MAX], int novaR[MAX][MAX], int novaG[MAX][MAX],
-                  int novaB[MAX][MAX], int cols, int rows);
+void contrastePPM(
+        int R[MAX][MAX],
+        int G[MAX][MAX],
+        int B[MAX][MAX],
+        int novaR[MAX][MAX],
+        int novaG[MAX][MAX],
+        int novaB[MAX][MAX],
+        int cols,
+        int rows
+);
 
-void cinzaPPM(int R[MAX][MAX], int G[MAX][MAX], int B[MAX][MAX], int novaR[MAX][MAX], int novaG[MAX][MAX],
-              int novaB[MAX][MAX], int cols, int rows);
+void cinzaPPM(
+        int R[MAX][MAX],
+        int G[MAX][MAX],
+        int B[MAX][MAX],
+        int novaR[MAX][MAX],
+        int novaG[MAX][MAX],
+        int novaB[MAX][MAX],
+        int cols,
+        int rows
+);
 
 /**
  * Função principal do programa que aplica efeitos a imagens PPM.

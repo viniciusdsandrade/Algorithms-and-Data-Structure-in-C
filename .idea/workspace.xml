@@ -9,73 +9,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="Fix[Desafio04] : Finalizando desafio04">
-      <change afterPath="$PROJECT_DIR$/lista_7_C_files/exe07.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lista_7_C_files/global.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lista_7_C_files/global.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="build[file] : Lista de arquivos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange2_C/desafio02.c" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange2_C/desafio2.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._Tiny6pixel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._dados" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._enunciado.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_cinza.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_cinza_hist_b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_cinza_hist_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_cinza_hist_r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_esticar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_esticar_hist_b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_esticar_hist_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_esticar_hist_r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_hist_b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_hist_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_hist_r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/._lenna_pixels.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/_aux/._lab-imagem.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq01.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq01.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq02.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq02.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq03.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq03.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq04.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq04.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq05.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq05.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq06.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq06.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq07.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq07.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq08.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq08.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq09.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq09.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq10.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq10.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq11.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq11.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq12.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq12.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq13.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq13.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq14.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq14.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq15.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq15.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq16.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq16.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq17.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq17.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq18.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq18.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq19.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq19.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq20.in" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/__MACOSX/dados/._arq20.in.ppm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/_aux/lab-imagem.c" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/_aux/lab-imagem.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges_C/challange4_C/enunciado.html" beforeDir="false" afterPath="$PROJECT_DIR$/challanges_C/challange4_C/enunciado.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/Algoritmos-Unicamp/lista_extra_Guanabara_algoritmos.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/Algoritmos-Unicamp/lista_extra_IFBA_algoritmos.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/Algoritmos-em-C/Algoritmos-em-linguagem-C.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/Algoritmos-em-C/Linguagem C Luis Damas.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/leetcode/java_leet_code_solutions.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/exe07.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_files/exe07.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_7_C_files/exe07.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,28 +50,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/Algorithms-and-Data-Structure-in-C/lista_7_C_files/exe07.c&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "ignore_missing_gitignore": "true",
+    "last_opened_file_path": "C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/Algorithms-and-Data-Structure-in-C/challanges_C/challange4_C/_aux/lab-imagem.c",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\challanges_C\challange4_C\dados" />
@@ -137,7 +79,7 @@
       <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_extra_2_C\slides" />
     </key>
   </component>
-  <component name="RunManager" selected="C/C++ File.exe07.c">
+  <component name="RunManager" selected="C/C++ File.lab-imagem.c">
     <configuration name="Guaranara_algoritmos.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="Guaranara_algoritmos.c" CONFIG_NAME="Guaranara_algoritmos.c">
       <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_extra_2_C\Guaranara_algoritmos.c" />
       <method v="2">
@@ -162,7 +104,7 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="desafio3.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="desafio3.c" CONFIG_NAME="desafio3.c">
+    <configuration name="desafio3.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="enunciado.html" TARGET_NAME="desafio3.c" CONFIG_NAME="desafio3.c">
       <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\challanges_C\challange3_C\desafio3.c" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
@@ -204,25 +146,22 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="exe07.c (1)" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="exe07.c">
-      <option name="sourceFile" value="lista_7_C_files\exe07.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="exe07.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="exe07.c" CONFIG_NAME="exe07.c">
       <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_7_C_files\exe07.c" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="lab-imagem.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="lab-imagem.c" CONFIG_NAME="lab-imagem.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\challanges_C\challange4_C\dados\lab-imagem.c" />
+    <configuration name="lab-imagem.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="enunciado.html" TARGET_NAME="lab-imagem.c" CONFIG_NAME="lab-imagem.c">
+      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\challanges_C\challange4_C\_aux\lab-imagem.c" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="C/C++ File.desafio1.c" />
+      <item itemvalue="C/C++ File.desafio2.c" />
+      <item itemvalue="C/C++ File.desafio3.c" />
       <item itemvalue="C/C++ File.exe01.c" />
       <item itemvalue="C/C++ File.exe02.c" />
       <item itemvalue="C/C++ File.exe03.c" />
@@ -230,19 +169,10 @@
       <item itemvalue="C/C++ File.exe05.c" />
       <item itemvalue="C/C++ File.exe06.c" />
       <item itemvalue="C/C++ File.exe07.c" />
-      <item itemvalue="C/C++ File.desafio1.c" />
-      <item itemvalue="C/C++ File.desafio2.c" />
-      <item itemvalue="C/C++ File.desafio3.c" />
       <item itemvalue="C/C++ File.Guaranara_algoritmos.c" />
       <item itemvalue="C/C++ File.IFBA_algoritmos.c" />
       <item itemvalue="C/C++ File.lab-imagem.c" />
-      <item itemvalue="C/C++ File.exe07.c (1)" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="C/C++ File.exe07.c (1)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -301,6 +231,10 @@
       <workItem from="1697300687076" duration="453000" />
       <workItem from="1697386826639" duration="2090000" />
       <workItem from="1697390780853" duration="2420000" />
+      <workItem from="1697393424599" duration="81000" />
+      <workItem from="1697419263070" duration="14000" />
+      <workItem from="1697540339739" duration="104000" />
+      <workItem from="1697540457902" duration="406000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;Feat&gt; :  Finalizando 'lista5-funcoes'">
       <option name="closed" value="true" />
@@ -526,7 +460,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697084876511</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="build[file] : Lista de arquivos">
+      <option name="closed" value="true" />
+      <created>1697393570681</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1697393570681</updated>
+    </task>
+    <task id="LOCAL-00030" summary="build[file] : Lista de arquivos">
+      <option name="closed" value="true" />
+      <created>1697393590550</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1697393590550</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,7 +512,8 @@
     <MESSAGE value="Fix[Desafio03] Refatorando desafio3.c" />
     <MESSAGE value="Fix[Desafio03] : Aprendendo a abrir e manipular arquivos em C" />
     <MESSAGE value="Fix[Desafio04] : Finalizando desafio04" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix[Desafio04] : Finalizando desafio04" />
+    <MESSAGE value="build[file] : Lista de arquivos" />
+    <option name="LAST_COMMIT_MESSAGE" value="build[file] : Lista de arquivos" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

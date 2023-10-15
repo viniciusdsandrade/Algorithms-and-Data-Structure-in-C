@@ -67,7 +67,10 @@ int exercise04(void) {
 }
 
 int exercise05(void) {
-    printf("\nExercise 05:\n");
+
+
+
+
     return 0;
 }
 
