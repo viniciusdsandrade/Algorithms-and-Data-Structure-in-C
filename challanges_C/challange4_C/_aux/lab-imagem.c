@@ -6,7 +6,8 @@
     @ALUNO 1: Vinícius dos Santos Andrade  RA: 2760482311026
     @ALUNO 2: Gianlucca Fadiga Rissato     RA: 2760482311014
 */
-
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "OCDFAInspection"
 #define MAX 129 // Tamanho máximo da imagem em pixels
 
 void leImagemPPM(char *name, int R[MAX][MAX], int G[MAX][MAX], int B[MAX][MAX], int *cols, int *rows);
@@ -44,13 +45,10 @@ int main(int argc, char **argv) {
 
     // Verifica o terceiro argumento para determinar o efeito desejado
     if (strcmp(argv[3], "esticar") == 0) {
-        // Aplica o efeito de esticar contrastePPM
-        contrastePPM(R, G, B, novaR, novaG, novaB, cols, rows);
+        contrastePPM(R, G, B, novaR, novaG, novaB, cols, rows); // Aplica o efeito de esticar contrastePPM
     } else if (strcmp(argv[3], "cinza") == 0) {
-        // Converte a imagem para escala de cinzaPPM
-        cinzaPPM(R, G, B, novaR, novaG, novaB, cols, rows);
+        cinzaPPM(R, G, B, novaR, novaG, novaB, cols, rows); // Converte a imagem para escala de cinzaPPM
     } else {
-        // Efeito desconhecido
         printf("Efeito desconhecido.\n");
         return 1;
     }
@@ -198,7 +196,6 @@ void contrastePPM(
     }
 }
 
-
 /**
  * Converte uma imagem colorida em escala de cinzaPPM.
  *
@@ -236,3 +233,5 @@ void cinzaPPM(
         }
     }
 }
+
+#pragma clang diagnostic pop
