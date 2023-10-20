@@ -40,7 +40,7 @@ int somaFaixa(Cell *vet, int n) {
     return sum;
 }
 
-int main() {
+int main(void) {
     Cell vet[] = {
             {'y', 10},
             {'y', 2},
