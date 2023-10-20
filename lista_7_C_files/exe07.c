@@ -68,14 +68,35 @@ int exercise04(void) {
 
 int exercise05(void) {
 
+    FILE *arq;
+    double aux = 2.5;
 
-
+    arq = fopen(
+            "C:\\Users\\vinic\\OneDrive\\햞ea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe05.txt",
+            "w+b");
+    if (arq == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    } else {
+        fwrite(&aux, sizeof(double), 1, arq);
+    }
 
     return 0;
 }
 
 int exercise06(void) {
-    printf("\nExercise 06:\n");
+    FILE *arq;
+    double aux[] = {2.5, 3.5, 4.5, 5.5, 6.5};
+
+    arq = fopen(
+            "C:\\Users\\vinic\\OneDrive\\햞ea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe06.txt",
+            "w+b");
+    if (arq == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    } else {
+        fwrite(aux, sizeof(double), 5, arq);
+    }
     return 0;
 }
 
@@ -85,17 +106,66 @@ int exercise07(void) {
 }
 
 int exercise08(void) {
-    printf("\nExercise 08:\n");
+    FILE *arq;
+    double aux = 0;
+
+    arq = fopen(
+            "C:\\Users\\vinic\\OneDrive\\햞ea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe06.txt",
+            "r+b");
+
+    if (arq == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    } else {
+        fread(&aux, sizeof(double), 1, arq);
+        printf("Value: %lf\n", aux);
+    }
+
     return 0;
 }
 
 int exercise09(void) {
-    printf("\nExercise 09:\n");
+
+    FILE *arq;
+    double aux[5];
+
+    arq = fopen(
+            "C:\\Users\\vinic\\OneDrive\\햞ea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe06.txt",
+            "r+b");
+
+    if (arq == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+
+    fread(aux, sizeof(double), 5, arq);
+
+    for (int i = 0; i < 5; i++) {
+        printf("Value: %lf\n", aux[i]);
+    }
+
     return 0;
 }
 
 int exercise10(void) {
-    printf("\nExercise 10:\n");
+
+    char nomeArq[20];
+    int ra;
+
+    printf("Digite o nome do arquivo: ");
+    scanf("%s", nomeArq);
+
+    imprimeArquivo(nomeArq);
+
+    printf("Digite o RA do aluno que deseja alterar o nome: ");
+    scanf("%d", &ra);
+
+    char nome[20];
+    printf("Digite o novo nome: ");
+    scanf("%s", nome);
+
+    alteraNome(nomeArq, ra, nome);
+
     return 0;
 }
 

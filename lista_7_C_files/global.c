@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+typedef struct Aluno {
+    char nome[50];
+    int RA;
+} Aluno;
+
 /**
  * Copia o conteúdo de um arquivo de origem para um arquivo de destino.
  *
@@ -119,4 +124,46 @@ bool compareFiles(const char *file1, const char *file2) {
     }
 
     return false; // Retorna falso se os tamanhos dos arquivos forem diferentes
+}
+
+void imprimeArquivo(char nomeArq[]) {
+    FILE *arq;
+    Aluno aux;
+
+    arq = fopen(nomeArq, "r+b");
+
+    if (arq == NULL) {
+        printf("Error opening file!\n");
+        return;
+    }
+
+    while (fread(&aux, sizeof(Aluno), 1, arq) == 1) {
+        printf("Nome: %s\n", aux.nome);
+        printf("RA: %d\n", aux.RA);
+    }
+
+    fclose(arq);
+}
+
+void alteraNome(char nomeArq[],int ra, char nome[]) {
+    FILE *arq;
+    Aluno aux;
+
+    arq = fopen(nomeArq, "r+b");
+
+    if (arq == NULL) {
+        printf("Error opening file!\n");
+        return;
+    }
+
+    while (fread(&aux, sizeof(Aluno), 1, arq) == 1) {
+        if (aux.RA == ra) {
+            strcpy(aux.nome, nome);
+            fseek(arq, -sizeof(Aluno), SEEK_CUR);
+            fwrite(&aux, sizeof(Aluno), 1, arq);
+            break;
+        }
+    }
+
+    fclose(arq);
 }

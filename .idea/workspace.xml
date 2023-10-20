@@ -9,15 +9,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="build[file] : Lista de arquivos">
+    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/Algoritmos-Unicamp/lista_extra_Guanabara_algoritmos.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/Algoritmos-Unicamp/lista_extra_IFBA_algoritmos.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/Algoritmos-em-C/Algoritmos-em-linguagem-C.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/Algoritmos-em-C/Linguagem C Luis Damas.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/leetcode/java_leet_code_solutions.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exe07.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/linguagem-c-luis-damas/Linguagem C Luis Damas.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab-imagem.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab-imagem.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista_7_C_files/exe07.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_7_C_files/exe07.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_files/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_7_C_files/global.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +27,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,13 +58,13 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
     "ignore_missing_gitignore": "true",
-    "last_opened_file_path": "C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/Algorithms-and-Data-Structure-in-C/challanges_C/challange4_C/_aux/lab-imagem.c",
+    "last_opened_file_path": "C:/Users/vinic/OneDrive/Área de Trabalho/p1-lp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -79,7 +75,7 @@
       <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_extra_2_C\slides" />
     </key>
   </component>
-  <component name="RunManager" selected="C/C++ File.lab-imagem.c">
+  <component name="RunManager" selected="C/C++ File.exe07.c">
     <configuration name="Guaranara_algoritmos.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="Guaranara_algoritmos.c" CONFIG_NAME="Guaranara_algoritmos.c">
       <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_extra_2_C\Guaranara_algoritmos.c" />
       <method v="2">
@@ -234,7 +230,9 @@
       <workItem from="1697393424599" duration="81000" />
       <workItem from="1697419263070" duration="14000" />
       <workItem from="1697540339739" duration="104000" />
-      <workItem from="1697540457902" duration="406000" />
+      <workItem from="1697540457902" duration="3922000" />
+      <workItem from="1697799681394" duration="141000" />
+      <workItem from="1697800321648" duration="61000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;Feat&gt; :  Finalizando 'lista5-funcoes'">
       <option name="closed" value="true" />
@@ -476,7 +474,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697393590550</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="build[file] : Lista de arquivos">
+      <option name="closed" value="true" />
+      <created>1697540962586</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1697540962586</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1697540984812</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1697540984812</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +527,8 @@
     <MESSAGE value="Fix[Desafio03] : Aprendendo a abrir e manipular arquivos em C" />
     <MESSAGE value="Fix[Desafio04] : Finalizando desafio04" />
     <MESSAGE value="build[file] : Lista de arquivos" />
-    <option name="LAST_COMMIT_MESSAGE" value="build[file] : Lista de arquivos" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
