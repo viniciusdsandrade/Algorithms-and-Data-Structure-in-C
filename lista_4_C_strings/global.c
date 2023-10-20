@@ -206,7 +206,6 @@ bool isPalindrome(char* str) {
         left++;
         right--;
 
-
     return true;
 }
 

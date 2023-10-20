@@ -3,7 +3,7 @@
 #include <string.h>
 #include "global.h"
 
-#define MAX_EXERCISES 10
+#define MAX_EXERCISES 26
 
 int exercise01(void) {
     /**
@@ -233,7 +233,7 @@ int exercise06(void) {
     char p[80];
 
     printf("Digite um texto de ate 80 caracteres: ");
-    fflush(stdin); // Limpa o buffer do teclado
+    fflush(stdin);
     fgets(t, sizeof(t), stdin);
 
     printf("Digite uma palavra: ");
@@ -265,7 +265,6 @@ int exercise06(void) {
         printf("Palavra não encontrada!\n");
     else
         printf("Palavra encontrada %d vezes!\n", cont);
-
 
     return 0;
 }
@@ -435,7 +434,6 @@ int exercise11(void) {
 
     for (j = comStrlen - 1, i = 0; j >= 0; j--, i++)
         stInversa[j] = st1[i];
-
 
     stInversa[comStrlen] = '\0';
 
@@ -642,6 +640,227 @@ int exercise16(void) {
     return 0;
 }
 
+int exercicio17(void) {
+
+    /*
+     * Ler uma string de ate 79 caracteres e salvar a inversa desta em um
+vetor. Imprimir a inversa da string lida.
+     * */
+
+    char st[80], stInv[80];
+
+    printf("Digite um texto (max. 79):");
+    scanf("%s", st);
+    int tam;
+    tam = 0;
+
+    //maneira manual de calcular o tamanho de um vetor de char
+    while ((st[tam] != '\0') && (st[tam] != '\n'))
+        tam++;
+
+    stInv[tam] = '\0';
+
+    for (int i = 0; i < tam; i++)
+        stInv[i] = st[tam - i - 1];
+
+    printf("Texto:   %s\n", st);
+    printf("Inversa: %s\n", stInv);
+
+    return 0;
+}
+
+int exercicio18(void) {
+
+    char st[80], stInv[80];
+    int i, j, tam;
+
+    printf("Digite um texto (max. 79):");
+    scanf("%s", st);
+
+    //maneira de calcular o tamanho deu uma String
+    for (tam = 0; (st[tam] != '\0') && (tam < 80); tam++);
+
+    stInv[tam] = '\0';
+    for (j = tam - 1, i = 0; j >= 0; j--, i++)
+        stInv[j] = st[i];
+
+    printf("Texto:   %s\n", st);
+    printf("Inversa: %s\n", stInv);
+
+
+    return 0;
+}
+
+int exercicio19(void) {
+
+    char st[80], stInv[80];
+    int i, j, tam;
+
+    printf("Digite um texto (max. 79):");
+    fflush(stdin);
+    fgets(st, sizeof(st), stdin);
+
+    //maneira de calcular o tamanho deu uma String
+    for (tam = 0; (st[tam] != '\0') && (tam < 80); tam++);
+
+    stInv[tam] = '\0';
+    for (j = tam - 1, i = 0; j >= 0; j--, i++)
+        stInv[j] = st[i];
+
+    printf("Texto:   %s\n", st);
+    printf("Inversa: %s\n", stInv);
+
+    return 0;
+}
+
+int exercicio20(void) {
+    /*
+     * 1 - char *strcat(char *s1, const char *s2: Para fazer a concatenação de duas strings
+     * 2 - int strcmp(const char *s1, const char *s2): Para fazer a comparação lexicográfica (utilizada em ordenação) de duas strings
+     * 3 - char *strcpy(char *s1, const char *s2): Para fazer a cópia de uma string para outra
+     * 4 - int strlen(const char *s): Para calcular o tamanho de uma string
+     * */
+
+    char s1[80], s2[80] = "Vinicius dos Santos Andrade";
+    strcpy(s1, s2);
+
+    printf("s1: %s\n", s1);
+    printf("s2: %s\n", s2);
+
+    return 0;
+}
+
+int exercicio21(void) {
+
+    /*Programa que conta o número de palavras em textos sem pontuação*/
+
+    char s[80];
+    int i = 0, n = 0;
+
+    printf("Digite um texto que voce gostaria de saber quantas palavras tem: (limite 80):  ");
+    fflush(stdin);
+    fgets(s, 80, stdin);
+
+    while (s[i] != '\n' && s[i] != '\0') {
+        while (s[i] == ' ') {
+            i++;
+        }
+
+        if (s[i] != '\n' && s[i] != '\0') {
+            n++;
+            while (s[i] != ' ' && s[i] != '\n' && s[i] != '\0') {
+                i++;
+            }
+        }
+    }
+
+    printf("Total de palavras: %d\n", n);
+
+
+    return 0;
+}
+
+int exercicio22(void) {
+
+    /*
+     Fazer um programa que acha todas as posições de ocorrência de uma
+     palavra em um texto.
+     */
+
+    char s[80], p[80];
+    int tamS, tamP, i, j;
+
+    printf("Digite um texto: ");
+    fflush(stdin);
+    fgets(s, sizeof(s), stdin);
+
+    printf("Digite uma palavra: ");
+    fflush(stdin);
+    fgets(p, sizeof(p), stdin);
+
+    tamS = strlen(s) - 1;
+    tamP = strlen(p) - 1;
+
+    for (i = 0; i <= tamS - tamP; i++) {
+        j = 0;
+        while (j < tamP && p[j] == s[i + j]) {
+            j++;
+        }
+
+        if (j == tamP) {
+            printf("Encontrada na posicao [%d - %d]\n", i, i + tamP - 1);
+        }
+    }
+
+    return 0;
+}
+
+int exercicio23(void) {
+
+    /*
+     * Escreva um programa que lê uma string de até 50 caracteres, e
+     * imprime "Palindromo" caso a string seja um palindromo e  "Não Palindromo"
+     * caso contrário
+     * */
+
+    char s[50];
+    printf("Digite uma string de ate 50 caracteres: ");
+    fflush(stdin);
+    fgets(s, sizeof(s), stdin);
+
+    int tam = strlen(s) - 1; // Desconsidera o caractere de nova linha '\n'
+    int i, j = tam - 1;
+
+    for (i = 0; i < tam; i++) {
+        if (s[i] != s[j]) {
+            printf("Nao e palindromo!\n");
+            return 0;
+        }
+        j--;
+    }
+
+    printf("E palindromo!\n");
+
+    return 0;
+}
+
+int exercicio24(void) {
+
+    /*
+     * Refaça o exemplo visto em aula de inversão dee uma string de tal
+     * forma que não seja utilizado nenhum vetor adicional! Ou seja devemos
+     * computar a inversa no príprio vetor original
+     */
+
+    printf("Digite uma string: ");
+    char st[80];
+    fflush(stdin);
+    fgets(st, sizeof(st), stdin); //string / tamanho / entrada Padrão
+
+    int tam = strlen(st) - 1;
+    int i, j;
+
+    for (i = 0, j = tam; j > 0; i++, j--) {
+        char temp = st[i];
+        st[i] = st[j];
+        st[j] = temp;
+    }
+
+    printf("%s\n", st);
+
+    return 0;
+}
+
+int exercicio25(void) {
+
+    return 0;
+}
+
+int exercicio26(void) {
+
+    return 0;
+}
+
 int displayMenuAndGetChoice(void) {
     printf("Exercise 01:\n");
     printf("Exercise 02:\n");
@@ -655,6 +874,20 @@ int displayMenuAndGetChoice(void) {
     printf("Exercise 10:\n");
     printf("Exercise 11:\n");
     printf("Exercise 12:\n");
+    printf("Exercise 13:\n");
+    printf("Exercise 14:\n");
+    printf("Exercise 15:\n");
+    printf("Exercise 16:\n");
+    printf("Exercise 17:\n");
+    printf("Exercise 18:\n");
+    printf("Exercise 19:\n");
+    printf("Exercise 20:\n");
+    printf("Exercise 21:\n");
+    printf("Exercise 22:\n");
+    printf("Exercise 23:\n");
+    printf("Exercise 24:\n");
+    printf("Exercise 25:\n");
+    printf("Exercise 26:\n");
     printf("Enter the number of the exercise you want to execute: ");
 
     int choice;
@@ -712,6 +945,37 @@ void executeExercise(int choice) {
         case 16:
             exercise16();
             break;
+        case 17:
+            exercicio17();
+            break;
+        case 18:
+            exercicio18();
+            break;
+        case 19:
+            exercicio19();
+            break;
+        case 20:
+            exercicio20();
+            break;
+        case 21:
+            exercicio21();
+            break;
+        case 22:
+            exercicio22();
+            break;
+        case 23:
+            exercicio23();
+            break;
+        case 24:
+            exercicio24();
+            break;
+        case 25:
+            exercicio25();
+            break;
+        case 26:
+            exercicio26();
+            break;
+
         default:
             printf("Invalid option!\n");
             break;
