@@ -7,7 +7,7 @@
 
 int exercise01(void) {
 
-    const char *nomeArquivoOrigem = "C:\\Users\\vinic\\OneDrive\\¡rea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe01.txt";
+    const char *nomeArquivoOrigem = "C:\\Users\\vinic\\OneDrive\\√Årea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe01.txt";
     bool verify = verificarArquivo(nomeArquivoOrigem);
 
     if (verify)
@@ -20,7 +20,7 @@ int exercise01(void) {
 
 int exercise02(void) {
 
-    const char *nomeArquivoOrigem = "C:\\Users\\vinic\\OneDrive\\¡rea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe01.txt";
+    const char *nomeArquivoOrigem = "C:\\Users\\vinic\\OneDrive\\√Årea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe01.txt";
     imprimirConteudoArquivo(nomeArquivoOrigem);
     printf("\n");
 
@@ -51,8 +51,8 @@ int exercise03(void) {
 
 int exercise04(void) {
 
-    const char *nomeArquivoOrigem = "C:\\Users\\vinic\\OneDrive\\¡rea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe01.txt";
-    const char *nomeArquivoDestino = "C:\\Users\\vinic\\OneDrive\\¡rea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe03.txt";
+    const char *nomeArquivoOrigem = "C:\\Users\\vinic\\OneDrive\\√Årea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe01.txt";
+    const char *nomeArquivoDestino = "C:\\Users\\vinic\\OneDrive\\√Årea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe03.txt";
 
     copiarArquivo(nomeArquivoOrigem, nomeArquivoDestino);
 
@@ -72,14 +72,13 @@ int exercise05(void) {
     double aux = 2.5;
 
     arq = fopen(
-            "C:\\Users\\vinic\\OneDrive\\¡rea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe05.txt",
+            "C:\\Users\\vinic\\OneDrive\\√Årea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe05.txt",
             "w+b");
     if (arq == NULL) {
         printf("Error opening file!\n");
         return 1;
-    } else {
+    } else 
         fwrite(&aux, sizeof(double), 1, arq);
-    }
 
     return 0;
 }
@@ -89,14 +88,14 @@ int exercise06(void) {
     double aux[] = {2.5, 3.5, 4.5, 5.5, 6.5};
 
     arq = fopen(
-            "C:\\Users\\vinic\\OneDrive\\¡rea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe06.txt",
+            "C:\\Users\\vinic\\OneDrive\\√Årea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe06.txt",
             "w+b");
     if (arq == NULL) {
         printf("Error opening file!\n");
         return 1;
-    } else {
+    } else 
         fwrite(aux, sizeof(double), 5, arq);
-    }
+    
     return 0;
 }
 
@@ -110,7 +109,7 @@ int exercise08(void) {
     double aux = 0;
 
     arq = fopen(
-            "C:\\Users\\vinic\\OneDrive\\¡rea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe06.txt",
+            "C:\\Users\\vinic\\OneDrive\\√Årea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe06.txt",
             "r+b");
 
     if (arq == NULL) {
@@ -130,7 +129,7 @@ int exercise09(void) {
     double aux[5];
 
     arq = fopen(
-            "C:\\Users\\vinic\\OneDrive\\¡rea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe06.txt",
+            "C:\\Users\\vinic\\OneDrive\\√Årea de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe06.txt",
             "r+b");
 
     if (arq == NULL) {
@@ -140,10 +139,9 @@ int exercise09(void) {
 
     fread(aux, sizeof(double), 5, arq);
 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++) 
         printf("Value: %lf\n", aux[i]);
-    }
-
+    
     return 0;
 }
 
