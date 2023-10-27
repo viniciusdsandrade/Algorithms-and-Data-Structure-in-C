@@ -104,7 +104,8 @@ int exercise07(void) {
     return 0;
 }
 
-int exercise08(void) {
+int exercise08(void) { 
+    
     FILE *arq;
     double aux = 0;
 
