@@ -3,7 +3,7 @@
 #include <locale.h>
 #include "global.h"
 
-#define MAX_EXERCISES 10
+#define MAX_EXERCISES 11
 
 int exercise01(void) {
 
@@ -154,7 +154,7 @@ int exercise10(void) {
     printf("Digite o nome do arquivo: ");
     scanf("%s", nomeArq);
 
-    imprimeArquivo(nomeArq);
+    imprimeAluno(nomeArq);
 
     printf("Digite o RA do aluno que deseja alterar o nome: ");
     scanf("%d", &ra);
@@ -163,7 +163,18 @@ int exercise10(void) {
     printf("Digite o novo nome: ");
     scanf("%s", nome);
 
-    alteraNome(nomeArq, ra, nome);
+    alteraNomeAluno(nomeArq, ra, nome);
+
+    return 0;
+}
+
+
+
+int exercicio11(void){
+
+
+
+
 
     return 0;
 }
@@ -180,6 +191,7 @@ int displayMenuAndGetChoice(void) {
     printf("Exercise 08:\n");
     printf("Exercise 09:\n");
     printf("Exercise 10:\n");
+    printf("Exercise 11:\n");
     printf("Enter the number of the exercise you want to execute: ");
 
     int choice;
@@ -218,6 +230,9 @@ void executeExercise(int choice) {
             break;
         case 10:
             exercise10();
+            break;
+        case 11:
+            exercise11();
             break;
         default:
             printf("Invalid option!\n");

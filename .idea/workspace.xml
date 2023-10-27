@@ -9,12 +9,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="">
+    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="build[prova-1] : correção prova 1 de Linguagem de Programação">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/linguagem-c-luis-damas/Linguagem C Luis Damas.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab-imagem.exe" beforeDir="false" afterPath="$PROJECT_DIR$/lab-imagem.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista_7_C_files/exe07.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_7_C_files/exe07.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista_7_C_files/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_7_C_files/global.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_files/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/lista_7_C_files/global.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -58,13 +59,14 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
     "ignore_missing_gitignore": "true",
-    "last_opened_file_path": "C:/Users/vinic/OneDrive/Área de Trabalho/p1-lp",
+    "last_opened_file_path": "C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/Algorithms-and-Data-Structure-in-C",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -233,6 +235,9 @@
       <workItem from="1697540457902" duration="3922000" />
       <workItem from="1697799681394" duration="141000" />
       <workItem from="1697800321648" duration="61000" />
+      <workItem from="1697812965388" duration="960000" />
+      <workItem from="1698405758999" duration="34000" />
+      <workItem from="1698405806788" duration="3217000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;Feat&gt; :  Finalizando 'lista5-funcoes'">
       <option name="closed" value="true" />
@@ -490,7 +495,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697540984812</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="build[prova-1] : correção prova 1 de Linguagem de Programação">
+      <option name="closed" value="true" />
+      <created>1697813024114</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1697813024114</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,7 +541,8 @@
     <MESSAGE value="Fix[Desafio04] : Finalizando desafio04" />
     <MESSAGE value="build[file] : Lista de arquivos" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="build[prova-1] : correção prova 1 de Linguagem de Programação" />
+    <option name="LAST_COMMIT_MESSAGE" value="build[prova-1] : correção prova 1 de Linguagem de Programação" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

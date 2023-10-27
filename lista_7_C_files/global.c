@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 typedef struct Aluno {
-    char nome[50];
+    char nome[100];
     int RA;
 } Aluno;
 
@@ -126,12 +126,31 @@ bool compareFiles(const char *file1, const char *file2) {
     return false; // Retorna falso se os tamanhos dos arquivos forem diferentes
 }
 
-void imprimeArquivo(char nomeArq[]) {
+void cadastraAluno(char nomeArq[]) {
+    FILE *arq;
+    Aluno aux;
+
+    arq = fopen(nomeArq, "ab");
+    if (arq == NULL) {
+        printf("Error opening file!\n");
+        return;
+    }
+
+    printf("Digite o nome do aluno: ");
+    scanf("%s", aux.nome);
+    printf("Digite o RA do aluno: ");
+    scanf("%d", &aux.RA);
+
+    fwrite(&aux, sizeof(Aluno), 1, arq);
+
+    fclose(arq);
+}
+
+void imprimeAluno(char nomeArq[]) {
     FILE *arq;
     Aluno aux;
 
     arq = fopen(nomeArq, "r+b");
-
     if (arq == NULL) {
         printf("Error opening file!\n");
         return;
@@ -140,12 +159,13 @@ void imprimeArquivo(char nomeArq[]) {
     while (fread(&aux, sizeof(Aluno), 1, arq) == 1) {
         printf("Nome: %s\n", aux.nome);
         printf("RA: %d\n", aux.RA);
+        printf("--------------------\n");
     }
 
     fclose(arq);
 }
 
-void alteraNome(char nomeArq[],int ra, char nome[]) {
+void alteraNomeAluno(char nomeArq[], int ra, char nome[]) {
     FILE *arq;
     Aluno aux;
 
