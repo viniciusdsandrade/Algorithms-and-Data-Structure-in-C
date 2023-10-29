@@ -8,8 +8,7 @@
 */
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "OCDFAInspection"
-#define MAX 129 // Tamanho máximo da imagem em pixels
-
+#define MAX 129
 void leImagemPPM(
         char *name,
         int R[MAX][MAX],
@@ -70,10 +69,8 @@ int main(int argc, char **argv) {
     int R[MAX][MAX], G[MAX][MAX], B[MAX][MAX], novaR[MAX][MAX], novaG[MAX][MAX], novaB[MAX][MAX]; // Matrizes de cores
     int cols, rows; // Número de colunas e linhas da imagem
 
-    // Lê a imagem de entrada e armazena as informações nas matrizes R, G e B
     leImagemPPM(arqEntrada, R, G, B, &cols, &rows);
 
-    // Verifica o terceiro argumento para determinar o efeito desejado
     if (strcmp(argv[3], "esticar") == 0) {
         contrastePPM(R, G, B, novaR, novaG, novaB, cols, rows); // Aplica o efeito de esticar contrastePPM
     } else if (strcmp(argv[3], "cinza") == 0) {
@@ -100,31 +97,30 @@ int main(int argc, char **argv) {
  * @param rows  Ponteiro para armazenar o número de linhas da imagem.
  */
 void leImagemPPM(
-        char *name,            // Nome do arquivo da imagem a ser lida
-        int R[MAX][MAX],       // Matriz de componentes vermelhos da imagem
-        int G[MAX][MAX],       // Matriz de componentes verdes da imagem
-        int B[MAX][MAX],       // Matriz de componentes azuis da imagem
-        int *cols,             // Ponteiro para armazenar a largura da imagem
-        int *rows             // Ponteiro para armazenar a altura da imagem
+        char *name,
+        int R[MAX][MAX],
+        int G[MAX][MAX],
+        int B[MAX][MAX],
+        int *cols,
+        int *rows
 ) {
-    int i, j, lixo;            // Variáveis para controle e descarte temporário de dados
-    char p;                    // Variável para armazenar o tipo de imagem (P3)
+    int i, j, lixo;
+    char p;
 
-    FILE *f;                   // Ponteiro de arquivo para abrir e ler a imagem
-    f = fopen(name, "r");      // Tenta abrir o arquivo especificado para leitura
+    FILE *f;
+    f = fopen(name, "r");
     if (f == NULL) {
-        printf("Erro ao abrir a imagem \"%s\".\n", name); // Exibe uma mensagem de erro caso a abertura do arquivo falhe
-        return;  // Retorna da função, pois a leitura da imagem não é possível
+        printf("Erro ao abrir a imagem \"%s\".\n", name);
+        return;
     }
-    fscanf(f, "%c", &p);      // Lê o tipo de imagem (P3) do arquivo
-    fscanf(f, "%d", &lixo);   // Lê e descarta o valor de lixo
-    fscanf(f, "%d %d", cols, rows); // Lê a largura e a altura da imagem e armazena nos ponteiros correspondentes
-    fscanf(f, "%d", &lixo);   // Lê e descarta o valor de lixo
+    fscanf(f, "%c", &p);
+    fscanf(f, "%d", &lixo);
+    fscanf(f, "%d %d", cols, rows);
+    fscanf(f, "%d", &lixo);
 
-    // Loop para ler os componentes R, G e B de cada pixel da imagem
     for (i = 0; i < (*rows); i++) {
         for (j = 0; j < (*cols); j++) {
-            fscanf(f, "%d %d %d", &R[i][j], &G[i][j], &B[i][j]); // Lê e armazena os componentes de cada pixel
+            fscanf(f, "%d %d %d", &R[i][j], &G[i][j], &B[i][j]);
         }
     }
 
@@ -142,32 +138,30 @@ void leImagemPPM(
  * @param rows      Número de linhas da imagem.
  */
 void imprimeImagemPPM(
-        char *arqSaida,         // Nome do arquivo de saída
-        int R[MAX][MAX],       // Matriz de componentes vermelhos da imagem
-        int G[MAX][MAX],       // Matriz de componentes verdes da imagem
-        int B[MAX][MAX],       // Matriz de componentes azuis da imagem
-        int cols,              // Largura da imagem
-        int rows               // Altura da imagem
+        char *arqSaida,
+        int R[MAX][MAX],
+        int G[MAX][MAX],
+        int B[MAX][MAX],
+        int cols,
+        int rows
 ) {
     int i, j;
-    FILE *f;                   // Ponteiro de arquivo para escrever a imagem
+    FILE *f;
 
-    f = fopen(arqSaida, "w");  // Tenta abrir o arquivo de saída para escrita
-    fprintf(f, "P3\n%d %d\n255\n", cols, rows); // Escreve o cabeçalho da imagem no arquivo
+    f = fopen(arqSaida, "w");
+    fprintf(f, "P3\n%d %d\n255\n", cols, rows);
 
-    // Loop para escrever os componentes R, G e B de cada pixel da imagem
     for (i = 0; i < rows; i++) {
         for (j = 0; j < cols; j++) {
-            fprintf(f, "%d %d %d", R[i][j], G[i][j], B[i][j]); // Escreve os componentes de cada pixel no arquivo
+            fprintf(f, "%d %d %d", R[i][j], G[i][j], B[i][j]);
             if (j < cols - 1) {
-                fprintf(f, " "); // Adiciona um espaço entre os componentes, exceto no último componente de cada linha
+                fprintf(f, " ");
             }
         }
-        fprintf(f, "\n"); // Adiciona uma quebra de linha após cada linha de pixels
+        fprintf(f, "\n");
     }
-    fclose(f); // Fecha o arquivo após concluir a escrita da imagem
+    fclose(f);
 }
-
 
 /**
  * Aplica o efeito de esticar contrastePPM em uma imagem.
@@ -182,28 +176,26 @@ void imprimeImagemPPM(
  * @param rows      Número de linhas da imagem.
  */
 void contrastePPM(
-        int R[MAX][MAX],      // Matriz de componentes vermelhos da imagem original
-        int G[MAX][MAX],      // Matriz de componentes verdes da imagem original
-        int B[MAX][MAX],      // Matriz de componentes azuis da imagem original
-        int novaR[MAX][MAX],  // Matriz de componentes vermelhos da imagem com contrastePPM esticado
-        int novaG[MAX][MAX],  // Matriz de componentes verdes da imagem com contrastePPM esticado
-        int novaB[MAX][MAX],  // Matriz de componentes azuis da imagem com contrastePPM esticado
-        int cols,             // Largura da imagem
-        int rows             // Altura da imagem
+        int R[MAX][MAX],
+        int G[MAX][MAX],
+        int B[MAX][MAX],
+        int novaR[MAX][MAX],
+        int novaG[MAX][MAX],
+        int novaB[MAX][MAX],
+        int cols,
+        int rows
 ) {
     int x, y;  // Variáveis de iteração
 
-    // Inicializa variáveis para os valores mínimos e máximos de R, G e B
     int minR = 255, maxR = 0;
     int minG = 255, maxG = 0;
     int minB = 255, maxB = 0;
 
-    // Loop para encontrar os valores mínimos e máximos de R, G e B na imagem
     for (x = 0; x < rows; x++) {
         for (y = 0; y < cols; y++) {
-            int r = R[x][y];  // Componente vermelha do pixel atual
-            int g = G[x][y];  // Componente verde do pixel atual
-            int b = B[x][y];  // Componente azul do pixel atual
+            int r = R[x][y];
+            int g = G[x][y];
+            int b = B[x][y];
 
             // Atualiza os valores mínimos e máximos para R, G e B
             minR = (r < minR) ? r : minR;
@@ -215,7 +207,6 @@ void contrastePPM(
         }
     }
 
-    // Loop para aplicar o efeito de contrastePPM esticado aos componentes R, G e B
     for (x = 0; x < rows; x++) {
         for (y = 0; y < cols; y++) {
             // Aplica a fórmula para esticar o contrastePPM aos componentes R, G e B
@@ -239,21 +230,19 @@ void contrastePPM(
  * @param rows      Número de linhas da imagem.
  */
 void cinzaPPM(
-        int R[MAX][MAX],      // Matriz de componentes vermelhos da imagem original
-        int G[MAX][MAX],      // Matriz de componentes verdes da imagem original
-        int B[MAX][MAX],      // Matriz de componentes azuis da imagem original
-        int novaR[MAX][MAX],  // Matriz de componentes vermelhos da imagem em escala de cinzaPPM
-        int novaG[MAX][MAX],  // Matriz de componentes verdes da imagem em escala de cinzaPPM
-        int novaB[MAX][MAX],  // Matriz de componentes azuis da imagem em escala de cinzaPPM
-        int cols,             // Largura da imagem
-        int rows             // Altura da imagem
+        int R[MAX][MAX],
+        int G[MAX][MAX],
+        int B[MAX][MAX],
+        int novaR[MAX][MAX],
+        int novaG[MAX][MAX],
+        int novaB[MAX][MAX],
+        int cols,
+        int rows
 ) {
-    int x, y;  // Variáveis de iteração
+    int x, y;
 
-    // Loop para percorrer cada pixel da imagem
     for (x = 0; x < rows; x++) {
         for (y = 0; y < cols; y++) {
-            // Calcula a média dos componentes R, G e B para obter um valor de escala de cinzaPPM
             int grayscale = (int) (R[x][y] + G[x][y] + B[x][y]) / 3;
 
             // Atribui o valor de escala de cinzaPPM calculado a cada componente R, G e B

@@ -9,12 +9,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="build[prova-1] : correção prova 1 de Linguagem de Programação">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="Cadastrando Alterando e Imprimindo aluno em C">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista_7_C_files/exe07.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_7_C_files/exe07.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista_7_C_files/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_7_C_files/global.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista_7_C_files/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/lista_7_C_files/global.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,29 +43,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "ignore_missing_gitignore": "true",
-    "last_opened_file_path": "C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/Algorithms-and-Data-Structure-in-C",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "structure.view.defaults.are.configured": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/Algorithms-and-Data-Structure-in-C&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\challanges_C\challange4_C\dados" />
@@ -237,7 +233,8 @@
       <workItem from="1697800321648" duration="61000" />
       <workItem from="1697812965388" duration="960000" />
       <workItem from="1698405758999" duration="34000" />
-      <workItem from="1698405806788" duration="3217000" />
+      <workItem from="1698405806788" duration="4107000" />
+      <workItem from="1698415035815" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="&lt;Feat&gt; :  Finalizando 'lista5-funcoes'">
       <option name="closed" value="true" />
@@ -503,7 +500,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697813024114</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Cadastrando Alterando e Imprimindo aluno em C">
+      <option name="closed" value="true" />
+      <created>1698410673938</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1698410673938</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +547,8 @@
     <MESSAGE value="build[file] : Lista de arquivos" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="build[prova-1] : correção prova 1 de Linguagem de Programação" />
-    <option name="LAST_COMMIT_MESSAGE" value="build[prova-1] : correção prova 1 de Linguagem de Programação" />
+    <MESSAGE value="Cadastrando Alterando e Imprimindo aluno em C" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cadastrando Alterando e Imprimindo aluno em C" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
