@@ -16,8 +16,8 @@ int exercise01(void) {
       <p>   int quantidade;
    <p>  }Produto;
 <p>
-   <p>  Implemente duas funções, uma que devolve o vetor ordenado por preços e outra que devolve
-    o vetor ordenado pela quantidade de itens no estoque. Os protótipos são:
+   <p>  Implemente duas funï¿½ï¿½es, uma que devolve o vetor ordenado por preï¿½os e outra que devolve
+    o vetor ordenado pela quantidade de itens no estoque. Os protï¿½tipos sï¿½o:
 <p>
    <p>  void ordenaPreco(Produto vet[], int n);
    <p> void ordenaQuantidade(Produto vet[], int n);
@@ -55,9 +55,9 @@ int exercise02(void) {
     <p> }Data;
      <p>
 
-   <p>  Implemente um algoritmo que receba um vetor de Datas como parâmetro e que retorne as datas em ordem cronológica.
+   <p>  Implemente um algoritmo que receba um vetor de Datas como parï¿½metro e que retorne as datas em ordem cronolï¿½gica.
 
-    <p>  Protótipo da função : void ordena(struct Data vet[], int tam);
+    <p>  Protï¿½tipo da funï¿½ï¿½o : void ordena(struct Data vet[], int tam);
 
     <p> Dica: Ordene o vetor separadamente por cada um dos campos.
     */
@@ -84,7 +84,7 @@ int exercise02(void) {
 int exercise03(void) {
     /**
     3. Suponha que criamos uma estrutura para armazenar dados de pessoas e uma outra estrutura
-    para armazenar dados de várias pessoas como uma base de dados.
+    para armazenar dados de vï¿½rias pessoas como uma base de dados.
 <p>
   <p>   typedef struct Pessoa{
    <p>      int rg;
@@ -93,25 +93,25 @@ int exercise03(void) {
    <p>  }Pessoa;
 <p>
    <p>  typedef struct Base{
-   <p>     int armazenado; //Deve sempre corresponder ao número de pessoas na base
+   <p>     int armazenado; //Deve sempre corresponder ao nï¿½mero de pessoas na base
    <p>      Pessoa pessoas[100];
    <p>  }Base;
 <p>
-   <p>  Crie funções para cada uma das operações abaixo:
+   <p>  Crie funï¿½ï¿½es para cada uma das operaï¿½ï¿½es abaixo:
 <p>
-   <p>  a) Cria base: esta função devolve uma Base onde o campo armazenado ? inicializado
+   <p>  a) Cria base: esta funï¿½ï¿½o devolve uma Base onde o campo armazenado ? inicializado
     com 0.
   <p>   Base cria_base();
 <p>
-  <p>   b) Inclui Pessoa: esta função recebe como parâmetro um dado do tipo Pessoa e o inclui
-    na base (também passada por parâmetro) caso já não exista na base uma pessoa com
-    o mesmo RG. A função devolve 1 caso a incluso tenha ocorrido, devolve 0 caso a
-    Base esteja cheia e devolve -1 caso já exista uma pessoa com o RG informado.
+  <p>   b) Inclui Pessoa: esta funï¿½ï¿½o recebe como parï¿½metro um dado do tipo Pessoa e o inclui
+    na base (tambï¿½m passada por parï¿½metro) caso jï¿½ nï¿½o exista na base uma pessoa com
+    o mesmo RG. A funï¿½ï¿½o devolve 1 caso a incluso tenha ocorrido, devolve 0 caso a
+    Base esteja cheia e devolve -1 caso jï¿½ exista uma pessoa com o RG informado.
   <p>   int insere_base(Pessoa p, Base base);
 <p>
-  <p>   c) Exclui Pessoa: esta função recebe como parâmetro um dado do tipo int representando
-    o RG de uma pessoa e o exclui da base caso esteja presente. A função devolve 1 caso a
-    exclusão tenha ocorrido, e devolve 0 caso não exista uma pessoa com o RG informado.
+  <p>   c) Exclui Pessoa: esta funï¿½ï¿½o recebe como parï¿½metro um dado do tipo int representando
+    o RG de uma pessoa e o exclui da base caso esteja presente. A funï¿½ï¿½o devolve 1 caso a
+    exclusï¿½o tenha ocorrido, e devolve 0 caso nï¿½o exista uma pessoa com o RG informado.
    <p>  int remove_base(int rg, Base base);
     */
 
@@ -143,9 +143,9 @@ int exercise04(void) {
      * <p>Pessoa cadastro[100];
      *<p>
      * <p>Suponha que o vetor esteja ordenado em ordem crescente por valor de RG.
-     * <p>Implemente uma função de busca por RG, que opera como a busca binária, e que caso exista uma
-     * <p>pessoa no cadastro com o RG a ser buscado, devolve o índice deste no cadastro, e devolve -1
-     * <p>caso não exista uma pessoa com o RG a ser buscado
+     * <p>Implemente uma funï¿½ï¿½o de busca por RG, que opera como a busca binï¿½ria, e que caso exista uma
+     * <p>pessoa no cadastro com o RG a ser buscado, devolve o ï¿½ndice deste no cadastro, e devolve -1
+     * <p>caso nï¿½o exista uma pessoa com o RG a ser buscado
      * */
 
     Pessoa cadastro[100];
@@ -174,17 +174,17 @@ int exercise04(void) {
 }
 
 int exercise05(void) {
-/**  Refaça as funções de busca sequencial e busca binária vistas em aula assumindo que o
-vetor possui chaves que podem aparecer repetidas. Neste caso, você deve retornar em um
-outro vetor todas as posições onde a chave foi encontrada.
+/**  Refaï¿½a as funï¿½ï¿½es de busca sequencial e busca binï¿½ria vistas em aula assumindo que o
+vetor possui chaves que podem aparecer repetidas. Neste caso, vocï¿½ deve retornar em um
+outro vetor todas as posiï¿½ï¿½es onde a chave foi encontrada.
 
-<p> Protótipo da função:
+<p> Protï¿½tipo da funï¿½ï¿½o:
 <p> void busca(int vet[], int tam, int chave, int posicoes[], int n)
 
-<p> Você deve devolver em posicoes[] as posições de vet que possuem a chave, e devolver
-em n o número de ocorrências da chave.
-<p> OBS: Na chamada desta função, o vetor posições deve ter espaço suficiente
-<p>(por exemplo, tam) para guardar todas as possíveis ocorrências da chave.
+<p> Vocï¿½ deve devolver em posicoes[] as posiï¿½ï¿½es de vet que possuem a chave, e devolver
+em n o nï¿½mero de ocorrï¿½ncias da chave.
+<p> OBS: Na chamada desta funï¿½ï¿½o, o vetor posiï¿½ï¿½es deve ter espaï¿½o suficiente
+<p>(por exemplo, tam) para guardar todas as possï¿½veis ocorrï¿½ncias da chave.
  */
 
     int vet[10] = {
@@ -246,17 +246,17 @@ int exercise07(void) {
 
     /**
     struct Aluno leAluno ( ) ;
-    <p> Esta função faz a leitura dos dados de um registro Aluno e devolve o
+    <p> Esta funï¿½ï¿½o faz a leitura dos dados de um registro Aluno e devolve o
     registro lido.
 <p>
     <p>void imprimeAluno (struct Aluno a) ;
-    <p>Esta função recebe como par?metro um registro Aluno e imprime os
+    <p>Esta funï¿½ï¿½o recebe como par?metro um registro Aluno e imprime os
     dados do registro.
 <p>
    <p> void listarTurma (struc t Aluno turma [ ], int n ) ;
-   <p> Esta função recebe como parâmetros um vetor do tipo Aluno
-   <p> representando uma turma, e também um inteiro n indicando o
-   <p> tamanho do vetor. A função imprime os dados de todos os alunos.
+   <p> Esta funï¿½ï¿½o recebe como parï¿½metros um vetor do tipo Aluno
+   <p> representando uma turma, e tambï¿½m um inteiro n indicando o
+   <p> tamanho do vetor. A funï¿½ï¿½o imprime os dados de todos os alunos.
     */
 
     int numAlunos;
@@ -277,8 +277,8 @@ int exercise07(void) {
 int exercise08(void) {
     /**
      Crie um novo tipo de registro para armazenar alunos com RA e idade.
-     <p> faça a leitura de 5 alunos em uma função.
-     <p> Função Calcule e imprima a média das idades dos alunos.
+     <p> faï¿½a a leitura de 5 alunos em uma funï¿½ï¿½o.
+     <p> Funï¿½ï¿½o Calcule e imprima a mï¿½dia das idades dos alunos.
      */
 
     int numAlunes;
@@ -297,9 +297,9 @@ int exercise09(void) {
     /**
     Crie um novo tipo de registro para armazenar coordenadas no plano
     cartesiano.
-    <p>Crie uma Função para imprimir um ponto do tipo criado.
-    <p>Crie uma Função para cada uma destas operações: soma de dois
-    pontos, subtraçõo de dois pontos, multiplicação por um escalar.
+    <p>Crie uma Funï¿½ï¿½o para imprimir um ponto do tipo criado.
+    <p>Crie uma Funï¿½ï¿½o para cada uma destas operaï¿½ï¿½es: soma de dois
+    pontos, subtraï¿½ï¿½o de dois pontos, multiplicaï¿½ï¿½o por um escalar.
     */
 
     Ponto *p3 = malloc(sizeof(Ponto));
@@ -342,12 +342,12 @@ int exercise09(void) {
 
 int exercise10(void) {
     /**
-    Defina uma variável do tipo registro que tenha dois campinas, senodo o  1 um vetor de 3 elementos do tipo inteiro
-    e o 2 campo um valor inteiro. Faça:
+    Defina uma variï¿½vel do tipo registro que tenha dois campinas, senodo o  1 um vetor de 3 elementos do tipo inteiro
+    e o 2 campo um valor inteiro. Faï¿½a:
     <p>
-    <p>a) Crie uma função para leitura dos valores do 1 campo(vetor)
+    <p>a) Crie uma funï¿½ï¿½o para leitura dos valores do 1 campo(vetor)
    <p>b) Some os valores do vetor e coloque o resultao no 2 campo
-    <p>c) Crie uma função para imprimir os valores de registro
+    <p>c) Crie uma funï¿½ï¿½o para imprimir os valores de registro
      */
 
     Reg minhaReg;
@@ -363,10 +363,10 @@ int exercise10(void) {
 
 int exercise11(void) {
 
-    /** Crie uma função que recebe duas strings de tamanhos quaisqueres e que devolve a concatenação destas
-     * lembre-se que uma função não pode devolver um vetor, mas ela pode devolver um ponteiro,
+    /** Crie uma funï¿½ï¿½o que recebe duas strings de tamanhos quaisqueres e que devolve a concatenaï¿½ï¿½o destas
+     * lembre-se que uma funï¿½ï¿½o nï¿½o pode devolver um vetor, mas ela pode devolver um ponteiro,
      *
-     * o protótipo da função será
+     * o protï¿½tipo da funï¿½ï¿½o serï¿½
      *
      * <p>char * concatena(char *s1, char *s2);
      */
@@ -387,16 +387,14 @@ int exercise12(void) {
 
     int vetor[10] = {14, 7, 8, 34, 56, 4, 0, 9, -8, 100};
     printf("Vetor desordenado:\n");
-    for (int i = 0; i < 10; ++i) {
+    for (int i = 0; i < 10; ++i) 
         printf("%d ", vetor[i]);
-    }
-
+    
     selectionSort(vetor, 10);
 
     printf("\nVetor ordenado:\n");
-    for (int i = 0; i < 10; ++i) {
+    for (int i = 0; i < 10; ++i) 
         printf("%d ", vetor[i]);
-    }
 
     return 0;
 }
