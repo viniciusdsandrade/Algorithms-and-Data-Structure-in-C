@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 typedef struct Aluno {
     char nome[100];
@@ -119,9 +120,8 @@ bool compareFiles(const char *file1, const char *file2) {
     fclose(f1);
     fclose(f2);
 
-    if (ch1 == ch2) {
+    if (ch1 == ch2)
         return true; // Retorna verdadeiro para indicar que os arquivos são idênticos
-    }
 
     return false; // Retorna falso se os tamanhos dos arquivos forem diferentes
 }
@@ -179,7 +179,7 @@ void alteraNomeAluno(char nomeArq[], int ra, char nome[]) {
     while (fread(&aux, sizeof(Aluno), 1, arq) == 1) {
         if (aux.RA == ra) {
             strcpy(aux.nome, nome);
-            fseek(arq, -sizeof(Aluno), SEEK_CUR);
+            fseek(arq, -sizeof(Aluno), SEEK_CUR); // Volta o ponteiro para a posição anterior (antes da leitura
             fwrite(&aux, sizeof(Aluno), 1, arq);
             break;
         }

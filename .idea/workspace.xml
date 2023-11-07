@@ -9,8 +9,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="Cadastrando Alterando e Imprimindo aluno em C">
+    <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lista_8_C_recursividade/exe08.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_8_C_recursividade/global.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_8_C_recursividade/global.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_extra_1_C/lista/IFBA_algoritmos.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_extra_2_C/lista/Guanabara_algoritmos.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_files/exe07.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_7_C_files/exe07.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_files/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_7_C_files/global.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_extra_1_C/slides/IFBA_algoritmos.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_extra_2_C/slides/Guanabara_algoritmos.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,23 +33,17 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
-    <option name="clangWarnings" value="-Wno-unused-variable,-Wno-infinite-recursion,-Wno-array-bounds,-Werror=implicit-function-declaration,-Wshadow,-Wno-shadow-field-in-constructor-modified,-Wno-shadow-ivar,-Wuninitialized,-Wunused-label,-Wunused-lambda-capture,-Wno-implicit-function-declaration" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-    <option name="showPreview" value="true" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="2VLo5WCMHsVSjkJIPWXyy4tG3sh" />
+  <component name="ProjectId" id="2XqTlQcaO9KFVpYFetpuAU0JwPk" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -46,7 +54,6 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
@@ -54,504 +61,34 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/Algorithms-and-Data-Structure-in-C&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/algorithms-and-data-structure-in-c&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\challanges_C\challange4_C\dados" />
-      <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_6_C_search\slides" />
-      <recent name="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_extra_2_C\slides" />
-    </key>
-  </component>
-  <component name="RunManager" selected="C/C++ File.exe07.c">
-    <configuration name="Guaranara_algoritmos.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="Guaranara_algoritmos.c" CONFIG_NAME="Guaranara_algoritmos.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_extra_2_C\Guaranara_algoritmos.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IFBA_algoritmos.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="IFBA_algoritmos.c" CONFIG_NAME="IFBA_algoritmos.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_extra_1_C\IFBA_algoritmos.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="desafio1.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="desafio1.c" CONFIG_NAME="desafio1.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\challanges_C\challange1_C\desafio1.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="desafio2.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="desafio2.c" CONFIG_NAME="desafio2.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\challanges_C\challange2_C\desafio2.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="desafio3.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="enunciado.html" TARGET_NAME="desafio3.c" CONFIG_NAME="desafio3.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\challanges_C\challange3_C\desafio3.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="exe01.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="exe01.c" CONFIG_NAME="exe01.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_1_C_condicionais\exe01.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="exe02.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="exe02.c" CONFIG_NAME="exe02.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_2_C_lacos\exe02.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="exe03.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="exe03.c" CONFIG_NAME="exe03.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_3_C_vetores_e_matrizes\exe03.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="exe04.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="exe04.c" CONFIG_NAME="exe04.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_4_C_strings\exe04.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="exe05.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="exe05.c" CONFIG_NAME="exe05.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_5_C_funcoes\exe05.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="exe06.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="exe06.c" CONFIG_NAME="exe06.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_6_C_search\exe06.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="exe07.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Algorithms-and-Data-Structure-in-C" TARGET_NAME="exe07.c" CONFIG_NAME="exe07.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\lista_7_C_files\exe07.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="lab-imagem.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="enunciado.html" TARGET_NAME="lab-imagem.c" CONFIG_NAME="lab-imagem.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\Algorithms-and-Data-Structure-in-C\challanges_C\challange4_C\_aux\lab-imagem.c" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="C/C++ File.desafio1.c" />
-      <item itemvalue="C/C++ File.desafio2.c" />
-      <item itemvalue="C/C++ File.desafio3.c" />
-      <item itemvalue="C/C++ File.exe01.c" />
-      <item itemvalue="C/C++ File.exe02.c" />
-      <item itemvalue="C/C++ File.exe03.c" />
-      <item itemvalue="C/C++ File.exe04.c" />
-      <item itemvalue="C/C++ File.exe05.c" />
-      <item itemvalue="C/C++ File.exe06.c" />
-      <item itemvalue="C/C++ File.exe07.c" />
-      <item itemvalue="C/C++ File.Guaranara_algoritmos.c" />
-      <item itemvalue="C/C++ File.IFBA_algoritmos.c" />
-      <item itemvalue="C/C++ File.lab-imagem.c" />
-    </list>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="097f3709-4530-4a3c-a161-bbbd4202c03d" name="Changes" comment="" />
-      <created>1694624541423</created>
+      <changelist id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="" />
+      <created>1699355762681</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1694624541423</updated>
-      <workItem from="1694624542483" duration="6706000" />
-      <workItem from="1694631406183" duration="8000" />
-      <workItem from="1694633903301" duration="2074000" />
-      <workItem from="1695048653394" duration="54000" />
-      <workItem from="1695048718371" duration="280000" />
-      <workItem from="1695122928206" duration="1409000" />
-      <workItem from="1695219391541" duration="157000" />
-      <workItem from="1695221012220" duration="1956000" />
-      <workItem from="1695236586335" duration="250000" />
-      <workItem from="1695295611818" duration="7000" />
-      <workItem from="1695295658410" duration="2888000" />
-      <workItem from="1695300781089" duration="1095000" />
-      <workItem from="1695562826407" duration="89000" />
-      <workItem from="1695562929712" duration="30000" />
-      <workItem from="1695673971264" duration="81000" />
-      <workItem from="1695674062770" duration="38000" />
-      <workItem from="1695728680078" duration="1412000" />
-      <workItem from="1695825880925" duration="3371000" />
-      <workItem from="1695832277317" duration="12150000" />
-      <workItem from="1695936434234" duration="25000" />
-      <workItem from="1695936472188" duration="40000" />
-      <workItem from="1695955494435" duration="95000" />
-      <workItem from="1695955645639" duration="2983000" />
-      <workItem from="1695989140148" duration="1439000" />
-      <workItem from="1695990682317" duration="3896000" />
-      <workItem from="1696333934334" duration="3757000" />
-      <workItem from="1696339202686" duration="128000" />
-      <workItem from="1696339342677" duration="74000" />
-      <workItem from="1696339426349" duration="1282000" />
-      <workItem from="1696341035616" duration="186000" />
-      <workItem from="1696510313450" duration="2864000" />
-      <workItem from="1696612393485" duration="39000" />
-      <workItem from="1696612448249" duration="19000" />
-      <workItem from="1696702294194" duration="1370000" />
-      <workItem from="1696938293807" duration="2535000" />
-      <workItem from="1696948813879" duration="1405000" />
-      <workItem from="1697048993053" duration="280000" />
-      <workItem from="1697049288225" duration="2491000" />
-      <workItem from="1697074533145" duration="2369000" />
-      <workItem from="1697076951293" duration="1285000" />
-      <workItem from="1697078280793" duration="104000" />
-      <workItem from="1697078395509" duration="1960000" />
-      <workItem from="1697080414257" duration="5006000" />
-      <workItem from="1697247910560" duration="52000" />
-      <workItem from="1697247988583" duration="213000" />
-      <workItem from="1697300526384" duration="139000" />
-      <workItem from="1697300687076" duration="453000" />
-      <workItem from="1697386826639" duration="2090000" />
-      <workItem from="1697390780853" duration="2420000" />
-      <workItem from="1697393424599" duration="81000" />
-      <workItem from="1697419263070" duration="14000" />
-      <workItem from="1697540339739" duration="104000" />
-      <workItem from="1697540457902" duration="3922000" />
-      <workItem from="1697799681394" duration="141000" />
-      <workItem from="1697800321648" duration="61000" />
-      <workItem from="1697812965388" duration="960000" />
-      <workItem from="1698405758999" duration="34000" />
-      <workItem from="1698405806788" duration="4107000" />
-      <workItem from="1698415035815" duration="2000" />
+      <updated>1699355762681</updated>
+      <workItem from="1699355763567" duration="184000" />
+      <workItem from="1699355961382" duration="814000" />
+      <workItem from="1699356802175" duration="16000" />
+      <workItem from="1699356833165" duration="90000" />
     </task>
-    <task id="LOCAL-00001" summary="&lt;Feat&gt; :  Finalizando 'lista5-funcoes'">
-      <option name="closed" value="true" />
-      <created>1694635512226</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1694635512227</updated>
-    </task>
-    <task id="LOCAL-00002" summary="&lt;Feat&gt; :  Finalizando 'lista5-funcoes'">
-      <option name="closed" value="true" />
-      <created>1694635530168</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1694635530168</updated>
-    </task>
-    <task id="LOCAL-00003" summary="&lt;Fix&gt; :  lista5 e lista6">
-      <option name="closed" value="true" />
-      <created>1695236649655</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1695236649655</updated>
-    </task>
-    <task id="LOCAL-00004" summary="&lt;Fix&gt; :  lista5 e lista6">
-      <option name="closed" value="true" />
-      <created>1695236817590</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1695236817590</updated>
-    </task>
-    <task id="LOCAL-00005" summary="&lt;Fix&gt; :  adicionando documentação">
-      <option name="closed" value="true" />
-      <created>1695301813540</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1695301813540</updated>
-    </task>
-    <task id="LOCAL-00006" summary="&lt;Fix&gt; :  adicionando documentação">
-      <option name="closed" value="true" />
-      <created>1695301879679</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1695301879679</updated>
-    </task>
-    <task id="LOCAL-00007" summary="&lt;Build&gt; :  Exercicios com ponteiros e alocação dinâmica de memória">
-      <option name="closed" value="true" />
-      <created>1695730033331</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1695730033331</updated>
-    </task>
-    <task id="LOCAL-00008" summary="&lt;Build&gt; :  Exercicios com ponteiros e alocação dinâmica de memória">
-      <option name="closed" value="true" />
-      <created>1695730057614</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1695730057614</updated>
-    </task>
-    <task id="LOCAL-00009" summary="&lt;Build&gt;[lista06] : Finalizando lista06">
-      <option name="closed" value="true" />
-      <created>1695828498647</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1695828498647</updated>
-    </task>
-    <task id="LOCAL-00010" summary="&lt;Build&gt;[lista06] : Finalizando lista06">
-      <option name="closed" value="true" />
-      <created>1695829241975</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1695829241975</updated>
-    </task>
-    <task id="LOCAL-00011" summary="&lt;Build&gt;[lista06] : Finalizando lista06">
-      <option name="closed" value="true" />
-      <created>1695829267967</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1695829267967</updated>
-    </task>
-    <task id="LOCAL-00012" summary="&lt;Fix&gt;[lista05] : corrigindo lista05">
-      <option name="closed" value="true" />
-      <created>1695837790123</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1695837790123</updated>
-    </task>
-    <task id="LOCAL-00013" summary="&lt;Fix&gt;[lista06] : corrigindo lista06">
-      <option name="closed" value="true" />
-      <created>1695841713178</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1695841713178</updated>
-    </task>
-    <task id="LOCAL-00014" summary="&lt;Fix&gt;[lista06] : corrigindo lista06">
-      <option name="closed" value="true" />
-      <created>1695844454187</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1695844454187</updated>
-    </task>
-    <task id="LOCAL-00015" summary="&lt;Fix&gt;[lista06] : corrigindo lista06">
-      <option name="closed" value="true" />
-      <created>1695844480657</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1695844480657</updated>
-    </task>
-    <task id="LOCAL-00016" summary="&lt;Fix&gt;[lista06] : corrigindo lista06 2.0">
-      <option name="closed" value="true" />
-      <created>1695957399220</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1695957399220</updated>
-    </task>
-    <task id="LOCAL-00017" summary="&lt;Fix&gt;[lista06] : corrigindo lista06 2.0">
-      <option name="closed" value="true" />
-      <created>1695958595685</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1695958595685</updated>
-    </task>
-    <task id="LOCAL-00018" summary="&lt;Fix&gt;[lista06] : corrigindo lista06 2.0">
-      <option name="closed" value="true" />
-      <created>1695958626590</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1695958626590</updated>
-    </task>
-    <task id="LOCAL-00019" summary="&lt;Fix&gt;[lista06] : Adicionando funcoes no global.h">
-      <option name="closed" value="true" />
-      <created>1696199523508</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1696199523508</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Merge remote-tracking branch 'origin/main'">
-      <option name="closed" value="true" />
-      <created>1696199547649</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1696199547649</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Fix[Desafio03] Refatorando desafio3.c">
-      <option name="closed" value="true" />
-      <created>1696338751188</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1696338751188</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Fix[Desafio03] Refatorando desafio3.c">
-      <option name="closed" value="true" />
-      <created>1696341142695</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1696341142695</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Fix[Desafio03] Refatorando desafio3.c">
-      <option name="closed" value="true" />
-      <created>1696341195529</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1696341195529</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Fix[Desafio03] : Aprendendo a abrir e manipular arquivos em C">
-      <option name="closed" value="true" />
-      <created>1696943115241</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1696943115241</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Fix[Desafio03] : Aprendendo a abrir e manipular arquivos em C">
-      <option name="closed" value="true" />
-      <created>1696943159325</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1696943159325</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Fix[Desafio03] : Aprendendo a abrir e manipular arquivos em C">
-      <option name="closed" value="true" />
-      <created>1696950150192</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1696950150192</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Fix[Desafio04] : Finalizando desafio04">
-      <option name="closed" value="true" />
-      <created>1697075093797</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1697075093797</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Fix[Desafio04] : Finalizando desafio04">
-      <option name="closed" value="true" />
-      <created>1697084876511</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1697084876511</updated>
-    </task>
-    <task id="LOCAL-00029" summary="build[file] : Lista de arquivos">
-      <option name="closed" value="true" />
-      <created>1697393570681</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1697393570681</updated>
-    </task>
-    <task id="LOCAL-00030" summary="build[file] : Lista de arquivos">
-      <option name="closed" value="true" />
-      <created>1697393590550</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1697393590550</updated>
-    </task>
-    <task id="LOCAL-00031" summary="build[file] : Lista de arquivos">
-      <option name="closed" value="true" />
-      <created>1697540962586</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1697540962586</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <option name="closed" value="true" />
-      <created>1697540984812</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1697540984812</updated>
-    </task>
-    <task id="LOCAL-00033" summary="build[prova-1] : correção prova 1 de Linguagem de Programação">
-      <option name="closed" value="true" />
-      <created>1697813024114</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1697813024114</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Cadastrando Alterando e Imprimindo aluno em C">
-      <option name="closed" value="true" />
-      <created>1698410673938</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1698410673938</updated>
-    </task>
-    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnknownFeatures">
-    <option featureType="dependencySupport" implementationName="executable:docker" />
-    <option featureType="dependencySupport" implementationName="executable:kubectl" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&lt;Feat&gt; :  Finalizando 'lista5-funcoes'" />
-    <MESSAGE value="&lt;Fix&gt; :  lista5 e lista6" />
-    <MESSAGE value="&lt;Fix&gt; :  adicionando documentação" />
-    <MESSAGE value="&lt;Build&gt; :  Exercicios com ponteiros e alocação dinâmica de memória" />
-    <MESSAGE value="&lt;Build&gt;[lista06] : Finalizando lista06" />
-    <MESSAGE value="&lt;Fix&gt;[lista05] : corrigindo lista05" />
-    <MESSAGE value="&lt;Fix&gt;[lista06] : corrigindo lista06" />
-    <MESSAGE value="&lt;Fix&gt;[lista06] : corrigindo lista06 2.0" />
-    <MESSAGE value="&lt;Fix&gt;[lista06] : Adicionando funcoes no global.h" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
-    <MESSAGE value="Fix[Desafio03] Refatorando desafio3.c" />
-    <MESSAGE value="Fix[Desafio03] : Aprendendo a abrir e manipular arquivos em C" />
-    <MESSAGE value="Fix[Desafio04] : Finalizando desafio04" />
-    <MESSAGE value="build[file] : Lista de arquivos" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <MESSAGE value="build[prova-1] : correção prova 1 de Linguagem de Programação" />
-    <MESSAGE value="Cadastrando Alterando e Imprimindo aluno em C" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cadastrando Alterando e Imprimindo aluno em C" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

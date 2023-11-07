@@ -170,7 +170,7 @@ int exercise10(void) {
 
 
 
-int exercicio11(void){
+int exercise11(void){
 
 
 
