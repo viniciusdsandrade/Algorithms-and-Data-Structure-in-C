@@ -6,7 +6,9 @@
 #define MAX_EXERCISES 11
 
 bool getExitChoice(void);
+
 void executeExercise(int choice);
+
 int displayMenuAndGetChoice(void);
 
 int main(void) {
@@ -28,8 +30,25 @@ int main(void) {
     return 0;
 }
 
-
 int exercise01(void) {
+
+    /*Soma dos elementos de um vetor*/
+
+    /*
+    * 1 - Dado um vetor v de inteiro de tamanho tam, devemos caluclar a soma dos seus elementso da posição 0 até tam - 1
+    * 2 - Como podemos descrever este problema de forma recurstiva ? Isto é, como podemos descrever este problema em função de si mesmo?
+    * 3 - Vamos denotar por S(n) a soma dos elementos das posições 0 até n do vetor, e portanto devemos achar S(tam - 1)
+    * 4 - O Valor de S(n) é dado por S(n) = v[n] + S(n - 1), onde S(0) = v[0]
+
+     Se n = 0 então a somaElementosVetorInt S(o) é igual a v[0]
+     */
+
+    int v[] = {1, 2, 3, 4, 5};
+    int tam = 5;
+
+    int somaVetor = somaElementosVetorInt(v, tam - 1);
+
+    printf("Soma dos elementos do vetor: %d\n", somaVetor);
     return 0;
 }
 
