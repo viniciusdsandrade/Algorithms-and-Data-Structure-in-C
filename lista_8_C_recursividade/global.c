@@ -17,6 +17,7 @@ long fat(long n) {
 
     return r;
 }
+
 int somaElementosVetorInt(int v[], int n) {
     if (n == 0) {
         return v[0];
@@ -24,3 +25,20 @@ int somaElementosVetorInt(int v[], int n) {
         return v[n] + somaElementosVetorInt(v, n - 1);
     }
 }
+
+void imprimeVetorIntEmOrderRecursivo(int v[], int i, int n) {
+    if (i < n) {
+        printf("%d ", v[i]);
+        imprimeVetorIntEmOrderRecursivo(v, i + 1, n);
+    }
+}
+
+int fibonacciRecursivo(int n) {
+    if (n <= 1)
+        return n;
+    else
+        return fibonacciRecursivo(n - 1) + fibonacciRecursivo(n - 2);
+}
+
+
+

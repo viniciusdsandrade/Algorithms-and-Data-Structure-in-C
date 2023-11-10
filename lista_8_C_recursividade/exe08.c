@@ -53,10 +53,19 @@ int exercise01(void) {
 }
 
 int exercise02(void) {
+    int v[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+    int tam = sizeof(v)/sizeof(v[0]);
+
+    imprimeVetorIntEmOrderRecursivo(v, 0, tam);
+    putchar('\n');
+
     return 0;
 }
 
 int exercise03(void) {
+
+
+
     return 0;
 }
 
