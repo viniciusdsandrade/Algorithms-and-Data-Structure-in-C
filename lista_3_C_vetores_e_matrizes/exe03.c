@@ -25,7 +25,7 @@ int exercicio01(void) {
     scanf("%d", &n);
 
     if (n < 1 || n > 50) {
-        printf("Valor inválido");
+        printf("Valor invï¿½lido");
         return 0;
     }
 
@@ -49,7 +49,7 @@ int exercicio02(void) {
 
     /*
      * 2. Escreva um programa que leia um vetor de ate 50 numeros reais e calcule o
-     * desvio padrão destes valores.
+     * desvio padrï¿½o destes valores.
      */
 
     printf("\nExe02 - Lista03\n");
@@ -69,7 +69,6 @@ int exercicio02(void) {
     else
         preencheVetorDoubleRandom(vetor, n, n);
 
-
     double media = mediaVetorDouble(vetor, n);
     double dp = 0.0;
 
@@ -77,13 +76,12 @@ int exercicio02(void) {
         // desvioPadrao += (vetor[i] - media)*(vetor[i] - media) ;
         dp += potenciaDouble(vetor[i] - media, 2);
 
-
     dp = raizQuadradaDouble(dp / n);
 
     printf("Vetor: ");
     imprimeVetorDouble(vetor, n);
-    printf("média: %.2lf\n", media);
-    printf("Desvio padrão: %.2lf\n", dp);
+    printf("mï¿½dia: %.2lf\n", media);
+    printf("Desvio padrï¿½o: %.2lf\n", dp);
 
     return 0;
 }
@@ -116,8 +114,36 @@ int exercicio03(void) {
      * }
      * }
      */
+
     putchar('\n');
     printf("Exe03 - Lista03");
+
+    int v1[9], v2[9], n = 123456789;
+
+    int i, j, k;
+
+    for (i = 0; n != 0; i++) {
+        v1[i] = n % 10;
+        n = n / 10;
+        v2[i] = 1;
+    }
+
+    for (j = 0; j < i; j++) {
+        printf("%d", v1[j]);
+
+    }
+    printf("\n");
+
+    for (j = 0; j < i; j++) {
+        for (k = 1; k <= v1[j]; k++) {
+            v2[j] = v2[j] * 2;
+
+        }
+    }
+
+    for (j = 0; j < i; j++) {
+        printf("%d\n", v2[j]);
+    }
 
     return 0;
 }
@@ -210,7 +236,6 @@ int exercicio05(void) {
         return 0;
     }
 
-
     if (tam1 < 8 || tam2 < 8) {
 
         printf("Vetor1\n");
@@ -280,6 +305,7 @@ int exercicio05(void) {
 }
 
 int exercicio06() {
+
     /*
     6. Faca um programa que leia duas sequencias de numeros inteiros distintos e salve cada
     sequencia em um vetor. Suponha que o numero maximo de elementos de uma sequencia
@@ -437,6 +463,7 @@ int exercicio07(void) {
 }
 
 int exercicio08(void) {
+
     /*
      * 8. Faca um programa que calcule o produto interno de dois vetores u e v de
      * mesmo tamanho n lidos do teclado. O programa deve ler primeiramente o valor
@@ -493,6 +520,7 @@ int exercicio08(void) {
 }
 
 int exercicio09(void) {
+
     /*
      * 9. Escreva um programa que leia uma sequencia de numeros inteiros e os salva
      * em um vetor. Assuma que o tamanho maximo da sequencia e 50. Em seguida o programa
@@ -567,7 +595,7 @@ int exercicio10(void) {
      * v[5]  1    1    1    1    1    0
      *
      *
-     * Note no exemplo que 2 (v[0]) é coprimo de 3 (v[1]), 5 (v[3]) e 7 (v[5]).
+     * Note no exemplo que 2 (v[0]) ï¿½ coprimo de 3 (v[1]), 5 (v[3]) e 7 (v[5]).
      */
 
     putchar('\n');
@@ -635,7 +663,7 @@ int exercicio11(void) {
         }
     }
     if (umEmComum == 0)
-        printf("não há elementos iguais em suas respectivas posicoes\n");
+        printf("nï¿½o hï¿½ elementos iguais em suas respectivas posicoes\n");
 
     return 0;
 }
@@ -716,7 +744,7 @@ int exercicio13(void) {
 
 int exercicio14(void) {
     /*
-        Faça um programa que leia valores de 2 matriz nxn sendo n um valor inteiro
+        Faï¿½a um programa que leia valores de 2 matriz nxn sendo n um valor inteiro
         digitado pelo usuario. Em seguida atribua valores para cada uma das posi??es
         dessas matrizes E faca a soma dessas matrizes.
     */
@@ -1107,7 +1135,7 @@ int exercicio24(void) {
 
     printf("O elemento com maior frequencia: %d\n", maior_elemento);
     printf("Frequencia do maior elemento: %d\n", frequenciaMaiorElemento);
-    printf("Posiçoes do maior elemento:\n");
+    printf("Posiï¿½oes do maior elemento:\n");
 
     for (int i = 0; i < l; i++) {
         for (int j = 0; j < c; j++) {
@@ -1358,7 +1386,7 @@ int exercicio29(void) {
     printf("Matriz:\n");
     imprimeMatrizInt(matriz, n, n);
 
-    // verificar se uma matriz é inversível
+    // verificar se uma matriz ï¿½ inversï¿½vel
     int det = (int) determinanteMatrizInt(matriz, n, n);
     if (det == 0)
         printf("Matriz nao inversivel\n");
@@ -1378,7 +1406,7 @@ int exercicio29(void) {
 
 int exercicio30(void) {
     /*
-    Verifica se uma matriz é triangular superior ou triangular inferior ou nenhuma das duas
+    Verifica se uma matriz ï¿½ triangular superior ou triangular inferior ou nenhuma das duas
     */
 
     printf("\nexercicio 30\n");
@@ -1449,38 +1477,38 @@ int exercicio31(void) {
 }
 
 int displayMenuGetChoice() {
-    printf("Exercício 1 - Lista 3\n");
-    printf("Exercício 2 - Lista 3\n");
-    printf("Exercício 3 - Lista 3\n");
-    printf("Exercício 4 - Lista 3\n");
-    printf("Exercício 5 - Lista 3\n");
-    printf("Exercício 6 - Lista 3\n");
-    printf("Exercício 7 - Lista 3\n");
-    printf("Exercício 8 - Lista 3\n");
-    printf("Exercício 9 - Lista 3\n");
-    printf("Exercício 10 - Lista 3\n");
-    printf("Exercício 11 - Lista 3\n");
-    printf("Exercício 12 - Lista 3\n");
-    printf("Exercício 13 - Lista 3\n");
-    printf("Exercício 14 - Lista 3\n");
-    printf("Exercício 15 - Lista 3\n");
-    printf("Exercício 16 - Lista 3\n");
-    printf("Exercício 17 - Lista 3\n");
-    printf("Exercício 18 - Lista 3\n");
-    printf("Exercício 19 - Lista 3\n");
-    printf("Exercício 20 - Lista 3\n");
-    printf("Exercício 21 - Lista 3\n");
-    printf("Exercício 22 - Lista 3\n");
-    printf("Exercício 23 - Lista 3\n");
-    printf("Exercício 24 - Lista 3\n");
-    printf("Exercício 25 - Lista 3\n");
-    printf("Exercício 26 - Lista 3\n");
-    printf("Exercício 27 - Lista 3\n");
-    printf("Exercício 28 - Lista 3\n");
-    printf("Exercício 29 - Lista 3\n");
-    printf("Exercício 30 - Lista 3\n");
-    printf("Exercício 31 - Lista 3\n");
-    printf("Digite o número do exercício: ");
+    printf("Exercï¿½cio 1 - Lista 3\n");
+    printf("Exercï¿½cio 2 - Lista 3\n");
+    printf("Exercï¿½cio 3 - Lista 3\n");
+    printf("Exercï¿½cio 4 - Lista 3\n");
+    printf("Exercï¿½cio 5 - Lista 3\n");
+    printf("Exercï¿½cio 6 - Lista 3\n");
+    printf("Exercï¿½cio 7 - Lista 3\n");
+    printf("Exercï¿½cio 8 - Lista 3\n");
+    printf("Exercï¿½cio 9 - Lista 3\n");
+    printf("Exercï¿½cio 10 - Lista 3\n");
+    printf("Exercï¿½cio 11 - Lista 3\n");
+    printf("Exercï¿½cio 12 - Lista 3\n");
+    printf("Exercï¿½cio 13 - Lista 3\n");
+    printf("Exercï¿½cio 14 - Lista 3\n");
+    printf("Exercï¿½cio 15 - Lista 3\n");
+    printf("Exercï¿½cio 16 - Lista 3\n");
+    printf("Exercï¿½cio 17 - Lista 3\n");
+    printf("Exercï¿½cio 18 - Lista 3\n");
+    printf("Exercï¿½cio 19 - Lista 3\n");
+    printf("Exercï¿½cio 20 - Lista 3\n");
+    printf("Exercï¿½cio 21 - Lista 3\n");
+    printf("Exercï¿½cio 22 - Lista 3\n");
+    printf("Exercï¿½cio 23 - Lista 3\n");
+    printf("Exercï¿½cio 24 - Lista 3\n");
+    printf("Exercï¿½cio 25 - Lista 3\n");
+    printf("Exercï¿½cio 26 - Lista 3\n");
+    printf("Exercï¿½cio 27 - Lista 3\n");
+    printf("Exercï¿½cio 28 - Lista 3\n");
+    printf("Exercï¿½cio 29 - Lista 3\n");
+    printf("Exercï¿½cio 30 - Lista 3\n");
+    printf("Exercï¿½cio 31 - Lista 3\n");
+    printf("Digite o nï¿½mero do exercï¿½cio: ");
 
     int choice;
     scanf("%d", &choice);
@@ -1611,7 +1639,7 @@ int main(void) {
         if (choice >= 0 && choice <= MAX) {
             executeExercise(choice);
         } else {
-            printf("Opçãoo inválida, tente novamente.\n");
+            printf("Opï¿½ï¿½oo invï¿½lida, tente novamente.\n");
         }
         sair = getExitChoice();
     } while (!sair);

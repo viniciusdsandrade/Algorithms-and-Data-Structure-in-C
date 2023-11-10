@@ -10,14 +10,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="feat[recursividade] : iniciando lista de recursividade">
-      <change beforePath="$PROJECT_DIR$/.idea/algorithms-and-data-structure-in-c.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/algorithms-and-data-structure-in-c.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_7_C_ponteiros/exe07.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_7_C_ponteiros/global.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_7_C_ponteiros/global.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_7_C_ponteiros/lista/lista7-ponteiros.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_7_C_ponteiros/slides/LP-aula05-ponteiros-I.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_7_C_ponteiros/slides/LP-aula06-ponteiros-II.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_7_C_ponteiros/slides/LP-aula07-ponteiros-III.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_8_C_recursividade/lista/lista8-recursao.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_8_C_recursividade/slides/LP-aula10-recursao-I.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_9_C_files/exe01.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_9_C_files/exe02.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_9_C_files/exe03.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_9_C_files/exe06.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_9_C_files/exe09.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_9_C_files/global.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_9_C_files/global.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_9_C_files/lista/lista7-ponteiros.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_9_C_files/slides/LP-aula08-arquivos-I.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lista_9_C_files/slides/LP-aula09-arquivos-II.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_7_2023_9_10_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_7_2023_9_10_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exe08.exe" beforeDir="false" afterPath="$PROJECT_DIR$/exe08.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_3_C_vetores_e_matrizes/exe03.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_3_C_vetores_e_matrizes/exe03.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_3_C_vetores_e_matrizes/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_3_C_vetores_e_matrizes/global.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_6_C_search/exe06.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_6_C_search/exe06.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_files/exe01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_files/exe02.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_files/exe03.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_files/exe06.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_files/exe07.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_files/global.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_files/global.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_files/lista7-ponteiros.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lista_8_C_recursividade/exe08.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_8_C_recursividade/exe08.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista_8_C_recursividade/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_8_C_recursividade/global.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista_8_C_recursividade/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/lista_8_C_recursividade/global.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_8_C_recursividade/lista8-recursao.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,25 +75,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/algorithms-and-data-structure-in-c&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/c-algorithms",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="exe08.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algorithms-and-data-structure-in-c" TARGET_NAME="exe08.c" CONFIG_NAME="exe08.c">
       <option name="sourceFile" value="lista_8_C_recursividade\exe08.c" />
@@ -85,6 +115,7 @@
       <workItem from="1699356802175" duration="16000" />
       <workItem from="1699356831627" duration="242000" />
       <workItem from="1699616964042" duration="655000" />
+      <workItem from="1699626864070" duration="2559000" />
     </task>
     <task id="LOCAL-00001" summary="feat[recursividade] : iniciando lista de recursividade">
       <option name="closed" value="true" />
@@ -99,6 +130,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

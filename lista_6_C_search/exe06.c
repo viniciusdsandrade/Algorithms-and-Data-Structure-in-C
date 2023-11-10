@@ -824,7 +824,6 @@ int exercise29(int argc, char *argv[]) {
         i++;
     }
 
-
     free(texto);
     fclose(arq);
     return 0;

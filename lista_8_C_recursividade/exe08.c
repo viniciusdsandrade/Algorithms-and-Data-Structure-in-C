@@ -6,9 +6,7 @@
 #define MAX_EXERCISES 11
 
 bool getExitChoice(void);
-
 void executeExercise(int choice);
-
 int displayMenuAndGetChoice(void);
 
 int main(void) {
@@ -32,6 +30,160 @@ int main(void) {
 
 int exercise01(void) {
 
+    /*
+     1. Escreva um algoritmo iterativo em C para avaliar a * b usando a adição, onde a e b são
+    inteiros não negativos.
+     */
+
+    return 0;
+}
+
+int exercise02(void) {
+
+    /*
+     2. Escreva uma definição recursiva para o cálculo de a * b e em seguida escreva um algoritmo
+    recursivo para o calculo de a * b, onde a e b são inteiros não-negativos.
+     */
+
+    return 0;
+
+}
+
+int exercise03(void) {
+
+    /*
+     3. Faça uma função recursiva em C que calcula o elemento máximo em um vetor.
+     */
+
+    return 0;
+}
+
+int exercise04(void) {
+
+    /*
+     * 4. Faça uma função recursiva em C que calcula o elemento mínimo em um vetor.
+     */
+
+    return 0;
+}
+
+int exercise05(void) {
+
+    /*
+     * 5. Faça uma função recursiva em C que calcula a média dos elementos de um vetor.
+     */
+
+    return 0;
+}
+
+int exercise06(void) {
+
+    /*
+     * 6. Faça uma representação da memória do computador considerando as chamadas das funções
+    recursivas abaixo (vistas em aula). Faça um modelo passo a passo como nos exemplos visto
+    em sala de aula:
+    • fatorial(6)
+    • fibonacci(5)
+     */
+
+    return 0;
+}
+
+int exercise07(void) {
+
+    /*
+     * 7. Determine o que a seguinte definição recursiva para uma função f calcula. A definição da
+    função f é dada abaixo:
+    • Se n == 0 retorne 0.
+    • Se n > 0 retorne n + f(n menos 1).
+     */
+
+    return 0;
+}
+
+int exercise08(void) {
+
+    /*
+
+     8. Execute a função ff abaixo com os argumentos 7 e 0.
+    int ff(int n, int ind) {
+    int i;
+    for (i = 0; i < ind; i++)
+    printf(‘‘ ");
+    printf ("ff (%d, %d) \n", n, ind);
+    if (n == 1)
+    return 1;
+    if (n % 2==0)
+    return ff(n/2, ind + 1);
+    return ff((n-1)/2, ind +1) + ff((n+1)/2, ind +1);
+    }
+    */
+
+    return 0;
+}
+
+int exercise09(void) {
+
+    /*
+     * 9. Escreva uma função recursiva que calcule blg nc, ou seja, o piso do logaritmo de n na base 2.
+     */
+    return 0;
+}
+
+int exercise10(void) {
+
+    /*
+     * 10. Escreva uma função recursiva para a busca sequencial em um vetor.
+     */
+
+    return 0;
+}
+
+int exercise11(void) {
+
+    /*
+     * 11. Escreva uma função recursiva para a busca binária em um vetor.
+     */
+
+    return 0;
+}
+
+int exercise12(void) {
+
+    /*
+     12. Escreva uma função recursiva para o cálculo do máximo divisor comum de dois números
+    inteiros não negativos. Lembre-se que
+    • mdc(x,y) = x se y é zero,
+    • mdc(x,y) = mdc(y,x%y) caso contrário.
+     */
+    return 0;
+}
+
+int exercise13(void) {
+
+    /*
+     13. Suponha que uma matriz binária quadrada M represente a ligação entre um conjunto de n
+     cidades. Desta forma M[i, j] = 1 indica que existe uma estrada da cidade i para a cidade
+     j, e M[i, j] = 0 caso contrário. Por exemplo, na matriz abaixo temos que a cidade 0 possui
+     estradas para 1 e 2, já a cidade 1 possui estrada apenas para 2. Note que existe estrada
+     de 0 para 1, mas não de 1 para 0, pois só há estradas de 2 e 3 para 0.
+
+     0 1 1 0
+     0 0 1 0
+     1 1 0 1
+     1 0 1 0
+
+     Escreva uma função recursiva que dada uma matriz M e uma cidade i determina todas as
+    cidades que podem ser alcançadas a partir de i.
+     */
+    return 0;
+}
+
+int exercise14(void) {
+    return 0;
+}
+
+int exercise15(void) {
     /*Soma dos elementos de um vetor*/
 
     /*
@@ -52,9 +204,14 @@ int exercise01(void) {
     return 0;
 }
 
-int exercise02(void) {
+int exercise16(void) {
+
+    /*
+     *
+     */
+
     int v[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-    int tam = sizeof(v)/sizeof(v[0]);
+    int tam = sizeof(v) / sizeof(v[0]);
 
     imprimeVetorIntEmOrderRecursivo(v, 0, tam);
     putchar('\n');
@@ -62,42 +219,19 @@ int exercise02(void) {
     return 0;
 }
 
-int exercise03(void) {
-
-
-
+int exercise17(void) {
     return 0;
 }
 
-int exercise04(void) {
+int exercise18(void) {
     return 0;
 }
 
-int exercise05(void) {
+int exercise19(void) {
     return 0;
 }
 
-int exercise06(void) {
-    return 0;
-}
-
-int exercise07(void) {
-    return 0;
-}
-
-int exercise08(void) {
-    return 0;
-}
-
-int exercise09(void) {
-    return 0;
-}
-
-int exercise10(void) {
-    return 0;
-}
-
-int exercise11(void) {
+int exercise20(void) {
     return 0;
 }
 
@@ -145,6 +279,33 @@ void executeExercise(int choice) {
             break;
         case 11:
             exercise11();
+            break;
+        case 12:
+            exercise12();
+            break;
+        case 13:
+            exercise13();
+            break;
+        case 14:
+            exercise14();
+            break;
+        case 15:
+            exercise15();
+            break;
+        case 16:
+            exercise16();
+            break;
+        case 17:
+            exercise17();
+            break;
+        case 18:
+            exercise18();
+            break;
+        case 19:
+            exercise19();
+            break;
+        case 20:
+            exercise20();
             break;
         default:
             printf("Invalid option!\n");
