@@ -1618,11 +1618,11 @@ void executeExercise(int choice) {
 
 bool getExitChoice() {
     int exitChoice;
-    printf("Deseja sair? (1) - Sim (0) - N?o: ");
+    printf("Deseja sair? (1) - Sim (0) - Na o: ");
     scanf("%d", &exitChoice);
 
     while (exitChoice != 0 && exitChoice != 1) {
-        printf("Op??o inv?lida, digite novamente: ");
+        printf("Opcao invalida, digite novamente: ");
         scanf("%d", &exitChoice);
     }
 
@@ -1639,7 +1639,7 @@ int main(void) {
         if (choice >= 0 && choice <= MAX) {
             executeExercise(choice);
         } else {
-            printf("Op��oo inv�lida, tente novamente.\n");
+            printf("Opcaoo invalida, tente novamente.\n");
         }
         sair = getExitChoice();
     } while (!sair);

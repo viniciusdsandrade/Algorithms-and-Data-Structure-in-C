@@ -168,13 +168,7 @@ int exercise10(void) {
     return 0;
 }
 
-
-
 int exercise11(void){
-
-
-
-
 
     return 0;
 }

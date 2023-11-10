@@ -1,15 +1,12 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include <malloc.h>
 #include <locale.h>
 #include "global.h"
 
 #define MAX_EXERCISES 30
 
 int displayMenuAndGetChoice(void);
-
 bool getExitChoice(void);
-
 void executeExercise(int choice);
 
 int main(void) {
@@ -20,11 +17,11 @@ int main(void) {
     do {
         int choice = displayMenuAndGetChoice();
 
-        if (choice >= 1 && choice <= MAX_EXERCISES) {
+        if (choice >= 1 && choice <= MAX_EXERCISES)
             executeExercise(choice);
-        } else {
+        else
             printf("Invalid option!\n");
-        }
+
         exitProgram = getExitChoice();
     } while (!exitProgram);
     printf("Thank you for using the program!\n");
@@ -32,6 +29,7 @@ int main(void) {
 }
 
 int exercise01(void) {
+
     /*
     1 - Considere que tenha sido executado as seguintes instruções (assuma que o endereço de x
     é 1000 e de y é 1004):
@@ -57,14 +55,16 @@ int exercise01(void) {
 
 int exercise02(void) {
 
-    //Vinícius dos Santos Andrade
-    //RA: 2760482311026
+
 
     /*
     2 - O que será impresso pelo programa abaixo?
     Considere que a seja inicializada com a soma
     dos 3 primeiros dígitos do seu RA e b seja inicializada com a soma dos demais dígitos. Por
     exemplo, se RA=123456 então a recebe inicialmente 6 enquanto que b recebe inicialmente 15.
+
+    Vinicius dos Santos Andrade
+    RA: 2760482311026
     #include <stdio.h>
     int main(){
     int a=Soma 3 primeiros dígitos, b=Soma dos demais dígitos, *c, *d;
@@ -81,9 +81,11 @@ int exercise02(void) {
     */
 
     int a = 15, b = 36, *c, *d;
+
     c = &a;
     d = c;
     c = &b;
+
     if (*d % 2 == 0)
         *d = *d - 10;
     else
@@ -186,60 +188,174 @@ int exercise07(void) {
 
 int exercise08(void) {
 
+    int *variable;
+    int a = 90;
+    variable = &a;
+
+    printf("%d", *variable);
+    putchar('\n');
+
     return 0;
 }
 
 int exercise09(void) {
 
+    int b;
+    int *c;
+
+    b = 10;
+    c = &b;
+    *c = 11;
+
+    printf("%d", b);
+    putchar('\n');
+
     return 0;
 }
 
 int exercise10(void) {
+    int num, q = 1;
+    int *p;
+
+    num = 100;
+    p = &num;
+    q = *p;
+
+    printf("%d", q);
+    putchar('\n');
 
     return 0;
 }
 
 int exercise11(void) {
+    int a, b;
+    int *c;
+
+    b = 10;
+    c = &a;
+    *c = 13;
+
+    printf("%d", b);
+    putchar('\n');
 
     return 0;
 }
 
 int exercise12(void) {
 
+    int b, a;
+    int *c;
+
+    b = 10;
+    c = &a;
+    *c = 11;
+    a = b * (*c);
+    printf("%d", a);
+    putchar('\n');
+
     return 0;
 }
 
 int exercise13(void) {
+
+    double a, b, *c;
+
+    b = 10.89;
+    c = &b;
+    a = *c;
+
+    printf("%lf", a);
 
     return 0;
 }
 
 int exercise14(void) {
 
+    double *a = NULL;
+    double *b = NULL;
+    double c = 5;
+    a = &c;
+
+    if (a != NULL) {
+        b = a;
+        printf("Numero : %.2lf", *b);
+    }
+    putchar('\n');
+
     return 0;
 }
 
 int exercise15(void) {
+    int x = 4, y = 5;
+
+    swap(&x, &y);
+
+    printf("x = %d, y = %d", x, y);
+    putchar('\n');
 
     return 0;
 }
 
 int exercise16(void) {
+    int a[] = {1, 2, 3, 4, 5};
+    int *p;
+    p = a;
+
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", p[i]);
+    }
+    putchar('\n');
 
     return 0;
 }
 
 int exercise17(void) {
+    int a[] = {1, 2, 3, 5, 6};
+    int *b, i;
+
+    b = a;
+
+    printf("\nConteudo de B\n");
+    for (i = 0; i < 5; i++) {
+        printf("%d ", b[i]);
+    }
+
+    printf("\nConteudo de A\n");
+    for (i = 0; i < 5; i++) {
+        printf("%d ", a[i]);
+    }
+    putchar('\n');
 
     return 0;
 }
 
 int exercise18(void) {
+    int a = 3, b = 2, *p = NULL, *q = NULL;
+    p = &a;
+    q = p;
+    *q = *q + 1;
+    q = &b;
+    b = b + 1;
+
+    printf("%d\n", *q);
+    printf("%d\n", *p);
 
     return 0;
 }
 
 int exercise19(void) {
+    char p[] = "abc";
+    char s[] = "abc";
+    char q[] = "def";
+    char t[] = "def";
+
+    char r[10]; // Asegúrese de que r tenga suficiente espacio para almacenar la concatenación
+    char u[10];
+
+    strcat_custom(p, q, r);
+    strcat_custom2(s, t, u);
+    printf("%s \n", r);
+    printf("%s \n", u);
 
     return 0;
 }
@@ -444,4 +560,3 @@ bool getExitChoice(void) {
     } while (exitChoice != 0 && exitChoice != 1);
     return exitChoice;
 }
-

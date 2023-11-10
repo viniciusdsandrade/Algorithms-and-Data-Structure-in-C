@@ -6,7 +6,9 @@
 #define MAX_EXERCISES 11
 
 bool getExitChoice(void);
+
 void executeExercise(int choice);
+
 int displayMenuAndGetChoice(void);
 
 int main(void) {
@@ -52,7 +54,7 @@ int exercise02(void) {
 int exercise03(void) {
 
     /*
-     3. Faça uma função recursiva em C que calcula o elemento máximo em um vetor.
+     3 - Faça uma função recursiva em C que calcula o elemento máximo em um vetor.
      */
 
     return 0;
@@ -61,7 +63,7 @@ int exercise03(void) {
 int exercise04(void) {
 
     /*
-     * 4. Faça uma função recursiva em C que calcula o elemento mínimo em um vetor.
+     4 - Faça uma função recursiva em C que calcula o elemento mínimo em um vetor.
      */
 
     return 0;
@@ -70,7 +72,7 @@ int exercise04(void) {
 int exercise05(void) {
 
     /*
-     * 5. Faça uma função recursiva em C que calcula a média dos elementos de um vetor.
+     5 - Faça uma função recursiva em C que calcula a média dos elementos de um vetor.
      */
 
     return 0;
@@ -79,9 +81,9 @@ int exercise05(void) {
 int exercise06(void) {
 
     /*
-     * 6. Faça uma representação da memória do computador considerando as chamadas das funções
-    recursivas abaixo (vistas em aula). Faça um modelo passo a passo como nos exemplos visto
-    em sala de aula:
+     6 - Faça uma representação da memória do computador considerando as chamadas das funções
+     recursivas abaixo (vistas em aula). Faça um modelo passo a passo como nos exemplos visto
+     em sala de aula:
     • fatorial(6)
     • fibonacci(5)
      */
@@ -92,7 +94,7 @@ int exercise06(void) {
 int exercise07(void) {
 
     /*
-     * 7. Determine o que a seguinte definição recursiva para uma função f calcula. A definição da
+    7 - Determine o que a seguinte definição recursiva para uma função f calcula. A definição da
     função f é dada abaixo:
     • Se n == 0 retorne 0.
     • Se n > 0 retorne n + f(n menos 1).
@@ -104,8 +106,7 @@ int exercise07(void) {
 int exercise08(void) {
 
     /*
-
-     8. Execute a função ff abaixo com os argumentos 7 e 0.
+    8 - Execute a função ff abaixo com os argumentos 7 e 0.
     int ff(int n, int ind) {
     int i;
     for (i = 0; i < ind; i++)
@@ -125,7 +126,7 @@ int exercise08(void) {
 int exercise09(void) {
 
     /*
-     * 9. Escreva uma função recursiva que calcule blg nc, ou seja, o piso do logaritmo de n na base 2.
+     9 - Escreva uma função recursiva que calcule blg nc, ou seja, o piso do logaritmo de n na base 2.
      */
     return 0;
 }
@@ -133,7 +134,7 @@ int exercise09(void) {
 int exercise10(void) {
 
     /*
-     * 10. Escreva uma função recursiva para a busca sequencial em um vetor.
+     10 - Escreva uma função recursiva para a busca sequencial em um vetor.
      */
 
     return 0;
@@ -142,7 +143,7 @@ int exercise10(void) {
 int exercise11(void) {
 
     /*
-     * 11. Escreva uma função recursiva para a busca binária em um vetor.
+     11 - Escreva uma função recursiva para a busca binária em um vetor.
      */
 
     return 0;
@@ -151,7 +152,7 @@ int exercise11(void) {
 int exercise12(void) {
 
     /*
-     12. Escreva uma função recursiva para o cálculo do máximo divisor comum de dois números
+    12 - Escreva uma função recursiva para o cálculo do máximo divisor comum de dois números
     inteiros não negativos. Lembre-se que
     • mdc(x,y) = x se y é zero,
     • mdc(x,y) = mdc(y,x%y) caso contrário.
@@ -162,7 +163,7 @@ int exercise12(void) {
 int exercise13(void) {
 
     /*
-     13. Suponha que uma matriz binária quadrada M represente a ligação entre um conjunto de n
+     13 - Suponha que uma matriz binária quadrada M represente a ligação entre um conjunto de n
      cidades. Desta forma M[i, j] = 1 indica que existe uma estrada da cidade i para a cidade
      j, e M[i, j] = 0 caso contrário. Por exemplo, na matriz abaixo temos que a cidade 0 possui
      estradas para 1 e 2, já a cidade 1 possui estrada apenas para 2. Note que existe estrada
@@ -174,7 +175,7 @@ int exercise13(void) {
      1 0 1 0
 
      Escreva uma função recursiva que dada uma matriz M e uma cidade i determina todas as
-    cidades que podem ser alcançadas a partir de i.
+     cidades que podem ser alcançadas a partir de i.
      */
     return 0;
 }
@@ -184,7 +185,7 @@ int exercise14(void) {
 }
 
 int exercise15(void) {
-    /*Soma dos elementos de um vetor*/
+    /* Soma dos elementos de um vetor */
 
     /*
     * 1 - Dado um vetor v de inteiro de tamanho tam, devemos caluclar a soma dos seus elementso da posição 0 até tam - 1
@@ -325,6 +326,15 @@ int displayMenuAndGetChoice(void) {
     printf("Exercise 09:\n");
     printf("Exercise 10:\n");
     printf("Exercise 11:\n");
+    printf("Exercise 12:\n");
+    printf("Exercise 13:\n");
+    printf("Exercise 14:\n");
+    printf("Exercise 15:\n");
+    printf("Exercise 16:\n");
+    printf("Exercise 17:\n");
+    printf("Exercise 18:\n");
+    printf("Exercise 19:\n");
+    printf("Exercise 20:\n");
     printf("Enter the number of the exercise you want to execute: ");
 
     int choice;
