@@ -4,6 +4,7 @@
 #include "global.h"
 
 #define MAX_EXERCISES 11
+#define MAX 100
 
 bool getExitChoice(void);
 void executeExercise(int choice);
@@ -31,9 +32,21 @@ int main(void) {
 int exercise01(void) {
 
     /*
-     1. Escreva um algoritmo iterativo em C para avaliar a * b usando a adi√ß√£o, onde a e b s√£o
-    inteiros n√£o negativos.
+     1. Escreva um algoritmo iterativo em C para avaliar a * b usando a adiÁ„o, onde a e b s„o
+    inteiros n„o negativos.
      */
+
+    int a, b, result;
+
+    printf("Enter the value of a: ");
+    scanf("%d", &a);
+    printf("Enter the value of b: ");
+    scanf("%d", &b);
+
+    result = somaIterativa(a, b);
+
+    printf("%d * %d = %d", a, b, result);
+    putchar('\n');
 
     return 0;
 }
@@ -41,19 +54,43 @@ int exercise01(void) {
 int exercise02(void) {
 
     /*
-     2. Escreva uma defini√ß√£o recursiva para o c√°lculo de a * b e em seguida escreva um algoritmo
-    recursivo para o calculo de a * b, onde a e b s√£o inteiros n√£o-negativos.
+     2. Escreva uma definiÁ„o recursiva para o c·lculo de a * b e em seguida escreva um algoritmo
+    recursivo para o calculo de a * b, onde a e b s„o inteiros n„o-negativos.
      */
 
-    return 0;
+    int a, b,result;
 
+    printf("Enter the value of a: ");
+    scanf("%d", &a);
+
+    printf("Enter the value of b: ");
+    scanf("%d", &b);
+
+    result = multiplicacaoRecursiva(a, b);
+
+    printf("%d * %d = %d", a, b, result);
+    putchar('\n');
+
+    return 0;
 }
 
 int exercise03(void) {
 
     /*
-     3 - Fa√ßa uma fun√ß√£o recursiva em C que calcula o elemento m√°ximo em um vetor.
+     3. FaÁa uma funÁ„o recursiva em C que calcula o elemento m·ximo em um vetor.
      */
+
+    printf("digite o tamanho do vetor:");
+    int n, v[MAX];
+
+    scanf("%d", &n);
+
+    preencherVetor(v, n);
+
+    int maximo = max(v, n);
+
+    printf("elemento maximo: %d", maximo);
+    putchar('\n');
 
     return 0;
 }
@@ -61,8 +98,21 @@ int exercise03(void) {
 int exercise04(void) {
 
     /*
-     4 - Fa√ßa uma fun√ß√£o recursiva em C que calcula o elemento m√≠nimo em um vetor.
+     * 4. FaÁa uma funÁ„o recursiva em C que calcula o elemento mÌnimo em um vetor.
      */
+
+    printf("digite o tamanho do vetor:");
+    int n;
+
+    scanf("%d", &n);
+    int v[n];
+
+    preencherVetor(v, n);
+
+    int minimo = min(v, n);
+
+    printf("elemento minimo: %d", minimo);
+    putchar('\n');
 
     return 0;
 }
@@ -70,8 +120,23 @@ int exercise04(void) {
 int exercise05(void) {
 
     /*
-     5 - Fa√ßa uma fun√ß√£o recursiva em C que calcula a m√©dia dos elementos de um vetor.
+     * 5. FaÁa uma funÁ„o recursiva em C que calcula a mÈdia dos elementos de um vetor.
      */
+
+    printf("digite o tamanho do vetor:");
+    int n,v[MAX];
+
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        printf("digite o elemento %d do vetor:", i + 1);
+        scanf("%d", &v[i]);
+    }
+
+    float mediaVetor = media(v, n);
+
+    printf("media dos elementos do vetor: %.2f", mediaVetor);
+    putchar('\n');
 
     return 0;
 }
@@ -79,12 +144,14 @@ int exercise05(void) {
 int exercise06(void) {
 
     /*
-     6 - Fa√ßa uma representa√ß√£o da mem√≥ria do computador considerando as chamadas das fun√ß√µes
-     recursivas abaixo (vistas em aula). Fa√ßa um modelo passo a passo como nos exemplos visto
-     em sala de aula:
-    ‚Ä¢ fatorial(6)
-    ‚Ä¢ fibonacci(5)
+     6. FaÁa uma representaÁ„o da memÛria do computador considerando as chamadas das funÁıes
+    recursivas abaixo (vistas em aula). FaÁa um modelo passo a passo como nos exemplos visto
+    em sala de aula:
+    ï fatorial(6)
+    ï fibonacci(5)
      */
+
+
 
     return 0;
 }
@@ -92,10 +159,10 @@ int exercise06(void) {
 int exercise07(void) {
 
     /*
-    7 - Determine o que a seguinte defini√ß√£o recursiva para uma fun√ß√£o f calcula. A defini√ß√£o da
-    fun√ß√£o f √© dada abaixo:
-    ‚Ä¢ Se n == 0 retorne 0.
-    ‚Ä¢ Se n > 0 retorne n + f(n menos 1).
+    7. Determine o que a seguinte definiÁ„o recursiva para uma funÁ„o f calcula. A definiÁ„o da
+    funÁ„o f È dada abaixo:
+    ï Se n == 0 retorne 0.
+    ï Se n > 0 retorne n + f(n menos 1).
      */
 
     return 0;
@@ -104,11 +171,11 @@ int exercise07(void) {
 int exercise08(void) {
 
     /*
-    8 - Execute a fun√ß√£o ff abaixo com os argumentos 7 e 0.
+     8. Execute a funÁ„o ff abaixo com os argumentos 7 e 0.
     int ff(int n, int ind) {
     int i;
     for (i = 0; i < ind; i++)
-    printf(‚Äò‚Äò ");
+    printf(ëë ");
     printf ("ff (%d, %d) \n", n, ind);
     if (n == 1)
     return 1;
@@ -118,13 +185,21 @@ int exercise08(void) {
     }
     */
 
+    int n = 7;
+    int ind = 0;
+
+    int result = ff(n, ind);
+
+    printf("ff(%d, %d) = %d", n, ind, result);
+    putchar('\n');
+
     return 0;
 }
 
 int exercise09(void) {
 
     /*
-     9 - Escreva uma fun√ß√£o recursiva que calcule blg nc, ou seja, o piso do logaritmo de n na base 2.
+     * 9. Escreva uma funÁ„o recursiva que calcule blg nc, ou seja, o piso do logaritmo de n na base 2.
      */
     return 0;
 }
@@ -132,7 +207,7 @@ int exercise09(void) {
 int exercise10(void) {
 
     /*
-     10 - Escreva uma fun√ß√£o recursiva para a busca sequencial em um vetor.
+     * 10. Escreva uma funÁ„o recursiva para a busca sequencial em um vetor.
      */
 
     return 0;
@@ -141,7 +216,7 @@ int exercise10(void) {
 int exercise11(void) {
 
     /*
-     11 - Escreva uma fun√ß√£o recursiva para a busca bin√°ria em um vetor.
+     * 11. Escreva uma funÁ„o recursiva para a busca bin·ria em um vetor.
      */
 
     return 0;
@@ -150,10 +225,10 @@ int exercise11(void) {
 int exercise12(void) {
 
     /*
-    12 - Escreva uma fun√ß√£o recursiva para o c√°lculo do m√°ximo divisor comum de dois n√∫meros
-    inteiros n√£o negativos. Lembre-se que
-    ‚Ä¢ mdc(x,y) = x se y √© zero,
-    ‚Ä¢ mdc(x,y) = mdc(y,x%y) caso contr√°rio.
+     12. Escreva uma funÁ„o recursiva para o c·lculo do m·ximo divisor comum de dois n˙meros
+    inteiros n„o negativos. Lembre-se que
+    ï mdc(x,y) = x se y È zero,
+    ï mdc(x,y) = mdc(y,x%y) caso contr·rio.
      */
     return 0;
 }
@@ -161,19 +236,19 @@ int exercise12(void) {
 int exercise13(void) {
 
     /*
-     13 - Suponha que uma matriz bin√°ria quadrada M represente a liga√ß√£o entre um conjunto de n
+     13. Suponha que uma matriz bin·ria quadrada M represente a ligaÁ„o entre um conjunto de n
      cidades. Desta forma M[i, j] = 1 indica que existe uma estrada da cidade i para a cidade
-     j, e M[i, j] = 0 caso contr√°rio. Por exemplo, na matriz abaixo temos que a cidade 0 possui
-     estradas para 1 e 2, j√° a cidade 1 possui estrada apenas para 2. Note que existe estrada
-     de 0 para 1, mas n√£o de 1 para 0, pois s√≥ h√° estradas de 2 e 3 para 0.
+     j, e M[i, j] = 0 caso contr·rio. Por exemplo, na matriz abaixo temos que a cidade 0 possui
+     estradas para 1 e 2, j· a cidade 1 possui estrada apenas para 2. Note que existe estrada
+     de 0 para 1, mas n„o de 1 para 0, pois sÛ h· estradas de 2 e 3 para 0.
 
      0 1 1 0
      0 0 1 0
      1 1 0 1
      1 0 1 0
 
-     Escreva uma fun√ß√£o recursiva que dada uma matriz M e uma cidade i determina todas as
-     cidades que podem ser alcan√ßadas a partir de i.
+     Escreva uma funÁ„o recursiva que dada uma matriz M e uma cidade i determina todas as
+    cidades que podem ser alcanÁadas a partir de i.
      */
     return 0;
 }
@@ -183,15 +258,14 @@ int exercise14(void) {
 }
 
 int exercise15(void) {
-    /* Soma dos elementos de um vetor */
 
     /*
-    * 1 - Dado um vetor v de inteiro de tamanho tam, devemos caluclar a soma dos seus elementso da posi√ß√£o 0 at√© tam - 1
-    * 2 - Como podemos descrever este problema de forma recurstiva ? Isto √©, como podemos descrever este problema em fun√ß√£o de si mesmo?
-    * 3 - Vamos denotar por S(n) a soma dos elementos das posi√ß√µes 0 at√© n do vetor, e portanto devemos achar S(tam - 1)
-    * 4 - O Valor de S(n) √© dado por S(n) = v[n] + S(n - 1), onde S(0) = v[0]
+    * 1 - Dado um vetor v de inteiro de tamanho tam, devemos caluclar a soma dos seus elementso da posiÁ„o 0 atÈ tam - 1
+    * 2 - Como podemos descrever este problema de forma recurstiva ? Isto È, como podemos descrever este problema em funÁ„o de si mesmo?
+    * 3 - Vamos denotar por S(n) a soma dos elementos das posiÁıes 0 atÈ n do vetor, e portanto devemos achar S(tam - 1)
+    * 4 - O Valor de S(n) È dado por S(n) = v[n] + S(n - 1), onde S(0) = v[0]
 
-     Se n = 0 ent√£o a somaElementosVetorInt S(o) √© igual a v[0]
+     Se n = 0 ent„o a somaElementosVetorInt S(o) È igual a v[0]
      */
 
     int v[] = {1, 2, 3, 4, 5};
@@ -324,15 +398,6 @@ int displayMenuAndGetChoice(void) {
     printf("Exercise 09:\n");
     printf("Exercise 10:\n");
     printf("Exercise 11:\n");
-    printf("Exercise 12:\n");
-    printf("Exercise 13:\n");
-    printf("Exercise 14:\n");
-    printf("Exercise 15:\n");
-    printf("Exercise 16:\n");
-    printf("Exercise 17:\n");
-    printf("Exercise 18:\n");
-    printf("Exercise 19:\n");
-    printf("Exercise 20:\n");
     printf("Enter the number of the exercise you want to execute: ");
 
     int choice;

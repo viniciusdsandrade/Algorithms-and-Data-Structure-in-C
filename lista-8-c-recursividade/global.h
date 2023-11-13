@@ -3,6 +3,7 @@
 #ifndef ALGORITHMS_AND_DATA_STRUCTURE_IN_C_GLOBAL_H
 #define ALGORITHMS_AND_DATA_STRUCTURE_IN_C_GLOBAL_H
 
+void preencherVetor(int v[], int n);
 long somaIterativa(long a, long b);
 long multiplicacaoRecursiva(long a, long b);
 long fatorialIterativo(long n);
