@@ -1,5 +1,3 @@
-#include "string.h"
-
 void f1(const int v[], int n, int *a) {
     int i;
     *a = v[0];
@@ -10,7 +8,13 @@ void f1(const int v[], int n, int *a) {
 }
 
 void menor_base_log(int n, int *b, int *k) {
-
+    int i = 0;
+    while (n > 1) {
+        n /= 2;
+        i++;
+    }
+    *b = 2;
+    *k = i;
 }
 
 int primo(int n, int *p1, int *p2) {

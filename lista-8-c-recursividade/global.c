@@ -144,12 +144,12 @@ long fatorialRecursivo(long n) {
  * @return O n-ésimo termo da sequência de Fibonacci.
  */
 int fibonacciIterativo(int n) {
-    int i, t1 = 0, t2 = 1, nextTerm;
+    int i, t1 = 0, t2 = 1, proximo;
 
     for (i = 1; i <= n; ++i) {
-        nextTerm = t1 + t2;
+        proximo = t1 + t2;
         t1 = t2;
-        t2 = nextTerm;
+        t2 = proximo;
     }
 
     return t1;
@@ -188,7 +188,6 @@ int ff(int n, int ind) {
 
     if (n % 2 == 0)
         return ff(n / 2, ind + 1);
-
 
     return ff((n - 1) / 2, ind + 1) + ff((n + 1) / 2, ind + 1);
 }
@@ -232,4 +231,57 @@ long logaritmo(long n) {
         return 0;
     else
         return 1 + logaritmo(n / 2);
+}
+
+/**
+ * Função para calcular o máximo divisor comum (MDC) de dois números inteiros não negativos.
+ *
+ * @param x O primeiro número
+ * @param y O segundo número
+ * @return O MDC de x e y
+ */
+int mdc(int x, int y) {
+    if (y == 0)
+        return x;
+    else
+        return mdc(y, x % y);
+}
+
+/**
+ * Esta função calcula a potência de uma base dada elevada a um expoente inteiro não negativo
+ * usando uma abordagem recursiva.
+ *
+ * @param x A base da operação de potência.
+ * @param n O expoente inteiro não negativo.
+ * @return O resultado de elevar a base (x) à potência do expoente (n).
+ * @throws Um aviso se o expoente (n) for negativo (não há exceções em C, mas o comentário indica a condição).
+ */
+long potenciaRecursiva(long x, long n) {
+    if (n < 0) {
+        printf("Aviso: O expoente deve ser um inteiro não negativo.\n");
+        return -1; // Retorna -1 para indicar um erro
+    }
+
+    if (n == 0)
+        return 1;
+    else
+        return x * potenciaRecursiva(x, n - 1);
+}
+
+/**
+ * Solução para o problema das Torres de Hanoi
+ *
+ * @param n O número de discos
+ * @param origem A torre de origem
+ * @param destino A torre de destino
+ * @param auxiliar A torre auxiliar
+ */
+void hanoi(int n, char origem, char destino, char auxiliar) {
+    if (n == 1)
+        printf("Mova o disco %c da torre %c para a torre %c\n", n, origem, destino);
+    else {
+        hanoi(n - 1, origem, auxiliar, destino);
+        printf("Mova o disco %d da torre %c para a torre %c\n", n, origem, destino);
+        hanoi(n - 1, auxiliar, destino, origem);
+    }
 }

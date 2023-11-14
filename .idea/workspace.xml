@@ -9,13 +9,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="feat[recursividade] : organizando diretos dos exercicios 'files', 'recursividade' e 'ponteiros'">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="build[recursividade] : finalizando lista de recursividade">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_7_2023_9_10_AM_[Changes]/exe08.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_7_2023_9_10_AM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_7_2023_9_10_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exe08.exe" beforeDir="false" afterPath="$PROJECT_DIR$/exe08.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista_8_C_recursividade/exe08.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_8_C_recursividade/exe08.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista_8_C_recursividade/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista_8_C_recursividade/global.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista_8_C_recursividade/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/lista_8_C_recursividade/global.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exe08.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-7-c-ponteiros/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-7-c-ponteiros/global.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-8-c-recursividade/exe08.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-8-c-recursividade/exe08.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-8-c-recursividade/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-8-c-recursividade/global.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-8-c-recursividade/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/lista-8-c-recursividade/global.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista_7_C_ponteiros/lista/lista7-ponteiros.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,28 +47,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/c-algorithms",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/c-algorithms/lista-8-c-recursividade/exe08.c&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration name="exe08.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algorithms-and-data-structure-in-c" TARGET_NAME="exe08.c" CONFIG_NAME="exe08.c">
-      <option name="sourceFile" value="lista_8_C_recursividade\exe08.c" />
+    <configuration name="exe08.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="c-algorithms" TARGET_NAME="exe08.c" CONFIG_NAME="exe08.c">
+      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\c-algorithms\lista-8-c-recursividade\exe08.c" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
@@ -86,7 +90,9 @@
       <workItem from="1699626864070" duration="2677000" />
       <workItem from="1699872550657" duration="175000" />
       <workItem from="1699873051731" duration="33000" />
-      <workItem from="1699903179406" duration="1905000" />
+      <workItem from="1699903179406" duration="2180000" />
+      <workItem from="1699961273084" duration="2046000" />
+      <workItem from="1699971844439" duration="729000" />
     </task>
     <task id="LOCAL-00001" summary="feat[recursividade] : iniciando lista de recursividade">
       <option name="closed" value="true" />
@@ -104,7 +110,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699629553829</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="build[recursividade] : finalizando lista de recursividade">
+      <option name="closed" value="true" />
+      <created>1699905213881</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699905213881</updated>
+    </task>
+    <task id="LOCAL-00004" summary="build[recursividade] : finalizando lista de recursividade">
+      <option name="closed" value="true" />
+      <created>1699905251986</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699905251986</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +148,8 @@
     <MESSAGE value="feat[recursividade] : iniciando lista de recursividade" />
     <MESSAGE value="feat[recursividade] : mais exercícios de recursividade" />
     <MESSAGE value="feat[recursividade] : organizando diretos dos exercicios 'files', 'recursividade' e 'ponteiros'" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat[recursividade] : organizando diretos dos exercicios 'files', 'recursividade' e 'ponteiros'" />
+    <MESSAGE value="build[recursividade] : finalizando lista de recursividade" />
+    <option name="LAST_COMMIT_MESSAGE" value="build[recursividade] : finalizando lista de recursividade" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -3,7 +3,7 @@
 #include <locale.h>
 #include "global.h"
 
-#define MAX_EXERCISES 11
+#define MAX_EXERCISES 20
 #define MAX 100
 
 bool getExitChoice(void);
@@ -33,7 +33,7 @@ int exercise01(void) {
 
     /*
      1. Escreva um algoritmo iterativo em C para avaliar a * b usando a adição, onde a e b são
-    inteiros não negativos.
+     inteiros não negativos.
      */
 
     int a, b, result;
@@ -58,7 +58,7 @@ int exercise02(void) {
     recursivo para o calculo de a * b, onde a e b são inteiros não-negativos.
      */
 
-    int a, b,result;
+    int a, b, result;
 
     printf("Enter the value of a: ");
     scanf("%d", &a);
@@ -98,7 +98,7 @@ int exercise03(void) {
 int exercise04(void) {
 
     /*
-     * 4. Faça uma função recursiva em C que calcula o elemento mínimo em um vetor.
+     4. Faça uma função recursiva em C que calcula o elemento mínimo em um vetor.
      */
 
     printf("digite o tamanho do vetor:");
@@ -120,11 +120,11 @@ int exercise04(void) {
 int exercise05(void) {
 
     /*
-     * 5. Faça uma função recursiva em C que calcula a média dos elementos de um vetor.
+     5. Faça uma função recursiva em C que calcula a média dos elementos de um vetor.
      */
 
     printf("digite o tamanho do vetor:");
-    int n,v[MAX];
+    int n, v[MAX];
 
     scanf("%d", &n);
 
@@ -171,7 +171,7 @@ int exercise07(void) {
 int exercise08(void) {
 
     /*
-     8. Execute a função ff abaixo com os argumentos 7 e 0.
+    8. Execute a função ff abaixo com os argumentos 7 e 0.
     int ff(int n, int ind) {
     int i;
     for (i = 0; i < ind; i++)
@@ -199,15 +199,27 @@ int exercise08(void) {
 int exercise09(void) {
 
     /*
-     * 9. Escreva uma função recursiva que calcule blg nc, ou seja, o piso do logaritmo de n na base 2.
+     9. Escreva uma função recursiva que calcule blg nc, ou seja, o piso do logaritmo de n na base 2.
      */
+
+    long n;
+
+    printf("digite o valor de n: ");
+    scanf("%ld", &n);
+
+    long result = logaritmo(n);
+
+    printf("blg(%ld) = %ld", n, result);
+    putchar('\n');
+
+
     return 0;
 }
 
 int exercise10(void) {
 
     /*
-     * 10. Escreva uma função recursiva para a busca sequencial em um vetor.
+     10. Escreva uma função recursiva para a busca sequencial em um vetor.
      */
 
     return 0;
@@ -216,7 +228,7 @@ int exercise10(void) {
 int exercise11(void) {
 
     /*
-     * 11. Escreva uma função recursiva para a busca binária em um vetor.
+     11. Escreva uma função recursiva para a busca binária em um vetor.
      */
 
     return 0;
@@ -230,6 +242,20 @@ int exercise12(void) {
     • mdc(x,y) = x se y é zero,
     • mdc(x,y) = mdc(y,x%y) caso contrário.
      */
+
+    int x, y;
+
+    printf("digite o valor de x: ");
+    scanf("%d", &x);
+
+    printf("digite o valor de y: ");
+    scanf("%d", &y);
+
+    int result = mdc(x, y);
+
+    printf("mdc(%d, %d) = %d", x, y, result);
+    putchar('\n');
+
     return 0;
 }
 
@@ -293,6 +319,24 @@ int exercise16(void) {
 }
 
 int exercise17(void) {
+
+    /*
+     como calcular potencia de x elevado a n para n inteiro positivo de forma recursiva
+     */
+
+    long x, n;
+
+    printf("digite o valor de x: ");
+    scanf("%ld", &x);
+
+    printf("digite o valor de n: ");
+    scanf("%ld", &n);
+
+    long potencia = potenciaRecursiva(x, n);
+
+    printf("%ld^%ld = %ld", x, n, potencia);
+    putchar('\n');
+
     return 0;
 }
 
@@ -398,6 +442,15 @@ int displayMenuAndGetChoice(void) {
     printf("Exercise 09:\n");
     printf("Exercise 10:\n");
     printf("Exercise 11:\n");
+    printf("Exercise 12:\n");
+    printf("Exercise 13:\n");
+    printf("Exercise 14:\n");
+    printf("Exercise 15:\n");
+    printf("Exercise 16:\n");
+    printf("Exercise 17:\n");
+    printf("Exercise 18:\n");
+    printf("Exercise 19:\n");
+    printf("Exercise 20:\n");
     printf("Enter the number of the exercise you want to execute: ");
 
     int choice;
