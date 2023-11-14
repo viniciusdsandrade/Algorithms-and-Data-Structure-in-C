@@ -222,6 +222,21 @@ int exercise10(void) {
      10. Escreva uma função recursiva para a busca sequencial em um vetor.
      */
 
+    printf("digite o tamanho do vetor:");
+    int n, v[MAX], elemento;
+
+    scanf("%d", &n);
+
+    preencherVetor(v, n);
+
+    printf("digite o elemento a ser buscado: ");
+    scanf("%d", &elemento);
+
+    int posicao = buscaSequencial(v, n, elemento);
+
+    printf("vetor[%d] = %d", posicao, elemento);
+    putchar('\n');
+
     return 0;
 }
 
@@ -230,6 +245,20 @@ int exercise11(void) {
     /*
      11. Escreva uma função recursiva para a busca binária em um vetor.
      */
+
+    printf("digite o tamanho do vetor:");
+    int n, v[MAX], elemento;
+
+    scanf("%d", &n);
+    preencherVetor(v, n);
+
+    printf("digite o elemento a ser buscado: ");
+    scanf("%d", &elemento);
+
+    int posicao = buscaBinaria(v, n, elemento);
+
+    printf("vetor[%d] = %d", posicao, elemento);
+    putchar('\n');
 
     return 0;
 }
@@ -295,7 +324,7 @@ int exercise15(void) {
      */
 
     int v[] = {1, 2, 3, 4, 5};
-    int tam = 5;
+    int tam = sizeof v / sizeof v[0];
 
     int somaVetor = somaElementosVetorInt(v, tam - 1);
 
@@ -304,10 +333,6 @@ int exercise15(void) {
 }
 
 int exercise16(void) {
-
-    /*
-     *
-     */
 
     int v[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
     int tam = sizeof(v) / sizeof(v[0]);
@@ -341,6 +366,17 @@ int exercise17(void) {
 }
 
 int exercise18(void) {
+
+    printf("Deseja descobrir o fatorial de qual numero ?");
+    long n;
+
+    scanf("%ld", &n);
+
+    long fatorial = fatorialRecursivo(n);
+
+    printf("%ld! = %ld", n, fatorial);
+    putchar('\n');
+
     return 0;
 }
 

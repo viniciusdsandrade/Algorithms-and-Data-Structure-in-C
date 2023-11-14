@@ -19,5 +19,7 @@ long potenciaRecursiva(long x, long n);
 void hanoi(int n, char origem, char destino, char auxiliar);
 void imprimeVetorIntEmOrderRecursivo(int v[], int i, int n);
 int mdc(int x, int y);
+int buscaSequencial(int v[], int n, int x);
+int buscaBinaria(int v[], int n, int x);
 
 #endif //ALGORITHMS_AND_DATA_STRUCTURE_IN_C_GLOBAL_H

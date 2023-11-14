@@ -9,17 +9,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="build[recursividade] : finalizando lista de recursividade">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_7_2023_9_10_AM_[Changes]/exe08.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_7_2023_9_10_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_7_2023_9_10_AM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="build[recursividade] : finalizando lista de recursividade pt2">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exe08.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista-7-c-ponteiros/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-7-c-ponteiros/global.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exe08.exe" beforeDir="false" afterPath="$PROJECT_DIR$/exe08.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista-8-c-recursividade/exe08.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-8-c-recursividade/exe08.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista-8-c-recursividade/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-8-c-recursividade/global.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista-8-c-recursividade/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/lista-8-c-recursividade/global.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista_7_C_ponteiros/lista/lista7-ponteiros.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +59,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -92,7 +89,9 @@
       <workItem from="1699873051731" duration="33000" />
       <workItem from="1699903179406" duration="2180000" />
       <workItem from="1699961273084" duration="2046000" />
-      <workItem from="1699971844439" duration="729000" />
+      <workItem from="1699971844439" duration="1425000" />
+      <workItem from="1699988044104" duration="2526000" />
+      <workItem from="1699992316010" duration="2703000" />
     </task>
     <task id="LOCAL-00001" summary="feat[recursividade] : iniciando lista de recursividade">
       <option name="closed" value="true" />
@@ -126,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699905251986</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="build[recursividade] : finalizando lista de recursividade pt2">
+      <option name="closed" value="true" />
+      <created>1699972981634</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699972981634</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +156,8 @@
     <MESSAGE value="feat[recursividade] : mais exercícios de recursividade" />
     <MESSAGE value="feat[recursividade] : organizando diretos dos exercicios 'files', 'recursividade' e 'ponteiros'" />
     <MESSAGE value="build[recursividade] : finalizando lista de recursividade" />
-    <option name="LAST_COMMIT_MESSAGE" value="build[recursividade] : finalizando lista de recursividade" />
+    <MESSAGE value="build[recursividade] : finalizando lista de recursividade pt2" />
+    <option name="LAST_COMMIT_MESSAGE" value="build[recursividade] : finalizando lista de recursividade pt2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -9,7 +9,7 @@
  */
 void preencherVetor(int v[], int n) {
     for (int i = 0; i < n; i++) {
-        printf("Digite o elemento %d do vetor: ", i + 1);
+        printf("vetor[%d] : ", i);
         scanf("%d", &v[i]);
     }
 }
@@ -106,7 +106,8 @@ float media(int v[], int n) {
     if (n == 1)
         return v[0];  // Caso base: se há apenas um elemento no array, retorne esse elemento
     else
-        return (v[n - 1] + (n - 1) * media(v, n - 1)) / n;
+        return (v[n - 1] + media(v, n - 1) * (n - 1)) /
+               n;  // Caso recursivo: calcule a média do subarray excluindo o último elemento
 }
 
 /**
@@ -283,5 +284,43 @@ void hanoi(int n, char origem, char destino, char auxiliar) {
         hanoi(n - 1, origem, auxiliar, destino);
         printf("Mova o disco %d da torre %c para a torre %c\n", n, origem, destino);
         hanoi(n - 1, auxiliar, destino, origem);
+    }
+}
+
+/**
+ * Busca sequencial em um vetor de inteiros.
+ * @param v Um vetor de inteiros.
+ * @param n O número de elementos no vetor.
+ * @param x O valor a ser buscado.
+ * @return O índice do elemento no vetor, ou -1 se o elemento não for encontrado.
+ */
+int buscaSequencial(int v[], int n, int x) {
+    if (n == 0)
+        return -1;
+    else if (v[n - 1] == x)
+        return n - 1;
+    else
+        return buscaSequencial(v, n - 1, x);
+}
+
+/**
+ * Busca binária em um vetor de inteiros.
+ * @param v Um vetor de inteiros ordenado.
+ * @param n O número de elementos no vetor.
+ * @param x O valor a ser buscado.
+ * @return O índice do elemento no vetor, ou -1 se o elemento não for encontrado.
+ */
+int buscaBinaria(int v[], int n, int x) {
+    if (n == 0)
+        return -1;
+    else {
+        int meio = n / 2;
+
+        if (v[meio] == x)
+            return meio;
+        else if (v[meio] < x)
+            return meio + buscaBinaria(v + meio + 1, n - meio - 1, x);
+        else
+            return buscaBinaria(v, meio, x);
     }
 }
