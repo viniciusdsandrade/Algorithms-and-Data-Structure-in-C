@@ -3,7 +3,7 @@
 #include <locale.h>
 #include "global.h"
 
-#define MAX_EXERCISES 20
+#define MAX_EXERCISES 18
 #define MAX 100
 
 bool getExitChoice(void);
@@ -128,10 +128,7 @@ int exercise05(void) {
 
     scanf("%d", &n);
 
-    for (int i = 0; i < n; i++) {
-        printf("digite o elemento %d do vetor:", i + 1);
-        scanf("%d", &v[i]);
-    }
+    preencherVetor(v, n);
 
     float mediaVetor = media(v, n);
 
@@ -151,8 +148,17 @@ int exercise06(void) {
     • fibonacci(5)
      */
 
+    long fat, fib;
+    fat = 6;
+    fib = 5;
 
+    long fatorial = fatorialRecursivo(fat);
+    printf("%ld! = %ld", fat, fatorial);
+    putchar('\n');
 
+    int fibonacci = fibonacciRecursivo(fib);
+    printf("fibonacci(%ld) = %d", fib, fibonacci);
+    putchar('\n');
     return 0;
 }
 
@@ -164,6 +170,17 @@ int exercise07(void) {
     • Se n == 0 retorne 0.
     • Se n > 0 retorne n + f(n menos 1).
      */
+
+    int n;
+
+    printf("digite o valor de n: ");
+
+    scanf("%d", &n);
+
+    int result = f(n);
+
+    printf("f(%d) = %d", n, result);
+    putchar('\n');
 
     return 0;
 }
@@ -223,7 +240,7 @@ int exercise10(void) {
      */
 
     printf("digite o tamanho do vetor:");
-    int n, v[MAX], elemento;
+    int n, v[MAX], elemento, posicao;
 
     scanf("%d", &n);
 
@@ -232,7 +249,7 @@ int exercise10(void) {
     printf("digite o elemento a ser buscado: ");
     scanf("%d", &elemento);
 
-    int posicao = buscaSequencial(v, n, elemento);
+    posicao = buscaSequencial(v, n, elemento);
 
     printf("vetor[%d] = %d", posicao, elemento);
     putchar('\n');
@@ -247,7 +264,7 @@ int exercise11(void) {
      */
 
     printf("digite o tamanho do vetor:");
-    int n, v[MAX], elemento;
+    int n, v[MAX], elemento, posicao;
 
     scanf("%d", &n);
     preencherVetor(v, n);
@@ -255,7 +272,7 @@ int exercise11(void) {
     printf("digite o elemento a ser buscado: ");
     scanf("%d", &elemento);
 
-    int posicao = buscaBinaria(v, n, elemento);
+    posicao = buscaBinaria(v, n, elemento);
 
     printf("vetor[%d] = %d", posicao, elemento);
     putchar('\n');
@@ -272,7 +289,7 @@ int exercise12(void) {
     • mdc(x,y) = mdc(y,x%y) caso contrário.
      */
 
-    int x, y;
+    int x, y, result;
 
     printf("digite o valor de x: ");
     scanf("%d", &x);
@@ -280,7 +297,7 @@ int exercise12(void) {
     printf("digite o valor de y: ");
     scanf("%d", &y);
 
-    int result = mdc(x, y);
+    result = mdc(x, y);
 
     printf("mdc(%d, %d) = %d", x, y, result);
     putchar('\n');
@@ -305,6 +322,27 @@ int exercise13(void) {
      Escreva uma função recursiva que dada uma matriz M e uma cidade i determina todas as
     cidades que podem ser alcançadas a partir de i.
      */
+
+    int M[][MAX] = {
+            {0, 1, 1, 0},
+            {0, 0, 1, 0},
+            {1, 1, 0, 1},
+            {1, 0, 1, 0}
+    };
+
+    int n = 4;
+    int cidadeInicial = 0;
+
+    int visitadas[MAX] = {0};
+    cidadesAlcancaveis(M, n, cidadeInicial, visitadas);
+
+    printf("Cidades alcancaveis a partir da cidade %d:\n", cidadeInicial);
+    for (int i = 0; i < n; i++) {
+        if (visitadas[i])
+            printf("%d ", i);
+    }
+    printf("\n");
+
     return 0;
 }
 
@@ -380,14 +418,6 @@ int exercise18(void) {
     return 0;
 }
 
-int exercise19(void) {
-    return 0;
-}
-
-int exercise20(void) {
-    return 0;
-}
-
 bool getExitChoice(void) {
     int exitChoice;
     do {
@@ -454,12 +484,7 @@ void executeExercise(int choice) {
         case 18:
             exercise18();
             break;
-        case 19:
-            exercise19();
-            break;
-        case 20:
-            exercise20();
-            break;
+
         default:
             printf("Invalid option!\n");
             break;
@@ -485,8 +510,6 @@ int displayMenuAndGetChoice(void) {
     printf("Exercise 16:\n");
     printf("Exercise 17:\n");
     printf("Exercise 18:\n");
-    printf("Exercise 19:\n");
-    printf("Exercise 20:\n");
     printf("Enter the number of the exercise you want to execute: ");
 
     int choice;

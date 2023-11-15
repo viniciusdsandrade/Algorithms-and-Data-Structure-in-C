@@ -1,3 +1,5 @@
+#define MAX 100
+
 /**
  * Preenche um vetor com valores fornecidos pelo usuário.
  *
@@ -38,7 +40,6 @@ long somaIterativa(long a, long b) {
  * @return O resultado da multiplicação recursiva de 'a' e 'b'.
  */
 long multiplicacaoRecursiva(long a, long b) {
-    // Caso base: se b for zero, o resultado é zero
     if (b == 0)
         return 0;
     else
@@ -55,14 +56,11 @@ long multiplicacaoRecursiva(long a, long b) {
 int max(int v[], int n) {
     int x;
 
-    // Caso base: se há apenas um elemento no array, retorne esse elemento
     if (n == 1)
         return v[0];
     else {
-        // Caso recursivo: encontre o máximo no subarray excluindo o último elemento
         x = max(v, n - 1);
 
-        // Compare o máximo do subarray com o último elemento do array
         if (x > v[n - 1])
             return x;
         else
@@ -80,14 +78,11 @@ int max(int v[], int n) {
 int min(int v[], int n) {
     int x;
 
-    // Caso base: se há apenas um elemento no array, retorne esse elemento
     if (n == 1)
         return v[0];
     else {
-        // Caso recursivo: encontre o mínimo no subarray excluindo o último elemento
         x = min(v, n - 1);
 
-        // Compare o mínimo do subarray com o último elemento do array
         if (x < v[n - 1])
             return x;
         else
@@ -104,10 +99,9 @@ int min(int v[], int n) {
  */
 float media(int v[], int n) {
     if (n == 1)
-        return v[0];  // Caso base: se há apenas um elemento no array, retorne esse elemento
+        return v[0];
     else
-        return (v[n - 1] + media(v, n - 1) * (n - 1)) /
-               n;  // Caso recursivo: calcule a média do subarray excluindo o último elemento
+        return (v[n - 1] + media(v, n - 1) * (n - 1)) / n;
 }
 
 /**
@@ -322,5 +316,44 @@ int buscaBinaria(int v[], int n, int x) {
             return meio + buscaBinaria(v + meio + 1, n - meio - 1, x);
         else
             return buscaBinaria(v, meio, x);
+    }
+}
+
+/**
+ * Função recursiva que calcula a soma dos números de 1 até n.
+ *
+ * @param n O número até o qual a soma deve ser calculada.
+ * @return A soma dos números de 1 até n.
+ */
+long f(long n) {
+    if (n == 0)
+        return 0;
+    else
+        return n + f(n - 1);
+}
+
+/**
+ * Encontra todas as cidades alcançáveis a partir de uma cidade específica em uma matriz de estradas.
+ *
+ * @param M Matriz binária que representa a ligação entre as cidades.
+ * @param n Número total de cidades na matriz.
+ * @param cidadeInicial A cidade a partir da qual deseja-se encontrar as cidades alcançáveis.
+ * @param visitadas Array que rastreia as cidades já visitadas durante a execução da função.
+ */
+void cidadesAlcancaveis(int M[][MAX], int n, int cidadeInicial, int visitadas[]) {
+    // Verificações de parâmetros
+    if (cidadeInicial < 0 || cidadeInicial >= n) {
+        printf("Cidade inicial inválida.\n");
+        return;
+    }
+
+    // Marca a cidade atual como visitada
+    visitadas[cidadeInicial] = 1;
+
+    for (int i = 0; i < n; i++) {
+        // Verifica se há uma estrada da cidadeInicial para a cidade i e se a cidade i ainda não foi visitada
+        if (M[cidadeInicial][i] == 1 && !visitadas[i]) {
+            cidadesAlcancaveis(M, n, i, visitadas); // Chama a função recursiva para a cidade i
+        }
     }
 }

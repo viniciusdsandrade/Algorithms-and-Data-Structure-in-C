@@ -829,13 +829,6 @@ int exercise29(int argc, char *argv[]) {
     return 0;
 }
 
-
-int exercise30(void) {
-
-    return 0;
-}
-
-
 int displayMenuAndGetChoice(void) {
     printf("Exercise 01:\n");
     printf("Exercise 02:\n");
@@ -962,9 +955,6 @@ void executeExercise(int choice) {
             exercise28();
             break;
         case 29:
-            break;
-        case 30:
-            exercise30();
             break;
         default:
             printf("Invalid option!\n");

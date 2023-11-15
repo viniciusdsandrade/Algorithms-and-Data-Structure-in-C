@@ -568,6 +568,4 @@ int main(void) {
     } while (!sair);
     printf("Obrigado por utilizar o programa!\n");
     return 0;
-
-    return 0;
 }

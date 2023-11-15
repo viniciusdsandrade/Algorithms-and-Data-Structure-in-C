@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdbool.h>
+
 #include <locale.h>
 #include "global.h"
 
-#define MAX_EXERCISES 30
+#define MAX_EXERCISES 19
 
 int displayMenuAndGetChoice(void);
 bool getExitChoice(void);
@@ -50,12 +51,28 @@ int exercise01(void) {
     (h) *(&x)
     (i) &(*p2)
      */
+
+    int x = 10, y = 20;
+    int *p1;
+    int *p2;
+    p1 = &x;
+    p2 = &y;
+    (*p1)++;
+
+    printf("x = %d\n", x);
+    printf("y = %d\n", y);
+    printf("&x = %p\n", &x);
+    printf("&y = %p\n", &y);
+    printf("p1 = %p\n", p1);
+    printf("p2 = %p\n", p2);
+    printf("*p1 + *p2 = %d\n", *p1 + *p2);
+    printf("*(&x) = %d\n", *(&x));
+    printf("&(*p2) = %p\n", &(*p2));
+
     return 0;
 }
 
 int exercise02(void) {
-
-
 
     /*
     2 - O que será impresso pelo programa abaixo?
@@ -138,19 +155,37 @@ int exercise04(void) {
     void menor_base_log(int n, int *b, int *k);
     */
 
+    printf("Enter a number: ");
+    int n, b, k;
+    scanf("%d", &n);
+
+    menor_base_log(n, &b, &k);
+
+    printf("b = %d, k = %d\n", b, k);
+    putchar('\n');
+
     return 0;
 }
 
 int exercise05(void) {
 
     /*
-     5. Escreva uma função chamada primo que recebe como parâmetro um inteiro n e dois outros
+    5. Escreva uma função chamada primo que recebe como parâmetro um inteiro n e dois outros
     ponteiros para inteiros p1 e p2. A função deve retornar no endereço apontado por p1 o
     maior número primo que é menor do que n e deve retornar no endereço apontado por p2
     o menor número primo que é maior do que m. O protótipo da função deve ser:
 
     int primo(int n, int *p1, int *p2);
      */
+
+    printf("Enter a number: ");
+    int n, p1, p2;
+    scanf("%d", &n);
+
+    primo(n, &p1, &p2);
+
+    printf("p1 = %d, p2 = %d\n", p1, p2);
+    putchar('\n');
 
     return 0;
 }
@@ -167,13 +202,25 @@ int exercise06(void) {
     double media(double vet[], int n, int *i);
     */
 
+    double vet[] = {1.2, 2.3, 3.4, 4.5, 5.6, 6.7, 7.8, 9.9, 10.0};
+    int tam = sizeof vet / sizeof vet[0];
+    double mediaAritmetica;
+    int i;
+
+    imprimeVetorDouble(vet, tam);
+
+    mediaAritmetica = media(vet, tam, &i);
+
+    printf("media = %.2lf, i = %d\n", mediaAritmetica, i);
+    putchar('\n');
+
     return 0;
 }
 
 int exercise07(void) {
 
     /*
-     * 7. Escreva uma função que recebe como parâmetro um vetor de inteiros, um inteiro n que
+    7. Escreva uma função que recebe como parâmetro um vetor de inteiros, um inteiro n que
     indica o tamanho do vetor e dois ponteiros para inteiro f1 e f2. A função deve devolver no
     endereço apontado por f1 o elemento do vetor de menor frequência (que possui o menor
     número de ocorrências) e no endereço apontado por f2 o elemento do vetor de maior
@@ -182,6 +229,16 @@ int exercise07(void) {
 
     void frequencias(int v[], int n, int *f1, int *f2);
      */
+
+    int v[] = {1, 2, 3, 2, 4, 1, 3, 1, 2, 4, 4, 4};
+    int tam = sizeof v / sizeof v[0];
+
+    int menorFrequencia, maiorFrequencia;
+
+    frequencias(v, tam, &menorFrequencia, &maiorFrequencia);
+
+    printf("Menor frequencia: %d\n", menorFrequencia);
+    printf("Maior frequencia: %d\n", maiorFrequencia);
 
     return 0;
 }
@@ -349,7 +406,7 @@ int exercise19(void) {
     char q[] = "def";
     char t[] = "def";
 
-    char r[10]; // Asegúrese de que r tenga suficiente espacio para almacenar la concatenación
+    char r[10];
     char u[10];
 
     strcat_custom(p, q, r);
@@ -360,60 +417,6 @@ int exercise19(void) {
     return 0;
 }
 
-int exercise20(void) {
-
-    return 0;
-}
-
-int exercise21(void) {
-
-    return 0;
-}
-
-int exercise22(void) {
-
-    return 0;
-}
-
-int exercise23(void) {
-
-    return 0;
-}
-
-int exercise24(void) {
-
-    return 0;
-}
-
-int exercise25(void) {
-
-    return 0;
-}
-
-int exercise26(void) {
-
-    return 0;
-}
-
-int exercise27(void) {
-
-    return 0;
-}
-
-int exercise28(void) {
-
-    return 0;
-}
-
-int exercise29(void) {
-
-    return 0;
-}
-
-int exercise30(void) {
-
-    return 0;
-}
 
 int displayMenuAndGetChoice(void) {
     printf("Exercise 01:\n");
@@ -435,17 +438,7 @@ int displayMenuAndGetChoice(void) {
     printf("Exercise 17:\n");
     printf("Exercise 18:\n");
     printf("Exercise 19:\n");
-    printf("Exercise 20:\n");
-    printf("Exercise 21:\n");
-    printf("Exercise 22:\n");
-    printf("Exercise 23:\n");
-    printf("Exercise 24:\n");
-    printf("Exercise 25:\n");
-    printf("Exercise 26:\n");
-    printf("Exercise 27:\n");
-    printf("Exercise 28:\n");
-    printf("Exercise 29:\n");
-    printf("Exercise 30:\n");
+
 
     printf("Enter the number of the exercise you want to execute: ");
 
@@ -512,38 +505,6 @@ void executeExercise(int choice) {
             break;
         case 19:
             exercise19();
-            break;
-        case 20:
-            exercise20();
-            break;
-        case 21:
-            exercise21();
-            break;
-        case 22:
-            exercise22();
-            break;
-        case 23:
-            exercise23();
-            break;
-        case 24:
-            exercise24();
-            break;
-        case 25:
-            exercise25();
-            break;
-        case 26:
-            exercise26();
-            break;
-        case 27:
-            exercise27();
-            break;
-        case 28:
-            exercise28();
-            break;
-        case 29:
-            break;
-        case 30:
-            exercise30();
             break;
         default:
             printf("Invalid option!\n");

@@ -1396,7 +1396,6 @@ int exercicio29(void) {
 
     // calcular a sua inversa
     int matrizInversa[n][n];
-    (matriz, matrizInversa, n, n);
 
     printf("Matriz Inversa:\n");
     imprimeMatrizInt(matrizInversa, n, n);
