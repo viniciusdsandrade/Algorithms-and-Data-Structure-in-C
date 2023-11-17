@@ -25,7 +25,7 @@ int exercicio01(void) {
     scanf("%d", &n);
 
     if (n < 1 || n > 50) {
-        printf("Valor inv�lido");
+        printf("Valor invalido");
         return 0;
     }
 
@@ -49,7 +49,7 @@ int exercicio02(void) {
 
     /*
      * 2. Escreva um programa que leia um vetor de ate 50 numeros reais e calcule o
-     * desvio padr�o destes valores.
+     * desvio padrao destes valores.
      */
 
     printf("\nExe02 - Lista03\n");
@@ -1288,8 +1288,8 @@ int exercicio25(void) {
 
     } while (choice != 0);
 
-    liberarMatrizInt(matriz1, l1);
-    liberarMatrizInt(matriz2, l2);
+    liberarMatrizInt((int **) matriz1, l1);
+    liberarMatrizInt((int **) matriz2, l2);
 
     return 0;
 }

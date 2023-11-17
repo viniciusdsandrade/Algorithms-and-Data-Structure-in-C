@@ -24,5 +24,6 @@ int buscaSequencial(int v[], int n, int x);
 int buscaBinaria(int v[], int n, int x);
 long f(long n);
 void cidadesAlcancaveis(int M[][MAX], int n, int cidadeInicial, int visitadas[]);
+int bb_rec(int v[], int ini, int fim, int chave);
 
 #endif //ALGORITHMS_AND_DATA_STRUCTURE_IN_C_GLOBAL_H

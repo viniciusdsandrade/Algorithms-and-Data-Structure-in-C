@@ -327,7 +327,7 @@ double mediaVetorDouble(double vetor[], int n) {
  * @param num O número para o qual se deseja calcular a raiz quadrada.
  * @return A raiz quadrada do número, ou 0.0 em caso de erro.
  */
-float raizQuadradaDouble(float num) {
+double raizQuadradaDouble(double num) {
     if (num < 0) {
         printf("Erro: Não é possível calcular a raiz quadrada de um número negativo.\n");
         return 0.0;

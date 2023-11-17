@@ -357,3 +357,17 @@ void cidadesAlcancaveis(int M[][MAX], int n, int cidadeInicial, int visitadas[])
         }
     }
 }
+
+int bb_rec(int v[], int ini, int fim, int chave) {
+
+    int meio = (ini + fim) / 2;
+
+    if (chave == v[meio])
+        return meio;
+    else if (ini > fim)
+        return -1;
+    else if (chave < v[meio])
+        return bb_rec(v, ini, meio - 1, chave);
+    else
+        return bb_rec(v, meio + 1, fim, chave);
+}
