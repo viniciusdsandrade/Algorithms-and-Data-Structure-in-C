@@ -61,6 +61,7 @@ void imprimirCadeiaHierarquica(
 
 int main(void) {
 
+/*
     const char *teste_0 = "C:\\Users\\Pichau\\Desktop\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-0.txt";
     const char *teste_5 = "C:\\Users\\Pichau\\Desktop\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-5.txt";
     const char *teste_10 = "C:\\Users\\Pichau\\Desktop\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-10.txt";
@@ -70,6 +71,7 @@ int main(void) {
     const char *teste_5_1 = "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-5.txt";
     const char *teste_10_1 = "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-10.txt";
     const char *teste_11_1 = "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-11.txt";
+*/
 
     int numFuncionarios, idFuncionario;
     int matriz[MAX_FUNCIONARIOS][MAX_FUNCIONARIOS];
