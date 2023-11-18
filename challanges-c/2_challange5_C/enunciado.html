@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv='content-type' content='text/html; charset=utf-8'>
+    <title>Trabalho Arquivos</title>        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='https://sindresorhus.com/github-markdown-css/github-markdown.css'>
+    <style>
+        .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+        font-family: 'Noto Sans', sans-serif;
+        }
+        .markdown-body h6 { margin-bottom: 0; }
+        .markdown-body h6 + ul li {
+        display: inline-block;
+        width: 100%;
+        max-width: 426px;
+        vertical-align: top;
+        }
+        .markdown-body h6 + ul li pre {
+          max-height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <article class='markdown-body'>
+<h3>Fatec Campinas - ADS</h3>
+
+<h3>Linguagem de Programação</h3>
+
+<h1>Trabalho Recursão - Hierarquia</h1>
+<p>Entrega: MS Teams</p>
+<p>Até 4 pessoas</p>
+
+<p><em>Professor:</em> Alexandre Ferreira<br>
+
+<hr>
+
+<h2>
+<a id="user-content-descrição" class="anchor" href="#descri%C3%A7%C3%A3o" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Descrição</h2>
+
+<p>Esta tarefa tem por objetivo exercitar a construção de algoritmos recursivos.</p>
+
+<p>Cargos em empresas geralmente são organizados de forma hierárquica. Isto permite que decisões que atingem apenas um (sub-)setor da empresa possam ser tomadas por lideres locais, não sobrecarregando os cargos mais altos na hierarquia.</p>
+
+<p>A hierarquia da empresa pode ser entendida facilmente através de diagramas que mostram como ela está estruturada. Através deles, pode-se identificar a quem um determinado funcionário está diretamente subordinado, ou seja, quem é o seu <em>chefe</em>. Na verdade, pode-se até mesmo determinar toda a <em>cadeia hierárquica</em> de subordinados de um determinado funcionário, começando com o próprio funcionário e identificando-se quem são seus subordinados, em seguida quem são os subordinados dos seus subordinados e assim sucessivamente, até atingirmos os funcionários que não possuem subordinados. </p>
+
+<p>Como veremos a seguir, o objetivo desta tarefa é encontrar a <em>cadeia hierárquica</em> de um funcionário de uma empresa. Antes porém, veja abaixo um exemplo de um desses diagramas hierárquicos onde cada funcionário é identificado por um número, sendo 0 (zero) o presidente da empresa. </p>
+
+<p><a href="hierarquia.png" target="_blank"><img src="hierarquia.png" alt="Hierarquia" style="max-width:100%;"></a></p>
+
+<p>Algumas relações que podemos ver no diagrama acima são:</p>
+
+<ul>
+<li>A cadeia hierárquica do funcionário 0 (o presidente) é formada pelos funcionários 0, 1, 2, 3, 4, 5, 6, 7, 8 e 9 (todos os funcionários);</li>
+<li>A cadeia hierárquica do funcionário 1 é formada pelos funcionários 1, 2 e 3;</li>
+<li>A cadeia hierárquica do funcionário 7 é formada pelos funcionários 7 e 4;</li>
+<li>A cadeia hierárquica do funcionário 4 é formada somente por ele mesmo (pois não possui subordinados).</li>
+</ul>
+
+<p>Podemos representar as informações do diagrama hierárquico de uma empresa com <code>n</code> funcionários fazendo uso de uma matriz quadrada de ordem <code>n</code>, com todos elementos tendo valor 0 (zero) ou 1 (um). Para tanto, vamos supor que os funcionários da empresa são identificados por números de 0 a <code>n-1</code>, sendo 0 (zero) o presidente da empresa. Assim, na linha <code>i</code> da matriz, uma coluna <code>j</code> terá o valor 1 (um) se o funcionário <code>j</code> for subordinado <strong>direto</strong> do funcionário <code>i</code>, caso contrário o valor nesta coluna é 0 (zero). </p>
+
+<p>Por exemplo, a matriz correspondente ao diagrama hierárquico visto na imagem acima seria:</p>
+
+<pre><code>0 1 0 0 0 1 1 0 0 0    
+0 0 1 1 0 0 0 0 0 0    
+0 0 0 0 0 0 0 0 0 0    
+0 0 0 0 0 0 0 0 0 0    
+0 0 0 0 0 0 0 0 0 0    
+0 0 0 0 0 0 0 0 0 0    
+0 0 0 0 0 0 0 1 1 1    
+0 0 0 0 1 0 0 0 0 0    
+0 0 0 0 0 0 0 0 0 0    
+0 0 0 0 0 0 0 0 0 0    
+</code></pre>
+
+<h2>
+<a id="user-content-objetivo" class="anchor" href="#objetivo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Objetivo</h2>
+
+<p>O objetivo desta tarefa é fazer um programa que <strong>use recursividade</strong> e que, dada a matriz que descreve a hierarquia de uma empresa, encontre a <em>cadeia hierárquica</em> relativa a um determinado funcionário.</p>
+
+<h2>
+<a id="user-content-entrada" class="anchor" href="#entrada" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Entrada</h2>
+
+<p>A primeira linha contém dois inteiros: <code>n</code>, o número de funcionários entre 3 e 30, e <code>k</code>, o identificador numérico do funcionário sobre o qual deseja-se conhecer a cadeira hierárquica. A seguir tem-se <code>n</code> linhas que correspondem as linhas da matriz que descrevem a hierarquia da empresa, conforme explicado no enunciado.</p>
+
+<h2>
+<a id="user-content-saída" class="anchor" href="#sa%C3%ADda" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Saída</h2>
+
+<p>Na saída devem ser impressos os números que identificam todos os funcionários que estejam na <em>cadeia hierárquica</em> do funcionário <code>k</code>, <strong>começando pelo próprio</strong>, e então imprimindo, <strong>em ordem crescente</strong> por identificador, os outros funcionários. Os números dos funcionários da cadeia devem estar separados por um único espaço em branco.</p>
+
+<h2>
+<a id="user-content-exemplos" class="anchor" href="#exemplos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Exemplos</h2>
+
+<h6>
+<a id="user-content-teste-05" class="anchor" href="#teste-05" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 05</h6>
+
+<ul>
+<li>
+<p><a href="dados/arq05.in">Entrada</a></p>
+
+<pre><code>5 0
+0 1 1 0 0
+0 0 0 1 1
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+</code></pre>
+</li>
+<li>
+<p><a href="dados/arq05.res">Saída</a></p>
+
+<pre><code>0 1 2 3 4
+</code></pre>
+</li>
+</ul>
+
+<h6>
+<a id="user-content-teste-11" class="anchor" href="#teste-11" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 11</h6>
+
+<ul>
+<li>
+<p><a href="dados/arq11.in">Entrada</a></p>
+
+<pre><code>10 6
+0 1 1 0 1 0 0 1 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 1 0 0 1 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 1
+0 0 0 0 0 0 0 0 1 0
+0 0 0 0 0 1 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+</code></pre>
+</li>
+<li>
+<p><a href="dados/arq11.res">Saída</a></p>
+
+<pre><code>6 5 8
+</code></pre>
+</li>
+</ul>
+
+<h6>
+<a id="user-content-teste-10" class="anchor" href="#teste-10" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Teste 10</h6>
+
+<ul>
+<li>
+<p><a href="dados/arq10.in">Entrada</a></p>
+
+<pre><code>19 7
+0 1 0 0 0 0 0 0 0 1 0 1 0 0 1 0 0 0 0
+0 0 0 1 1 0 0 0 0 0 0 0 1 0 0 0 1 1 0
+0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0
+0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+</code></pre>
+</li>
+<li>
+<p><a href="dados/arq10.res">Saída</a></p>
+
+<pre><code>7
+</code></pre>
+</li>
+</ul>
+
+
+<h2>Observações</h2>
+
+<ul>
+<li>Você deve incluir, no início do seu programa, uma breve descrição dos objetivos do programa, da entrada e da saída, além do nome e do RA de todos do grupo.</li>
+<li>Indente corretamente o seu código e inclua comentários no decorrer do seu programa.</li>
+</ul>
+
+<h2>Critérios importantes</h2>
+
+<ul>
+<li>Para os programas em linguagem C, os únicos headers aceitos para essa tarefa serão os <code>stdio.h</code> e <code>stdlib.h</code>.</li>
+</ul>
+
+    </article>
+</body>
+</html>

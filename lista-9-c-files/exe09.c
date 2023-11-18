@@ -6,8 +6,7 @@
 #define MAX_EXERCISES 11
 
 int exercise01(void) {
-
-    const char *nomeArquivoOrigem = "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe01.txt";
+    const char *nomeArquivoOrigem = "C:\\Users\\Pichau\\Desktop\\CStudy\\c-algorithms\\lista-9-c-files\\exe01.txt";
     bool verify = verificarArquivo(nomeArquivoOrigem);
 
     if (verify)
@@ -17,7 +16,6 @@ int exercise01(void) {
 
     return 0;
 }
-
 int exercise02(void) {
 
     const char *nomeArquivoOrigem = "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe01.txt";

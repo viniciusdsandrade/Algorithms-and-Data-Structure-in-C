@@ -213,7 +213,6 @@ void preencheMatrizInt(int matriz[][100], int linhas, int colunas) {
             scanf("%d", &matriz[i][j]);
         }
     }
-
 }
 
 /**

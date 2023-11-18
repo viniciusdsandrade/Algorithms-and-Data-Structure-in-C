@@ -43,12 +43,12 @@ int somaFaixa(Cell *vet, int n) {
 int main(void) {
     Cell vet[] = {
             {'y', 10},
-            {'y', 2},
-            {'z', 5},
-            {'z', 4},
-            {'z', 5},
-            {'y', 4},
-            {'a', 3}
+            {'y', 02},
+            {'z', 05},
+            {'z', 04},
+            {'z', 05},
+            {'y', 04},
+            {'a', 03}
     };
     printf("%d", somaFaixa(vet, 7));
     return 0;
