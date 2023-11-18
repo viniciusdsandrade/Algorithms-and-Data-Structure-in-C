@@ -55,24 +55,30 @@ void encontrarCadeiaHierarquica(
 
 void imprimirCadeiaHierarquica(
         int numFuncionarios,
+        int funcionarioAtual,
         int cadeia[]
 );
 
 int main(void) {
 
-/*
+    const char *teste_0 = "C:\\Users\\Pichau\\Desktop\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-0.txt";
     const char *teste_5 = "C:\\Users\\Pichau\\Desktop\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-5.txt";
     const char *teste_10 = "C:\\Users\\Pichau\\Desktop\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-10.txt";
     const char *teste_11 = "C:\\Users\\Pichau\\Desktop\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-11.txt";
-*/
+
+    const char *teste_0_1 = "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-0.txt";
+    const char *teste_5_1 = "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-5.txt";
+    const char *teste_10_1 = "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-10.txt";
+    const char *teste_11_1 = "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\CStudy\\c-algorithms\\challanges-c\\2_challange5_C\\teste-11.txt";
 
     int numFuncionarios, idFuncionario;
     int matriz[MAX_FUNCIONARIOS][MAX_FUNCIONARIOS];
 
 /*
     // Chama a função para ler o arquivo
-    lerArquivoTxt(teste_5, &numFuncionarios, &idFuncionario, matriz);
+    lerArquivoTxt(teste_11_1, &numFuncionarios, &idFuncionario, matriz);
 */
+
 
     // Chama a função para validar a entrada do usuário
     if (!validarEntradaUsuario(&numFuncionarios, &idFuncionario))
@@ -89,7 +95,7 @@ int main(void) {
     encontrarCadeiaHierarquica(idFuncionario, numFuncionarios, matriz, visitados, cadeiraHierarquica);
 
     // Chama a função para imprimir a cadeiraHierarquica hierárquica em ordem crescente
-    imprimirCadeiaHierarquica(numFuncionarios, cadeiraHierarquica);
+    imprimirCadeiaHierarquica(numFuncionarios, idFuncionario, cadeiraHierarquica);
 
     return 0;
 }
@@ -117,10 +123,15 @@ void encontrarCadeiaHierarquica(
 
 void imprimirCadeiaHierarquica(
         int numFuncionarios,
+        int funcionarioAtual,
         int cadeia[]
 ) {
+    // Imprimir o funcionário atual
+    printf("%d ", funcionarioAtual);
+
+    // Imprimir os demais em ordem crescente
     for (int i = 0; i < numFuncionarios; i++) {
-        if (cadeia[i] == 1) {
+        if (cadeia[i] == 1 && i != funcionarioAtual) {
             printf("%d ", i);
         }
     }

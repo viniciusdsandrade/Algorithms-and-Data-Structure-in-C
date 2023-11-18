@@ -10,21 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="build[recursividade] : finalizando lista de recursividade pt3">
-      <change afterPath="$PROJECT_DIR$/challanges-c/2_challange5_C/__MACOSX/._enunciado.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challanges-c/2_challange5_C/enunciado.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challanges-c/2_challange5_C/hierarquia.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challanges-c/2_challange5_C/lab-hierarquia.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challanges-c/2_challange5_C/teste-10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challanges-c/2_challange5_C/teste-11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challanges-c/2_challange5_C/teste-5.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lab-hierarquia.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges-c/2_lp/p1-lp/Q1.c" beforeDir="false" afterPath="$PROJECT_DIR$/challanges-c/2_lp/p1-lp/Q1.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista-8-c-recursividade/exe08.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-8-c-recursividade/exe08.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista-9-c-files/exe09.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-9-c-files/exe09.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges-c/2_challange5_C/lab-hierarquia.c" beforeDir="false" afterPath="$PROJECT_DIR$/challanges-c/2_challange5_C/lab-hierarquia.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exe08.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-4-c-strings/exe04.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-4-c-strings/exe04.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-4-c-strings/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/lista-4-c-strings/global.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-5-c-funcoes/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-5-c-funcoes/global.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-5-c-funcoes/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/lista-5-c-funcoes/global.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,6 +176,8 @@
       <workItem from="1700327028238" duration="37000" />
       <workItem from="1700327080262" duration="6500000" />
       <workItem from="1700334558454" duration="2174000" />
+      <workItem from="1700341715005" duration="35000" />
+      <workItem from="1700341760903" duration="1059000" />
     </task>
     <task id="LOCAL-00001" summary="feat[recursividade] : iniciando lista de recursividade">
       <option name="closed" value="true" />

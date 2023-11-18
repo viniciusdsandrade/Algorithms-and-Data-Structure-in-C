@@ -37,11 +37,11 @@ void multiplicaMatriz(
  *
  * Esta função recebe duas matrizes 'mat1' e 'mat2' de dimensão 'n' e calcula a soma
  * 'mat1' + 'mat2', armazenando o resultado na matriz 'matRes'. Ela utiliza loops aninhados
- * para realizar a adição de matrizes.
+ * para realizar a adicao de matrizes.
  *
  * @param mat1 A primeira matriz de entrada.
  * @param mat2 A segunda matriz de entrada.
- * @param matRes A matriz onde o resultado da adição será armazenado.
+ * @param matRes A matriz onde o resultado da adicao será armazenado.
  * @param n A dimensão das matrizes e o número de linhas/colunas.
  */
 void somaMatriz(
@@ -154,7 +154,7 @@ int pot(int a, int b) {
  *
  * Esta função calcula o fatorial de um número inteiro 'n'. Ela trata de maneira
  * adequada o caso em que 'n' é negativo (retorna -1 como erro) e o caso em que
- * 'n' é igual a 0 (retorna 1, pois o fatorial de 0 é 1). Usa recursão para calcular
+ * 'n' é igual a 0 (retorna 1, pois o fatorial de 0 é 1). Usa recursao para calcular
  * o fatorial de 'n'.
  *
  * @param n O número para calcular o fatorial.
@@ -264,7 +264,7 @@ double calcularSomaQuadradosDasDiferencas(
  *
  * Esta função calcula o desvio padrão amostral de um conjunto de números representados
  * pelo array 'numeros' com 'quantidade' elementos. O desvio padrão amostral é uma medida
- * de dispersão que indica o quanto os valores do conjunto se desviam da média.
+ * de dispersao que indica o quanto os valores do conjunto se desviam da média.
  *
  * @param numeros Um array contendo os números para os quais deseja-se calcular o desvio padrão amostral.
  * @param quantidade A quantidade de elementos no array 'numeros'.
@@ -282,8 +282,8 @@ double desvioPadrao(double numeros[], int quantidade) {
     double varianciaAmostral = somaQuadradosDasDiferencas / (quantidade - 1);
     double desvioPadraoAmostral = sqrt(varianciaAmostral);
 
-    printf("Média: %.2lf\n", media);
-    printf("Variância amostral: %.2lf\n", varianciaAmostral);
+    printf("Media: %.2lf\n", media);
+    printf("Variancia amostral: %.2lf\n", varianciaAmostral);
 
     return desvioPadraoAmostral;
 }
@@ -311,6 +311,11 @@ void preencheVetorDouble(int qtd, double pDouble[qtd]) {
  * @param dimension A dimensão da matriz (número de linhas e colunas).
  */
 void readMatrix(int matrix[MAX_DIMENSION][MAX_DIMENSION], int dimension) {
+    if (dimension > MAX_DIMENSION) {
+        printf("Erro: A dimensão da matriz excede o máximo permitido.\n");
+        return;
+    }
+
     printf("Digite os elementos da matriz:\n");
     for (int i = 0; i < dimension; ++i) {
         for (int j = 0; j < dimension; ++j) {
@@ -319,7 +324,6 @@ void readMatrix(int matrix[MAX_DIMENSION][MAX_DIMENSION], int dimension) {
         }
     }
 }
-
 /**
  * Imprime os elementos de uma matriz quadrada.
  *
@@ -332,7 +336,7 @@ void printMatrix(int matrix[MAX_DIMENSION][MAX_DIMENSION], int dimension) {
         for (int j = 0; j < dimension; ++j) {
             printf("%d", matrix[i][j]);
             if (j < dimension - 1) {
-                printf("\t"); // Espaço entre os elementos
+                printf(" "); // Espaço entre os elementos
             }
         }
         printf("]\n");
@@ -343,16 +347,16 @@ void printMatrix(int matrix[MAX_DIMENSION][MAX_DIMENSION], int dimension) {
  * Calcula a matriz transposta de uma matriz quadrada.
  *
  * @param inputMatrix A matriz de entrada.
- * @param resultMatrix A matriz que conterá a transposta após a execução.
- * @param dimension A dimensão da matriz (número de linhas e colunas).
+ * @param resultMatrix A matriz que contera a transposta após a execucao.
+ * @param dim A dimensão da matriz (número de linhas e colunas).
  */
 void transpose(
         int inputMatrix[MAX_DIMENSION][MAX_DIMENSION],
         int resultMatrix[MAX_DIMENSION][MAX_DIMENSION],
-        int dimension
+        int dim
 ) {
-    for (int i = 0; i < dimension; ++i) {
-        for (int j = 0; j < dimension; ++j) {
+    for (int i = 0; i < dim; ++i) {
+        for (int j = 0; j < dim; ++j) {
             resultMatrix[i][j] = inputMatrix[j][i];
         }
     }
@@ -362,19 +366,19 @@ void transpose(
  * Calcula a matriz transposta de uma matriz quadrada.
  *
  * @param inputMatrix A matriz de entrada.
- * @param resultMatrix A matriz que conterá a transposta após a execução.
- * @param dimension A dimensão da matriz (número de linhas e colunas).
+ * @param resultMatrix A matriz que contera a transposta após a execucao.
+ * @param dim A dimensão da matriz (número de linhas e colunas).
  */
 void multiplySquareMatrix(
         int matrixA[MAX_DIMENSION][MAX_DIMENSION],
         int matrixB[MAX_DIMENSION][MAX_DIMENSION],
         int resultMatrix[MAX_DIMENSION][MAX_DIMENSION],
-        int dimension
+        int dim
 ) {
-    for (int i = 0; i < dimension; ++i) {
-        for (int j = 0; j < dimension; ++j) {
+    for (int i = 0; i < dim; ++i) {
+        for (int j = 0; j < dim; ++j) {
             resultMatrix[i][j] = 0;
-            for (int k = 0; k < dimension; ++k) {
+            for (int k = 0; k < dim; ++k) {
                 resultMatrix[i][j] += matrixA[i][k] * matrixB[k][j];
             }
         }
@@ -455,11 +459,10 @@ int calculaSoma(
 ) {
     int soma = 0;
     for (int i = 0; i < tamanho; i++) {
-        if (linha) {
+        if (linha)
             soma += matriz[indice][i];
-        } else {
+        else
             soma += matriz[i][indice];
-        }
     }
     return soma;
 }
@@ -494,7 +497,7 @@ bool isMagico(int matriz[30][30], int tamanho) {
 }
 
 /**
- * Verifica se um número pode ser inserido em uma linha específica do tabuleiro Sudoku.
+ * Verifica se um número pode ser inserido em uma linha especifica do tabuleiro Sudoku.
  *
  * @param linha O índice da linha que será verificada.
  * @param numero O número a ser inserido.
@@ -515,7 +518,7 @@ bool verificaLinha(
 }
 
 /**
- * Verifica se um número pode ser inserido em uma coluna específica do tabuleiro Sudoku.
+ * Verifica se um número pode ser inserido em uma coluna especifica do tabuleiro Sudoku.
  *
  * @param coluna O índice da coluna que será verificada.
  * @param numero O número a ser inserido.
@@ -585,14 +588,14 @@ void cidadesComEntradaSemSaida(
 
         for (int j = 0; j < n; j++) {
             if (mat[j][i] == 1) {
-                resposta[i] = 0; // A cidade i tem uma estrada de entrada, então não atende ao critério.
+                resposta[i] = 0; // A cidade i tem uma estrada de entrada, então não atende ao criterio.
                 break;
             }
         }
 
         for (int j = 0; j < n; j++) {
             if (mat[i][j] == 1) {
-                resposta[i] = 1; // A cidade i tem uma estrada de saída, atende ao critério.
+                resposta[i] = 1; // A cidade i tem uma estrada de saída, atende ao criterio.
                 break;
             }
         }
@@ -628,7 +631,7 @@ void cidadesComSaidaSemEntrada(
 
         for (int j = 0; j < n; j++) {
             if (mat[j][i] == 1) {
-                resposta[i] = 1; // A cidade i tem uma estrada de entrada, atende ao critério.
+                resposta[i] = 1; // A cidade i tem uma estrada de entrada, atende ao criterio.
                 break;
             }
         }

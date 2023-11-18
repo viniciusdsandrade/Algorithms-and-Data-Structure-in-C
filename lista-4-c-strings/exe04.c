@@ -5,6 +5,29 @@
 
 #define MAX_EXERCISES 26
 
+bool getExitChoice(void);
+void executeExercise(int choice);
+int displayMenuAndGetChoice(void);
+
+int main(void) {
+    setlocale(LC_ALL, "Portuguese");
+
+    bool exitProgram = false;
+
+    do {
+        int choice = displayMenuAndGetChoice();
+
+        if (choice >= 1 && choice <= MAX_EXERCISES)
+            executeExercise(choice);
+        else
+            printf("Invalid option!\n");
+
+        exitProgram = getExitChoice();
+    } while (!exitProgram);
+    printf("Thank you for using the program!\n");
+    return 0;
+}
+
 int exercise01(void) {
     /**
         1 - Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
@@ -40,7 +63,7 @@ int exercise01(void) {
 
 int exercise02(void) {
     /**
-        <p>2. Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
+        2. Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
         <p>caracteres e que entao salve a string lida em uma nova removendo-se os espacos.
         <p>Exemplo de entrada:
 <p>
@@ -79,7 +102,7 @@ int exercise02(void) {
 
 int exercise03(void) {
     /**
-        <p>3. Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
+        3. Faca um programa que leia do teclado uma string (possivelmente com espacos) de ate 80
         <p>caracteres e que entao salve a string lida em uma nova removendo-se os espacos extras
         <p>entre as palavras.
 <p>
@@ -149,7 +172,7 @@ int exercise04(void) {
     int tamStr2 = strlen(str2) - 1;
 
     if (tamStr1 != tamStr2) {
-        printf("Não e anagrama!\n");
+        printf("Nao e anagrama!\n");
         return 0;
     }
 
@@ -165,7 +188,7 @@ int exercise04(void) {
 
     for (i = 0; i < tamStr2; i++) {
         if (str2[i] != ' ') {
-            printf("Não é anagrama!\n");
+            printf("Nao e anagrama!\n");
             return 0;
         }
     }
@@ -173,7 +196,7 @@ int exercise04(void) {
     str1[tamStr1] = '\0'; // Coloca o caractere de fim de string
     aux[tamStr2] = '\0';
 
-    printf("%s é anagrama de %s!\n", str1, aux);
+    printf("%s e anagrama de %s!\n", str1, aux);
 
     return 0;
 }
@@ -221,7 +244,7 @@ int exercise05(void) {
 
 int exercise06(void) {
     /**
-        <p>6. Faça um programa que leia um texto T (com espacos) e uma palavra p do teclado. Em
+        6. Faça um programa que leia um texto T (com espacos) e uma palavra p do teclado. Em
         seguida o programa devera imprimir todas as posicoes onde ocorrem a palavra p em T.
         <p>Se por exemplo T = "duas bananas e 4 abacates. Nao havera mais bananas.", e p ="bananas",
         então o programa deveria imprimir 5 e 43.
@@ -716,10 +739,10 @@ int exercicio19(void) {
 int exercicio20(void) {
     /*
      * 1 - char *strcat(char *s1, const char *s2: Para fazer a concatenação de duas strings
-     * 2 - int strcmp(const char *s1, const char *s2): Para fazer a comparação lexicográfica (utilizada em ordenação) de duas strings
+     * 2 - int strcmp(const char *s1, const char *s2): Para fazer a comparacao lexicografica (utilizada em ordenação) de duas strings
      * 3 - char *strcpy(char *s1, const char *s2): Para fazer a cópia de uma string para outra
      * 4 - int strlen(const char *s): Para calcular o tamanho de uma string
-     * */
+     */
 
     char s1[80], s2[80] = "Vinicius dos Santos Andrade";
     strcpy(s1, s2);
@@ -829,7 +852,7 @@ int exercicio24(void) {
     /*
      * Refaça o exemplo visto em aula de inversão dee uma string de tal
      * forma que não seja utilizado nenhum vetor adicional! Ou seja devemos
-     * computar a inversa no príprio vetor original
+     * computar a inversa no proprio vetor original
      */
 
     printf("Digite uma string: ");
@@ -847,16 +870,6 @@ int exercicio24(void) {
     }
 
     printf("%s\n", st);
-
-    return 0;
-}
-
-int exercicio25(void) {
-
-    return 0;
-}
-
-int exercicio26(void) {
 
     return 0;
 }
@@ -886,8 +899,7 @@ int displayMenuAndGetChoice(void) {
     printf("Exercise 22:\n");
     printf("Exercise 23:\n");
     printf("Exercise 24:\n");
-    printf("Exercise 25:\n");
-    printf("Exercise 26:\n");
+
     printf("Enter the number of the exercise you want to execute: ");
 
     int choice;
@@ -969,13 +981,6 @@ void executeExercise(int choice) {
         case 24:
             exercicio24();
             break;
-        case 25:
-            exercicio25();
-            break;
-        case 26:
-            exercicio26();
-            break;
-
         default:
             printf("Invalid option!\n");
             break;
@@ -990,23 +995,4 @@ bool getExitChoice(void) {
         scanf("%d", &exitChoice);
     } while (exitChoice != 0 && exitChoice != 1);
     return exitChoice;
-}
-
-int main(void) {
-    setlocale(LC_ALL, "Portuguese");
-
-    bool exitProgram = false;
-
-    do {
-        int choice = displayMenuAndGetChoice();
-
-        if (choice >= 1 && choice <= MAX_EXERCISES)
-            executeExercise(choice);
-        else
-            printf("Invalid option!\n");
-
-        exitProgram = getExitChoice();
-    } while (!exitProgram);
-    printf("Thank you for using the program!\n");
-    return 0;
 }
