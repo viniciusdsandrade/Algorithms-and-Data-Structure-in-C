@@ -6,7 +6,7 @@
 
 int exercicio01(void) {
     /**
-    <p>1. Faça um programa que imprima um menu de 4 pratos na tela e uma quinta opção para sair do programa.
+    1. Faça um programa que imprima um menu de 4 pratos na tela e uma quinta opção para sair do programa.
     <p>O programa deve imprimir o prato solicitado. O programa deve terminarquando for escolhido a quinta opção.
     */
 
@@ -63,7 +63,7 @@ int exercicio01(void) {
 
 int exercicio02(void) {
     /**
-    <p>2. Faça um programa que lê dois números inteiros positivos a e b.
+    2. Faça um programa que lê dois números inteiros positivos a e b.
     <p>Utilizando laços, o seu programa deve calcular e imprimir o valor a^b.
     */
 
@@ -109,7 +109,7 @@ int exercicio03(void) {
 
 int exercicio04(void) {
     /**
-    <p>4. No exemplo dos números primos visto em aula, não precisamos testar todos os números
+    4. No exemplo dos números primos visto em aula, não precisamos testar todos os números
     entre 2, . . . , (n?1), para verificar se dividem ou não n. Basta testarmos até n/2. Por que?
     <p>Qual o maior divisor possível de n? Na verdade basta testarmos os números 2, . . . ,pn.
     Por que?
@@ -121,7 +121,7 @@ int exercicio04(void) {
 
 int exercicio05(void) {
     /**
-        <p>5. Considere o programa para determinar se uma sequência de n números digitados pelo
+        5. Considere o programa para determinar se uma sequência de n números digitados pelo
         <p>usuário está ordenada ou não. Faça o programa usando uma variável contadora.
     */
 
@@ -153,7 +153,7 @@ int exercicio05(void) {
 
 int exercicio06(void) {
     /**
-    <p>6. Faça um programa em C que calcule o máximo divisor comum de dois números m, n. Você
+    6. Faça um programa em C que calcule o máximo divisor comum de dois números m, n. Você
     <p>deve utilizar a seguinte regra do cálculo do mdc com m # n
     <p>mdc(m, n) = m se n = 0
     <p>mdc(m, n) = mdc(n,m%n) se n > 0

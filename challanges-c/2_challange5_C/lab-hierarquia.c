@@ -81,7 +81,6 @@ int main(void) {
     lerArquivoTxt(teste_11_1, &numFuncionarios, &idFuncionario, matriz);
 */
 
-
     // Chama a função para validar a entrada do usuário
     if (!validarEntradaUsuario(&numFuncionarios, &idFuncionario))
         return 0; // Se a entrada for inválida, encerra o programa

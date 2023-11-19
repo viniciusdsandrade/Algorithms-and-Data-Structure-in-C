@@ -542,7 +542,8 @@ void subtraiMatrizInt(int matriz1[][100], int matriz2[][100], int l1, int c1, in
  * @param matriz A matriz de inteiros a ser multiplicada pelo escalar.
  * @param n O valor inteiro pelo qual a matriz será multiplicada.
  * @return A matriz resultante da multiplicação.
- */int **multiplicaMatrizInt2(int **matriz, int n) {
+ */
+ int **multiplicaMatrizInt2(int **matriz, int n) {
     int **matrizMultiplicacao = malloc(n * sizeof(int *));
     for (int i = 0; i < n; i++) {
         matrizMultiplicacao[i] = malloc(n * sizeof(int));
