@@ -3,11 +3,11 @@
 #define MIN_FUNCIONARIOS 3
 #define MAX_FUNCIONARIOS 30
 
-/*
- * Autor: Vinícius dos Santos Andrade
- * RA:    2760482311026
- * Data:  18/11/2023
- */
+/**
+    - MEMBROS DO GRUPO:
+    @ALUNO 1: Vinícius dos Santos Andrade  RA: 2760482311026
+    @ALUNO 2: Gianlucca Fadiga Rissato     RA: 2760482311014
+*/
 
 /*
 Objetivo
@@ -77,7 +77,7 @@ int main(void) {
     int matriz[MAX_FUNCIONARIOS][MAX_FUNCIONARIOS];
 
 /*
-    // Chama a função para ler o arquivo
+    // Chama a função para ler o arquivo automaticamente
     lerArquivoTxt(teste_11_1, &numFuncionarios, &idFuncionario, matriz);
 */
 

@@ -33,7 +33,7 @@ int exercise01(void) {
 
     /*
     1 - Considere que tenha sido executado as seguintes instruções (assuma que o endereço de x
-    é 1000 e de y é 1004):
+    é 10 e de y é 20):
     int x = 10, y=20;
     int* p1;
     int* p2;
@@ -321,7 +321,8 @@ int exercise13(void) {
     c = &b;
     a = *c;
 
-    printf("%lf", a);
+    printf("%.2lf", a);
+    putchar('\n');
 
     return 0;
 }
@@ -438,8 +439,6 @@ int displayMenuAndGetChoice(void) {
     printf("Exercise 17:\n");
     printf("Exercise 18:\n");
     printf("Exercise 19:\n");
-
-
     printf("Enter the number of the exercise you want to execute: ");
 
     int choice;

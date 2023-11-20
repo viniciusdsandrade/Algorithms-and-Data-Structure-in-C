@@ -9,7 +9,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="build[extra]" />
+    <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="build[extra]">
+      <change afterPath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/files.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/ponteiros.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/recursividade.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/teste-10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/teste-11.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/teste-5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exe07.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab-hierarquia.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges-c/2_challange4_C/_aux/lab-imagem.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challanges-c/2_challange5_C/lab-hierarquia.c" beforeDir="false" afterPath="$PROJECT_DIR$/challanges-c/2_challange5_C/lab-hierarquia.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-7-c-ponteiros/exe07.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-7-c-ponteiros/exe07.c" afterDir="false" />
+    </list>
+    <list id="4a8b0725-1d78-48dd-b320-8ad3c7a43860" name="Changes by gianl" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,33 +55,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Pichau/Desktop/CStudy/c-algorithms/lista-9-c-files/exe09.c",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "structure.view.defaults.are.configured": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pichau/Desktop/CStudy/c-algorithms/lista-9-c-files/exe09.c&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Pichau\Desktop\CStudy\c-algorithms\challanges-c" />
     </key>
+  </component>
+  <component name="RunManager" selected="C/C++ File.exe07.c">
+    <configuration name="exe07.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="c-algorithms" TARGET_NAME="exe07.c" CONFIG_NAME="exe07.c">
+      <option name="sourceFile" value="lista-7-c-ponteiros\exe07.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="files.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="c-algorithms" TARGET_NAME="files.c" CONFIG_NAME="files.c">
+      <option name="sourceFile" value="challanges-c\2_lp\p2-lp\files.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lab-hierarquia.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="c-algorithms" TARGET_NAME="lab-hierarquia.c" CONFIG_NAME="lab-hierarquia.c">
+      <option name="sourceFile" value="challanges-c\2_challange5_C\lab-hierarquia.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="C/C++ File.files.c" />
+      <item itemvalue="C/C++ File.exe07.c" />
+      <item itemvalue="C/C++ File.lab-hierarquia.c" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ File.exe07.c" />
+        <item itemvalue="C/C++ File.lab-hierarquia.c" />
+        <item itemvalue="C/C++ File.files.c" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
