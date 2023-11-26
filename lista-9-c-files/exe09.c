@@ -16,6 +16,7 @@ int exercise01(void) {
 
     return 0;
 }
+
 int exercise02(void) {
 
     const char *nomeArquivoOrigem = "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe01.txt";
@@ -75,7 +76,7 @@ int exercise05(void) {
     if (arq == NULL) {
         printf("Error opening file!\n");
         return 1;
-    } else 
+    } else
         fwrite(&aux, sizeof(double), 1, arq);
 
     return 0;
@@ -91,9 +92,9 @@ int exercise06(void) {
     if (arq == NULL) {
         printf("Error opening file!\n");
         return 1;
-    } else 
+    } else
         fwrite(aux, sizeof(double), 5, arq);
-    
+
     return 0;
 }
 
@@ -102,14 +103,15 @@ int exercise07(void) {
     return 0;
 }
 
-int exercise08(void) { 
-    
+int exercise08(void) {
+
     FILE *arq;
     double aux = 0;
 
     arq = fopen(
             "C:\\Users\\vinic\\OneDrive\\Área de Trabalho\\CStudy\\Algorithms-and-Data-Structure-in-C\\lista_7_C_files\\exe06.txt",
-            "r+b");
+            "r+b"
+    );
 
     if (arq == NULL) {
         printf("Error opening file!\n");
@@ -138,9 +140,9 @@ int exercise09(void) {
 
     fread(aux, sizeof(double), 5, arq);
 
-    for (int i = 0; i < 5; i++) 
+    for (int i = 0; i < 5; i++)
         printf("Value: %lf\n", aux[i]);
-    
+
     return 0;
 }
 
@@ -166,7 +168,7 @@ int exercise10(void) {
     return 0;
 }
 
-int exercise11(void){
+int exercise11(void) {
 
     return 0;
 }

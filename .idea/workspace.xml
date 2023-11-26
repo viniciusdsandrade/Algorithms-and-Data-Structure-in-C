@@ -9,22 +9,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="build[p2]">
-      <change afterPath="$PROJECT_DIR$/Q1.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Q2.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Q3.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Q4.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/Q1.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/Q2.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/Q3.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/Q4.c" afterDir="false" />
+    <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="build[extra]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/files.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/ponteiros.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/recursividade.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/teste-10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/teste-11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challanges-c/2_lp/p2-lp/teste-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/exe03.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/exe03.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-8-c-recursividade/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-8-c-recursividade/global.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-9-c-files/exe09.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-9-c-files/exe09.c" afterDir="false" />
     </list>
     <list id="4a8b0725-1d78-48dd-b320-8ad3c7a43860" name="Changes by gianl" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +33,7 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -71,12 +63,12 @@
     "cidr.known.project.marker": "true",
     "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Pichau/Desktop/CStudy/c-algorithms/challanges-c/2_lp/p2-lp",
+    "last_opened_file_path": "C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/c-algorithms/lista-3-c-vetores-e-matrizes/exe03.c",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -89,7 +81,7 @@
       <recent name="C:\Users\Pichau\Desktop\CStudy\c-algorithms\challanges-c" />
     </key>
   </component>
-  <component name="RunManager" selected="C/C++ File.Q4.c">
+  <component name="RunManager" selected="C/C++ File.exe03.c">
     <configuration name="Q1.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="c-algorithms" TARGET_NAME="Q1.c" CONFIG_NAME="Q1.c">
       <option name="sourceFile" value="challanges-c\2_lp\p2-lp\Q1.c" />
       <method v="2">
@@ -114,6 +106,12 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="exe03.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="c-algorithms" TARGET_NAME="exe03.c" CONFIG_NAME="exe03.c">
+      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\c-algorithms\lista-3-c-vetores-e-matrizes\exe03.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="exe07.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="c-algorithms" TARGET_NAME="exe07.c" CONFIG_NAME="exe07.c">
       <option name="sourceFile" value="lista-7-c-ponteiros\exe07.c" />
       <method v="2">
@@ -121,6 +119,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="C/C++ File.exe03.c" />
       <item itemvalue="C/C++ File.Q1.c" />
       <item itemvalue="C/C++ File.Q2.c" />
       <item itemvalue="C/C++ File.Q3.c" />
@@ -129,8 +128,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="C/C++ File.Q4.c" />
         <item itemvalue="C/C++ File.Q3.c" />
+        <item itemvalue="C/C++ File.Q4.c" />
         <item itemvalue="C/C++ File.Q2.c" />
         <item itemvalue="C/C++ File.Q1.c" />
         <item itemvalue="C/C++ File.exe07.c" />
@@ -169,6 +168,11 @@
       <workItem from="1700342869240" duration="204000" />
       <workItem from="1700418658035" duration="6344000" />
       <workItem from="1700569479350" duration="3397000" />
+      <workItem from="1700744000321" duration="38000" />
+      <workItem from="1700744049315" duration="109000" />
+      <workItem from="1700744169591" duration="53000" />
+      <workItem from="1700744233930" duration="458000" />
+      <workItem from="1701008820191" duration="9394000" />
     </task>
     <task id="LOCAL-00001" summary="feat[recursividade] : iniciando lista de recursividade">
       <option name="closed" value="true" />

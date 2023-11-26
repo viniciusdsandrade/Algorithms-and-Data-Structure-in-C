@@ -2,33 +2,31 @@
 #define LISTA_3_GLOBAL_H
 #include "global.c"
 
+#define MAX 100
+
+bool verifyInput(int input, int inicio, int fim);
+double sumArray(int n, double vetor[]);
 void linha(int tamanho, char caractere);
-
 void preencheVetorDouble(double vet[], int tamanho);
-void preencheVetorDoubleRandom(double vetor[], int tamanho, int limite);
-int mdc(int a, int b);
-
+void preencheVetorFloat(float vet[], int tamanho);
+float somaElementosVetorFloat(float pDouble[10], int i);
+void preencheVetorDoubleRandom(double vetor[], int tamanho, double limite, unsigned int seed);
+int verificaOcorrenciaVetorInt(const int sequencia1[], int n1, const int sequencia2[], int n2);
 void preencheVetorInt(int vet[], int tamanho);
-void preencheVetorIntRandom(int vetor[], int tamanho, int limite);
-
-void preencheMatrizInt(int matriz[][100], int linhas, int colunas);
-void preencheMatrizIntRandom(int matriz[][100], int linhas, int colunas, int limite);
-
-void imprimeMatrizInt(int matriz[][100], int linhas, int colunas);
-void imprimeVetorInt(int vetor[], int tamanho);
+void matrizTranspostaInt(int matriz[][MAX], int linhas, int colunas);
+int mdc(int a, int b);
+void preencheVetorIntRandom(int vetor[], int tamanho, unsigned int limite, unsigned int seed);
+void preencheMatrizInt(int matriz[][MAX], int linhas, int colunas);
+void preencheMatrizDouble(double matriz[][MAX], int linhas, int colunas);
+void imprimeMatrizInt(int matriz[][MAX], int linhas, int colunas);
+void imprimeVetorInt(const int vetor[], int tamanho);
 void imprimeVetorDouble(double vetor[], int tamanho);
-
-void somaMatrizInt(int matriz1[][100], int matriz2[][100], int l1, int c1, int l2, int c2);
-void subtraiMatrizInt(int matriz1[][100], int matriz2[][100], int l1, int c1, int l2, int c2);
-int **multiplicaMatrizInt2(int **matriz, int n);
-int ** preenchendoMatrizInt(int linhas, int colunas);
-int **matrizIdentidadeCalculo(int n);
-
-void matrizTranspostaInt(int matriz[][100], int linhas, int colunas);
-
-int encontraMenorElementoMatrizInt(int matriz[][100], int linhas, int colunas);
-int encontraMaiorElementoMatrizInt(int matriz[][100], int linhas, int colunas);
+void imprimeMatrizDouble(double matriz[][MAX], int linhas, int colunas);
+float somaElementosVetorFloat(float pDouble[10], int i);
+void multiplicaMatrizInt(int m1[][MAX], int m2[][MAX], int m3[][MAX], int n);
+double mediaVetorDouble(double vetor[], int n);
+double raizQuadradaDouble(double num);
+double potenciaDouble(double base, int exp);
 void liberarMatrizInt(int **matriz, int linhas);
-
 
 #endif // LISTA_3_GLOBAL_H
