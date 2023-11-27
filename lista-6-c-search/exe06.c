@@ -174,17 +174,17 @@ int exercise04(void) {
 }
 
 int exercise05(void) {
-/**  Refa�a as fun��es de busca sequencial e busca bin�ria vistas em aula assumindo que o
-vetor possui chaves que podem aparecer repetidas. Neste caso, voc� deve retornar em um
-outro vetor todas as posi��es onde a chave foi encontrada.
+/**  Refaca as funcoes de busca sequencial e busca binaria vistas em aula assumindo que o
+vetor possui chaves que podem aparecer repetidas. Neste caso, voce deve retornar em um
+outro vetor todas as posicoes onde a chave foi encontrada.
 
-<p> Prot�tipo da fun��o:
+<p> Prototipo da funcoo:
 <p> void busca(int vet[], int tam, int chave, int posicoes[], int n)
 
-<p> Voc� deve devolver em posicoes[] as posi��es de vet que possuem a chave, e devolver
-em n o n�mero de ocorr�ncias da chave.
-<p> OBS: Na chamada desta fun��o, o vetor posi��es deve ter espa�o suficiente
-<p>(por exemplo, tam) para guardar todas as poss�veis ocorr�ncias da chave.
+<p> Voce deve devolver em posicoes[] as posicoes de vet que possuem a chave, e devolver
+em n o numero de ocorrencias da chave.
+<p> OBS: Na chamada desta funcao, o vetor posicoes deve ter espaco suficiente
+<p>(por exemplo, tam) para guardar todas as possiveis ocorrencias da chave.
  */
 
     int vet[10] = {
@@ -246,17 +246,17 @@ int exercise07(void) {
 
     /**
     struct Aluno leAluno ( ) ;
-    <p> Esta fun��o faz a leitura dos dados de um registro Aluno e devolve o
+    <p> Esta funcao faz a leitura dos dados de um registro Aluno e devolve o
     registro lido.
 <p>
     <p>void imprimeAluno (struct Aluno a) ;
-    <p>Esta fun��o recebe como par?metro um registro Aluno e imprime os
+    <p>Esta funcao recebe como parametro um registro Aluno e imprime os
     dados do registro.
 <p>
    <p> void listarTurma (struc t Aluno turma [ ], int n ) ;
-   <p> Esta fun��o recebe como par�metros um vetor do tipo Aluno
-   <p> representando uma turma, e tamb�m um inteiro n indicando o
-   <p> tamanho do vetor. A fun��o imprime os dados de todos os alunos.
+   <p> Esta funcao recebe como parametros um vetor do tipo Aluno
+   <p> representando uma turma, e tambem um inteiro n indicando o
+   <p> tamanho do vetor. A funcao imprime os dados de todos os alunos.
     */
 
     int numAlunos;
@@ -277,8 +277,8 @@ int exercise07(void) {
 int exercise08(void) {
     /**
      Crie um novo tipo de registro para armazenar alunos com RA e idade.
-     <p> fa�a a leitura de 5 alunos em uma fun��o.
-     <p> Fun��o Calcule e imprima a m�dia das idades dos alunos.
+     <p> faca a leitura de 5 alunos em uma funcao.
+     <p> Funcao Calcule e imprima a media das idades dos alunos.
      */
 
     int numAlunes;

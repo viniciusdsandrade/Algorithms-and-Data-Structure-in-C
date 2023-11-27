@@ -5,6 +5,83 @@
 
 #define MAX 100
 
+/**
+ * Imprime um vetor de inteiros.
+ *
+ * Esta função imprime os elementos de um vetor de inteiros no formato [elem1, elem2, ..., elemN].
+ *
+ * @param vetor O vetor de inteiros a ser impresso.
+ * @param tamanho O tamanho do vetor.
+ */
+void imprimeVetorInt(const int vetor[], int tamanho) {
+    if (vetor == NULL || tamanho <= 0) {
+        fprintf(stderr, "Erro: Vetor nulo ou tamanho inválido.\n");
+        return;
+    }
+
+    printf("[");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d", vetor[i]);
+
+        if (i < tamanho - 1) {
+            printf(", ");
+        }
+    }
+    printf("]\n");
+}
+
+/**
+ * Calcula o produto interno entre dois vetores de números reais.
+ *
+ * Esta função recebe dois vetores de números reais e calcula o produto interno
+ * entre eles. O produto interno é a soma do produto de cada par de elementos
+ * correspondentes dos dois vetores.
+ *
+ * @param vet1 O primeiro vetor.
+ * @param vet2 O segundo vetor.
+ * @param tam O tamanho dos vetores.
+ * @return O resultado do produto interno.
+ */
+double produtoInternoDouble(
+        const double *vet1,
+        const double *vet2,
+        double *produtoInterno,
+        double soma,
+        int tam
+) {
+    for (int i = 0; i < tam; ++i) {
+        produtoInterno[i] = vet1[i] * vet2[i];
+        soma += vet1[i] * vet2[i];
+    }
+    return soma;
+}
+
+/**
+ * Ordena um array de inteiros utilizando o algoritmo Bubble Sort.
+ *
+ * @param v3 O array a ser ordenado.
+ * @param tam O tamanho do array.
+ */
+void buubleSort(int *v3, int tam) {
+    int temp;
+    for (int i = 0; i < 2 * tam; i++) {
+        for (int j = 0; j < 2 * tam - 1; j++) {
+            if (v3[j] > v3[j + 1]) {
+                temp = v3[j];
+                v3[j] = v3[j + 1];
+                v3[j + 1] = temp;
+            }
+        }
+    }
+}
+
+/**
+ * Imprime uma matriz de inteiros na saída padrão.
+ *
+ * @param matriz A matriz a ser impressa.
+ * @param linhas O número de linhas na matriz.
+ * @param colunas O número de colunas na matriz.
+ */
 void imprimeMatrizInt(int matriz[][100], int linhas, int colunas) {
     for (int i = 0; i < linhas; i++) {
         printf("[");
@@ -14,11 +91,18 @@ void imprimeMatrizInt(int matriz[][100], int linhas, int colunas) {
             else
                 printf("%d", matriz[i][j]);
         }
-        printf("]");
-        putchar('\n');
+        printf("]\n");
     }
 }
 
+/**
+ * Calcula a soma dos elementos de um array de números double.
+ *
+ * @param n O tamanho do array.
+ * @param vetor O array de números double.
+ *
+ * @return A soma dos elementos do array.
+ */
 double sumArray(int n, double vetor[]) {
     double sum = 0;
 
@@ -27,13 +111,21 @@ double sumArray(int n, double vetor[]) {
         scanf("%lf", &vetor[i]);
         sum += vetor[i];
     }
-
     return sum;
-};
+}
 
+/**
+ * Verifica se um valor está dentro de um intervalo especificado.
+ *
+ * @param input O valor a ser verificado.
+ * @param inicio O limite inferior do intervalo.
+ * @param fim O limite superior do intervalo.
+ *
+ * @return true se o valor está dentro do intervalo, false caso contrário.
+ */
 bool verifyInput(int input, int inicio, int fim) {
     return input >= inicio && input <= fim;
-};
+}
 
 /**
  * Função para imprimir uma linha de caracteres.
@@ -72,7 +164,25 @@ int mdc(int a, int b) {
     return a;
 }
 
+/**
+ * Calcula o determinante de uma matriz quadrada de inteiros.
+ *
+ * Esta função utiliza a regra de Sarrus para calcular o determinante de matrizes de ordem 2, 3, 4, 5, 6, 7, 8 e 9.
+ * Para matrizes de ordens diferentes, a função imprime uma mensagem indicando que o cálculo não é suportado.
+ *
+ * @param matriz A matriz de entrada.
+ * @param linhas O número de linhas na matriz.
+ * @param colunas O número de colunas na matriz.
+ *
+ * @return O determinante da matriz, ou 0 se a matriz não for quadrada ou se a ordem não for suportada.
+ */
 int determinanteMatrizInt(int matriz[MAX][MAX], int linhas, int colunas) {
+
+    if (linhas > 9 || colunas > 9) {
+        printf("Nao e possivel calcular o determinante de uma matriz de ordem maior que 9.\n");
+        return 0;
+    }
+
     if (linhas != colunas) {
         printf("Nao e possível calcular o determinante de uma matriz nao quadrada.\n");
         return 0;
@@ -168,6 +278,86 @@ int determinanteMatrizInt(int matriz[MAX][MAX], int linhas, int colunas) {
                 matriz[0][0] * matriz[1][6] * matriz[2][5] * matriz[3][4] * matriz[4][3] * matriz[5][2] * matriz[6][1]
         );
     }
+
+    if (linhas == 8 && colunas == 8) {
+        // utilizando a regra de Sarrus
+        return (int) (
+                matriz[0][0] * matriz[1][1] * matriz[2][2] * matriz[3][3] * matriz[4][4] * matriz[5][5] * matriz[6][6] *
+                matriz[7][7] +
+                matriz[0][1] * matriz[1][2] * matriz[2][3] * matriz[3][4] * matriz[4][5] * matriz[5][6] * matriz[6][7] *
+                matriz[7][0] +
+                matriz[0][2] * matriz[1][3] * matriz[2][4] * matriz[3][5] * matriz[4][6] * matriz[5][7] * matriz[6][0] *
+                matriz[7][1] +
+                matriz[0][3] * matriz[1][4] * matriz[2][5] * matriz[3][6] * matriz[4][7] * matriz[5][0] * matriz[6][1] *
+                matriz[7][2] +
+                matriz[0][4] * matriz[1][5] * matriz[2][6] * matriz[3][7] * matriz[4][0] * matriz[5][1] * matriz[6][2] *
+                matriz[7][3] +
+                matriz[0][5] * matriz[1][6] * matriz[2][7] * matriz[3][0] * matriz[4][1] * matriz[5][2] * matriz[6][3] *
+                matriz[7][4] +
+                matriz[0][6] * matriz[1][7] * matriz[2][0] * matriz[3][1] * matriz[4][2] * matriz[5][3] * matriz[6][4] *
+                matriz[7][5] +
+                matriz[0][7] * matriz[1][0] * matriz[2][1] * matriz[3][2] * matriz[4][3] * matriz[5][4] * matriz[6][5] *
+                matriz[7][6] -
+                matriz[0][7] * matriz[1][6] * matriz[2][5] * matriz[3][4] * matriz[4][3] * matriz[5][2] * matriz[6][1] *
+                matriz[7][0] -
+                matriz[0][6] * matriz[1][5] * matriz[2][4] * matriz[3][3] * matriz[4][2] * matriz[5][1] * matriz[6][0] *
+                matriz[7][7] -
+                matriz[0][5] * matriz[1][4] * matriz[2][3] * matriz[3][2] * matriz[4][1] * matriz[5][0] * matriz[6][7] *
+                matriz[7][6] -
+                matriz[0][4] * matriz[1][3] * matriz[2][2] * matriz[3][1] * matriz[4][0] * matriz[5][7] * matriz[6][6] *
+                matriz[7][5] -
+                matriz[0][3] * matriz[1][2] * matriz[2][1] * matriz[3][0] * matriz[4][7] * matriz[5][6] * matriz[6][5] *
+                matriz[7][4] -
+                matriz[0][2] * matriz[1][1] * matriz[2][0] * matriz[3][7] * matriz[4][6] * matriz[5][5] * matriz[6][4] *
+                matriz[7][3] -
+                matriz[0][1] * matriz[1][0] * matriz[2][7] * matriz[3][6] * matriz[4][5] * matriz[5][4] * matriz[6][3] *
+                matriz[7][2] -
+                matriz[0][0] * matriz[1][7] * matriz[2][6] * matriz[3][5] * matriz[4][4] * matriz[5][3] * matriz[6][2] *
+                matriz[7][1]
+        );
+    }
+
+    if (linhas == 9 && colunas == 9) {
+        // utilizando a regra de Sarrus
+        return (int) (
+                matriz[0][0] * matriz[1][1] * matriz[2][2] * matriz[3][3] * matriz[4][4] * matriz[5][5] * matriz[6][6] *
+                matriz[7][7] * matriz[8][8] +
+                matriz[0][1] * matriz[1][2] * matriz[2][3] * matriz[3][4] * matriz[4][5] * matriz[5][6] * matriz[6][7] *
+                matriz[7][8] * matriz[8][0] +
+                matriz[0][2] * matriz[1][3] * matriz[2][4] * matriz[3][5] * matriz[4][6] * matriz[5][7] * matriz[6][8] *
+                matriz[7][0] * matriz[8][1] +
+                matriz[0][3] * matriz[1][4] * matriz[2][5] * matriz[3][6] * matriz[4][7] * matriz[5][8] * matriz[6][0] *
+                matriz[7][1] * matriz[8][2] +
+                matriz[0][4] * matriz[1][5] * matriz[2][6] * matriz[3][7] * matriz[4][8] * matriz[5][0] * matriz[6][1] *
+                matriz[7][2] * matriz[8][3] +
+                matriz[0][5] * matriz[1][6] * matriz[2][7] * matriz[3][8] * matriz[4][0] * matriz[5][1] * matriz[6][2] *
+                matriz[7][3] * matriz[8][4] +
+                matriz[0][6] * matriz[1][7] * matriz[2][8] * matriz[3][0] * matriz[4][1] * matriz[5][2] * matriz[6][3] *
+                matriz[7][4] * matriz[8][5] +
+                matriz[0][7] * matriz[1][8] * matriz[2][0] * matriz[3][1] * matriz[4][2] * matriz[5][3] * matriz[6][4] *
+                matriz[7][5] * matriz[8][6] +
+                matriz[0][8] * matriz[1][0] * matriz[2][1] * matriz[3][2] * matriz[4][3] * matriz[5][4] * matriz[6][5] *
+                matriz[7][6] * matriz[8][7] -
+                matriz[0][8] * matriz[1][7] * matriz[2][6] * matriz[3][5] * matriz[4][4] * matriz[5][3] * matriz[6][2] *
+                matriz[7][1] * matriz[8][0] -
+                matriz[0][7] * matriz[1][6] * matriz[2][5] * matriz[3][4] * matriz[4][3] * matriz[5][2] * matriz[6][1] *
+                matriz[7][0] * matriz[8][8] -
+                matriz[0][6] * matriz[1][5] * matriz[2][4] * matriz[3][3] * matriz[4][2] * matriz[5][1] * matriz[6][0] *
+                matriz[7][8] * matriz[8][7] -
+                matriz[0][5] * matriz[1][4] * matriz[2][3] * matriz[3][2] * matriz[4][1] * matriz[5][0] * matriz[6][8] *
+                matriz[7][7] * matriz[8][6] -
+                matriz[0][4] * matriz[1][3] * matriz[2][2] * matriz[3][1] * matriz[4][0] * matriz[5][8] * matriz[6][7] *
+                matriz[7][6] * matriz[8][5] -
+                matriz[0][3] * matriz[1][2] * matriz[2][1] * matriz[3][0] * matriz[4][8] * matriz[5][7] * matriz[6][6] *
+                matriz[7][5] * matriz[8][4] -
+                matriz[0][2] * matriz[1][1] * matriz[2][0] * matriz[3][8] * matriz[4][7] * matriz[5][6] * matriz[6][5] *
+                matriz[7][4] * matriz[8][3] -
+                matriz[0][1] * matriz[1][0] * matriz[2][8] * matriz[3][7] * matriz[4][6] * matriz[5][5] * matriz[6][4] *
+                matriz[7][3] * matriz[8][2] -
+                matriz[0][0] * matriz[1][8] * matriz[2][7] * matriz[3][6] * matriz[4][5] * matriz[5][4] * matriz[6][3] *
+                matriz[7][2] * matriz[8][1]
+        );
+    }
 }
 
 /**
@@ -190,6 +380,82 @@ void preencheMatrizInt(int matriz[][100], int linhas, int colunas) {
     }
 }
 
+/**
+ * Preenche uma matriz de inteiros com valores aleatórios.
+ *
+ * Esta função preenche uma matriz de inteiros com valores aleatórios no intervalo [0, limite).
+ * Se o limite fornecido for menor ou igual a 0, a função exibirá um erro no fluxo de erro padrão.
+ * Se a semente (seed) for igual a 0, a função utilizará o tempo atual como semente para a geração
+ * de números aleatórios; caso contrário, utilizará a semente fornecida.
+ *
+ * @param matriz A matriz a ser preenchida com valores aleatórios.
+ * @param linhas O número de linhas na matriz.
+ * @param colunas O número de colunas na matriz.
+ * @param limite O limite superior para os valores aleatórios (exclusivo).
+ * @param seed A semente para a geração de números aleatórios. Se 0, a função usará o tempo atual como semente.
+ */
+void preencheMatrizIntRandom(
+        int matriz[][100],
+        int linhas,
+        int colunas,
+        int limite,
+        unsigned int seed
+) {
+    if (limite <= 0) {
+        fprintf(stderr, "Erro: O limite deve ser um número positivo.\n");
+        return;
+    }
+
+    if (seed == 0)
+        srand((unsigned int) time(NULL));
+    else
+        srand(seed);
+
+    for (int i = 0; i < linhas; i++) {
+        for (int j = 0; j < colunas; ++j)
+            matriz[i][j] = rand() % limite;
+    }
+}
+
+/**
+ * Conta as posições não nulas em uma matriz, armazenando os valores em um vetor.
+ *
+ * Esta função percorre a matriz e identifica os elementos não nulos,
+ * armazenando-os em um vetor e exibindo estatísticas sobre as posições não nulas.
+ *
+ * @param matriz Uma matriz de inteiros.
+ * @param linhas O número de linhas na matriz.
+ * @param colunas O número de colunas na matriz.
+ */
+void contaPosicoesNaoNulas(const int matriz[][MAX], int linhas, int colunas) {
+    int pos[MAX], cont = 0;
+
+    printf("Posicoes nao nulas: \n");
+
+    for (int i = 0; i < linhas; i++) {
+        for (int j = 0; j < colunas; ++j) {
+            if (matriz[i][j] != 0) {
+                pos[cont] = matriz[i][j];
+                cont++;
+            }
+        }
+    }
+
+    printf("Total de posicoes nao nulas: %d\n", cont);
+    printf("Posicoes nao nulas: ");
+    imprimeVetorInt(pos, cont);
+    printf("\n");
+}
+
+/**
+ * Preenche uma matriz de números double a partir da entrada do usuário.
+ *
+ * Esta função solicita que o usuário insira valores para cada elemento da matriz.
+ *
+ * @param matriz A matriz a ser preenchida.
+ * @param linhas O número de linhas na matriz.
+ * @param colunas O número de colunas na matriz.
+ */
 void preencheMatrizDouble(double matriz[][100], int linhas, int colunas) {
     for (int i = 0; i < linhas; i++) {
         for (int j = 0; j < colunas; ++j) {
@@ -198,6 +464,17 @@ void preencheMatrizDouble(double matriz[][100], int linhas, int colunas) {
         }
     }
 }
+
+/**
+ * Calcula a matriz transposta de uma matriz quadrada de inteiros.
+ *
+ * Se a matriz não for quadrada (número de linhas diferente do número de colunas),
+ * imprime uma mensagem indicando que a transposta não pode ser calculada.
+ *
+ * @param matriz A matriz de entrada.
+ * @param linhas O número de linhas na matriz.
+ * @param colunas O número de colunas na matriz.
+ */
 void matrizTranspostaInt(int matriz[][MAX], int linhas, int colunas) {
 
     if (linhas != colunas) {
@@ -215,8 +492,7 @@ void matrizTranspostaInt(int matriz[][MAX], int linhas, int colunas) {
             else
                 printf("%d", matrizT[i][j]);
         }
-        printf("]");
-        putchar('\n');
+        printf("]\n");
     }
 }
 
@@ -270,7 +546,7 @@ double mediaVetorDouble(double vetor[], int n) {
     for (int i = 0; i < n; ++i)
         soma += vetor[i];
 
-    return soma / n;
+    return (double) soma / n;
 }
 
 /**
@@ -291,7 +567,6 @@ double raizQuadradaDouble(double num) {
 
     if (num == 0)
         return 0.0;
-
 
     float resBefore = num;
     float resActual = (resBefore + num / resBefore) / 2.0;
@@ -346,7 +621,12 @@ double potenciaDouble(double base, int exp) {
  * @param seed (Opcional) Uma semente para a geração de números aleatórios.
  *             Se for 0, a função utiliza o tempo atual como semente.
  */
-void preencheVetorIntRandom(int vetor[], int tamanho, unsigned int limite, unsigned int seed) {
+void preencheVetorIntRandom(
+        int vetor[],
+        int tamanho,
+        unsigned int limite,
+        unsigned int seed
+) {
     if (vetor == NULL || tamanho <= 0) {
         fprintf(stderr, "Erro: Vetor nulo ou tamanho inválido.\n");
         return;
@@ -361,47 +641,57 @@ void preencheVetorIntRandom(int vetor[], int tamanho, unsigned int limite, unsig
         vetor[i] = rand() % (limite + 1);
 }
 
-
+/**
+ * Multiplica duas matrizes de inteiros.
+ *
+ * Esta função realiza a multiplicação de duas matrizes quadradas de ordem 'n' e armazena
+ * o resultado em uma terceira matriz.
+ *
+ * @param matriz1 A primeira matriz de entrada.
+ * @param matriz2 A segunda matriz de entrada.
+ * @param matriz3 A matriz de saída que armazenará o resultado da multiplicação.
+ * @param n A ordem das matrizes (número de linhas/colunas).
+ */
 void multiplicaMatrizInt(
-        int m1[][MAX],
-        int m2[][MAX],
-        int m3[][MAX],
+        int matriz1[][MAX],
+        int matriz2[][MAX],
+        int matriz3[][MAX],
         int n
 ) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            m3[i][j] = 0;
-            for (int k = 0; k < n; k++) {
-                m3[i][j] += m1[i][k] * m2[k][j];
-            }
+            matriz3[i][j] = 0;
+            for (int k = 0; k < n; k++)
+                matriz3[i][j] += matriz1[i][k] * matriz2[k][j];
         }
     }
-};
+}
 
 /**
- * Imprime um vetor de inteiros.
+ * Soma duas matrizes de double.
  *
- * Esta função imprime os elementos de um vetor de inteiros no formato [elem1, elem2, ..., elemN].
+ * Esta função recebe duas matrizes de double, realiza a soma elemento a elemento
+ * e armazena o resultado em uma terceira matriz.
  *
- * @param vetor O vetor de inteiros a ser impresso.
- * @param tamanho O tamanho do vetor.
+ * @param matriz1 A primeira matriz de entrada.
+ * @param matriz2 A segunda matriz de entrada.
+ * @param resultado A matriz que armazenará o resultado da soma.
+ * @param linhas O número de linhas nas matrizes.
+ * @param colunas O número de colunas nas matrizes.
  */
-void imprimeVetorInt(const int vetor[], int tamanho) {
-    if (vetor == NULL || tamanho <= 0) {
-        fprintf(stderr, "Erro: Vetor nulo ou tamanho inválido.\n");
-        return;
+void somaMatrizesDouble(
+        const double matriz1[][MAX],
+        const double matriz2[][MAX],
+        double resultado[][MAX],
+        int linhas,
+        int colunas
+) {
+    for (int i = 0; i < linhas; ++i) {
+        for (int j = 0; j < colunas; ++j)
+            resultado[i][j] = matriz1[i][j] + matriz2[i][j];
     }
-
-    printf("[");
-    for (int i = 0; i < tamanho; i++) {
-        printf("%d", vetor[i]);
-
-        if (i < tamanho - 1) {
-            printf(", ");
-        }
-    }
-    printf("]\n");
 }
+
 
 /**
  * Imprime um vetor de números em ponto flutuante de precisão dupla (double).
@@ -425,16 +715,24 @@ void imprimeVetorDouble(double vetor[], int tamanho) {
     printf("]\n");
 }
 
-void imprimeMatrizDouble(double matriz[][MAX], int linhas, int colunas) {
-    for (int i = 0; i < linhas; i++) {
+/**
+ * Função para imprimir uma matriz de números double.
+ *
+ * Esta função percorre cada elemento da matriz e imprime seus valores formatados.
+ *
+ * @param matriz A matriz a ser impressa.
+ * @param linhas O número de linhas na matriz.
+ * @param colunas O número de colunas na matriz.
+ */
+void imprimeMatrizDouble(const double matriz[][MAX], int linhas, int colunas) {
+    for (int i = 0; i < linhas; ++i) {
         printf("[");
         for (int j = 0; j < colunas; ++j) {
             printf("%.2lf", matriz[i][j]);
             if (j < colunas - 1)
                 printf("\t");
         }
-        printf("]");
-        putchar('\n');
+        printf("]\n");
     }
 }
 
@@ -513,9 +811,9 @@ float somaElementosVetorFloat(float pDouble[10], int i) {
  * @param linhas O número de linhas da matriz.
  */
 void liberarMatrizInt(int **matriz, int linhas) {
-    for (int i = 0; i < linhas; i++) {
+    for (int i = 0; i < linhas; i++)
         free(matriz[i]);
-    }
+
     free(matriz);
 }
 
@@ -532,9 +830,9 @@ void liberarMatrizInt(int **matriz, int linhas) {
  * @return O número de vezes que a primeira sequência ocorre dentro da segunda sequência.
  */
 int verificaOcorrenciaVetorInt(const int sequencia1[], int n1, const int sequencia2[], int n2) {
-    if (n1 > n2 || n1 <= 0 || n2 <= 0) {
+
+    if (n1 > n2 || n1 <= 0 || n2 <= 0)
         return 0;
-    }
 
     int count = 0;
 
@@ -548,9 +846,8 @@ int verificaOcorrenciaVetorInt(const int sequencia1[], int n1, const int sequenc
             }
         }
 
-        if (found) {
+        if (found)
             count++;
-        }
     }
 
     return count;

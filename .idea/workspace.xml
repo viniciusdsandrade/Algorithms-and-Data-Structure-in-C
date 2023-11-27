@@ -10,12 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="build[extra]">
+      <change afterPath="$PROJECT_DIR$/exe03.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/exe03.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/exe03.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista-8-c-recursividade/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-8-c-recursividade/global.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista-9-c-files/exe09.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-9-c-files/exe09.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-4-c-strings/exe04.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-4-c-strings/exe04.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-4-c-strings/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-4-c-strings/global.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-6-c-search/exe06.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-6-c-search/exe06.c" afterDir="false" />
     </list>
     <list id="4a8b0725-1d78-48dd-b320-8ad3c7a43860" name="Changes by gianl" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,12 +65,12 @@
     "cidr.known.project.marker": "true",
     "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/c-algorithms/lista-3-c-vetores-e-matrizes/exe03.c",
+    "last_opened_file_path": "C:/Users/Pichau/Desktop/c-study/c-algorithms/lista-3-c-vetores-e-matrizes/exe03.c",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -107,7 +109,7 @@
       </method>
     </configuration>
     <configuration name="exe03.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="c-algorithms" TARGET_NAME="exe03.c" CONFIG_NAME="exe03.c">
-      <option name="sourceFile" value="C:\Users\vinic\OneDrive\Área de Trabalho\CStudy\c-algorithms\lista-3-c-vetores-e-matrizes\exe03.c" />
+      <option name="sourceFile" value="C:\Users\Pichau\Desktop\c-study\c-algorithms\lista-3-c-vetores-e-matrizes\exe03.c" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>

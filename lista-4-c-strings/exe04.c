@@ -80,8 +80,7 @@ int exercise02(void) {
 
     printf("\nExercicio02 - Lista04\n");
 
-    char str[80];
-    char strSemEspaco[80];
+    char str[80], strSemEspaco[80];
 
     printf("Digite uma string: ");
     fflush(stdin);
@@ -119,8 +118,7 @@ int exercise03(void) {
 
     printf("\nExercicio03 - Lista04\n");
 
-    char str[80];
-    char strSemEspacoExtra[80];
+    char str[80], strSemEspacoExtra[80];
 
     printf("Digite uma string: ");
     escreveString(str);
@@ -152,9 +150,7 @@ int exercise04(void) {
     */
 
     printf("\nExercicio04 - Lista04\n");
-    char str1[80];
-    char str2[80];
-    char aux[80];
+    char str1[80], str2[80], aux[80];
 
     printf("Digite uma string: ");
     fflush(stdin);
@@ -210,8 +206,7 @@ int exercise05(void) {
 
     printf("\nExercicio05 - Lista04\n");
 
-    char str1[80];
-    char str2[80];
+    char str1[80], str2[80];
 
     printf("Digite uma string: ");
     fflush(stdin);
@@ -252,8 +247,7 @@ int exercise06(void) {
 
     printf("\nExercicio06 - Lista04\n");
 
-    char t[80];
-    char p[80];
+    char t[80], p[80];
 
     printf("Digite um texto de ate 80 caracteres: ");
     fflush(stdin);
@@ -345,8 +339,7 @@ int exercise08(void) {
 
     printf("\nExercicio08 - Lista04\n");
 
-    char p1[100];
-    char p2[100];
+    char p1[100], p2[100];
 
     printf("Digite a primeira palavra: ");
     scanf("%s", p1);
@@ -354,10 +347,8 @@ int exercise08(void) {
     printf("Digite a segunda palavra: ");
     scanf("%s", p2);
 
-    int len1 = strlen(p1);
-    int len2 = strlen(p2);
-    int i = 0, j = 0;
-    int isSub = 0;
+    int len1 = strlen(p1), len2 = strlen(p2);
+    int i = 0, j = 0, isSub = 0;
 
     while (i < len1 && j < len2) {
         if (p1[i] == p2[j]) {
@@ -625,8 +616,7 @@ int exercise16(void) {
     <p>b) retornar a posicao da primeira ocorrencia dessa palavra
      */
 
-    char s[80];
-    char palavra[80];
+    char s[80], palavra[80];
 
     printf("Digite um texto: ");
     fflush(stdin);
@@ -666,9 +656,9 @@ int exercise16(void) {
 int exercicio17(void) {
 
     /*
-     * Ler uma string de ate 79 caracteres e salvar a inversa desta em um
-vetor. Imprimir a inversa da string lida.
-     * */
+     17 -  Ler uma string de ate 79 caracteres e salvar a inversa desta em um
+     vetor. Imprimir a inversa da string lida.
+     */
 
     char st[80], stInv[80];
 
@@ -806,13 +796,11 @@ int exercicio22(void) {
 
     for (i = 0; i <= tamS - tamP; i++) {
         j = 0;
-        while (j < tamP && p[j] == s[i + j]) {
+        while (j < tamP && p[j] == s[i + j])
             j++;
-        }
 
-        if (j == tamP) {
+        if (j == tamP)
             printf("Encontrada na posicao [%d - %d]\n", i, i + tamP - 1);
-        }
     }
 
     return 0;
@@ -821,10 +809,10 @@ int exercicio22(void) {
 int exercicio23(void) {
 
     /*
-     * Escreva um programa que lê uma string de até 50 caracteres, e
-     * imprime "Palindromo" caso a string seja um palindromo e  "Não Palindromo"
-     * caso contrário
-     * */
+     23 - Escreva um programa que lê uma string de até 50 caracteres, e
+     imprime "Palindromo" caso a string seja um palindromo e  "Não Palindromo"
+     caso contrário
+     */
 
     char s[50];
     printf("Digite uma string de ate 50 caracteres: ");
@@ -850,9 +838,9 @@ int exercicio23(void) {
 int exercicio24(void) {
 
     /*
-     * Refaça o exemplo visto em aula de inversão dee uma string de tal
-     * forma que não seja utilizado nenhum vetor adicional! Ou seja devemos
-     * computar a inversa no proprio vetor original
+     24 -  Refaça o exemplo visto em aula de inversão dee uma string de tal
+     forma que não seja utilizado nenhum vetor adicional! Ou seja devemos
+     computar a inversa no proprio vetor original
      */
 
     printf("Digite uma string: ");

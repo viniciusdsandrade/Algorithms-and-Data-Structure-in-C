@@ -199,6 +199,7 @@ int exercicio05(void) {
         preencheVetorInt(v2, tam2);
 
     } else {
+        srand(time(NULL)); // inicializa semente para números aleatórios
         preencheVetorIntRandom(v1, tam1, tam1, 0);
         preencheVetorIntRandom(v2, tam2, tam2, 0);
     }
@@ -354,7 +355,7 @@ int exercicio07(void) {
 
     verifyInput(tam, 1, 50) == false ? printf("Valor invalido"), 0 : 1;
 
-    int index;
+    int index = 0;
 
     if (tam < 8) {
         printf("Vetor1\n");
@@ -373,27 +374,14 @@ int exercicio07(void) {
     printf("Vetor2: ");
     imprimeVetorInt(v2, tam);
 
-    index = 0;
-    // Aqui nos estamos alocando todos os valores de v1 e v2 em v3
+    // Intercalação dos vetores em v3
     for (int i = 0; i < tam; ++i) {
-        if (i < tam) {
-            v3[index] = v1[i];
-            v3[index + 1] = v2[i];
-            index = index + 2;
-        }
+        v3[2 * i] = v1[i];
+        v3[2 * i + 1] = v2[i];
     }
 
     // bubbleSort com intuito de ordernar o vetor
-    int temp;
-    for (int i = 0; i < 2 * tam; i++) {
-        for (int j = 0; j < 2 * tam - 1; j++) {
-            if (v3[j] > v3[j + 1]) {
-                temp = v3[j];
-                v3[j] = v3[j + 1];
-                v3[j + 1] = temp;
-            }
-        }
-    }
+    buubleSort(v3, tam);
 
     printf("VetorUnicaoCrescente: ");
     imprimeVetorInt(v3, index);
@@ -430,19 +418,16 @@ int exercicio08(void) {
         preencheVetorDoubleRandom(vet2, tam, tam, 0);
     }
 
-    for (int i = 0; i < tam; ++i) {
-        produtoInterno[i] = vet1[i] * vet2[i];
-        soma += vet1[i] * vet2[i];
-    }
+    soma = produtoInternoDouble(vet1, vet2, produtoInterno, soma, tam);
 
     linha(tam * 15, '*');
-    printf("vet1 ");
+    printf("vet1: ");
     imprimeVetorDouble(vet1, tam);
 
-    printf("vet2 ");
+    printf("vet2: ");
     imprimeVetorDouble(vet2, tam);
 
-    printf("produtoInterno ");
+    printf("produtoInternoDouble: ");
     imprimeVetorDouble(produtoInterno, tam);
 
     printf("soma dos produtos: %.02lf\n", soma);
@@ -597,8 +582,7 @@ int exercicio12(void) {
     preencheVetorDouble(vetor2, 5);
     linha(30, '*');
 
-    for (int j = 0; j < 5; j++)
-        res += vetor1[j] * vetor2[j];
+    res = produtoInternoDouble(vetor1, vetor2, vetor1, res, 5);
 
     printf("Produto Interno: %.2lf\n", res);
 
@@ -651,24 +635,10 @@ int exercicio14(void) {
 
     printf("2º Matriz: \n");
     preencheMatrizDouble(m2, n, n);
-    printf("*********************************\n");
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++)
-            s3[i][j] = m1[i][j] + m2[i][j];
-    }
+    somaMatrizesDouble(m1, m2, s3, n, n);
 
-    printf("**************soma********************\n");
-    for (int k = 0; k < n; k++) {
-        printf("[");
-        for (int l = 0; l < n; l++) {
-            if (l < n - 1)
-                printf("%.02lf \t", s3[k][l]);
-            else
-                printf("%.02lf", s3[k][l]);
-        }
-        printf("]\n");
-    }
+    imprimeMatrizDouble(s3, n, n);
 
     putchar('\n');
 
@@ -678,6 +648,7 @@ int exercicio14(void) {
 
 
 int exercicio15(void) {
+
     /*
     15 - Faca um algoritmo para multiplicar duas matrizes de dimensao nxn
     */
@@ -713,6 +684,7 @@ int exercicio15(void) {
 
 
 int exercicio16(void) {
+
     /*
      16 - Faca um algoritmo para calcular a matriz transposta de dimensao nxn
      */
@@ -830,21 +802,26 @@ int exercicio20(void) {
 }
 
 int exercicio21(void) {
+
     /*
-     21 - Escreva um programa que leia todas as posicoes de uma matriz 10 x 10.
+     21 - Escreva um programa que leia todas as posicoes de uma matriz 10 x 10 de inteiros.
      O programa deve entao exibir o numero de posicoes nao nulas na matriz.
      */
 
-    printf("\nExercicio 11\n");
+    printf("\nExercicio 21\n");
 
     int matriz[MAX][MAX], pos[MAX], cont = 0, n;
 
     printf("Digite a dimensao da matriz nxn: ");
     scanf("%d", &n);
 
-    printf("Posicoes nao nulas: %d\n", cont);
-    printf("Posicoes nao nulas: ");
-    imprimeVetorInt(pos, cont);
+    printf("Digite os valores da matriz: \n");
+    preencheMatrizIntRandom(matriz, n, n, 10, 0);
+
+    printf("Matriz: \n");
+    imprimeMatrizInt(matriz, n, n);
+
+    contaPosicoesNaoNulas(matriz, n, n);
 
     return 0;
 }
@@ -908,7 +885,7 @@ int exercicio23(void) {
 
 int exercicio24(void) {
     /*
-    Faca um programa que leia uma matriz de dimensao arbitraria definida pelo usuario
+    24 - Faca um programa que leia uma matriz de dimensao arbitraria definida pelo usuario
     a) encontre o elemento com maior frequencia na matriz
     b) a frequencia do maior elemento
     c) as posicoes que se encontram o maior elemento
@@ -1012,7 +989,7 @@ int exercicio24(void) {
 int exercicio25(void) {
 
     /*
-    Faca um programa para realizar operacoes com matrizes que tenha as
+    25 - Faca um programa para realizar operacoes com matrizes que tenha as
     seguintes funcionalidades:
     I Um menu para escolher a operacao a ser realizada:
     1 - Leitura de uma matriz1.
