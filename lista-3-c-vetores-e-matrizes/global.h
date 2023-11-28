@@ -4,7 +4,11 @@
 
 #define MAX 100
 
-void buubleSort(int *v3, int tam);
+void trocarLinhas(int matriz[MAX][MAX], int linhas, int colunas, int linha1, int linha2);
+int obterPivoNaoZero(int matriz[MAX][MAX], int linhas, int colunas, int coluna);
+int eliminacaoGauss(int matriz[][MAX], int linhas, int colunas);
+void unirVetores(const int v1[],int tam1,const int v2[],int tam2,int v3[]);
+void bubbleSort(int *v3, int tam);
 bool verifyInput(int input, int inicio, int fim);
 double sumArray(int n, double vetor[]);
 void linha(int tamanho, char caractere);
@@ -15,7 +19,7 @@ void preencheVetorDoubleRandom(double vetor[], int tamanho, double limite, unsig
 int verificaOcorrenciaVetorInt(const int sequencia1[], int n1, const int sequencia2[], int n2);
 void preencheVetorInt(int vet[], int tamanho);
 void matrizTranspostaInt(int matriz[][MAX], int linhas, int colunas);
-int determinanteMatrizInt(int matriz[MAX][MAX], int linhas, int colunas);
+int determinanteMatrizInt(int matriz[][MAX], int linhas, int colunas);
 double produtoInternoDouble(const double *vet1, const double *vet2, double *produtoInterno, double soma, int tam);
 int mdc(int a, int b);
 void preencheVetorIntRandom(int vetor[], int tamanho, unsigned int limite, unsigned int seed);

@@ -9,15 +9,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="build[extra]">
-      <change afterPath="$PROJECT_DIR$/exe03.exe" afterDir="false" />
+    <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="fix[lista03 matriz] 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exe03.exe" beforeDir="false" afterPath="$PROJECT_DIR$/exe03.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/exe03.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/exe03.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista-4-c-strings/exe04.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-4-c-strings/exe04.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista-4-c-strings/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-4-c-strings/global.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista-6-c-search/exe06.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-6-c-search/exe06.c" afterDir="false" />
     </list>
     <list id="4a8b0725-1d78-48dd-b320-8ad3c7a43860" name="Changes by gianl" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,29 +49,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Pichau/Desktop/c-study/c-algorithms/lista-3-c-vetores-e-matrizes/exe03.c",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "structure.view.defaults.are.configured": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pichau/Desktop/c-study/c-algorithms/lista-3-c-vetores-e-matrizes/exe03.c&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Pichau\Desktop\CStudy\c-algorithms\challanges-c\2_lp\p2-lp" />
@@ -130,11 +127,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="C/C++ File.Q3.c" />
+        <item itemvalue="C/C++ File.exe07.c" />
         <item itemvalue="C/C++ File.Q4.c" />
+        <item itemvalue="C/C++ File.Q3.c" />
         <item itemvalue="C/C++ File.Q2.c" />
         <item itemvalue="C/C++ File.Q1.c" />
-        <item itemvalue="C/C++ File.exe07.c" />
       </list>
     </recent_temporary>
   </component>
@@ -175,6 +172,8 @@
       <workItem from="1700744169591" duration="53000" />
       <workItem from="1700744233930" duration="458000" />
       <workItem from="1701008820191" duration="9394000" />
+      <workItem from="1701198321417" duration="838000" />
+      <workItem from="1701199184586" duration="1056000" />
     </task>
     <task id="LOCAL-00001" summary="feat[recursividade] : iniciando lista de recursividade">
       <option name="closed" value="true" />
@@ -272,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700513421091</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix[lista03 matriz] 2">
+      <option name="closed" value="true" />
+      <created>1701110079254</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701110079255</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,9 +305,11 @@
     <MESSAGE value="build[recursividade] : finalizando lista de recursividade pt2" />
     <MESSAGE value="build[recursividade] : finalizando lista de recursividade pt3" />
     <MESSAGE value="feat[challenge] : Trabalho 3 - Hierarquia" />
-    <MESSAGE value="build[extra]" />
     <MESSAGE value="build[p2]" />
-    <option name="LAST_COMMIT_MESSAGE" value="build[p2]" />
+    <MESSAGE value="build[extra]" />
+    <MESSAGE value="fix[lista03 matriz]" />
+    <MESSAGE value="fix[lista03 matriz] 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix[lista03 matriz] 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

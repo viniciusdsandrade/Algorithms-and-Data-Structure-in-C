@@ -54,7 +54,6 @@ int exercicio02(void) {
     double media = mediaVetorDouble(vetor, n);
 
     for (int i = 0; i < n; i++)
-        // desvioPadrao += (vetor[i] - media)*(vetor[i] - media) ;
         dp += potenciaDouble(vetor[i] - media, 2);
 
     dp = raizQuadradaDouble(dp / n);
@@ -291,22 +290,12 @@ int exercicio06(void) {
     imprimeVetorInt(v2, tam2);
     linha(10, '*');
 
-    // Algoritmo para unir 2 vetores de dimens?es diferentes
-    int tam3 = tam1 + tam2, index = 0;
-
-    // Copia os elementos do vetor1 para o vetor3
-    for (index = 0; index < tam1; index++)
-        v3[index] = v1[index];
-
-    // Copia os elementos do vetor2 para o vetor3
-    for (int i = 0; i < tam2; i++) {
-        v3[index] = v2[i];
-        index++;
-    }
+    unirVetores(v1, tam1, v2, tam2, v3);
 
     // Algoritmo para remover elementos duplicados
     int novoTam = 0, v3SemDuplicados[100];
 
+    int tam3 = tam1 + tam2;
     for (int i = 0; i < tam3; i++) {
         int duplicado = 0;
         for (int j = 0; j < novoTam; j++) {
@@ -381,7 +370,7 @@ int exercicio07(void) {
     }
 
     // bubbleSort com intuito de ordernar o vetor
-    buubleSort(v3, tam);
+    bubbleSort(v3, tam);
 
     printf("VetorUnicaoCrescente: ");
     imprimeVetorInt(v3, index);
@@ -895,7 +884,7 @@ int exercicio24(void) {
     g) faca uma matriz que mostre a frequencia dos seus respectivos elementos 1 a 1
     Caso  haja mais de um elemento com maior ou menor frequencia, printar os dois elementos, inclusive suas posi??es
      */
-    printf("\nExerc?cio 24\n");
+    printf("\nExercicio 24\n");
 
     int matriz[MAX][MAX], matrizFrequencia[MAX][MAX];
     int l, c;
@@ -1031,7 +1020,6 @@ int exercicio25(void) {
                 scanf("%d", &l1);
                 printf("Digite o numero de colunas da matriz1: ");
                 scanf("%d", &c1);
-
                 putchar('\n');
                 break;
             case 2:
@@ -1090,7 +1078,7 @@ int exercicio26(void) {
     printf("Matriz:\n");
     preencheMatrizInt(matriz, n, n);
 
-    printf("Matriz: ");
+    printf("Matriz: \n");
     imprimeMatrizInt(matriz, n, n);
 
     printf("Determinante: %d\n", determinanteMatrizInt(matriz, n, n));

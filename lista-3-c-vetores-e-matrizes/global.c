@@ -5,6 +5,25 @@
 
 #define MAX 100
 
+void unirVetores(
+        const int v1[],
+        int tam1,
+        const int v2[],
+        int tam2,
+        int v3[]
+) {
+    int tam3 = tam1 + tam2, index = 0;
+
+    // Copia os elementos do vetor1 para o vetor3
+    for (index = 0; index < tam1; index++)
+        v3[index] = v1[index];
+
+    // Copia os elementos do vetor2 para o vetor3
+    for (int i = 0; i < tam2; i++, index++)
+        v3[index] = v2[i];
+}
+
+
 /**
  * Imprime um vetor de inteiros.
  *
@@ -62,7 +81,7 @@ double produtoInternoDouble(
  * @param v3 O array a ser ordenado.
  * @param tam O tamanho do array.
  */
-void buubleSort(int *v3, int tam) {
+void bubbleSort(int *v3, int tam) {
     int temp;
     for (int i = 0; i < 2 * tam; i++) {
         for (int j = 0; j < 2 * tam - 1; j++) {
@@ -165,201 +184,106 @@ int mdc(int a, int b) {
 }
 
 /**
- * Calcula o determinante de uma matriz quadrada de inteiros.
+ * Troca as linhas de uma matriz.
  *
- * Esta função utiliza a regra de Sarrus para calcular o determinante de matrizes de ordem 2, 3, 4, 5, 6, 7, 8 e 9.
- * Para matrizes de ordens diferentes, a função imprime uma mensagem indicando que o cálculo não é suportado.
- *
- * @param matriz A matriz de entrada.
- * @param linhas O número de linhas na matriz.
- * @param colunas O número de colunas na matriz.
- *
- * @return O determinante da matriz, ou 0 se a matriz não for quadrada ou se a ordem não for suportada.
+ * @param matriz   A matriz em que as linhas serão trocadas.
+ * @param linhas   O número de linhas da matriz.
+ * @param colunas  O número de colunas da matriz.
+ * @param linha1   Índice da primeira linha a ser trocada.
+ * @param linha2   Índice da segunda linha a ser trocada.
  */
-int determinanteMatrizInt(int matriz[MAX][MAX], int linhas, int colunas) {
-
-    if (linhas > 9 || colunas > 9) {
-        printf("Nao e possivel calcular o determinante de uma matriz de ordem maior que 9.\n");
-        return 0;
-    }
-
-    if (linhas != colunas) {
-        printf("Nao e possível calcular o determinante de uma matriz nao quadrada.\n");
-        return 0;
-    }
-
-    if (linhas == 1 || colunas == 1) {
-        return (int) matriz[0][0];
-    }
-
-    if (linhas == 2 && colunas == 2) {
-        return (int) (
-                matriz[0][0] * matriz[1][1] -
-                matriz[0][1] * matriz[1][0]
-        );
-    }
-
-    if (linhas == 3 && colunas == 3) {
-        // utilizando a regra de Sarrus
-        return (int) (
-                matriz[0][0] * matriz[1][1] * matriz[2][2] +
-                matriz[0][1] * matriz[1][2] * matriz[2][0] +
-                matriz[0][2] * matriz[1][0] * matriz[2][1] -
-                matriz[0][2] * matriz[1][1] * matriz[2][0] -
-                matriz[0][1] * matriz[1][0] * matriz[2][2] -
-                matriz[0][0] * matriz[1][2] * matriz[2][1]
-        );
-    }
-
-    if (linhas == 4 && colunas == 4) {
-        // utilizando a regra de Sarrus
-        return (int) (
-                matriz[0][0] * matriz[1][1] * matriz[2][2] * matriz[3][3] +
-                matriz[0][1] * matriz[1][2] * matriz[2][3] * matriz[3][0] +
-                matriz[0][2] * matriz[1][3] * matriz[2][0] * matriz[3][1] +
-                matriz[0][3] * matriz[1][0] * matriz[2][1] * matriz[3][2] -
-                matriz[0][3] * matriz[1][2] * matriz[2][1] * matriz[3][0] -
-                matriz[0][2] * matriz[1][1] * matriz[2][0] * matriz[3][3] -
-                matriz[0][1] * matriz[1][0] * matriz[2][3] * matriz[3][2] -
-                matriz[0][0] * matriz[1][3] * matriz[2][2] * matriz[3][1]
-        );
-    }
-
-    if (linhas == 5 && colunas == 5) {
-        // utilizando a regra de Sarrs
-        return (int) (
-                matriz[0][0] * matriz[1][1] * matriz[2][2] * matriz[3][3] * matriz[4][4] +
-                matriz[0][1] * matriz[1][2] * matriz[2][3] * matriz[3][4] * matriz[4][0] +
-                matriz[0][2] * matriz[1][3] * matriz[2][4] * matriz[3][0] * matriz[4][1] +
-                matriz[0][3] * matriz[1][4] * matriz[2][0] * matriz[3][1] * matriz[4][2] +
-                matriz[0][4] * matriz[1][0] * matriz[2][1] * matriz[3][2] * matriz[4][3] -
-                matriz[0][4] * matriz[1][3] * matriz[2][2] * matriz[3][1] * matriz[4][0] -
-                matriz[0][3] * matriz[1][2] * matriz[2][1] * matriz[3][0] * matriz[4][4] -
-                matriz[0][2] * matriz[1][1] * matriz[2][0] * matriz[3][4] * matriz[4][3] -
-                matriz[0][1] * matriz[1][0] * matriz[2][4] * matriz[3][3] * matriz[4][2] -
-                matriz[0][0] * matriz[1][4] * matriz[2][3] * matriz[3][2] * matriz[4][1]
-        );
-    }
-
-    if (linhas == 6 && colunas == 6) {
-        // utilizando a regra de Sarrus
-        return (int) (
-                matriz[0][0] * matriz[1][1] * matriz[2][2] * matriz[3][3] * matriz[4][4] * matriz[5][5] +
-                matriz[0][1] * matriz[1][2] * matriz[2][3] * matriz[3][4] * matriz[4][5] * matriz[5][0] +
-                matriz[0][2] * matriz[1][3] * matriz[2][4] * matriz[3][5] * matriz[4][0] * matriz[5][1] +
-                matriz[0][3] * matriz[1][4] * matriz[2][5] * matriz[3][0] * matriz[4][1] * matriz[5][2] +
-                matriz[0][4] * matriz[1][5] * matriz[2][0] * matriz[3][1] * matriz[4][2] * matriz[5][3] +
-                matriz[0][5] * matriz[1][0] * matriz[2][1] * matriz[3][2] * matriz[4][3] * matriz[5][4] -
-                matriz[0][5] * matriz[1][4] * matriz[2][3] * matriz[3][2] * matriz[4][1] * matriz[5][0] -
-                matriz[0][4] * matriz[1][3] * matriz[2][2] * matriz[3][1] * matriz[4][0] * matriz[5][5] -
-                matriz[0][3] * matriz[1][2] * matriz[2][1] * matriz[3][0] * matriz[4][5] * matriz[5][4] -
-                matriz[0][2] * matriz[1][1] * matriz[2][0] * matriz[3][5] * matriz[4][4] * matriz[5][3] -
-                matriz[0][1] * matriz[1][0] * matriz[2][5] * matriz[3][4] * matriz[4][3] * matriz[5][2] -
-                matriz[0][0] * matriz[1][5] * matriz[2][4] * matriz[3][3] * matriz[4][2] * matriz[5][1]
-        );
-    }
-
-    if (linhas == 7 && colunas == 7) {
-        // utilizando a regra de Sarrus
-        return (int) (
-                matriz[0][0] * matriz[1][1] * matriz[2][2] * matriz[3][3] * matriz[4][4] * matriz[5][5] * matriz[6][6] +
-                matriz[0][1] * matriz[1][2] * matriz[2][3] * matriz[3][4] * matriz[4][5] * matriz[5][6] * matriz[6][0] +
-                matriz[0][2] * matriz[1][3] * matriz[2][4] * matriz[3][5] * matriz[4][6] * matriz[5][0] * matriz[6][1] +
-                matriz[0][3] * matriz[1][4] * matriz[2][5] * matriz[3][6] * matriz[4][0] * matriz[5][1] * matriz[6][2] +
-                matriz[0][4] * matriz[1][5] * matriz[2][6] * matriz[3][0] * matriz[4][1] * matriz[5][2] * matriz[6][3] +
-                matriz[0][5] * matriz[1][6] * matriz[2][0] * matriz[3][1] * matriz[4][2] * matriz[5][3] * matriz[6][4] +
-                matriz[0][6] * matriz[1][0] * matriz[2][1] * matriz[3][2] * matriz[4][3] * matriz[5][4] * matriz[6][5] -
-                matriz[0][6] * matriz[1][5] * matriz[2][4] * matriz[3][3] * matriz[4][2] * matriz[5][1] * matriz[6][0] -
-                matriz[0][5] * matriz[1][4] * matriz[2][3] * matriz[3][2] * matriz[4][1] * matriz[5][0] * matriz[6][6] -
-                matriz[0][4] * matriz[1][3] * matriz[2][2] * matriz[3][1] * matriz[4][0] * matriz[5][6] * matriz[6][5] -
-                matriz[0][3] * matriz[1][2] * matriz[2][1] * matriz[3][0] * matriz[4][6] * matriz[5][5] * matriz[6][4] -
-                matriz[0][2] * matriz[1][1] * matriz[2][0] * matriz[3][6] * matriz[4][5] * matriz[5][4] * matriz[6][3] -
-                matriz[0][1] * matriz[1][0] * matriz[2][6] * matriz[3][5] * matriz[4][4] * matriz[5][3] * matriz[6][2] -
-                matriz[0][0] * matriz[1][6] * matriz[2][5] * matriz[3][4] * matriz[4][3] * matriz[5][2] * matriz[6][1]
-        );
-    }
-
-    if (linhas == 8 && colunas == 8) {
-        // utilizando a regra de Sarrus
-        return (int) (
-                matriz[0][0] * matriz[1][1] * matriz[2][2] * matriz[3][3] * matriz[4][4] * matriz[5][5] * matriz[6][6] *
-                matriz[7][7] +
-                matriz[0][1] * matriz[1][2] * matriz[2][3] * matriz[3][4] * matriz[4][5] * matriz[5][6] * matriz[6][7] *
-                matriz[7][0] +
-                matriz[0][2] * matriz[1][3] * matriz[2][4] * matriz[3][5] * matriz[4][6] * matriz[5][7] * matriz[6][0] *
-                matriz[7][1] +
-                matriz[0][3] * matriz[1][4] * matriz[2][5] * matriz[3][6] * matriz[4][7] * matriz[5][0] * matriz[6][1] *
-                matriz[7][2] +
-                matriz[0][4] * matriz[1][5] * matriz[2][6] * matriz[3][7] * matriz[4][0] * matriz[5][1] * matriz[6][2] *
-                matriz[7][3] +
-                matriz[0][5] * matriz[1][6] * matriz[2][7] * matriz[3][0] * matriz[4][1] * matriz[5][2] * matriz[6][3] *
-                matriz[7][4] +
-                matriz[0][6] * matriz[1][7] * matriz[2][0] * matriz[3][1] * matriz[4][2] * matriz[5][3] * matriz[6][4] *
-                matriz[7][5] +
-                matriz[0][7] * matriz[1][0] * matriz[2][1] * matriz[3][2] * matriz[4][3] * matriz[5][4] * matriz[6][5] *
-                matriz[7][6] -
-                matriz[0][7] * matriz[1][6] * matriz[2][5] * matriz[3][4] * matriz[4][3] * matriz[5][2] * matriz[6][1] *
-                matriz[7][0] -
-                matriz[0][6] * matriz[1][5] * matriz[2][4] * matriz[3][3] * matriz[4][2] * matriz[5][1] * matriz[6][0] *
-                matriz[7][7] -
-                matriz[0][5] * matriz[1][4] * matriz[2][3] * matriz[3][2] * matriz[4][1] * matriz[5][0] * matriz[6][7] *
-                matriz[7][6] -
-                matriz[0][4] * matriz[1][3] * matriz[2][2] * matriz[3][1] * matriz[4][0] * matriz[5][7] * matriz[6][6] *
-                matriz[7][5] -
-                matriz[0][3] * matriz[1][2] * matriz[2][1] * matriz[3][0] * matriz[4][7] * matriz[5][6] * matriz[6][5] *
-                matriz[7][4] -
-                matriz[0][2] * matriz[1][1] * matriz[2][0] * matriz[3][7] * matriz[4][6] * matriz[5][5] * matriz[6][4] *
-                matriz[7][3] -
-                matriz[0][1] * matriz[1][0] * matriz[2][7] * matriz[3][6] * matriz[4][5] * matriz[5][4] * matriz[6][3] *
-                matriz[7][2] -
-                matriz[0][0] * matriz[1][7] * matriz[2][6] * matriz[3][5] * matriz[4][4] * matriz[5][3] * matriz[6][2] *
-                matriz[7][1]
-        );
-    }
-
-    if (linhas == 9 && colunas == 9) {
-        // utilizando a regra de Sarrus
-        return (int) (
-                matriz[0][0] * matriz[1][1] * matriz[2][2] * matriz[3][3] * matriz[4][4] * matriz[5][5] * matriz[6][6] *
-                matriz[7][7] * matriz[8][8] +
-                matriz[0][1] * matriz[1][2] * matriz[2][3] * matriz[3][4] * matriz[4][5] * matriz[5][6] * matriz[6][7] *
-                matriz[7][8] * matriz[8][0] +
-                matriz[0][2] * matriz[1][3] * matriz[2][4] * matriz[3][5] * matriz[4][6] * matriz[5][7] * matriz[6][8] *
-                matriz[7][0] * matriz[8][1] +
-                matriz[0][3] * matriz[1][4] * matriz[2][5] * matriz[3][6] * matriz[4][7] * matriz[5][8] * matriz[6][0] *
-                matriz[7][1] * matriz[8][2] +
-                matriz[0][4] * matriz[1][5] * matriz[2][6] * matriz[3][7] * matriz[4][8] * matriz[5][0] * matriz[6][1] *
-                matriz[7][2] * matriz[8][3] +
-                matriz[0][5] * matriz[1][6] * matriz[2][7] * matriz[3][8] * matriz[4][0] * matriz[5][1] * matriz[6][2] *
-                matriz[7][3] * matriz[8][4] +
-                matriz[0][6] * matriz[1][7] * matriz[2][8] * matriz[3][0] * matriz[4][1] * matriz[5][2] * matriz[6][3] *
-                matriz[7][4] * matriz[8][5] +
-                matriz[0][7] * matriz[1][8] * matriz[2][0] * matriz[3][1] * matriz[4][2] * matriz[5][3] * matriz[6][4] *
-                matriz[7][5] * matriz[8][6] +
-                matriz[0][8] * matriz[1][0] * matriz[2][1] * matriz[3][2] * matriz[4][3] * matriz[5][4] * matriz[6][5] *
-                matriz[7][6] * matriz[8][7] -
-                matriz[0][8] * matriz[1][7] * matriz[2][6] * matriz[3][5] * matriz[4][4] * matriz[5][3] * matriz[6][2] *
-                matriz[7][1] * matriz[8][0] -
-                matriz[0][7] * matriz[1][6] * matriz[2][5] * matriz[3][4] * matriz[4][3] * matriz[5][2] * matriz[6][1] *
-                matriz[7][0] * matriz[8][8] -
-                matriz[0][6] * matriz[1][5] * matriz[2][4] * matriz[3][3] * matriz[4][2] * matriz[5][1] * matriz[6][0] *
-                matriz[7][8] * matriz[8][7] -
-                matriz[0][5] * matriz[1][4] * matriz[2][3] * matriz[3][2] * matriz[4][1] * matriz[5][0] * matriz[6][8] *
-                matriz[7][7] * matriz[8][6] -
-                matriz[0][4] * matriz[1][3] * matriz[2][2] * matriz[3][1] * matriz[4][0] * matriz[5][8] * matriz[6][7] *
-                matriz[7][6] * matriz[8][5] -
-                matriz[0][3] * matriz[1][2] * matriz[2][1] * matriz[3][0] * matriz[4][8] * matriz[5][7] * matriz[6][6] *
-                matriz[7][5] * matriz[8][4] -
-                matriz[0][2] * matriz[1][1] * matriz[2][0] * matriz[3][8] * matriz[4][7] * matriz[5][6] * matriz[6][5] *
-                matriz[7][4] * matriz[8][3] -
-                matriz[0][1] * matriz[1][0] * matriz[2][8] * matriz[3][7] * matriz[4][6] * matriz[5][5] * matriz[6][4] *
-                matriz[7][3] * matriz[8][2] -
-                matriz[0][0] * matriz[1][8] * matriz[2][7] * matriz[3][6] * matriz[4][5] * matriz[5][4] * matriz[6][3] *
-                matriz[7][2] * matriz[8][1]
-        );
+void trocarLinhas(int matriz[MAX][MAX], int linhas, int colunas, int linha1, int linha2) {
+    for (int j = 0; j < colunas; j++) {
+        int temp = matriz[linha1][j];
+        matriz[linha1][j] = matriz[linha2][j];
+        matriz[linha2][j] = temp;
     }
 }
 
+/**
+ * Obtém o índice da primeira linha com um pivô não zero em uma coluna específica.
+ *
+ * @param matriz   A matriz a ser verificada.
+ * @param linhas   O número de linhas da matriz.
+ * @param colunas  O número de colunas da matriz.
+ * @param coluna   A coluna a ser verificada para o pivô não zero.
+ * @return         O índice da linha com o pivô não zero ou -1 se não encontrado.
+ */
+int obterPivoNaoZero(int matriz[MAX][MAX], int linhas, int colunas, int coluna) {
+    for (int i = coluna; i < linhas; i++) {
+        if (matriz[i][coluna] != 0) {
+            return i;
+        }
+    }
+    return -1; // Não encontrado
+}
+
+/**
+ * Aplica a eliminação de Gauss a uma matriz para torná-la triangular superior.
+ *
+ * @param matriz   A matriz a ser modificada.
+ * @param linhas   O número de linhas da matriz.
+ * @param colunas  O número de colunas da matriz.
+ * @return         O número de trocas de linhas feitas durante a eliminação.
+ */
+int eliminacaoGauss(int matriz[][MAX], int linhas, int colunas) {
+    int trocas = 0;
+
+    for (int i = 0; i < linhas; i++) {
+        // Encontrar uma linha com um pivô não zero
+        int linhaPivo = obterPivoNaoZero(matriz, linhas, colunas, i);
+
+        if (linhaPivo == -1) {
+            // Nenhuma linha encontrada, a matriz é singular
+            return 0;
+        }
+
+        // Trocar as linhas se necessário
+        if (linhaPivo != i) {
+            trocarLinhas(matriz, linhas, colunas, i, linhaPivo);
+            trocas++;
+        }
+
+        // Zerar elementos abaixo do pivô
+        for (int j = i + 1; j < linhas; j++) {
+            int fator = matriz[j][i] / matriz[i][i];
+            for (int k = i; k < colunas; k++) {
+                matriz[j][k] -= fator * matriz[i][k];
+            }
+        }
+    }
+
+    return trocas % 2 == 0 ? 1 : -1;
+}
+
+/**
+ * Calcula o determinante de uma matriz quadrada usando a eliminação de Gauss.
+ *
+ * @param matriz   A matriz para a qual o determinante será calculado.
+ * @param linhas   O número de linhas da matriz.
+ * @param colunas  O número de colunas da matriz.
+ * @return         O determinante da matriz.
+ */
+int determinanteMatrizInt(int matriz[][MAX], int linhas, int colunas) {
+    if (linhas != colunas) {
+        printf("Não é possível calcular o determinante de uma matriz não quadrada.\n");
+        return 0;
+    }
+
+    int matrizAux[MAX][MAX];
+    for (int i = 0; i < linhas; i++) {
+        for (int j = 0; j < colunas; j++)
+            matrizAux[i][j] = matriz[i][j];
+    }
+
+    int trocas = eliminacaoGauss(matrizAux, linhas, colunas);
+
+    int det = 1;
+    for (int i = 0; i < linhas; i++)
+        det *= matrizAux[i][i];
+
+    return det * trocas;
+}
 /**
  * Função para preencher uma matriz de inteiros a partir da entrada padrão.
  *
@@ -691,7 +615,6 @@ void somaMatrizesDouble(
             resultado[i][j] = matriz1[i][j] + matriz2[i][j];
     }
 }
-
 
 /**
  * Imprime um vetor de números em ponto flutuante de precisão dupla (double).
