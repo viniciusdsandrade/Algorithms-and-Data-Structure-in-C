@@ -994,7 +994,7 @@ int exercicio25(void) {
     printf("\nExercicio 25 \n");
 
     int choice = 0;
-    int matriz1[MAX][MAX], matriz2[MAX][MAX], matrizSoma[MAX][MAX];
+    int matriz1[MAX][MAX], matriz2[MAX][MAX], matrizSoma[MAX][MAX], matrizSub[MAX][MAX], matrizMult[MAX][MAX];
     int l1 = 0, c1 = 0, l2 = 0, c2 = 0;
 
     do {
@@ -1018,36 +1018,82 @@ int exercicio25(void) {
             case 1:
                 printf("Digite o numero de linhas da matriz1: ");
                 scanf("%d", &l1);
+
                 printf("Digite o numero de colunas da matriz1: ");
                 scanf("%d", &c1);
+
+                preencheMatrizInt(matriz1, l1, c1);
+
                 putchar('\n');
                 break;
             case 2:
                 printf("Digite o numero de linhas da matriz2: ");
                 scanf("%d", &l2);
+
                 printf("Digite o numero de colunas da matriz2: ");
                 scanf("%d", &c2);
+
+                preencheMatrizInt(matriz2, l2, c2);
+
                 putchar('\n');
                 break;
             case 3:
                 printf("\nMatriz1:\n");
+                imprimeMatrizInt(matriz1, l1, c1);
+
                 printf("Matriz2:\n");
+                imprimeMatrizInt(matriz2, l2, c2);
+
                 putchar('\n');
                 break;
             case 4:
                 printf(" \nSoma das matrizes:\n");
+                somaMatrizInt(matriz1, matriz2, matrizSoma, l1, c1);
+
+                printf("Matriz1:\n");
+                imprimeMatrizInt(matriz1, l1, c1);
+
+                printf("Matriz2:\n");
+                imprimeMatrizInt(matriz2, l2, c2);
+
+                printf("MatrizSoma:\n");
+                imprimeMatrizInt(matrizSoma, l1, c1);
                 putchar('\n');
                 break;
             case 5:
                 printf(" \nMultiplicacao das matrizes:\n");
+                multiplicacaoMatrizIntGenerica(matriz1, matriz2, matrizMult, l1, c1, l2, c2);
+                printf("Matriz1:\n");
+                imprimeMatrizInt(matriz1, l1, c1);
+
+                printf("Matriz2:\n");
+                imprimeMatrizInt(matriz2, l2, c2);
+
+                printf("MatrizMult:\n");
+                imprimeMatrizInt(matrizMult, l1, c2);
                 putchar('\n');
                 break;
             case 6:
                 printf(" \nSubtracao das matrizes:\n");
+                subtracaoMatrizInt(matriz1, matriz2, matrizSub, l1, c1);
+                printf("Matriz1:\n");
+                imprimeMatrizInt(matriz1, l1, c1);
+                printf("Matriz2:\n");
+                imprimeMatrizInt(matriz2, l2, c2);
+                printf("MatrizSub:\n");
+                imprimeMatrizInt(matrizSub, l1, c1);
                 putchar('\n');
                 break;
             case 7:
+                printf("\nmatriz1:\n");
+                imprimeMatrizInt(matriz1, l1, c1);
                 printf(" \nTransposta da matriz1:\n");
+                matrizTranspostaInt(matriz1, l1, c1);
+
+                printf("\nmatriz2:\n");
+                imprimeMatrizInt(matriz2, l2, c2);
+                printf(" \nTransposta da matriz2:\n");
+                matrizTranspostaInt(matriz2, l2, c2);
                 putchar('\n');
                 break;
             default:
@@ -1099,10 +1145,9 @@ int exercicio27(void) {
     scanf("%d", &n);
 
     printf("Matriz:\n");
+    preencheMatrizInt(matriz, n, n);
 
-    int soma = 0;
-    for (int i = 0; i < n; i++)
-        soma += matriz[i][i];
+    int soma = somaDiagonalPrincipal(matriz, n);
 
     printf("Soma da diagonal principal: %d\n", soma);
 
@@ -1115,13 +1160,15 @@ int exercicio28(void) {
     */
 
     printf("\nexercicio 28\n");
-    int n, soma = 0, matriz[MAX][MAX];
+    int n, matriz[MAX][MAX];
 
     printf("Digite a dimensao da matriz: ");
     scanf("%d", &n);
 
-    for (int i = 0; i < n; i++)
-        soma += matriz[i][n - i - 1];
+    printf("Matriz:\n");
+    preencheMatrizInt(matriz, n, n);
+
+    int soma = somaDiagonalSecundaria(matriz, n);
 
     printf("Soma da diagonal secundaria: %d\n", soma);
 

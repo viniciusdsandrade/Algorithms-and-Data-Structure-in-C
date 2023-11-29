@@ -5,6 +5,45 @@
 
 #define MAX 100
 
+/**
+ * Calcula a soma dos elementos da diagonal principal de uma matriz quadrada.
+ *
+ * @param matriz A matriz quadrada de onde a diagonal principal será somada.
+ * @param ordem A ordem da matriz quadrada.
+ * @return A soma dos elementos da diagonal principal.
+ */
+int somaDiagonalPrincipal(int matriz[][MAX], int ordem) {
+    int soma = 0;
+    for (int i = 0; i < ordem; i++) {
+        soma += matriz[i][i];
+    }
+    return soma;
+}
+
+/**
+ * Calcula a soma dos elementos da diagonal secundária de uma matriz quadrada.
+ *
+ * @param matriz A matriz quadrada de onde a diagonal secundária será somada.
+ * @param ordem A ordem da matriz quadrada.
+ * @return A soma dos elementos da diagonal secundária.
+ */
+int somaDiagonalSecundaria(int matriz[][MAX], int ordem) {
+    int soma = 0;
+    for (int i = 0; i < ordem; i++) {
+        soma += matriz[i][ordem - i - 1];
+    }
+    return soma;
+}
+
+/**
+ * Une dois vetores em um terceiro vetor.
+ *
+ * @param v1 O primeiro vetor a ser unido.
+ * @param tam1 O tamanho do primeiro vetor.
+ * @param v2 O segundo vetor a ser unido.
+ * @param tam2 O tamanho do segundo vetor.
+ * @param v3 O vetor resultante da união.
+ */
 void unirVetores(
         const int v1[],
         int tam1,
@@ -22,7 +61,6 @@ void unirVetores(
     for (int i = 0; i < tam2; i++, index++)
         v3[index] = v2[i];
 }
-
 
 /**
  * Imprime um vetor de inteiros.
@@ -586,6 +624,56 @@ void multiplicaMatrizInt(
         for (int j = 0; j < n; j++) {
             matriz3[i][j] = 0;
             for (int k = 0; k < n; k++)
+                matriz3[i][j] += matriz1[i][k] * matriz2[k][j];
+        }
+    }
+}
+
+void somaMatrizInt(
+        int const matriz1[][MAX],
+        int const matriz2[][MAX],
+        int matriz3[][MAX],
+        int linhas,
+        int colunas
+) {
+    for (int i = 0; i < linhas; ++i) {
+        for (int j = 0; j < colunas; ++j)
+            matriz3[i][j] = matriz1[i][j] + matriz2[i][j];
+    }
+}
+
+void subtracaoMatrizInt(
+        int const matriz1[][MAX],
+        int const matriz2[][MAX],
+        int matriz3[][MAX],
+        int linhas,
+        int colunas
+) {
+    for (int i = 0; i < linhas; ++i) {
+        for (int j = 0; j < colunas; ++j)
+            matriz3[i][j] = matriz1[i][j] - matriz2[i][j];
+    }
+}
+
+
+void multiplicacaoMatrizIntGenerica(
+        const int matriz1[][MAX],
+        const int matriz2[][MAX],
+        int matriz3[][MAX],
+        int linhas1,
+        int colunas1,
+        int linhas2,
+        int colunas2
+) {
+    if (colunas1 != linhas2) {
+        printf("Não é possível multiplicar as matrizes.\n");
+        return;
+    }
+
+    for (int i = 0; i < linhas1; i++) {
+        for (int j = 0; j < colunas2; j++) {
+            matriz3[i][j] = 0;
+            for (int k = 0; k < colunas1; k++)
                 matriz3[i][j] += matriz1[i][k] * matriz2[k][j];
         }
     }
