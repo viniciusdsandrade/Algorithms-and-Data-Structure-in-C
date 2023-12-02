@@ -24,7 +24,7 @@ int exercicio01(void) {
 
     printf("Soma: %.2lf\n", sum);
 
-    media = mediaVetorDouble(vetor, n);
+    media = media;
     printf("%.2lf / %d =  %.2lf\n", sum, n, media);
 
     return 0;
@@ -278,6 +278,9 @@ int exercicio06(void) {
     printf("Tamanho v2: ");
     scanf("%d", &tam2);
 
+    verifyInput(tam1, 1, 50) == false ? printf("Valor invalido"), 0 : 1;
+    verifyInput(tam2, 1, 50) == false ? printf("Valor invalido"), 0 : 1;
+
     printf("Vetor1:\n");
     preencheVetorInt(v1, tam1);
 
@@ -322,29 +325,17 @@ int exercicio06(void) {
 
 int exercicio07(void) {
 
-    /*
-     7 - Faca um programa que leia duas sequencias de numeros inteiros ordenados e
-     salve cada sequencia em um vetor. Suponha que o numero maximo de elementos de
-     uma  sequencia e 50. Escreva um programa para intercalar os valores dos dois
-     vetores em um  terceiro vetor, em ordem crescente.
-
-     Exemplo:
-     v1 = [1, 3, 5, 5, 7, 9, 10]
-     v2 = [2, 2, 4, 6, 8, 8, 10]
-     v3 = [1, 2, 2, 3, 4, 5, 5, 6, 7, 8, 8, 9, 10, 10]
-     */
-
     printf("\nExe07 - Lista03\n");
 
-    int v1[MAX], v2[MAX], v3[50];
+    int v1[MAX / 2], v2[MAX / 2], v3[MAX];
     int tam = 0;
 
     printf("Digite o tamanho dos vetores: ");
     scanf("%d", &tam);
 
-    verifyInput(tam, 1, 50) == false ? printf("Valor invalido"), 0 : 1;
+    int tamDobrado = tam * 2;
 
-    int index = 0;
+    verifyInput(tam, 1, 50) == false ? printf("Valor invalido"), 0 : 1;
 
     if (tam < 8) {
         printf("Vetor1\n");
@@ -363,17 +354,13 @@ int exercicio07(void) {
     printf("Vetor2: ");
     imprimeVetorInt(v2, tam);
 
-    // Intercalação dos vetores em v3
-    for (int i = 0; i < tam; ++i) {
-        v3[2 * i] = v1[i];
-        v3[2 * i + 1] = v2[i];
-    }
+    intercalarVetores(v1, v2, v3, tam);
 
-    // bubbleSort com intuito de ordernar o vetor
-    bubbleSort(v3, tam);
+    printf("Vetor3: ");
+    imprimeVetorInt(v3, tamDobrado);
 
-    printf("VetorUnicaoCrescente: ");
-    imprimeVetorInt(v3, index);
+    bubbleSort(v3, tamDobrado);
+    imprimeVetorInt(v3, tamDobrado);
 
     return 0;
 }
@@ -898,6 +885,8 @@ int exercicio24(void) {
     printf("Numero de colunas da matriz: ");
     scanf("%d", &c);
 
+    preencheMatrizIntRandom(matriz, l, c, 10, 0);
+
     // Algoritmo para calcular a frequencia de todos os elementos da matriz
     for (int i = 0; i < l; i++) {
         for (int j = 0; j < c; j++) {
@@ -971,6 +960,10 @@ int exercicio24(void) {
     }
 
     linha(50, '*');
+    imprimeMatrizInt(matriz, l, c);
+
+    linha(50, '*');
+    imprimeMatrizInt(matrizFrequencia, l, c);
 
     return 0;
 }
@@ -1196,16 +1189,41 @@ int exercicio29(void) {
 }
 
 int exercicio30(void) {
-
-    /*
-    30 - Verifica se uma matriz e triangular superior ou triangular inferior ou nenhuma das duas
-    */
-
     printf("\nexercicio 30\n");
     int n, matriz[MAX][MAX];
 
     printf("Digite a dimensao da matriz: ");
     scanf("%d", &n);
+
+    verifyInput(n, 1, MAX) == false ? printf("Valor invalido"), 0 : 1;
+
+    // Read matrix elements
+    preencheMatrizInt(matriz, n, n);
+
+    int upperTriangular = 1; // Assume upper triangular initially
+    int lowerTriangular = 1; // Assume lower triangular initially
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+
+            if (i > j && matriz[i][j] != 0)
+                upperTriangular = 0;
+
+            if (i < j && matriz[i][j] != 0)
+                lowerTriangular = 0;
+        }
+    }
+
+    if (upperTriangular && lowerTriangular)
+        printf("A matriz e triangular superior e inferior.\n");
+    else if (upperTriangular)
+        printf("A matriz e triangular superior.\n");
+    else if (lowerTriangular)
+        printf("A matriz e triangular inferior.\n");
+    else
+        printf("A matriz nao e triangular superior nem inferior.\n");
+
+    imprimeMatrizInt(matriz, n, n);
 
     return 0;
 }

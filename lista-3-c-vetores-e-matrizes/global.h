@@ -15,6 +15,7 @@ void preencheMatrizIntRandom(int matriz[][MAX], int linhas, int colunas, int lim
 void preencheMatrizDouble(double matriz[][MAX], int linhas, int colunas);
 void imprimeVetorInt(const int vetor[], int tamanho);
 void imprimeVetorDouble(double vetor[], int tamanho);
+void intercalarVetores(int v1[], int v2[], int v3[], int tam);
 void imprimeMatrizInt(int matriz[][MAX], int linhas, int colunas);
 void imprimeMatrizDouble(const double matriz[][MAX], int linhas, int colunas);
 int obterPivoNaoZero(int matriz[MAX][MAX], int linhas, int colunas, int coluna);

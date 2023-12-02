@@ -6,6 +6,27 @@
 #define MAX 100
 
 /**
+ * Entrelaça os elementos de dois arrays em um terceiro array.
+ *
+ * @param v1 O primeiro array a ser entrelaçado.
+ * @param v2 O segundo array a ser entrelaçado.
+ * @param v3 O array onde os elementos entrelaçados serão armazenados.
+ * @param tam O tamanho dos arrays (número de elementos a serem entrelaçados).
+ *
+ * Esta função entrelaça os elementos dos arrays v1 e v2 no array v3 da seguinte maneira:
+ * v3[0] = v1[0], v3[1] = v2[0], v3[2] = v1[1], v3[3] = v2[1] e assim por diante.
+ * Se o tamanho dos arrays for tam, o array resultante v3 terá um tamanho de 2 * tam.
+ */
+void intercalarVetores(int v1[], int v2[], int v3[], int tam) {
+    int aux = 0;
+    for (int i = 0; i < tam; ++i) {
+        v3[aux] = v1[i];
+        v3[aux + 1] = v2[i];
+        aux = aux + 2;
+    }
+}
+
+/**
  * Calcula a soma dos elementos da diagonal principal de uma matriz quadrada.
  *
  * @param matriz A matriz quadrada de onde a diagonal principal será somada.
@@ -119,10 +140,16 @@ double produtoInternoDouble(
  * @param v3 O array a ser ordenado.
  * @param tam O tamanho do array.
  */
+/**
+ * Ordena um array de inteiros utilizando o algoritmo Bubble Sort.
+ *
+ * @param v3 O array a ser ordenado.
+ * @param tam O tamanho do array.
+ */
 void bubbleSort(int *v3, int tam) {
     int temp;
-    for (int i = 0; i < 2 * tam; i++) {
-        for (int j = 0; j < 2 * tam - 1; j++) {
+    for (int i = 0; i < tam - 1; i++) {
+        for (int j = 0; j < tam - i - 1; j++) {
             if (v3[j] > v3[j + 1]) {
                 temp = v3[j];
                 v3[j] = v3[j + 1];
@@ -230,7 +257,13 @@ int mdc(int a, int b) {
  * @param linha1   Índice da primeira linha a ser trocada.
  * @param linha2   Índice da segunda linha a ser trocada.
  */
-void trocarLinhas(int matriz[MAX][MAX], int linhas, int colunas, int linha1, int linha2) {
+void trocarLinhas(
+        int matriz[MAX][MAX],
+        int linhas,
+        int colunas,
+        int linha1,
+        int linha2
+) {
     for (int j = 0; j < colunas; j++) {
         int temp = matriz[linha1][j];
         matriz[linha1][j] = matriz[linha2][j];
@@ -322,6 +355,7 @@ int determinanteMatrizInt(int matriz[][MAX], int linhas, int colunas) {
 
     return det * trocas;
 }
+
 /**
  * Função para preencher uma matriz de inteiros a partir da entrada padrão.
  *
@@ -629,6 +663,15 @@ void multiplicaMatrizInt(
     }
 }
 
+/**
+ * Soma duas matrizes de inteiros e armazena o resultado em uma terceira matriz.
+ *
+ * @param matriz1 A primeira matriz de entrada.
+ * @param matriz2 A segunda matriz de entrada.
+ * @param matriz3 A matriz de saída onde a soma será armazenada.
+ * @param linhas O número de linhas nas matrizes.
+ * @param colunas O número de colunas nas matrizes.
+ */
 void somaMatrizInt(
         int const matriz1[][MAX],
         int const matriz2[][MAX],
@@ -642,6 +685,15 @@ void somaMatrizInt(
     }
 }
 
+/**
+ * Subtrai duas matrizes de inteiros e armazena o resultado em uma terceira matriz.
+ *
+ * @param matriz1 A primeira matriz de entrada.
+ * @param matriz2 A segunda matriz de entrada.
+ * @param matriz3 A matriz de saída onde a subtração será armazenada.
+ * @param linhas O número de linhas nas matrizes.
+ * @param colunas O número de colunas nas matrizes.
+ */
 void subtracaoMatrizInt(
         int const matriz1[][MAX],
         int const matriz2[][MAX],
@@ -655,7 +707,17 @@ void subtracaoMatrizInt(
     }
 }
 
-
+/**
+ * Multiplica duas matrizes de inteiros e armazena o resultado em uma terceira matriz.
+ *
+ * @param matriz1 A primeira matriz de entrada.
+ * @param matriz2 A segunda matriz de entrada.
+ * @param matriz3 A matriz de saída onde a multiplicação será armazenada.
+ * @param linhas1 O número de linhas na primeira matriz.
+ * @param colunas1 O número de colunas na primeira matriz.
+ * @param linhas2 O número de linhas na segunda matriz.
+ * @param colunas2 O número de colunas na segunda matriz.
+ */
 void multiplicacaoMatrizIntGenerica(
         const int matriz1[][MAX],
         const int matriz2[][MAX],
@@ -678,6 +740,7 @@ void multiplicacaoMatrizIntGenerica(
         }
     }
 }
+
 
 /**
  * Soma duas matrizes de double.
@@ -840,7 +903,12 @@ void liberarMatrizInt(int **matriz, int linhas) {
  * @param n2 O tamanho da segunda sequência.
  * @return O número de vezes que a primeira sequência ocorre dentro da segunda sequência.
  */
-int verificaOcorrenciaVetorInt(const int sequencia1[], int n1, const int sequencia2[], int n2) {
+int verificaOcorrenciaVetorInt(
+        const int sequencia1[],
+        int n1,
+        const int sequencia2[],
+        int n2
+) {
 
     if (n1 > n2 || n1 <= 0 || n2 <= 0)
         return 0;
