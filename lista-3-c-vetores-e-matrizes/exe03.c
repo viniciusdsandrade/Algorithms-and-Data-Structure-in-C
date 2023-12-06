@@ -421,7 +421,7 @@ int exercicio09(void) {
      de 2  posicoes distintas do vetor cuja multiplicacao seja C e imprimi-los. Caso nao
      existam tais numeros, o programa deve informar isto.
 
-     Exemplo: Se vetor = [2, 4, 5,10, 7] e C = 35 entao o programa deve imprimir
+     Exemplo: Se vetor = [2, 4, 5, 10, 7] e C = 35 entao o programa deve imprimir
      5 e 7". Se C = 31 entao o programa deve imprimir nao existem tais numeros".
      */
 
@@ -440,20 +440,7 @@ int exercicio09(void) {
     printf("Digite um valor para comum:");
     scanf("%d", &comum);
 
-    for (int i = 0; i < tam; ++i) {
-        for (int j = i + 1; j < tam; ++j) {
-            if (vet[i] * vet[j] == comum) {
-                printf("%d x %d = %d\n", vet[i], vet[j], comum);
-                multiplo[cont] = vet[i];
-                cont = cont + 2;
-            }
-        }
-    }
-
-    if (cont == 0)
-        printf("Nao existem multiplos de %d\n", comum);
-    else
-        printf("total de multiplos: %d\n", cont);
+    encontrarMultiplos(vet, tam, comum);
 
     return 0;
 }
@@ -1171,19 +1158,23 @@ int exercicio28(void) {
 int exercicio29(void) {
 
     /*
-    29 - Faca um algoritmo que verifique se uma matriz e inversivel. Em seguida calcule a sua inversa.
+    29 - Faca um algoritmo que verifique todas as possíveis combinações de multiplicação entre os numeros naturais menores que um numero n digitado pelo usuario que de o proprio numero n
+    por exemplo
+
+     n = 4
+
+     4*1
+     2*2
     */
 
     printf("\nexercicio 29\n");
-    int n, matriz[MAX][MAX];
+    int n;
 
-    printf("Digite a dimensao da matriz: ");
+    printf("Digite um numero inteiro positivo: ");
     scanf("%d", &n);
 
-    int matrizInversa[n][n];
-
-    printf("Matriz Inversa:\n");
-    imprimeMatrizInt(matrizInversa, n, n);
+    printf("Combinacoes de multiplicacao: \n");
+    combinacoesMultiplicacao(n);
 
     return 0;
 }
@@ -1231,17 +1222,52 @@ int exercicio30(void) {
 int exercicio31(void) {
 
     /*
-    31 - Escreva uma algoritmo que descubra qual a matriz identidade de uma matriz digitada pelo usuario
-    */
+     * 31 -
+     * */
 
     printf("\nexercicio 31\n");
-    int matriz[MAX][MAX], matrizIdentidade[MAX][MAX];
-    int matrizAux[MAX][MAX], matrizIdentidade2[MAX][MAX];
     int n;
 
-    printf("Digite a dimensao da matriz: ");
+    printf("Digite um numero inteiro positivo: ");
     scanf("%d", &n);
 
+    int *divisores;
+    int quantidade;
+
+    calculaDivisores(n, &divisores, &quantidade);
+
+    printf("Divisores[%d]:", n);
+    imprimeVetorInt(divisores, quantidade);
+
+    free(divisores);
+    putchar('\n');
+
+    return 0;
+}
+
+int exercise32(void) {
+    printf("\nexercicio 32\n");
+    int n;
+
+    printf("Digite um numero inteiro positivo: ");
+    scanf("%d", &n);
+
+    if (n <= 0) {
+        printf("O numero deve ser positivo.\n");
+        return 1;
+    }
+
+    fatoracaoPrimos(n);
+
+    return 0;
+}
+
+int exercise33(void) {
+
+    /*
+     * 33 -
+     *
+     */
     return 0;
 }
 
@@ -1278,6 +1304,8 @@ int displayMenuGetChoice() {
     printf("Exercicio 29\n");
     printf("Exercicio 30\n");
     printf("Exercicio 31\n");
+    printf("Exercicio 32\n");
+    printf("Exercicio 33\n");
     printf("Digite o numero do exercicio: ");
 
     int choice;
@@ -1379,6 +1407,12 @@ void executeExercise(int choice) {
             break;
         case 31:
             exercicio31();
+            break;
+        case 32:
+            exercise32();
+            break;
+        case 33:
+            exercise33();
             break;
         default:
             printf("Exercicio nao existente na lista.\n");

@@ -9,8 +9,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="fix[lista03 matriz] 3">
+    <list default="true" id="f984eee4-f361-49b5-abdb-ab7abcb74572" name="Changes" comment="fix[lista03 matriz] 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exe03.exe" beforeDir="false" afterPath="$PROJECT_DIR$/exe03.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/exe03.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/exe03.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/lista-3-c-vetores-e-matrizes/global.h" afterDir="false" />
@@ -48,29 +49,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/c-algorithms/lista-3-c-vetores-e-matrizes/exe03.c&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/vinic/OneDrive/Área de Trabalho/CStudy/c-algorithms/lista-3-c-vetores-e-matrizes/exe03.c",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Pichau\Desktop\CStudy\c-algorithms\challanges-c\2_lp\p2-lp" />
@@ -175,7 +176,8 @@
       <workItem from="1701199184586" duration="1056000" />
       <workItem from="1701283410150" duration="647000" />
       <workItem from="1701546386047" duration="87000" />
-      <workItem from="1701546487624" duration="2441000" />
+      <workItem from="1701546487624" duration="2569000" />
+      <workItem from="1701829662207" duration="2764000" />
     </task>
     <task id="LOCAL-00001" summary="feat[recursividade] : iniciando lista de recursividade">
       <option name="closed" value="true" />
@@ -289,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701278647703</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix[lista03 matriz] 4">
+      <option name="closed" value="true" />
+      <created>1701549048443</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701549048443</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,7 +330,8 @@
     <MESSAGE value="fix[lista03 matriz]" />
     <MESSAGE value="fix[lista03 matriz] 2" />
     <MESSAGE value="fix[lista03 matriz] 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix[lista03 matriz] 3" />
+    <MESSAGE value="fix[lista03 matriz] 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix[lista03 matriz] 4" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

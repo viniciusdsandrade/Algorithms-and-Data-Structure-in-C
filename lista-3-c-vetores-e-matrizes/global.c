@@ -6,6 +6,115 @@
 #define MAX 100
 
 /**
+ * Realiza a fatoração em números primos de um número inteiro positivo e imprime os resultados.
+ *
+ * Esta função recebe um número inteiro positivo e imprime sua fatoração em números primos.
+ * Utiliza otimizações para encontrar fatores primos, reduzindo o número de iterações necessárias.
+ *
+ * @param num O número inteiro positivo para o qual realizar a fatoração em primos.
+ */
+void fatoracaoPrimos(int num) {
+    printf("Fatoracao em numeros primos de %d: ", num);
+
+    while (num % 2 == 0) {
+        printf("2 ");
+        num = num / 2;
+    }
+
+    for (int i = 3; i * i <= num; i = i + 2) {
+        while (num % i == 0) {
+            printf("%d ", i);
+            num = num / i;
+        }
+    }
+
+    if (num > 2) {
+        printf("%d ", num);
+    }
+
+    putchar('\n');
+}
+
+/**
+ * Gera e imprime todas as combinações de multiplicação de números naturais
+ * menores ou iguais a um número inteiro positivo fornecido.
+ *
+ * Esta função percorre todos os pares de números naturais (i, j) onde i e j
+ * são menores ou iguais ao número fornecido `n`. Imprime as combinações em que
+ * o produto de i e j é igual a `n`.
+ *
+ * @param n O número inteiro positivo para o qual gerar as combinações de multiplicação.
+ */
+void combinacoesMultiplicacao(int n) {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (i * j == n) {
+                printf("%d * %d = %d\n", i, j, n);
+            }
+        }
+    }
+}
+
+/**
+ * Calcula os divisores naturais de um número inteiro positivo.
+ *
+ * Esta função recebe um número inteiro positivo, calcula todos os divisores
+ * naturais desse número e os armazena em um vetor alocado dinamicamente.
+ * A quantidade de divisores e o vetor resultante são retornados através de
+ * ponteiros passados como argumentos.
+ *
+ * @param numero O número inteiro positivo para o qual calcular os divisores.
+ * @param divisores Um ponteiro para um ponteiro de inteiros para armazenar o vetor de divisores.
+ * @param quantidade Um ponteiro para armazenar a quantidade de divisores encontrados.
+ */
+void calculaDivisores(int numero, int **divisores, int *quantidade) {
+    int count = 0;
+    int *divs = NULL;
+
+    for (int i = 1; i <= numero; i++) {
+        if (numero % i == 0) {
+            count++;
+            divs = (int *) realloc(divs, count * sizeof(int));
+            divs[count - 1] = i;
+        }
+    }
+
+    *divisores = divs;
+    *quantidade = count;
+}
+
+/**
+ * Procura pares de números no vetor cujo produto seja igual a um valor comum.
+ *
+ * Esta função percorre o vetor e imprime os pares de elementos cujo produto é igual
+ * ao valor comum fornecido. Também exibe uma mensagem indicando se não foram encontrados
+ * tais pares.
+ *
+ * @param vet Um array de inteiros.
+ * @param tam O tamanho do array `vet`.
+ * @param comum O valor comum para o qual procuramos pares de multiplicação.
+ */
+void encontrarMultiplos(int vet[], int tam, int comum) {
+    int multiplo[MAX];
+    int cont = 0;
+
+    for (int i = 0; i < tam; ++i) {
+        for (int j = i + 1; j < tam; ++j) {
+            if (vet[i] * vet[j] == comum) {
+                printf("%d x %d = %d\n", vet[i], vet[j], comum);
+                multiplo[cont] = vet[i];
+                cont = cont + 2;
+            }
+        }
+    }
+
+    if (cont == 0)
+        printf("Nao existem multiplos de %d\n", comum);
+    else
+        printf("total de multiplos: %d\n", cont);
+}
+
+/**
  * Entrelaça os elementos de dois arrays em um terceiro array.
  *
  * @param v1 O primeiro array a ser entrelaçado.
@@ -74,11 +183,9 @@ void unirVetores(
 ) {
     int tam3 = tam1 + tam2, index = 0;
 
-    // Copia os elementos do vetor1 para o vetor3
     for (index = 0; index < tam1; index++)
         v3[index] = v1[index];
 
-    // Copia os elementos do vetor2 para o vetor3
     for (int i = 0; i < tam2; i++, index++)
         v3[index] = v2[i];
 }
@@ -821,7 +928,7 @@ void imprimeMatrizDouble(const double matriz[][MAX], int linhas, int colunas) {
  */
 void preencheVetorInt(int vet[], int tamanho) {
     for (int i = 0; i < tamanho; ++i) {
-        printf("vetor[%d] = ", i + 1);
+        printf("vetor[%d] = ", i);
         scanf("%d", &vet[i]);
     }
 }
