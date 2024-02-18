@@ -551,7 +551,6 @@ bool getExitChoice() {
     return sair;
 }
 
-
 int main(void) {
     setlocale(LC_ALL, "Portuguese");
 
