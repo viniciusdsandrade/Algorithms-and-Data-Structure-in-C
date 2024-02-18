@@ -144,7 +144,7 @@ int pot(int a, int b) {
 
     int result = a;
     for (int i = 1; i < b; i++)
-        result *= a;
+        result = result * a;
 
     return result;
 }
@@ -324,6 +324,7 @@ void readMatrix(int matrix[MAX_DIMENSION][MAX_DIMENSION], int dimension) {
         }
     }
 }
+
 /**
  * Imprime os elementos de uma matriz quadrada.
  *

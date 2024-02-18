@@ -84,7 +84,7 @@ int exercise02(void) {
 int exercise03(void) {
     /**
     3. Suponha que criamos uma estrutura para armazenar dados de pessoas e uma outra estrutura
-    para armazenar dados de v�rias pessoas como uma base de dados.
+    para armazenar dados de várias pessoas como uma base de dados.
 <p>
   <p>   typedef struct Pessoa{
    <p>      int rg;
@@ -93,23 +93,23 @@ int exercise03(void) {
    <p>  }Pessoa;
 <p>
    <p>  typedef struct Base{
-   <p>     int armazenado; //Deve sempre corresponder ao n�mero de pessoas na base
+   <p>     int armazenado; //Deve sempre corresponder ao número de pessoas na base
    <p>      Pessoa pessoas[100];
    <p>  }Base;
 <p>
-   <p>  Crie fun��es para cada uma das opera��es abaixo:
+   <p>  Crie fun��es para cada uma das operações abaixo:
 <p>
-   <p>  a) Cria base: esta fun��o devolve uma Base onde o campo armazenado ? inicializado
+   <p>  a) Cria base: esta função devolve uma Base onde o campo armazenado ? inicializado
     com 0.
   <p>   Base cria_base();
 <p>
-  <p>   b) Inclui Pessoa: esta fun��o recebe como par�metro um dado do tipo Pessoa e o inclui
-    na base (tamb�m passada por par�metro) caso j� n�o exista na base uma pessoa com
-    o mesmo RG. A fun��o devolve 1 caso a incluso tenha ocorrido, devolve 0 caso a
+  <p>   b) Inclui Pessoa: esta função recebe como parâmetro um dado do tipo Pessoa e o inclui
+    na base (também passada por par�metro) caso já não exista na base uma pessoa com
+    o mesmo RG. A função devolve 1 caso a incluso tenha ocorrido, devolve 0 caso a
     Base esteja cheia e devolve -1 caso j� exista uma pessoa com o RG informado.
   <p>   int insere_base(Pessoa p, Base base);
 <p>
-  <p>   c) Exclui Pessoa: esta fun��o recebe como par�metro um dado do tipo int representando
+  <p>   c) Exclui Pessoa: esta função recebe como par�metro um dado do tipo int representando
     o RG de uma pessoa e o exclui da base caso esteja presente. A fun��o devolve 1 caso a
     exclus�o tenha ocorrido, e devolve 0 caso n�o exista uma pessoa com o RG informado.
    <p>  int remove_base(int rg, Base base);
