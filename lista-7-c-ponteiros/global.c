@@ -1,5 +1,72 @@
 #define MAX 100000
-#include <string.h>
+#include <stdio.h>
+#include "global.h"
+#include "string.h"
+
+#define LINHAS 10
+#define COLUNAS 10
+
+void modifyVowels(char *str) {
+    for (int i = 0; i < strlen(str); i++) {
+        switch (str[i]) {
+            case 'a':
+                str[i] = 'u';
+                break;
+            case 'e':
+                str[i] = 'o';
+                break;
+            case 'i':
+                str[i] = 'u';
+                break;
+            case 'o':
+                str[i] = 'e';
+                break;
+            case 'u':
+                str[i] = 'a';
+                break;
+            default:
+                break;
+        }
+    }
+}
+void printString(char *str) {
+    printf("%s\n", str);
+}
+void imprimeVetorInt(int v[], int n) {
+    int i;
+    printf("[");
+    for (i = 0; i < n; i++) {
+        if (i == n - 1)
+            printf("%d]", v[i]);
+        else
+            printf("%d , ", v[i]);
+    }
+    printf("\n");
+}
+void imprimirMatriz(int (*matriz)[COLUNAS]) {
+    for (int i = 0; i < LINHAS; i++) {
+        printf("| ");
+        for (int j = 0; j < COLUNAS; j++) {
+            printf("%3d ", matriz[i][j]);
+        }
+        printf("|\n");
+    }
+}
+void preencherMatriz(int (*matriz)[COLUNAS]) {
+    int contador = 99;
+    for (int i = 0; i < LINHAS; i++) {
+        for (int j = 0; j < COLUNAS; j++) {
+            matriz[i][j] = contador--;
+        }
+    }
+}
+void inicializarMatriz(int (*matriz)[COLUNAS]) {
+    for (int i = 0; i < LINHAS; i++) {
+        for (int j = 0; j < COLUNAS; j++) {
+            matriz[i][j] = 0;
+        }
+    }
+}
 
 /**
  * Encontra o maior número par no vetor e atribui o valor a *a.
@@ -163,7 +230,7 @@ void swap(int *a, int *b) {
  * @param min Ponteiro para armazenar o valor mínimo.
  * @param max Ponteiro para armazenar o valor máximo.
  */
-void maxAndMin(const int vet[], int tam, int *min, int *max) {
+__attribute__((unused)) void maxAndMin(const int vet[], int tam, int *min, int *max) {
     int i;
     *max = vet[0];
     *min = vet[0];
@@ -182,7 +249,7 @@ void maxAndMin(const int vet[], int tam, int *min, int *max) {
  * @param vet Um vetor de inteiros.
  * @param tam O número de elementos no vetor.
  */
-void zeraVet(int vet[], int tam) {
+__attribute__((unused)) void zeraVet(int vet[], int tam) {
     int i;
     for (i = 0; i < tam; i++) {
         vet[i] = 0;

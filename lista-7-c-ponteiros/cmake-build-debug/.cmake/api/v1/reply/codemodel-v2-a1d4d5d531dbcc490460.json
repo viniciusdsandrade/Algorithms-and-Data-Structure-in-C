@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "lista_7_c_ponteiros",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "lista_7_c_ponteiros::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lista_7_c_ponteiros-Debug-3758eaf9f7e5a64a9920.json",
+					"name" : "lista_7_c_ponteiros",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/vinic/OneDrive/\u00c1rea de Trabalho/c-algorithms/c-algorithms/lista-7-c-ponteiros/cmake-build-debug",
+		"source" : "C:/Users/vinic/OneDrive/\u00c1rea de Trabalho/c-algorithms/c-algorithms/lista-7-c-ponteiros"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

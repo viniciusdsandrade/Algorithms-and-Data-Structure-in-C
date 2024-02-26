@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdbool.h>
-
 #include <locale.h>
 #include "global.h"
 
-#define MAX_EXERCISES 19
+#define MAX_EXERCISES 22
 
 int displayMenuAndGetChoice(void);
+
 bool getExitChoice(void);
+
 void executeExercise(int choice);
 
 int main(void) {
@@ -418,6 +419,76 @@ int exercise19(void) {
     return 0;
 }
 
+int exercise20(void) {
+
+    /*
+    20.Faça um programa que modifique as vogais de uma frase O programa
+    deve ler uma frase max 100 caracteres) e armazená-la num vetor
+    Imprimir a frase lida trocando as vogais, isto é, trocar ' pelo ' u','
+    pelo ' o' , ' pelo ' u',' pelo ' e o ' pelo ' Usar uma função void
+    ( para realizar a troca e uma função para realizar a
+    impressão da frase trocada A função deve ter como parâmetro um
+    ponteiro char referente ao vetor Dica Use a função gets da biblioteca
+    string h para realizar a leitura da frase use o switch para realizar as
+    trocas Só considere as letras minúsculas
+     */
+
+    char frase[100];
+    printf("Digite uma frase: ");
+    fflush(stdin); // Limpa o buffer do teclado (stdin)
+    fgets(frase, 101, stdin);
+
+    modifyVowels(frase);
+
+    printString(frase);
+
+    return 0;
+}
+
+int exercise21(void) {
+
+    /*
+    21. Escreva um programa que declare uma matriz 10 x 10 de inteiros Você
+    criar uma função void (para inicializar a matriz com
+    zeros usando um ponteiro para a matriz Faça outra função void para
+    preencher depois a matriz com os números de 99 a 0 também usando
+    ponteiro para matriz como parâmetro Por fim, o programa deve
+    imprimir a matriz
+     */
+
+    int matriz[10][10];
+
+    inicializarMatriz(matriz);
+    preencherMatriz(matriz);
+    imprimirMatriz(matriz);
+
+    return 0;
+}
+
+int exercise22(void) {
+
+    /*
+     22.
+
+     1. Codifique um programa que contenha uma variável ponteiro que
+     aponte para um vetor de 5 elementos do tipo inteiro, insira dados
+     neste vetor e mostre os mesmos
+
+     2. Codifique um programa que contenha um vetor de 5 elementos do tipo
+     ponteiro para um char, insira dados neste vetor e mostre os mesmos
+
+     3. O que será impresso no seguinte programa
+     */
+
+    int vet[5] = {1, 2, 3, 4, 5};
+    int *p = vet;
+
+    imprimeVetorInt(p, 5);
+
+    putchar('\n');
+
+    return 0;
+}
 
 int displayMenuAndGetChoice(void) {
     printf("Exercise 01:\n");
@@ -439,6 +510,9 @@ int displayMenuAndGetChoice(void) {
     printf("Exercise 17:\n");
     printf("Exercise 18:\n");
     printf("Exercise 19:\n");
+    printf("Exercise 20:\n");
+    printf("Exercise 21:\n");
+    printf("Exercise 22:\n");
     printf("Enter the number of the exercise you want to execute: ");
 
     int choice;
@@ -504,6 +578,15 @@ void executeExercise(int choice) {
             break;
         case 19:
             exercise19();
+            break;
+        case 20:
+            exercise20();
+            break;
+        case 21:
+            exercise21();
+            break;
+        case 22:
+            exercise22();
             break;
         default:
             printf("Invalid option!\n");
