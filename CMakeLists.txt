@@ -9,4 +9,4 @@ add_executable(c_algorithms
         challanges-c/2_challange6_C/global.c
         challanges-c/2_challange6_C/global.h
         challanges-c/2_challange6_C/register-challange.c
-        challanges-c/2_challange6_C/registro-aluno-c.jpg)
+        challanges-c/2_challange6_C/enunciado/registro-aluno-c.jpg)

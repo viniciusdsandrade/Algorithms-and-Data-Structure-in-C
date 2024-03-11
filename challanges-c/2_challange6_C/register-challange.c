@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "global.h"
 #include "stdio.h"
 
@@ -48,8 +49,7 @@
 int main(void) {
     Aluno alunos[MAX_ALUNOS];
     int numAlunos = 0;
-    int opcao;
-
+    char opcaoStr[10]; // Assuming the option won't exceed 10 characters
     while (1) {
         printf("1. Adicionar novo aluno\n");
         printf("2. Buscar aluno por nome\n");
@@ -58,7 +58,15 @@ int main(void) {
         printf("5. Editar dados de um aluno\n");
         printf("6. Sair\n");
         printf("Digite a opcao desejada: ");
-        scanf("%d", &opcao);
+        printf("Digite a opcao desejada: ");
+        fgets(opcaoStr, sizeof(opcaoStr), stdin);
+        int opcao = (int)strtol(opcaoStr, NULL, 10); // Convert the string to an integer using strtol
+
+        // Error handling for strtol
+        if (opcao == 0 && opcaoStr[0] != '0') {
+            printf("\nOpcao invalida. Por favor, digite um numero de opcao valido.\n\n");
+            continue;
+        }
 
         switch (opcao) {
             case 1:
