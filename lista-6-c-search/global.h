@@ -12,6 +12,7 @@ int *uniao(const int vet1[],
            int n2);
 int *initVet(int *size, int *maxSize);
 void printVet(int *vet, int size, int maxSize);
+void imprimirVetor(int vet[], int tamanho);
 int *addVet(int *v, int *size, int *maxSize, int e);
 int find(const int *v, int size, int e);
 int *removeVet(int *v, int *size, int *maxSize, int e);
@@ -19,10 +20,24 @@ int *removeVet(int *v, int *size, int *maxSize, int e);
 char *replicarStringComEspacos(const char *vetor, int vezes);
 int somaPeso(Cell vet[], int n);
 
-int binarySearch(const int vet[], int tam, int chave);
+void bubbleSort(int *vet, int n);
+void selectionSort(int *vet, int tam);
+void insertionSort(int *vet, int tam);
+void mergeSort(int *vet, int inicio, int fim);
+void quickSort(int *vet, int inicio, int fim);
+void heapSort(int *vet, int n);
+void shellSort(int *vet, int n);
+void countingSort(int *vet, int n);
+void radixSort(int *vet, int n);
+void bucketSort(int *vet, int n);
+
 int linearSearch(const int vet[], int tam, int chave);
-void insertionSort(int vet[], int tam);
-void bubbleSort(int vet[], int tam);
+int binarySearch(const int vet[], int tam, int chave);
+int ternarySearch(const int vet[], int tam, int chave);
+int interpolationSearch(const int vet[], int tam, int chave);
+int exponentialSearch(int vet[], int tam, int chave);
+int jumpSearch(const int vet[], int tam, int chave);
+int fibonacciSearch(const int vet[], int tam, int chave);
 
 void troca(int *a, int *b);
 int indiceMenor(const int vet[], int tam, int ini);

@@ -7,6 +7,8 @@
 #define MAX_CURSO 50
 #define MAX_DATA_NASCIMENTO 10
 
+#include <locale.h>
+
 typedef struct Aluno {
     char nome[MAX_NOME];
     char matricula[MAX_MATRICULA];

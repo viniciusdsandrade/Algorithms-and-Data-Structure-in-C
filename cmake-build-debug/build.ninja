@@ -63,6 +63,13 @@ build CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/register-challange
   OBJECT_DIR = CMakeFiles\c_algorithms.dir
   OBJECT_FILE_DIR = CMakeFiles\c_algorithms.dir\challanges-c\2_challange6_C
 
+build CMakeFiles/c_algorithms.dir/lista-6-c-search/exe06.c.obj: C_COMPILER__c_algorithms_unscanned_Debug C$:/Users/vinic/OneDrive/Área$ de$ Trabalho/c-algorithms/lista-6-c-search/exe06.c || cmake_object_order_depends_target_c_algorithms
+  DEP_FILE = CMakeFiles\c_algorithms.dir\lista-6-c-search\exe06.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/vinic/OneDrive/Área de Trabalho/c-algorithms/challanges-c/2_challange6_C"
+  OBJECT_DIR = CMakeFiles\c_algorithms.dir
+  OBJECT_FILE_DIR = CMakeFiles\c_algorithms.dir\lista-6-c-search
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target c_algorithms
@@ -71,7 +78,7 @@ build CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/register-challange
 #############################################
 # Link the executable c_algorithms.exe
 
-build c_algorithms.exe: C_EXECUTABLE_LINKER__c_algorithms_Debug CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/global.c.obj CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/register-challange.c.obj
+build c_algorithms.exe: C_EXECUTABLE_LINKER__c_algorithms_Debug CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/global.c.obj CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/register-challange.c.obj CMakeFiles/c_algorithms.dir/lista-6-c-search/exe06.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\c_algorithms.dir

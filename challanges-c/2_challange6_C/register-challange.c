@@ -1,52 +1,55 @@
 #include <stdlib.h>
+#include <locale.h>
 #include "global.h"
 #include "stdio.h"
 
 /*
-    Objetivo: Este exercÃ­cio visa desenvolver um programa em C que gerencia o registro de alunos
-    em uma universidade. O programa permitirÃ¡ a
-    entrada, armazenamento, consulta, ediÃ§Ã£o e exclusÃ£o de dados dos alunos.
+    Objetivo: Este exercício visa desenvolver um programa em C que gerencia o registro de alunos
+    em uma universidade. O programa permitirá a
+    entrada, armazenamento, consulta, edição e exclusão de dados dos alunos.
 
     Requisitos:
-    1 - O programa deve criar e utilizar uma estrutura de dados para armazenar informaÃ§Ãµes do aluno,
+    1 - O programa deve criar e utilizar uma estrutura de dados para armazenar informações do aluno,
     como
         nome,
-        matrÃ­cula,
+        matrícula,
         curso e
         data de nascimento.
-    2 - O programa deve oferecer um menu interativo com as seguintes opÃ§Ãµes:
+    2 - O programa deve oferecer um menu interativo com as seguintes opções:
 
-        1. Adicionar novo aluno: Permitir a entrada dos dados do aluno e adicionar o novo registro Ã 
+        1. Adicionar novo aluno: Permitir a entrada dos dados do aluno e adicionar o novo registro à
         estrutura de dados,
         2. Buscar aluno por nome: Solicitar o nome do aluno e buscar o registro correspondente na
-        estrutura de dados. Se o aluno for encontrado, exibir seus dados completos. Caso contrÃ¡rio,
-        informar que o aluno nÃ£o foi encontrado.
-        3. Excluir aluno: Solicitar o nome ou matrÃ­cula do aluno e excluir o registro correspondente da
+        estrutura de dados. Se o aluno for encontrado, exibir seus dados completos. Caso contrário,
+        informar que o aluno não foi encontrado.
+        3. Excluir aluno: Solicitar o nome ou matrícula do aluno e excluir o registro correspondente da
         estrutura de dados.
         4. Listar todos os alunos: Exibir os dados de todos os alunos cadastrados na estrutura de
         dados.
 
-        5. Editar dados de um aluno: Solicitar o nome ou matrÃ­cula do aluno e permitir a ediÃ§Ã£o de
+        5. Editar dados de um aluno: Solicitar o nome ou matrícula do aluno e permitir a edição de
         seus dados, como nome, curso ou data de nascimento
 
-    ImplementaÃ§Ã£o:
-    Utilize a linguagem de programaÃ§Ã£o C para implementar o programa.
+    Implementação:
+    Utilize a linguagem de programação C para implementar o programa.
     Utilize uma estrutura de dados adequada para armazenar os dados dos alunos, como uma lista ou um vetor.
-    Implemente cada funcionalidade do menu de forma modular, utilizando funÃ§Ãµes separadas para cada tarefa
-    Utilize funÃ§Ãµes auxiliares para tarefas como entrada de dados, validaÃ§Ã£o e formataÃ§Ã£o de saÃ­da.
+    Implemente cada funcionalidade do menu de forma modular, utilizando funções separadas para cada tarefa
+    Utilize funções auxiliares para tarefas como entrada de dados, validação e formatação de saída.
 
     Dicas:
-    Utilize comentÃ¡rios para explicar o cÃ³digo e facilitar a compreensÃ£o.
+    Utilize comentários para explicar o código e facilitar a compreensão.
     Teste o programa com diferentes entradas para garantir seu funcionamento correto.
-    Utilize ferramentas de depuraÃ§Ã£o para identificar e corrigir erros
+    Utilize ferramentas de depuração para identificar e corrigir erros
 
     Recursos Adicionais:
-    Utilize a biblioteca stdlib.h para funÃ§Ãµes de entrada e saÃ­da de dados.
-    Utilize a biblioteca string.h para funÃ§Ãµes de manipulaÃ§Ã£o de strings
-    Consulte a documentaÃ§Ã£o da linguagem C para obter mais informaÃ§Ãµes sobre as funÃ§Ãµes utilizadas.
+    Utilize a biblioteca stdlib.h para funções de entrada e saída de dados.
+    Utilize a biblioteca string.h para funções de manipulação de strings
+    Consulte a documentação da linguagem C para obter mais informações sobre as funções utilizadas.
  */
 
 int main(void) {
+
+    setlocale(LC_ALL, "Portuguese");
     Aluno alunos[MAX_ALUNOS];
     int numAlunos = 0;
     char opcaoStr[10]; // Assuming the option won't exceed 10 characters
@@ -57,7 +60,6 @@ int main(void) {
         printf("4. Listar todos os alunos\n");
         printf("5. Editar dados de um aluno\n");
         printf("6. Sair\n");
-        printf("Digite a opcao desejada: ");
         printf("Digite a opcao desejada: ");
         fgets(opcaoStr, sizeof(opcaoStr), stdin);
         int opcao = (int)strtol(opcaoStr, NULL, 10); // Convert the string to an integer using strtol

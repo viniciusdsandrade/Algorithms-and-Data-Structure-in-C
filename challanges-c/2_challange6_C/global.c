@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include "global.h"
+#include <locale.h>
 
 void adicionarAluno(Aluno alunos[], int *numAlunos) {
+    setlocale(LC_ALL, "Portuguese");
     if (*numAlunos < MAX_ALUNOS) {
         printf("Digite o nome do aluno: ");
         scanf("%s", alunos[*numAlunos].nome);
@@ -18,6 +20,7 @@ void adicionarAluno(Aluno alunos[], int *numAlunos) {
     }
 }
 void buscarAlunoPorNome(Aluno alunos[], int numAlunos) {
+    setlocale(LC_ALL, "Portuguese");
     char nome[MAX_NOME];
     printf("Digite o nome do aluno: ");
     scanf("%s", nome);
@@ -31,6 +34,7 @@ void buscarAlunoPorNome(Aluno alunos[], int numAlunos) {
     }
 }
 void excluirAluno(Aluno alunos[], const int *numAlunos) {
+    setlocale(LC_ALL, "Portuguese");
     char nome[MAX_NOME];
     printf("Digite o nome do aluno: ");
     scanf("%s", nome);
@@ -44,22 +48,26 @@ void excluirAluno(Aluno alunos[], const int *numAlunos) {
     }
 }
 void listarAlunos(Aluno alunos[], int numAlunos) {
+    setlocale(LC_ALL, "Portuguese");
     if (numAlunos == 0) {
-        printf("Não há alunos cadastrados.\n");
+        printf("\n-------------------------\n");
+        printf("Nao ha alunos cadastrados.\n");
+        printf("-------------------------\n\n");
         return;
     }
 
     printf("Lista de Alunos:\n");
-    printf("-------------------------------------------------------------------------\n");
-    printf("| %-20s | %-10s | %-20s | %-15s |\n", "Nome", "Matrícula", "Curso", "Data de Nascimento");
-    printf("-------------------------------------------------------------------------\n");
+    printf("---------------------------------------------------------------------------------------\n");
+    printf("| %-20s | %-10s | %-20s | %-15s |\n", "Nome", "Matricula", "Curso", "Data de Nascimento");
+    printf("---------------------------------------------------------------------------------------\n");
 
     for (int j = 0; j < numAlunos; j++) {
         printf("| %-20s | %-10s | %-20s | %-15s |\n", alunos[j].nome, alunos[j].matricula, alunos[j].curso, alunos[j].dataNascimento);
     }
-    printf("-------------------------------------------------------------------------\n");
+    printf("---------------------------------------------------------------------------------------\n");
 }
 void editarAluno(Aluno alunos[], int numAlunos) {
+    setlocale(LC_ALL, "Portuguese");
     char nome[MAX_NOME];
     printf("Digite o nome do aluno: ");
     scanf("%s", nome);

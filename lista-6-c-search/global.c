@@ -8,6 +8,80 @@ typedef struct Cell {
     int peso;
 } Cell;
 
+int *initVet(int *size, int *maxSize) {
+    int *v = malloc(*maxSize * sizeof(int));
+    *size = 0;
+    *maxSize = 4;
+    return v;
+}
+
+void imprimirVetor(int vet[], int tamanho) {
+    printf("[");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d", vet[i]);
+        if (i < tamanho - 1) {
+            printf(", ");
+        }
+    }
+    printf("]\n");
+}
+
+void printVet(int *vet, int size, int maxSize) {
+    int i;
+    printf("Vetor de tamanho %d (max alocado %d)\n", size, maxSize);
+    for (i = 0; i < size; i++) {
+        printf("%d ", vet[i]);
+    }
+    printf("\n");
+}
+
+int *addVet(int *v, int *size, int *maxSize, int e) {
+    if (*size < *maxSize) {
+        v[*size] = e;
+        (*size)++;
+        return v;
+    } else {
+        int *vaux = malloc(2 * (*maxSize) * sizeof(int));
+        for (int i = 0; i < *size; ++i) {
+            vaux[i] = v[i];
+        }
+        vaux[*size] = e;
+        (*size)++;
+        *maxSize *= 2;
+        free(v);
+        return vaux;
+    }
+}
+
+int find(const int *v, int size, int e) {
+    for (int i = 0; i < size; i++) {
+        if (v[i] == e)
+            return i;
+    }
+    return -1;
+}
+
+int *removeVet(int *v, int *size, int *maxSize, int e) {
+    int pos = find(v, *size, e);
+    if (pos != -1) {
+        for (int i = pos; i < *size - 1; i++) {
+            v[i] = v[i + 1];
+        }
+        (*size)--;
+        if (*size < *maxSize / 2) {
+            int *vaux = malloc((*maxSize / 2) * sizeof(int));
+            for (int i = 0; i < *size; ++i) {
+                vaux[i] = v[i];
+            }
+            *maxSize /= 2;
+            free(v);
+            return vaux;
+        }
+    }
+    return v;
+}
+
+
 char *replicarStringComEspacos(const char *vetor, int vezes) {
     if (vetor == NULL || vezes <= 0) {
         return NULL;
@@ -53,116 +127,60 @@ int somaPeso(Cell vet[], int n) {
     return pesoTotal;
 }
 
-/**
- * @struct Produto
- *
- * Estrutura que representa um produto com nome, preço e quantidade.
- */
 typedef struct Produto {
     char nome[80];
     double preco;
     int quantidade;
 } Produto;
 
-/**
- * @struct Aluno
- *
- * Estrutura que representa um aluno com nome e nota.
- */
+
 typedef struct Aluno {
     char nome[80];
     float nota;
 } Aluno;
 
-/**
- * @struct Alune
- *
- * Estrutura que representa um aluno com RA (Registro Acadêmico) e nota.
- */
+
 typedef struct Alune {
     int ra;
     double nota;
 } Alune;
 
-/**
- * @struct Ponto
- *
- * Estrutura que representa um ponto no plano cartesiano com coordenadas x e y.
- */
+
 typedef struct Ponto {
     double x;
     double y;
 } Ponto;
 
-/**
- * @struct Reg
- *
- * Estrutura que representa um registro com um vetor de inteiros com 3 elementos
- * e uma variável inteira.
- */
+
 typedef struct Reg {
     int vet[3];
     int n;
 } Reg;
 
-/**
- * @struct Data
- *
- * Estrutura que representa uma data com dia, mês e ano.
- */
+
 typedef struct Data {
     int dia;
     int mes;
     int ano;
 } Data;
 
-/**
- * @struct Pessoa
- *
- * Estrutura que representa uma pessoa com RG, CPF e nome.
- */
 typedef struct Pessoa {
     int rg;
     int cpf;
     char nome[80];
 } Pessoa;
 
-/**
- * @struct Base
- *
- * Estrutura que representa uma base de dados de pessoas.
- */
 typedef struct Base {
     int armazenado;
     Pessoa pessoas[100];
 } Base;
 
-/**
- * Troca os valores de duas variáveis inteiras.
- *
- * Esta função recebe dois ponteiros para inteiros, 'a' e 'b', e troca os valores das variáveis
- * para que 'a' contenha o valor original de 'b' e 'b' contenha o valor original de 'a'.
- *
- * @param a Ponteiro para o primeiro inteiro a ser trocado.
- * @param b Ponteiro para o segundo inteiro a ser trocado.
- */
 void troca(int *a, int *b) {
     int aux = *a;
     *a = *b;
     *b = aux;
 }
 
-/**
- * Encontra o índice do menor valor em um vetor a partir de uma posição inicial.
- *
- * Esta função recebe um vetor 'vet', seu tamanho 'tam' e um índice 'ini' como argumentos.
- * Ela busca o menor valor no vetor 'vet' a partir da posição 'ini' e retorna o índice do menor valor encontrado.
- *
- * @param vet O vetor de inteiros onde a busca é realizada.
- * @param tam O tamanho do vetor 'vet'.
- * @param ini O índice inicial a partir do qual a busca pelo menor valor é feita.
- * @return O índice do menor valor encontrado no vetor 'vet'.
- */
 int indiceMenor(const int vet[], int tam, int ini) {
     int menor = ini;
     int j;
@@ -173,18 +191,7 @@ int indiceMenor(const int vet[], int tam, int ini) {
     return menor;
 }
 
-/**
- * Ordena um vetor de inteiros usando o algoritmo Selection Sort.
- *
- * Esta função recebe um vetor 'vet' de inteiros e seu tamanho 'tam'. Ela ordena o vetor 'vet'
- * em ordem crescente usando o algoritmo Selection Sort. O algoritmo divide o vetor em uma
- * parte ordenada e outra não ordenada, encontrando repetidamente o menor valor da parte não
- * ordenada e movendo-o para a parte ordenada.
- *
- * @param vet O vetor de inteiros a ser ordenado.
- * @param tam O tamanho do vetor 'vet'.
- */
-void selectionSort(int vet[], int tam) {
+void selectionSort(int *vet, int tam) {
     int i, min;
     for (i = 0; i < tam - 1; i++) {
         min = indiceMenor(vet, tam, i);
@@ -192,17 +199,6 @@ void selectionSort(int vet[], int tam) {
     }
 }
 
-/**
- * Ordena um vetor de inteiros usando o algoritmo Selection Sort.
- *
- * Esta função recebe um vetor 'vet' de inteiros e seu tamanho 'tam'. Ela ordena o vetor 'vet'
- * em ordem crescente usando o algoritmo Selection Sort. O algoritmo divide o vetor em uma
- * parte ordenada e outra não ordenada, encontrando repetidamente o menor valor da parte não
- * ordenada e movendo-o para a parte ordenada.
- *
- * @param vet O vetor de inteiros a ser ordenado.
- * @param tam O tamanho do vetor 'vet'.
- */
 void selectionSortAbstrato(int vet[], int tam) {
     int i, min, aux;
     for (i = 0; i < tam; i++) {
@@ -218,42 +214,20 @@ void selectionSortAbstrato(int vet[], int tam) {
     }
 }
 
-/**
- * Ordena um vetor de inteiros usando o algoritmo Bubble Sort.
- *
- * Esta função recebe um vetor 'vet' de inteiros e seu tamanho 'tam'. Ela ordena o vetor 'vet'
- * em ordem crescente usando o algoritmo Bubble Sort. O algoritmo compara repetidamente pares
- * de elementos adjacentes e os troca se estiverem fora de ordem, empurrando os maiores valores
- * para o final do vetor em cada passagem.
- *
- * @param vet O vetor de inteiros a ser ordenado.
- * @param tam O tamanho do vetor 'vet'.
- */
-void bubbleSort(int vet[], int tam) {
+void bubbleSort(int *vet, int n) {
     int i, j;
-    for (i = tam - 1; i > 0; i--) {
-        for (j = 0; j < i; j++) {
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - i - 1; j++) {
             if (vet[j] > vet[j + 1]) {
                 int aux = vet[j];
                 vet[j] = vet[j + 1];
                 vet[j + 1] = aux;
-                //troca(&vet[j], &vet[j + 1]);
             }
         }
     }
 }
 
-/**
- * Ordena um vetor de inteiros usando o algoritmo Insertion Sort.
- *
- * Esta função recebe um vetor 'vet' de inteiros e seu tamanho 'tam'. Ela ordena o vetor 'vet'
- * em ordem crescente usando o algoritmo Insertion Sort, que constrói uma parte ordenada do vetor
- * um elemento por vez, inserindo cada elemento na posição correta.
- *
- * @param vet O vetor de inteiros a ser ordenado.
- * @param tam O tamanho do vetor 'vet'.
- */
-void insertionSort(int vet[], int tam) {
+void insertionSort(int *vet, int tam) {
     int i, j, aux;
     for (i = 1; i < tam; i++) {
         aux = vet[i];
@@ -264,17 +238,197 @@ void insertionSort(int vet[], int tam) {
     }
 }
 
-/**
- * Realiza uma busca linear por uma chave em um vetor de inteiros.
- *
- * Esta função recebe um vetor 'vet' de inteiros, seu tamanho 'tam' e uma chave de busca 'chave'.
- * Ela realiza uma busca linear no vetor 'vet' para encontrar a posição da chave, se exists.
- *
- * @param vet O vetor de inteiros onde a busca é realizada.
- * @param tam O tamanho do vetor 'vet'.
- * @param chave A chave de busca a ser encontrada.
- * @return A posição da chave no vetor ou -1 se a chave não for encontrada.
- */
+void merge(int *vet, int inicio, int meio, int fim) {
+    int *temp, p1, p2, tamanho, i, j, k;
+    int fim1 = 0, fim2 = 0;
+    tamanho = fim - inicio + 1;
+    p1 = inicio;
+    p2 = meio + 1;
+    temp = (int *) malloc(tamanho * sizeof(int));
+    if (temp != NULL) {
+        for (i = 0; i < tamanho; i++) {
+            if (!fim1 && !fim2) {
+                if (vet[p1] < vet[p2])
+                    temp[i] = vet[p1++];
+                else
+                    temp[i] = vet[p2++];
+                if (p1 > meio) fim1 = 1;
+                if (p2 > fim) fim2 = 1;
+            } else {
+                if (!fim1)
+                    temp[i] = vet[p1++];
+                else
+                    temp[i] = vet[p2++];
+            }
+        }
+        for (j = 0, k = inicio; j < tamanho; j++, k++)
+            vet[k] = temp[j];
+    }
+    free(temp);
+}
+
+void mergeSort(int *vet, int inicio, int fim) {
+    if (inicio < fim) {
+        int meio = (inicio + fim) / 2;
+        mergeSort(vet, inicio, meio);
+        mergeSort(vet, meio + 1, fim);
+        merge(vet, inicio, meio, fim);
+    }
+}
+
+void quickSort(int *vet, int inicio, int fim) {
+    int pivo, aux, i, j, meio;
+    i = inicio;
+    j = fim;
+    meio = (int) ((i + j) / 2);
+    pivo = vet[meio];
+    do {
+        while (vet[i] < pivo) i = i + 1;
+        while (vet[j] > pivo) j = j - 1;
+        if (i <= j) {
+            aux = vet[i];
+            vet[i] = vet[j];
+            vet[j] = aux;
+            i = i + 1;
+            j = j - 1;
+        }
+    } while (j > i);
+    if (inicio < j) quickSort(vet, inicio, j);
+    if (i < fim) quickSort(vet, i, fim);
+}
+
+void heapSort(int *vet, int n) {
+    int i = n / 2, pai, filho, t;
+    while (1) {
+        if (i > 0) {
+            i--;
+            t = vet[i];
+        } else {
+            n--;
+            if (n == 0) return;
+            t = vet[n];
+            vet[n] = vet[0];
+        }
+        pai = i;
+        filho = i * 2 + 1;
+        while (filho < n) {
+            if ((filho + 1 < n) && (vet[filho + 1] > vet[filho]))
+                filho++;
+            if (vet[filho] > t) {
+                vet[pai] = vet[filho];
+                pai = filho;
+                filho = pai * 2 + 1;
+            } else {
+                break;
+            }
+        }
+        vet[pai] = t;
+    }
+}
+
+void shellSort(int *vet, int n) {
+    int i, j, value;
+    int gap = 1;
+    do {
+        gap = 3 * gap + 1;
+    } while (gap < n);
+    do {
+        gap /= 3;
+        for (i = gap; i < n; i++) {
+            value = vet[i];
+            j = i - gap;
+            while (j >= 0 && value < vet[j]) {
+                vet[j + gap] = vet[j];
+                j -= gap;
+            }
+            vet[j + gap] = value;
+        }
+    } while (gap > 1);
+}
+
+void countingSort(int *vet, int n) {
+    int i, j, k;
+    int *aux;
+    int maior = vet[0];
+    for (i = 1; i < n; i++) {
+        if (vet[i] > maior)
+            maior = vet[i];
+    }
+    aux = (int *) malloc((maior + 1) * sizeof(int));
+    for (i = 0; i <= maior; i++)
+        aux[i] = 0;
+
+    for (i = 0; i < n; i++)
+        aux[vet[i]]++;
+
+    for (i = 0, j = 0; i <= maior; i++) {
+        for (k = aux[i]; k > 0; k--)
+            vet[j++] = i;
+    }
+    free(aux);
+}
+
+void radixSort(int *vet, int n) {
+    int i, exp = 1;
+    int *b;
+    int maior = vet[0];
+    int *vetAux;
+    vetAux = (int *) malloc(n * sizeof(int));
+    for (i = 0; i < n; i++) {
+        if (vet[i] > maior)
+            maior = vet[i];
+    }
+    while (maior / exp > 0) {
+        b = (int *) calloc(10, sizeof(int));
+
+        for (i = 0; i < n; i++)
+            b[(vet[i] / exp) % 10]++;
+
+        for (i = 1; i < 10; i++)
+            b[i] += b[i - 1];
+
+        for (i = n - 1; i >= 0; i--)
+            vetAux[--b[(vet[i] / exp) % 10]] = vet[i];
+
+        for (i = 0; i < n; i++)
+            vet[i] = vetAux[i];
+
+        exp *= 10;
+        free(b);
+    }
+    free(vetAux);
+}
+
+void bucketSort(int *vet, int n) {
+    int i, j;
+    int max_value = 0;
+
+    // Encontrar o valor máximo no array
+    for (i = 0; i < n; i++) {
+        if (vet[i] > max_value) {
+            max_value = vet[i];
+        }
+    }
+
+    // Criar um array de contagem com tamanho baseado no valor máximo
+    int *count = (int *) calloc(max_value + 1, sizeof(int));
+
+    // Contar a frequência de cada elemento
+    for (i = 0; i < n; i++) {
+        count[vet[i]]++;
+    }
+
+    // Rearranjar o array original usando os elementos e suas frequências
+    for (i = 0, j = 0; i <= max_value; i++) {
+        while (count[i] > 0) {
+            vet[j++] = i;
+            count[i]--;
+        }
+    }
+
+    free(count);
+}
+
 int linearSearch(const int vet[], int tam, int chave) {
     for (int i = 0; i < tam; i++) {
         if (vet[i] == chave) {
@@ -284,17 +438,6 @@ int linearSearch(const int vet[], int tam, int chave) {
     return -1; // Chave não encontrada.
 }
 
-/**
- * Realiza uma busca binária por uma chave em um vetor de inteiros ordenado.
- *
- * Esta função recebe um vetor 'vet' de inteiros ordenado, seu tamanho 'tam' e uma chave de busca 'chave'.
- * Ela realiza uma busca binária no vetor 'vet' para encontrar a posição da chave, se existir.
- *
- * @param vet O vetor de inteiros ordenado onde a busca é realizada.
- * @param tam O tamanho do vetor 'vet'.
- * @param chave A chave de busca a ser encontrada.
- * @return A posição da chave no vetor ou -1 se a chave não for encontrada.
- */
 int binarySearch(const int vet[], int tam, int chave) {
     int inicio = 0;
     int fim = tam - 1;
@@ -312,16 +455,114 @@ int binarySearch(const int vet[], int tam, int chave) {
     return -1;
 }
 
-/**
- * Lê informações de um aluno da entrada padrão.
- *
- * Esta função solicita ao usuário que digite o nome e a nota de um aluno.
- * Ela lê o nome como uma linha de até 80 caracteres e a nota como um número
- * em ponto flutuante. Após a leitura, ela remove o caractere de nova linha ('\n')
- * do final do nome e retorna uma estrutura "Aluno" preenchida com os dados lidos.
- *
- * @return Uma estrutura "Aluno" preenchida com o nome e a nota lidos da entrada padrão.
- */
+int exponentialSearch(int vet[], int tam, int chave) {
+    if (vet[0] == chave)
+        return 0;
+
+    int i = 1;
+    while (i < tam && vet[i] <= chave)
+        i *= 2;
+
+    return binarySearch(vet, (i < tam ? i : tam), chave);
+}
+
+int ternarySearch(const int vet[], int tam, int chave) {
+    int inicio = 0;
+    int fim = tam - 1;
+
+    while (inicio <= fim) {
+        int terco = (fim - inicio) / 3;
+        int meio1 = inicio + terco;
+        int meio2 = fim - terco;
+
+        if (vet[meio1] == chave)
+            return meio1;
+        else if (vet[meio2] == chave)
+            return meio2;
+        else if (vet[meio1] > chave)
+            fim = meio1 - 1;
+        else if (vet[meio2] < chave)
+            inicio = meio2 + 1;
+        else {
+            inicio = meio1 + 1;
+            fim = meio2 - 1;
+        }
+    }
+    return -1;
+}
+
+int interpolationSearch(const int vet[], int tam, int chave) {
+    int inicio = 0;
+    int fim = tam - 1;
+
+    while (inicio <= fim && chave >= vet[inicio] && chave <= vet[fim]) {
+        int pos = inicio + ((chave - vet[inicio]) * (fim - inicio)) / (vet[fim] - vet[inicio]);
+
+        if (vet[pos] == chave)
+            return pos;
+        else if (vet[pos] < chave)
+            inicio = pos + 1;
+        else
+            fim = pos - 1;
+    }
+    return -1;
+}
+
+int jumpSearch(const int vet[], int tam, int chave) {
+    int salto = (int) sqrt(tam);
+    int anterior = 0;
+
+    while (vet[(salto < tam ? salto : tam) - 1] < chave) {
+        anterior = salto;
+        salto += (int) sqrt(tam);
+        if (anterior >= tam)
+            return -1;
+    }
+
+    for (int i = anterior; i < (salto < tam ? salto : tam); i++) {
+        if (vet[i] == chave)
+            return i;
+    }
+
+    return -1;
+}
+
+int fibonacciSearch(const int vet[], int tam, int chave) {
+    int fibM2 = 0;
+    int fibM1 = 1;
+    int fibM = fibM2 + fibM1;
+
+    while (fibM < tam) {
+        fibM2 = fibM1;
+        fibM1 = fibM;
+        fibM = fibM2 + fibM1;
+    }
+
+    int offset = -1;
+
+    while (fibM > 1) {
+        int i = (offset + fibM2) < (tam - 1) ? (offset + fibM2) : (tam - 1);
+
+        if (vet[i] < chave) {
+            fibM = fibM1;
+            fibM1 = fibM2;
+            fibM2 = fibM - fibM1;
+            offset = i;
+        } else if (vet[i] > chave) {
+            fibM = fibM2;
+            fibM1 -= fibM2;
+            fibM2 = fibM - fibM1;
+        } else {
+            return i;
+        }
+    }
+
+    if (fibM1 && vet[offset + 1] == chave)
+        return offset + 1;
+
+    return -1;
+}
+
 Aluno leAluno() {
     Aluno aux;
 
@@ -333,37 +574,17 @@ Aluno leAluno() {
     getchar();
 }
 
-/**
- * Imprime os dados de um aluno na saída padrão.
- *
- * @param a A estrutura Aluno a ser impressa.
- */
 void imprimeAluno(Aluno a) {
     printf("Nome: %s\n", a.nome);
     printf("Nota: %.2f\n", a.nota);
 }
 
-/**
- * Lista os dados de uma turma de alunos na saída padrão.
- *
- * @param turma O array de estruturas Aluno representando a turma.
- * @param n O número de alunos na turma.
- */
 void listarTurma(Aluno alunos[], int n) {
     for (int i = 0; i < n; i++) {
         imprimeAluno(alunos[i]);
     }
 }
 
-/**
- * Lê os dados de um vetor de produtos da entrada padrão.
- *
- * Esta função aloca memória para o vetor de produtos e preenche seus elementos
- * com os dados lidos da entrada padrão.
- *
- * @param n O número de produtos a serem lidos.
- * @return Um ponteiro para o vetor de produtos preenchido.
- */
 Produto *lerProdutos(int n) {
     Produto *produtos = malloc(n * sizeof(Produto));
     for (int i = 0; i < n; i++) {
@@ -377,15 +598,6 @@ Produto *lerProdutos(int n) {
     return produtos;
 }
 
-/**
- * Ordena um array de produtos por preço em ordem crescente.
- *
- * Esta função utiliza o algoritmo de ordenação "Selection Sort" para ordenar
- * um array de produtos por preço em ordem crescente.
- *
- * @param vet O array de produtos a ser ordenado.
- * @param n O número de elementos no array.
- */
 void ordenaPreco(Produto vet[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = i + 1; j < n; j++) {
@@ -398,15 +610,6 @@ void ordenaPreco(Produto vet[], int n) {
     }
 }
 
-/**
- * Ordena um array de produtos por quantidade em ordem crescente.
- *
- * Esta função utiliza o algoritmo de ordenação "Selection Sort" para ordenar
- * um array de produtos por quantidade em ordem crescente.
- *
- * @param vet O array de produtos a ser ordenado.
- * @param n O número de elementos no array.
- */
 void ordenaQtd(Produto vet[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = i + 1; j < n; j++) {
@@ -419,15 +622,6 @@ void ordenaQtd(Produto vet[], int n) {
     }
 }
 
-/**
- * Imprime os dados de uma lista de produtos na saída padrão.
- *
- * Esta função recebe um vetor de produtos e o número de elementos no vetor,
- * e imprime na saída padrão os detalhes de cada produto.
- *
- * @param vet O vetor de produtos a ser impresso.
- * @param n O número de elementos no vetor.
- */
 void imprimeProduto(Produto vet[], int n) {
     for (int i = 0; i < n; i++) {
         printf("Name:     %s\n", vet[i].nome);
@@ -437,15 +631,6 @@ void imprimeProduto(Produto vet[], int n) {
     }
 }
 
-/**
- * Lê os dados de um vetor de alunos da entrada padrão.
- *
- * Esta função aloca memória para o vetor de alunos e preenche seus elementos
- * com os dados lidos da entrada padrão.
- *
- * @param n O número de alunos a serem lidos.
- * @return Um ponteiro para o vetor de alunos preenchido.
- */
 Aluno *leAlunos(int n) {
     Aluno *alunos = malloc(n * sizeof(Aluno));
     if (alunos == NULL) {
@@ -461,15 +646,6 @@ Aluno *leAlunos(int n) {
     return alunos;
 }
 
-/**
- * Lê os dados de um vetor de alunes da entrada padrão.
- *
- * Esta função aloca memória para o vetor de alunes e preenche seus elementos
- * com os dados lidos da entrada padrão.
- *
- * @param n O número de alunes a serem lidos.
- * @return Um ponteiro para o vetor de alunes preenchido.
- */
 Alune *leAlunes(int n) {
     Alune *alunes = malloc(n * sizeof(Alune));
     if (alunes == NULL) {
@@ -485,14 +661,6 @@ Alune *leAlunes(int n) {
     return alunes;
 }
 
-
-/**
- * Calcula a média das notas dos alunos em uma estrutura Alune.
- *
- * @param alunos O array de estruturas Alune contendo os dados dos alunos.
- * @param n O número de alunos na estrutura.
- * @return A média das notas dos alunos.
- */
 double mediaAlunes(struct Alune alunes[], int n) {
     double soma = 0;
     for (int i = 0; i < n; i++) {
@@ -501,11 +669,6 @@ double mediaAlunes(struct Alune alunes[], int n) {
     return soma / n;
 }
 
-/**
- * Lê as coordenadas de um ponto da entrada padrão.
- *
- * @return Uma estrutura Ponto preenchida com as coordenadas lidas.
- */
 Ponto *lePonto() {
 
     Ponto *ponto = malloc(sizeof(Ponto));
@@ -524,23 +687,11 @@ Ponto *lePonto() {
     return ponto;
 }
 
-/**
- * Imprime as coordenadas de um ponto na saída padrão.
- *
- * @param p A estrutura Ponto a ser impressa.
- */
 void imprimePonto(Ponto p) {
     printf("x: %.2lf\n", p.x);
     printf("y: %.2lf\n", p.y);
 }
 
-/**
- * Calcula a soma de dois pontos.
- *
- * @param p1 O primeiro ponto.
- * @param p2 O segundo ponto.
- * @return Uma estrutura Ponto representando a soma dos dois pontos.
- */
 Ponto somaPonto(Ponto p1, Ponto p2) {
     Ponto soma;
     soma.x = p1.x + p2.x;
@@ -548,17 +699,6 @@ Ponto somaPonto(Ponto p1, Ponto p2) {
     return soma;
 }
 
-/**
- * Soma dois pontos e retorna um novo ponto.
- *
- * Esta função aloca dinamicamente memória para armazenar o resultado da soma dos
- * pontos `p1` e `p2`. Certifique-se de liberar essa memória usando `free` quando
- * o resultado não for mais necessário para evitar vazamentos de memória.
- *
- * @param p1 - O primeiro ponto a ser somado.
- * @param p2 - O segundo ponto a ser somado.
- * @return Um novo ponto que é a soma de `p1` e `p2`, ou NULL em caso de erro de alocação.
- */
 Ponto *somaPonto2(Ponto *p1, Ponto *p2) {
     Ponto *soma = malloc(sizeof(Ponto));
     if (soma == NULL) {
@@ -570,13 +710,6 @@ Ponto *somaPonto2(Ponto *p1, Ponto *p2) {
     return soma;
 }
 
-/**
- * Calcula a subtração de dois pontos.
- *
- * @param p1 O ponto do qual será subtraído.
- * @param p2 O ponto a ser subtraído.
- * @return Uma estrutura Ponto representando a subtração dos dois pontos.
- */
 Ponto subtraiPonto(Ponto p1, Ponto p2) {
     Ponto subtrai;
     subtrai.x = p1.x - p2.x;
@@ -584,13 +717,6 @@ Ponto subtraiPonto(Ponto p1, Ponto p2) {
     return subtrai;
 }
 
-/**
- * Calcula a multiplicação de um ponto por um escalar.
- *
- * @param p1 O ponto a ser multiplicado.
- * @param escalar O valor do escalar.
- * @return Uma estrutura Ponto representando a multiplicação do ponto pelo escalar.
- */
 Ponto multiplicaPonto(Ponto p1, double escalar) {
     Ponto multiplica;
     multiplica.x = p1.x * escalar;
@@ -598,27 +724,12 @@ Ponto multiplicaPonto(Ponto p1, double escalar) {
     return multiplica;
 }
 
-/**
- * Calcula a distância entre dois pontos.
- *
- * @param p1 O primeiro ponto.
- * @param p2 O segundo ponto.
- * @return A distância entre os dois pontos.
- */
 double distanciaPonto(Ponto p1, Ponto p2) {
     double distancia;
     distancia = sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
     return distancia;
 }
 
-/**
- * Função que lê valores para a estrutura Reg e retorna a estrutura preenchida.
- *
- * Esta função solicita ao usuário que insira valores para o vetor de inteiros e a variável
- * inteira dentro da estrutura Reg. Em seguida, ela retorna a estrutura Reg preenchida.
- *
- * @return A estrutura Reg preenchida.
- */
 Reg leReg(void) {
     Reg reg;
 
@@ -633,15 +744,6 @@ Reg leReg(void) {
     return reg;
 }
 
-/**
- * Função que soma os valores do vetor do primeiro atributo da estrutura Reg e armazena o resultado no segundo atributo.
- *
- * Esta função calcula a soma dos valores do vetor de inteiros no primeiro atributo da estrutura Reg
- * e armazena o resultado no segundo atributo da mesma estrutura.
- *
- * @param reg A estrutura Reg na qual os valores serão somados e armazenados.
- * @return A estrutura Reg com o segundo atributo atualizado.
- */
 Reg somaVetorSegundoAtributo(Reg reg) {
     int soma = 0;
 
@@ -655,14 +757,6 @@ Reg somaVetorSegundoAtributo(Reg reg) {
     return resultado;
 }
 
-/**
- * Função que imprime os valores de uma estrutura Reg.
- *
- * Esta função imprime os valores do vetor de inteiros e da variável
- * inteira dentro da estrutura Reg.
- *
- * @param reg A estrutura Reg cujos valores serão impressos.
- */
 void imprimeReg(Reg reg) {
     printf("Valores da estrutura Reg:\n");
 
@@ -675,15 +769,6 @@ void imprimeReg(Reg reg) {
     printf("Variável inteira (n): %d\n", reg.n);
 }
 
-/**
- * Função que concatena duas strings.
- *
- * Esta função concatena duas strings e retorna uma nova string com o resultado.
- *
- * @param s1 A primeira string a ser concatenada.
- * @param s2 A segunda string a ser concatenada.
- * @return Uma nova string com o resultado da concatenação.
- */
 char *concatena(char *s1, char *s2) {
     char *sres = NULL;
     int t1, t2, i;
@@ -702,24 +787,12 @@ char *concatena(char *s1, char *s2) {
     return sres;
 }
 
-/**
- * Função que realiza a troca de duas estruturas Data.
- *
- * @param a O ponteiro para a primeira estrutura Data.
- * @param b O ponteiro para a segunda estrutura Data.
- */
 void swapData(Data *a, Data *b) {
     Data temp = *a;
     *a = *b;
     *b = temp;
 }
 
-/**
- * Função que ordena um vetor de estruturas Data por dia.
- *
- * @param vet Um vetor de estruturas Data.
- * @param tam O tamanho do vetor.
- */
 void ordenaPorDia(Data vet[], int tam) {
     for (int i = 0; i < tam - 1; i++) {
         for (int j = 0; j < tam - i - 1; j++) {
@@ -732,12 +805,6 @@ void ordenaPorDia(Data vet[], int tam) {
     }
 }
 
-/**
- * Função que ordena um vetor de estruturas Data por mês.
- *
- * @param vet Um vetor de estruturas Data.
- * @param tam O tamanho do vetor.
- */
 void ordenaPorMes(Data vet[], int tam) {
     for (int i = 0; i < tam - 1; i++) {
         for (int j = 0; j < tam - i - 1; j++) {
@@ -750,12 +817,6 @@ void ordenaPorMes(Data vet[], int tam) {
     }
 }
 
-/**
- * Função que ordena um vetor de estruturas Data por ano.
- *
- * @param vet Um vetor de estruturas Data.
- * @param tam O tamanho do vetor.
- */
 void ordenaPorAno(Data vet[], int tam) {
     for (int i = 0; i < tam - 1; i++) {
         for (int j = 0; j < tam - i - 1; j++) {
@@ -766,12 +827,6 @@ void ordenaPorAno(Data vet[], int tam) {
     }
 }
 
-/**
- * Função que ordena um vetor de estruturas Data por ano, mês e dia.
- *
- * @param vet Um vetor de estruturas Data.
- * @param tam O tamanho do vetor.
- */
 void ordena(Data vet[], int tam) {
     ordenaPorAno(vet, tam);
 
@@ -796,11 +851,6 @@ void ordena(Data vet[], int tam) {
     }
 }
 
-/**
- * Função que lê os dados de uma estrutura Data a partir da entrada padrão.
- *
- * @return A estrutura Data preenchida.
- */
 Data leData(void) {
     struct Data data;
 
@@ -816,12 +866,6 @@ Data leData(void) {
     return data;
 }
 
-/**
- * Função que imprime as datas contidas em um vetor de estruturas Data.
- *
- * @param datas Um vetor de estruturas Data.
- * @param tam O tamanho do vetor.
- */
 void imprimeDatas(Data datas[], int tam) {
     for (int i = 0; i < tam; i++) {
         printf("Dia: %d, Mês: %d, Ano: %d\n", datas[i].dia, datas[i].mes, datas[i].ano);

@@ -1,4 +1,10 @@
 # ninja log v5
-15	98	7317210137209750	CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/register-challange.c.obj	73945ac3d90f2735
-99	221	7317210138387349	c_algorithms.exe	3d736ebb0d330344
-1	98	7317210137209750	CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/global.c.obj	13bdd711292577f
+3	152	7322067588492756	CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/register-challange.c.obj	73945ac3d90f2735
+189	344	7322067590375583	c_algorithms.exe	3d736ebb0d330344
+52	189	7322067588862819	CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/global.c.obj	13bdd711292577f
+47	383	7324723240861163	CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/register-challange.c.obj	73945ac3d90f2735
+21	384	7324723240881201	CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/global.c.obj	13bdd711292577f
+84	433	7324723241456480	CMakeFiles/c_algorithms.dir/lista-6-c-search/exe06.c.obj	44ed919dd34c63e2
+2	92	7324723397750334	CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/register-challange.c.obj	73945ac3d90f2735
+15	119	7324723398005920	CMakeFiles/c_algorithms.dir/challanges-c/2_challange6_C/global.c.obj	13bdd711292577f
+33	215	7324723398964683	CMakeFiles/c_algorithms.dir/lista-6-c-search/exe06.c.obj	44ed919dd34c63e2

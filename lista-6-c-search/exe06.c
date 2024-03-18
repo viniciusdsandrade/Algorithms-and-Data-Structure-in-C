@@ -3,8 +3,11 @@
 #include <malloc.h>
 #include <locale.h>
 #include "global.h"
+#include <time.h>
 
-#define MAX_EXERCISES 30
+#define TAMANHO 1000
+#define MAXIMO 1000
+#define MAX_EXERCISES 31
 
 int exercise01(void) {
     /**
@@ -387,13 +390,13 @@ int exercise12(void) {
 
     int vetor[10] = {14, 7, 8, 34, 56, 4, 0, 9, -8, 100};
     printf("Vetor desordenado:\n");
-    for (int i = 0; i < 10; ++i) 
+    for (int i = 0; i < 10; ++i)
         printf("%d ", vetor[i]);
-    
+
     selectionSort(vetor, 10);
 
     printf("\nVetor ordenado:\n");
-    for (int i = 0; i < 10; ++i) 
+    for (int i = 0; i < 10; ++i)
         printf("%d ", vetor[i]);
 
     return 0;
@@ -696,67 +699,6 @@ int exercise27(void) {
     return 0;
 }
 
-int *initVet(int *size, int *maxSize) {
-    int *v = malloc(*maxSize * sizeof(int));
-    *size = 0;
-    *maxSize = 4;
-    return v;
-}
-
-void printVet(int *vet, int size, int maxSize) {
-    int i;
-    printf("Vetor de tamanho %d (max alocado %d)\n", size, maxSize);
-    for (i = 0; i < size; i++) {
-        printf("%d ", vet[i]);
-    }
-    printf("\n");
-}
-
-int *addVet(int *v, int *size, int *maxSize, int e) {
-    if (*size < *maxSize) {
-        v[*size] = e;
-        (*size)++;
-        return v;
-    } else {
-        int *vaux = malloc(2 * (*maxSize) * sizeof(int));
-        for (int i = 0; i < *size; ++i) {
-            vaux[i] = v[i];
-        }
-        vaux[*size] = e;
-        (*size)++;
-        *maxSize *= 2;
-        free(v);
-        return vaux;
-    }
-}
-
-int find(const int *v, int size, int e) {
-    for (int i = 0; i < size; i++) {
-        if (v[i] == e)
-            return i;
-    }
-    return -1;
-}
-
-int *removeVet(int *v, int *size, int *maxSize, int e) {
-    int pos = find(v, *size, e);
-    if (pos != -1) {
-        for (int i = pos; i < *size - 1; i++) {
-            v[i] = v[i + 1];
-        }
-        (*size)--;
-        if (*size < *maxSize / 2) {
-            int *vaux = malloc((*maxSize / 2) * sizeof(int));
-            for (int i = 0; i < *size; ++i) {
-                vaux[i] = v[i];
-            }
-            *maxSize /= 2;
-            free(v);
-            return vaux;
-        }
-    }
-    return v;
-}
 
 int exercise28(void) {
 
@@ -829,6 +771,153 @@ int exercise29(int argc, char *argv[]) {
     return 0;
 }
 
+int exercise30(void) {
+
+    int vet_1[] = {10, 8, 9, 5, 4, 6, 7, 3, 2, 1};
+    int vet_2[] = {10, 8, 9, 5, 4, 6, 7, 3, 2, 1};
+    int vet_3[] = {10, 8, 9, 5, 4, 6, 7, 3, 2, 1};
+    int vet_4[] = {10, 8, 9, 5, 4, 6, 7, 3, 2, 1};
+    int vet_5[] = {10, 8, 9, 5, 4, 6, 7, 3, 2, 1};
+    int vet_6[] = {10, 8, 9, 5, 4, 6, 7, 3, 2, 1};
+    int vet_7[] = {10, 8, 9, 5, 4, 6, 7, 3, 2, 1};
+    int vet_8[] = {10, 8, 9, 5, 4, 6, 7, 3, 2, 1};
+    int vet_9[] = {10, 8, 9, 5, 4, 6, 7, 3, 2, 1};
+    int vet_10[] = {10, 8, 9, 5, 4, 6, 7, 3, 2, 1};
+    int vet_11[] = {10, 8, 9, 5, 4, 6, 7, 3, 2, 1};
+
+    printf("Vetor:       ");
+    imprimirVetor(vet_1, 10);
+
+    bubbleSort(vet_2, 10);
+    selectionSort(vet_3, 10);
+    insertionSort(vet_4, 10);
+    mergeSort(vet_5, 0, 9);
+    quickSort(vet_6, 0, 9);
+    heapSort(vet_7, 10);
+    shellSort(vet_8, 10);
+    countingSort(vet_9, 10);
+    radixSort(vet_10, 10);
+    bucketSort(vet_11, 10);
+
+    int tamanho = sizeof(vet_1) / sizeof(vet_1[0]);
+
+    printf("bsort:         ");
+    imprimirVetor(vet_1, tamanho);
+
+    printf("bubbleSort:    ");
+    imprimirVetor(vet_2, tamanho);
+
+    printf("selectionSort: ");
+    imprimirVetor(vet_3, tamanho);
+
+    printf("insertionSort: ");
+    imprimirVetor(vet_4, tamanho);
+
+    printf("mergeSort:     ");
+    imprimirVetor(vet_5, tamanho);
+
+    printf("quickSort:     ");
+    imprimirVetor(vet_6, tamanho);
+
+    printf("heapSort:      ");
+    imprimirVetor(vet_7, tamanho);
+
+    printf("shellSort:     ");
+    imprimirVetor(vet_8, tamanho);
+
+    printf("countingSort:  ");
+    imprimirVetor(vet_9, tamanho);
+
+    printf("radixSort:     ");
+    imprimirVetor(vet_10, tamanho);
+
+    printf("bucketSort:    ");
+    imprimirVetor(vet_11, tamanho);
+
+    return 0;
+}
+
+int exercise31(void) {
+    int vetor_1[TAMANHO];
+    int i;
+
+    // Inicializa o gerador de números aleatórios com o tempo atual
+    srand(time(NULL));
+
+    // Preenche o vetor com números aleatórios entre 0 e 1000
+    for (i = 0; i < TAMANHO; i++) {
+        vetor_1[i] = rand() % (MAXIMO + 1);
+    }
+
+    printf("Vetor desordenado:\n");
+    imprimirVetor(vetor_1, TAMANHO);
+    bubbleSort(vetor_1, TAMANHO);
+    printf("Vetor ordenado:\n");
+    imprimirVetor(vetor_1, TAMANHO);
+
+    int value_1 = vetor_1[500];
+    printf("vetor_1[500] = %d\n", value_1);
+
+    struct timespec start, end;
+    printf("linearSearch: ");
+    clock_gettime(CLOCK_REALTIME, &start);
+    int value_2 = linearSearch(vetor_1, TAMANHO, value_1);
+    clock_gettime(CLOCK_REALTIME, &end);
+    double elapsed_time = (long)(end.tv_sec - start.tv_sec) +
+                          (end.tv_nsec - start.tv_nsec);
+    printf("linearSearch(vetor_1, TAMANHO, %d): %d, Tempo:        %.3f ns\n", value_1, value_2, elapsed_time);
+
+    printf("binarySearch: ");
+    clock_gettime(CLOCK_REALTIME, &start);
+    int value_3 = binarySearch(vetor_1, TAMANHO, value_1);
+    clock_gettime(CLOCK_REALTIME, &end);
+    elapsed_time = (long)(end.tv_sec - start.tv_sec) +
+                   (end.tv_nsec - start.tv_nsec);
+    printf("binarySearch(vetor_1, TAMANHO, %d): %d, Tempo:        %.3f ns\n", value_1, value_3, elapsed_time);
+
+    printf("ternarySearch: ");
+    clock_gettime(CLOCK_REALTIME, &start);
+    int value_4 = ternarySearch(vetor_1, TAMANHO, value_1);
+    clock_gettime(CLOCK_REALTIME, &end);
+    elapsed_time = (long)(end.tv_sec - start.tv_sec) +
+                   (end.tv_nsec - start.tv_nsec);
+    printf("ternarySearch(vetor_1, TAMANHO, %d): %d, Tempo:       %.3f ns\n", value_1, value_4, elapsed_time);
+
+    printf("interpolationSearch: ");
+    clock_gettime(CLOCK_REALTIME, &start);
+    int value_5 = interpolationSearch(vetor_1, TAMANHO, value_1);
+    clock_gettime(CLOCK_REALTIME, &end);
+    elapsed_time = (long)(end.tv_sec - start.tv_sec) +
+                   (end.tv_nsec - start.tv_nsec);
+    printf("interpolationSearch(vetor_1, TAMANHO, %d): %d, Tempo: %.3f ns\n", value_1, value_5, elapsed_time);
+
+    printf("exponentialSearch: ");
+    clock_gettime(CLOCK_REALTIME, &start);
+    int value_6 = exponentialSearch(vetor_1, TAMANHO, value_1);
+    clock_gettime(CLOCK_REALTIME, &end);
+    elapsed_time = (long)(end.tv_sec - start.tv_sec) +
+                   (end.tv_nsec - start.tv_nsec);
+    printf("exponentialSearch(vetor_1, TAMANHO, %d): %d, Tempo:  %.3f ns\n", value_1, value_6, elapsed_time);
+
+    printf("jumpSearch: ");
+    clock_gettime(CLOCK_REALTIME, &start);
+    int value_7 = jumpSearch(vetor_1, TAMANHO, value_1);
+    clock_gettime(CLOCK_REALTIME, &end);
+    elapsed_time = (long)(end.tv_sec - start.tv_sec) +
+                   (end.tv_nsec - start.tv_nsec);
+    printf("jumpSearch(vetor_1, TAMANHO, %d): %d, Tempo:        %.3f ns\n", value_1, value_7, elapsed_time);
+
+    printf("fibonacciSearch: ");
+    clock_gettime(CLOCK_REALTIME, &start);
+    int value_8 = fibonacciSearch(vetor_1, 1000, value_1);
+    clock_gettime(CLOCK_REALTIME, &end);
+    elapsed_time = (long)(end.tv_sec - start.tv_sec) +
+                   (end.tv_nsec - start.tv_nsec);
+    printf("fibonacciSearch(vetor_1, 1000, %d): %d, Tempo:      %.3f ns\n", value_1, value_8, elapsed_time);
+
+    return 0;
+}
+
 int displayMenuAndGetChoice(void) {
     printf("Exercise 01:\n");
     printf("Exercise 02:\n");
@@ -860,6 +949,7 @@ int displayMenuAndGetChoice(void) {
     printf("Exercise 28:\n");
     printf("Exercise 29:\n");
     printf("Exercise 30:\n");
+    printf("Exercise 31:\n");
 
     printf("Enter the number of the exercise you want to execute: ");
 
@@ -955,6 +1045,13 @@ void executeExercise(int choice) {
             exercise28();
             break;
         case 29:
+            //exercise29(null, null);
+            break;
+        case 30:
+            exercise30();
+            break;
+        case 31:
+            exercise31();
             break;
         default:
             printf("Invalid option!\n");
