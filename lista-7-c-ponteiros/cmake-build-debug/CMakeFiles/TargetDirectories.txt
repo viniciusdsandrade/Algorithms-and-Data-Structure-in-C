@@ -1,3 +1,0 @@
-C:/Users/vinic/OneDrive/Área de Trabalho/c-algorithms/c-algorithms/lista-7-c-ponteiros/cmake-build-debug/CMakeFiles/lista_7_c_ponteiros.dir
-C:/Users/vinic/OneDrive/Área de Trabalho/c-algorithms/c-algorithms/lista-7-c-ponteiros/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/vinic/OneDrive/Área de Trabalho/c-algorithms/c-algorithms/lista-7-c-ponteiros/cmake-build-debug/CMakeFiles/rebuild_cache.dir
