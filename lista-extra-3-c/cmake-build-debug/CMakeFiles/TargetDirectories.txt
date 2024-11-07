@@ -1,0 +1,3 @@
+C:/Users/Pichau/Desktop/c-algorithms/lista-extra-3-c/cmake-build-debug/CMakeFiles/lista_extra_3_c.dir
+C:/Users/Pichau/Desktop/c-algorithms/lista-extra-3-c/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Pichau/Desktop/c-algorithms/lista-extra-3-c/cmake-build-debug/CMakeFiles/rebuild_cache.dir
